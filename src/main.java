@@ -10,7 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class main {
+public class main extends Application {
 
     @FXML private Button startstudybutton;
     @FXML private Button startplanbutton;
@@ -20,7 +20,7 @@ public class main {
 
     public void start(Stage stage) throws Exception {
 
-        ResourceBundle resourceBundle = java.util.ResourceBundle.getBundle("main");
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("resources/StuderaMera");
 
         Parent root = FXMLLoader.load(getClass().getResource("helloWorld.fxml"), resourceBundle);
 
@@ -30,7 +30,7 @@ public class main {
 
         stage.setScene(scene);
 
-        stage.getIcons().add(new Image("AddressBook/resources/frameIcon32.gif"));
+        //stage.getIcons().add(new Image("AddressBook/resources/frameIcon32.gif"));
 
         stage.show();
 
@@ -38,9 +38,13 @@ public class main {
     }
 
     public static void main(String[] args) {
+
+        //launch(args);
+
         System.out.println("Hello world");
 
     }
+
 
 
 }
