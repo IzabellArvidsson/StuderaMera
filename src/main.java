@@ -12,39 +12,31 @@ import javafx.stage.Stage;
 
 public class main extends Application {
 
-    @FXML private Button startstudybutton;
+   /* @FXML private Button startstudybutton;
     @FXML private Button startplanbutton;
     @FXML private Text newuser;
-    @FXML private ImageView pens;
+    @FXML private ImageView pens;*/
 
 
+   @Override
     public void start(Stage stage) throws Exception {
 
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("resources/StuderaMera");
-
-        Parent root = FXMLLoader.load(getClass().getResource("helloWorld.fxml"), resourceBundle);
-
-        Scene scene = new Scene(root, 400,600);
-
-        stage.setTitle(resourceBundle.getString("StuderaMera"));
-
-        stage.setScene(scene);
-
+        //ResourceBundle resourceBundle = ResourceBundle.getBundle("resources/StuderaMera");
+        Parent root = FXMLLoader.load(getClass().getResource("helloWorld.fxml"));
+        stage.setTitle("StuderaMera");
+       //Scene scene = new Scene(root, 400,600);
+        stage.setScene(new Scene (root, 500, 500));
         //stage.getIcons().add(new Image("AddressBook/resources/frameIcon32.gif"));
-
         stage.show();
-
 
     }
 
     public static void main(String[] args) {
 
-        //launch(args);
+        launch(args);
 
         System.out.println("Hello world");
 
     }
-
-
 
 }
