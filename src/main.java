@@ -26,7 +26,7 @@ public class main extends Application {
         stage.setTitle("StuderaMera");
        //Scene scene = new Scene(root, 400,600);
         stage.setScene(new Scene (root, 500, 500));
-        //stage.getIcons().add(new Image("AddressBook/resources/frameIcon32.gif"));
+        stage.getIcons().add(new Image("resources/Pennor.png"));
         stage.show();
 
     }
