@@ -5,17 +5,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class main extends Application {
-
-   /* @FXML private Button startstudybutton;
-    @FXML private Button startplanbutton;
-    @FXML private Text newuser;
-    @FXML private ImageView pens;*/
 
 
    @Override

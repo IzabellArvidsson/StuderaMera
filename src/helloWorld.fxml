@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main">
+<AnchorPane fx:id="firstView" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main">
    <children>
       <ImageView fx:id="pens" fitHeight="400.0" fitWidth="606.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -19,12 +19,12 @@
             <Font name="Arial" size="40.0" />
          </font>
       </Text>
-      <Button fx:id="startstudybutton" layoutX="71.0" layoutY="222.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="158.0" text="Börja studera" wrapText="true">
+      <Button fx:id="startstudybutton" layoutX="71.0" layoutY="222.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF;" text="Börja studera" wrapText="true">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button fx:id="startplanbutton" layoutX="354.0" layoutY="221.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="158.0" text="Börja planera" wrapText="true">
+      <Button fx:id="startplanbutton" layoutX="354.0" layoutY="221.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF;" text="Börja planera" wrapText="true">
          <font>
             <Font size="19.0" />
          </font>
