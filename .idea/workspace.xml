@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="Connectar startsidan till timersidan">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/helloWorld.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/helloWorld.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +169,13 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1599733129922</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL−00011" summary="Connectar startsidan till timersidan">
+      <created>1599755750228</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1599755750228</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,7 +201,8 @@
     <MESSAGE value="Fick bild till startsidan" />
     <MESSAGE value="Försöker fixa scene builder" />
     <MESSAGE value="Finjusterat lite kod" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finjusterat lite kod" />
+    <MESSAGE value="Connectar startsidan till timersidan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connectar startsidan till timersidan" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599639072526">
