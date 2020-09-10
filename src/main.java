@@ -21,13 +21,10 @@ public class main extends Application {
    @Override
     public void start(Stage stage) throws Exception {
 
-        //ResourceBundle resourceBundle = ResourceBundle.getBundle("resources/StuderaMera");
         Parent root = FXMLLoader.load(getClass().getResource("helloWorld.fxml"));
-        //stage.setTitle("StuderaMera");
+        stage.setTitle("StuderaMera");
         Scene scene = new Scene (root);
-       //Scene scene = new Scene(root, 400,600);
         stage.setScene(scene);
-        //stage.getIcons().add(new Image("resources/Pennor.png"));
         stage.show();
     }
 

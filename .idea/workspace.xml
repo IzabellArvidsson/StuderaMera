@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/StuderaMera.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +148,13 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1599718087302</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Försöker fixa scene builder">
+      <created>1599719815175</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1599719815175</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,7 +178,8 @@
     <MESSAGE value="Added fxml file" />
     <MESSAGE value="Försökte lära mig lite hur det det ska fungera" />
     <MESSAGE value="Fick bild till startsidan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fick bild till startsidan" />
+    <MESSAGE value="Försöker fixa scene builder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Försöker fixa scene builder" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599639072526">
