@@ -23,12 +23,12 @@ public class main extends Application {
 
         //ResourceBundle resourceBundle = ResourceBundle.getBundle("resources/StuderaMera");
         Parent root = FXMLLoader.load(getClass().getResource("helloWorld.fxml"));
-        stage.setTitle("StuderaMera");
+        //stage.setTitle("StuderaMera");
+        Scene scene = new Scene (root);
        //Scene scene = new Scene(root, 400,600);
-        stage.setScene(new Scene (root, 500, 500));
-        stage.getIcons().add(new Image("resources/Pennor.png"));
+        stage.setScene(scene);
+        //stage.getIcons().add(new Image("resources/Pennor.png"));
         stage.show();
-
     }
 
     public static void main(String[] args) {

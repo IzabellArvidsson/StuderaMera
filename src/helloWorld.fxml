@@ -11,7 +11,7 @@
    <children>
       <ImageView fx:id="pens" fitHeight="400.0" fitWidth="606.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Documents/Objektprojekt/Pennor.jpg" />
+            <Image url="@resources/Pennor.png" />
          </image>
       </ImageView>
       <Text fill="#f5f4f4" layoutX="312.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kom igång med StuderaMera" textAlignment="CENTER" wrappingWidth="243.73675537109375">
