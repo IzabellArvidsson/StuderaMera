@@ -30,4 +30,7 @@ public class main extends Application {
 
     }
 
+
+    int hej;
+
 }
