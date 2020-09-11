@@ -1,10 +1,13 @@
-import java.awt.*;
-import java.util.ResourceBundle;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class main extends Application {
@@ -20,8 +23,6 @@ public class main extends Application {
         stage.show();
     }
 
-
-
     public static void main(String[] args) {
 
         launch(args);
@@ -29,8 +30,5 @@ public class main extends Application {
         System.out.println("Hello world");
 
     }
-
-
-    int hej;
 
 }
