@@ -1,4 +1,4 @@
-import javafx.collections.FXCollections;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,13 +18,9 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    @FXML private Button startstudybutton;
-    //@FXML private AnchorPane TimerView;
-    //@FXML private AnchorPane firstView;
-
     public AnchorPane TimerView;
     public AnchorPane firstView;
-
+    public AnchorPane timerOnView;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,5 +36,8 @@ public class Controller implements Initializable {
         window.show();
     }
 
+    public void onClickStartTimer (MouseEvent mouseEvent) {
+        timerOnView.toFront();
+    }
 
 }
