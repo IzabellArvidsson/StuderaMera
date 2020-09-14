@@ -37,4 +37,13 @@ public class TimerController extends AnchorPane {
         timerOnView.toBack();
     }
 
+    public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("HelpView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
+    }
+
 }
