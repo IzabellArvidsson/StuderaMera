@@ -1,9 +1,14 @@
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 
 public class FirstSide {
@@ -13,7 +18,7 @@ public class FirstSide {
     @FXML private Text newuser;
     @FXML private ImageView pens;
 
-    public FirstSide(Button startstudybutton, Button startplanbutton, Text newuser, ImageView pens) {
+    /*public FirstSide(Button startstudybutton, Button startplanbutton, Text newuser, ImageView pens) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("helloWorld.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -28,6 +33,14 @@ public class FirstSide {
         this.startplanbutton = startplanbutton;
         this.newuser = newuser;
         this.pens = pens;
-    }
+    }*/
 
+    public void onClickStartStudy(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("TimerView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
+    }
 }

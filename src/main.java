@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 
 public class main extends Application {
 
-
    @Override
     public void start(Stage stage) throws Exception {
 
@@ -24,11 +23,8 @@ public class main extends Application {
     }
 
     public static void main(String[] args) {
-
         launch(args);
 
         System.out.println("Hello world");
-
     }
-
 }
