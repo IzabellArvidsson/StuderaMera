@@ -43,4 +43,13 @@ public class FirstSide {
         window.setScene(timerViewScene);
         window.show();
     }
+
+    public void onClickStartPlaning(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        Parent planOverviewParent = FXMLLoader.load(getClass().getResource("PlanOverview.fxml"));
+        Scene planOverviewScene = new Scene(planOverviewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(planOverviewScene);
+        window.show();
+    }
 }

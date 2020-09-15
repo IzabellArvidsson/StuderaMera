@@ -22,9 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="Connectar startsidan till timersidan">
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/StuderaMera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StuderaMera.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/helloWorld.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FirstSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/helloWorld.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/FirstSideTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/FirstSideTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +76,7 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Javaproject/ws_junit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/helloWorld.fxml" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -81,9 +86,24 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -100,7 +120,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -207,12 +227,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="???" />

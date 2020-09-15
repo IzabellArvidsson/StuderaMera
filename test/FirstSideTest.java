@@ -18,5 +18,4 @@ class FirstSideTest {
 
         //ssertSame(firstSide.onClickStartStudy(mouseEvent), "TimerView.fxml");
     }
-
 }
