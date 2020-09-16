@@ -22,18 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="Added FXML-file and a controller to start planing">
-      <change afterPath="$PROJECT_DIR$/src/controllers/CalendarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml_files/Calendar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/StuderaMera.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlanOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/StuderaMera.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/FirstSideController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/FirstSideController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/OverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/helloWorld.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CalendarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/Calendar.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +212,13 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1600076445216</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="Adding fxml and controller + some functions for buttons">
+      <created>1600255231314</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1600255231314</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -254,7 +252,8 @@
     <MESSAGE value="The startstudy button is now connected to the Timer.fxml file" />
     <MESSAGE value="Every fxml-file has different controllers now. The stop-button works. Changed some small design things. Created map for tests. Authors: Hanna and Iza" />
     <MESSAGE value="Authors:Hanna and Iza. Created help view and added controller class for the fxml-file. You can go from timerview to help and go back. The &quot;go back&quot; method needs to be fixed so it can be applied to every controller-class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Authors:Hanna and Iza. Created help view and added controller class for the fxml-file. You can go from timerview to help and go back. The &quot;go back&quot; method needs to be fixed so it can be applied to every controller-class." />
+    <MESSAGE value="Adding fxml and controller + some functions for buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding fxml and controller + some functions for buttons" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599639072526">

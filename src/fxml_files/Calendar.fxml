@@ -24,7 +24,7 @@
                   <DropShadow color="#919090" />
                </effect>
             </Text>
-            <Button fx:id="startplanbutton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
+            <Button fx:id="backToOverviewButton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
@@ -37,7 +37,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <Circle fx:id="helpButton" fill="WHITE" layoutX="42.0" layoutY="582.0" radius="28.0" stroke="WHITE" strokeType="INSIDE">
+      <Circle fill="WHITE" layoutX="48.0" layoutY="582.0" radius="28.0" stroke="WHITE" strokeType="INSIDE">
          <effect>
             <DropShadow color="#919090" />
          </effect>
@@ -45,7 +45,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Text layoutX="34.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
+      <Text layoutX="40.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
          <font>
             <Font size="35.0" />
          </font>
@@ -89,5 +89,21 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Polygon>
+      <Circle fill="WHITE" layoutX="50.0" layoutY="151.0" radius="35.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow color="#919090" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Text layoutX="29.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+" wrappingWidth="40.208980560302734">
+         <font>
+            <Font size="60.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
    </children>
 </AnchorPane>
