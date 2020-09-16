@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -39,6 +40,9 @@
          <effect>
             <DropShadow color="#919090" />
          </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Text fill="WHITE" layoutX="419.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ny användare?">
          <font>

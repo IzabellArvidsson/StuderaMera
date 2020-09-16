@@ -1,6 +1,8 @@
 
-
-
 .text-normal {
     -fx-font-family: "Georgia";
+}
+
+.root {
+  -fx-font-size: 15pt ;
 }

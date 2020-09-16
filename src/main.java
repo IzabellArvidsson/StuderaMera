@@ -4,12 +4,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class main extends Application {
 
    @Override
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml_files/helloWorld.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml_files/helloWorld.fxml")));
         stage.setTitle("StuderaMera");
         Scene scene = new Scene (root);
         stage.setResizable(false);
