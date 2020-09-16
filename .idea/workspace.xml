@@ -23,13 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/StuderaMera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StuderaMera.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/helloWorld.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstSide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/helloWorld.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/FirstSideTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/FirstSideTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml_files/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/helloWorld.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +42,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="HannaSoderstrom &lt;57448560+hannasoderstrom@users.noreply.github.com&gt;" />
         <option value="Hanna och Iza" />
       </list>
     </option>
@@ -91,6 +86,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\StuderaMera\src\fxml_files" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -216,7 +214,13 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1600076445216</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="Delat in koden i MVC-modell.">
+      <created>1600246803710</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1600246803710</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -250,109 +254,60 @@
     <MESSAGE value="The startstudy button is now connected to the Timer.fxml file" />
     <MESSAGE value="Every fxml-file has different controllers now. The stop-button works. Changed some small design things. Created map for tests. Authors: Hanna and Iza" />
     <MESSAGE value="Authors:Hanna and Iza. Created help view and added controller class for the fxml-file. You can go from timerview to help and go back. The &quot;go back&quot; method needs to be fixed so it can be applied to every controller-class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Authors:Hanna and Iza. Created help view and added controller class for the fxml-file. You can go from timerview to help and go back. The &quot;go back&quot; method needs to be fixed so it can be applied to every controller-class." />
+    <MESSAGE value="Delat in koden i MVC-modell." />
+    <option name="LAST_COMMIT_MESSAGE" value="Delat in koden i MVC-modell." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599639072526">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599639072526" />
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599571499643">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599571499643" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1599576388872">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1599576388872" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599576303767">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599576303767" />
-    <state x="520" y="110" key="FileChooserDialogImpl" timestamp="1599638757517">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599638757517" />
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1600094976387">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600094976387" />
-    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1600094976387">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600094976387" />
-    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1600094976387">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600094976387" />
-    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1600094976387">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600094976387" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1599589054601">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599589054601" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1599589054601">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1599589054601" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1599589054601">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1599589054601" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1599589054601">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1599589054601" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1599562890373">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1599562890373" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1599818365572">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599818365572" />
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1599566720380">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1599566720380" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600076469539">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600076469539" />
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600070035327">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1600070035327" />
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599813835479">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1599813835479" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600063807074">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1600063807074" />
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600069839757">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1600069839757" />
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599588987569">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1599588987569" />
-    <state x="209" y="33" key="new project wizard" timestamp="1599638966232">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1599638966232" />
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1599814751339">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1599814751339" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600071704277">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600071704277" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="520" y="110" key="FileChooserDialogImpl" />
+    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom" />
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="190" key="GridCell.Tab.0.center" />
+    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="190" key="GridCell.Tab.0.left" />
+    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="190" key="GridCell.Tab.0.right" />
+    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" />
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="249" y="0" key="SettingsEditor" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" />
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog" />
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" />
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" />
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" />
+    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" />
+    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" />
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" />
+    <state x="209" y="33" key="new project wizard" />
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
