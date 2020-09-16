@@ -22,27 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="Connectar startsidan till timersidan">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/CancelView.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/HelpView.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/TimerView.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/helloWorld.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CancelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CancelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CancelView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/CancelView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/FirstSideController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/HelpView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HelpViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HelpViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/OverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/PlanOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/TimerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/helloWorld.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/FirstSideTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/FirstSideTest.java" afterDir="false" />
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/fxml_files/helloWorld.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/helloWorld.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +42,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="HannaSoderstrom &lt;57448560+hannasoderstrom@users.noreply.github.com&gt;" />
         <option value="Hanna och Iza" />
       </list>
     </option>
@@ -232,7 +214,13 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1600076445216</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="Delat in koden i MVC-modell.">
+      <created>1600246803710</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1600246803710</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -266,7 +254,8 @@
     <MESSAGE value="The startstudy button is now connected to the Timer.fxml file" />
     <MESSAGE value="Every fxml-file has different controllers now. The stop-button works. Changed some small design things. Created map for tests. Authors: Hanna and Iza" />
     <MESSAGE value="Authors:Hanna and Iza. Created help view and added controller class for the fxml-file. You can go from timerview to help and go back. The &quot;go back&quot; method needs to be fixed so it can be applied to every controller-class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Authors:Hanna and Iza. Created help view and added controller class for the fxml-file. You can go from timerview to help and go back. The &quot;go back&quot; method needs to be fixed so it can be applied to every controller-class." />
+    <MESSAGE value="Delat in koden i MVC-modell." />
+    <option name="LAST_COMMIT_MESSAGE" value="Delat in koden i MVC-modell." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
