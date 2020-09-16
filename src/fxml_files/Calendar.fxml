@@ -12,98 +12,108 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalendarController">
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalendarController">
    <children>
-      <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #aba9a4;">
          <children>
-            <Text fill="WHITE" layoutX="25.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
-               <font>
-                  <Font name="Georgia" size="38.0" />
-               </font>
+            <AnchorPane layoutX="354.0" layoutY="196.0" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;">
+         <children>
+            <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" layoutX="25.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font name="Georgia" size="38.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#919090" />
+                     </effect>
+                  </Text>
+                  <Button fx:id="backToOverviewButton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
+                     <effect>
+                        <DropShadow color="#919090" />
+                     </effect>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Circle fill="WHITE" layoutX="48.0" layoutY="582.0" radius="28.0" stroke="WHITE" strokeType="INSIDE">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
-            </Text>
-            <Button fx:id="backToOverviewButton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
-               <effect>
-                  <DropShadow color="#919090" />
-               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Text layoutX="40.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
                <font>
-                  <Font size="17.0" />
+                  <Font size="35.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
-            </Button>
+            </Text>
+            <Text layoutX="370.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Din kalender">
+               <font>
+                  <Font name="Georgia" size="34.0" />
+               </font>
+            </Text>
+            <Text layoutX="346.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2020 v.38" textAlignment="CENTER" wrappingWidth="244.964038848877">
+               <font>
+                  <Font name="Georgia" size="25.0" />
+               </font>
+            </Text>
+            <TableView layoutX="98.0" layoutY="194.0" prefHeight="410.0" prefWidth="740.0" stylesheets="@../StuderaMera.css">
+              <columns>
+                  <TableColumn prefWidth="40.0" style="-fx-background-color: #2aadbc;" />
+                <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Måndag " />
+                <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Tisdag " />
+                  <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Onsdag" />
+                  <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Torsdag" />
+                  <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Fredag" />
+                  <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Lördag" />
+                  <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Söndag " />
+              </columns>
+               <styleClass>
+                  <String fx:value="root" />
+                  <String fx:value="text-normal" />
+               </styleClass>
+            </TableView>
+            <Polygon fill="WHITE" layoutX="310.0" layoutY="130.0" points="-25.045988082885742, 27.353620529174805, 16.399599075317383, 31.599607467651367, 1.3581119775772095, -4.837721824645996" rotate="23.0" stroke="BLACK" strokeType="INSIDE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Polygon fill="WHITE" layoutX="637.0" layoutY="142.0" points="-25.045988082885742, 27.353620529174805, 16.399599075317383, 31.599607467651367, 1.3581119775772095, -4.837721824645996" rotate="203.0" stroke="BLACK" strokeType="INSIDE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Polygon>
+            <Circle fill="WHITE" layoutX="50.0" layoutY="151.0" radius="35.0" stroke="WHITE" strokeType="INSIDE">
+               <effect>
+                  <DropShadow color="#919090" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Text layoutX="29.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+" wrappingWidth="40.208980560302734">
+               <font>
+                  <Font size="60.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
          </children>
       </AnchorPane>
-      <Circle fill="WHITE" layoutX="48.0" layoutY="582.0" radius="28.0" stroke="WHITE" strokeType="INSIDE">
-         <effect>
-            <DropShadow color="#919090" />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Text layoutX="40.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
-         <font>
-            <Font size="35.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Text>
-      <Text layoutX="370.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Din kalender">
-         <font>
-            <Font name="Georgia" size="34.0" />
-         </font>
-      </Text>
-      <Text layoutX="346.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2020 v.38" textAlignment="CENTER" wrappingWidth="244.964038848877">
-         <font>
-            <Font name="Georgia" size="25.0" />
-         </font>
-      </Text>
-      <TableView layoutX="98.0" layoutY="194.0" prefHeight="410.0" prefWidth="740.0" stylesheets="@../StuderaMera.css">
-        <columns>
-            <TableColumn prefWidth="40.0" style="-fx-background-color: #2aadbc;" />
-          <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Måndag " />
-          <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Tisdag " />
-            <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Onsdag" />
-            <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Torsdag" />
-            <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Fredag" />
-            <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Lördag" />
-            <TableColumn prefWidth="100.0" style="-fx-background-color: #2aadbc;" text="Söndag " />
-        </columns>
-         <styleClass>
-            <String fx:value="root" />
-            <String fx:value="text-normal" />
-         </styleClass>
-      </TableView>
-      <Polygon fill="WHITE" layoutX="310.0" layoutY="130.0" points="-25.045988082885742, 27.353620529174805, 16.399599075317383, 31.599607467651367, 1.3581119775772095, -4.837721824645996" rotate="23.0" stroke="BLACK" strokeType="INSIDE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Polygon>
-      <Polygon fill="WHITE" layoutX="637.0" layoutY="142.0" points="-25.045988082885742, 27.353620529174805, 16.399599075317383, 31.599607467651367, 1.3581119775772095, -4.837721824645996" rotate="203.0" stroke="BLACK" strokeType="INSIDE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Polygon>
-      <Circle fill="WHITE" layoutX="50.0" layoutY="151.0" radius="35.0" stroke="WHITE" strokeType="INSIDE">
-         <effect>
-            <DropShadow color="#919090" />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Text layoutX="29.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+" wrappingWidth="40.208980560302734">
-         <font>
-            <Font size="60.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Text>
    </children>
 </AnchorPane>
