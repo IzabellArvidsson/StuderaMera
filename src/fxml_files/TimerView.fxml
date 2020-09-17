@@ -16,7 +16,7 @@
    <children>
       <AnchorPane fx:id="timerOnView" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;" styleClass="StuderaMera.css">
          <children>
-            <AnchorPane fx:id="hhhh" prefHeight="624.0" prefWidth="936.0">
+            <AnchorPane fx:id="hhhh" prefHeight="624.0" prefWidth="936.0" stylesheets="@../StuderaMera.css">
                <children>
                   <Label fx:id="repTimerLabel" layoutX="643.0" layoutY="506.0" text="1/5">
                      <font>
@@ -61,8 +61,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <font>
-                        <Font name="Georgia" size="14.0" />
-                     </font></Button>
+                        <Font name="Georgia" size="16.0" />
+                     </font>
+                  </Button>
                   <Text fx:id="StuderaMera" fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="232.96403884887695">
                      <font>
                         <Font name="Georgia" size="38.0" />
@@ -76,37 +77,44 @@
                   </Text>
                </children>
             </AnchorPane>
-            <Spinner fx:id="restTimerSpinner" layoutX="365.0" layoutY="500.0" prefHeight="43.0" prefWidth="139.0">
+            <Spinner fx:id="restTimerSpinner" layoutX="386.0" layoutY="467.0" prefHeight="44.0" prefWidth="124.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Spinner>
-            <Spinner fx:id="repTimerSpinner" layoutX="581.0" layoutY="500.0" prefHeight="43.0" prefWidth="139.0">
+               </cursor>
+            </Spinner>
+            <Spinner fx:id="repTimerSpinner" layoutX="595.0" layoutY="467.0" prefHeight="44.0" prefWidth="124.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Spinner>
-            <Spinner fx:id="studyTimerSpinner" layoutX="156.0" layoutY="500.0" prefHeight="43.0" prefWidth="139.0" style="-fx-background-radius: 0; -fx-background-color: FFFFFF;">
+               </cursor>
+            </Spinner>
+            <Spinner fx:id="studyTimerSpinner" layoutX="174.0" layoutY="467.0" prefHeight="44.0" prefWidth="124.0" style="-fx-background-radius: 0; -fx-background-color: FFFFFF;">
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Spinner>
-            <Text layoutX="425.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vila">
+               </cursor>
+            </Spinner>
+            <Text layoutX="432.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vila">
                <font>
-                  <Font name="Georgia" size="14.0" />
-               </font></Text>
-            <Text layoutX="611.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repetitioner">
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="607.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repetitioner">
                <font>
-                  <Font name="Georgia" size="14.0" />
-               </font></Text>
-            <Text layoutX="205.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studera">
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="205.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studera">
                <font>
-                  <Font name="Georgia" size="14.0" />
-               </font></Text>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Text>
             <Circle fx:id="HelpButton" fill="WHITE" layoutX="46.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="25.0" stroke="WHITE" strokeType="INSIDE">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Circle>
+               </cursor>
+            </Circle>
             <Text layoutX="41.0" layoutY="590.0" onMouseClicked="#onClickGoToHelp" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
                <font>
                   <Font name="Georgia" size="24.0" />
@@ -115,7 +123,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Text>
-            <Button fx:id="startTimerButton" layoutX="389.0" layoutY="573.0" mnemonicParsing="false" onMouseClicked="#onClickStartTimer" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Starta">
+            <Button fx:id="startTimerButton" layoutX="382.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#onClickStartTimer" prefHeight="44.0" prefWidth="131.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Starta">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
@@ -123,14 +131,15 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <font>
-                  <Font name="Georgia" size="18.0" />
-               </font></Button>
-            <Button layoutX="858.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#onCLickGoToTips" prefHeight="64.0" prefWidth="64.0" style="-fx-background-radius: 100; -fx-background-color: FFFFFF;">
+                  <Font name="Georgia" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="tipsbutton" layoutX="821.0" layoutY="114.0" mnemonicParsing="false" onMouseClicked="#onCLickGoToTips" prefHeight="90.0" prefWidth="92.0" style="-fx-background-radius: 100; -fx-background-color: FFFFFF;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <graphic>
-                  <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/idea-light-bulb-pencil-drawing.png" />
                      </image>

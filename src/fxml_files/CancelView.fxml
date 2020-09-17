@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="transparentAnchorpane" prefHeight="624.0" prefWidth="936.0" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CancelController">
    <children>
-      <AnchorPane layoutX="173.0" layoutY="175.0" prefHeight="236.0" prefWidth="590.0" style="-fx-background-color: #DBEFF2;">
+      <AnchorPane layoutX="173.0" layoutY="175.0" prefHeight="236.0" prefWidth="590.0" style="-fx-background-color: #DBEFF2;" stylesheets="@../StuderaMera.css">
          <children>
             <Text layoutX="127.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Är du säker på att du vill avbryta?">
                <font>
@@ -21,7 +21,7 @@
                <font>
                   <Font name="Georgia" size="13.0" />
                </font></Text>
-            <Button layoutX="149.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#onCLickYesButton" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Ja">
+            <Button fx:id="yescancelbutton" layoutX="149.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#onCLickYesButton" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Ja">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
@@ -32,7 +32,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="383.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#onClickNoButton" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Nej">
+            <Button fx:id="nocancelbutton" layoutX="383.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#onClickNoButton" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Nej">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
@@ -43,7 +43,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label layoutX="567.0" layoutY="-1.0" onMouseClicked="#onClickNoButton" prefHeight="44.0" prefWidth="18.0" text="X" textFill="WHITE">
+            <Label fx:id="nocancelbutton" layoutX="567.0" layoutY="-1.0" onMouseClicked="#onClickNoButton" prefHeight="44.0" prefWidth="18.0" text="X" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
