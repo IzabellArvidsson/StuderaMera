@@ -228,7 +228,13 @@
       <option name="presentableId" value="LOCAL−00016" />
       <updated>1600260444046</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL−00017" summary="in progress of making the calender">
+      <created>1600348667307</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1600348667307</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -264,7 +270,8 @@
     <MESSAGE value="Authors:Hanna and Iza. Created help view and added controller class for the fxml-file. You can go from timerview to help and go back. The &quot;go back&quot; method needs to be fixed so it can be applied to every controller-class." />
     <MESSAGE value="Adding fxml and controller + some functions for buttons" />
     <MESSAGE value="small fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fixes" />
+    <MESSAGE value="in progress of making the calender" />
+    <option name="LAST_COMMIT_MESSAGE" value="in progress of making the calender" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599639072526">
