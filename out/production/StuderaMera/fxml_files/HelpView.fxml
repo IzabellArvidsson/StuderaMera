@@ -24,9 +24,9 @@
 =======
 <AnchorPane prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HelpViewController">
    <children>
-      <AnchorPane prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;">
+      <AnchorPane prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" stylesheets="@../StuderaMera.css">
          <children>
-            <Text fill="WHITE" layoutX="28.0" layoutY="63.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera">
+            <Text fx:id="StuderaMera" fill="WHITE" layoutX="28.0" layoutY="63.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera">
                <font>
                   <Font name="Georgia" size="38.0" />
 >>>>>>> origin/master
@@ -49,7 +49,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Text>
-            <Button layoutX="780.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#onClickBackButton" prefHeight="44.0" prefWidth="112.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
+            <Button fx:id="BackButton" layoutX="780.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#onClickBackButton" prefHeight="44.0" prefWidth="112.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
