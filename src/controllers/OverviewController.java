@@ -19,7 +19,7 @@ public class OverviewController extends AnchorPane{
     @FXML private AnchorPane calendarPane;
 
     public void onClickToCalendar(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent toCalendarParent = FXMLLoader.load(getClass().getResource("fxml_files/Calendar.fxml"));
+        Parent toCalendarParent = FXMLLoader.load(getClass().getResource("/fxml_files/Calendar.fxml"));
         Scene toCalendarScene = new Scene(toCalendarParent);
 
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
