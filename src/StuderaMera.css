@@ -4,6 +4,6 @@
   -fx-font-size: 15pt ;
 }
 
-#StuderaMera:hover {
+#StuderaMera,#HelpButton,#BackButton:hover {
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
 }

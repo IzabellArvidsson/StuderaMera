@@ -49,9 +49,9 @@
                </font></Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="setTimerView" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;">
+      <AnchorPane fx:id="setTimerView" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;" stylesheets="@../StuderaMera.css">
          <children>
-            <AnchorPane prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;">
+            <AnchorPane prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" stylesheets="@../StuderaMera.css">
                <children>
                   <Button fx:id="startplanbutton" layoutX="770.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#onClickStartPlanning" prefHeight="43.0" prefWidth="131.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Börja Planera">
                      <effect>
@@ -63,7 +63,7 @@
                      <font>
                         <Font name="Georgia" size="14.0" />
                      </font></Button>
-                  <Text fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="232.96403884887695">
+                  <Text fx:id="StuderaMera" fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="232.96403884887695">
                      <font>
                         <Font name="Georgia" size="38.0" />
                      </font>
@@ -100,7 +100,7 @@
                <font>
                   <Font name="Georgia" size="14.0" />
                </font></Text>
-            <Circle fx:id="helpButton" fill="WHITE" layoutX="46.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="25.0" stroke="WHITE" strokeType="INSIDE">
+            <Circle fx:id="HelpButton" fill="WHITE" layoutX="46.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="25.0" stroke="WHITE" strokeType="INSIDE">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
