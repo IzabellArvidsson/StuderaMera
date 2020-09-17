@@ -21,7 +21,7 @@ public class FirstSideController {
 
 
     public void onClickStartStudy(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml_files/TimerView.fxml")));
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/TimerView.fxml"));
         Scene timerViewScene = new Scene(timerViewParent);
 
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
@@ -30,7 +30,7 @@ public class FirstSideController {
     }
 
     public void onClickStartPlaning(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent planOverviewParent = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml_files/PlanOverview.fxml")));
+        Parent planOverviewParent = FXMLLoader.load(getClass().getResource("/fxml_files/PlanOverview.fxml"));
         Scene planOverviewScene = new Scene(planOverviewParent);
 
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();

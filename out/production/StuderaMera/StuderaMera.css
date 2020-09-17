@@ -6,3 +6,7 @@
 .root {
   -fx-font-size: 15pt ;
 }
+
+#transparentAnchorpane {
+    -fx-background-color: transparent;
+}

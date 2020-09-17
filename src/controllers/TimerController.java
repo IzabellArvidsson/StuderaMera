@@ -14,7 +14,6 @@ public class TimerController extends AnchorPane {
 
     @FXML private AnchorPane timerOnView;
     @FXML private AnchorPane TimerView;
-    @FXML private AnchorPane popupAnchorPane;
 
 
     public void onClickStartTimer () {
@@ -23,10 +22,10 @@ public class TimerController extends AnchorPane {
 
     public void onCLickStopButton (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         /*AnchorPane pane = FXMLLoader.load(getClass().getResource("CancelView.fxml"));
-        popupAnchorPane.getChildren().setAll(pane);
-        popupAnchorPane.toFront();*/
+        hhhh.getChildren().setAll(pane);
+        hhhh.toFront();*/
 
-        Parent timerViewParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml_files/CancelView.fxml"));
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/CancelView.fxml"));
         Scene timerViewScene = new Scene(timerViewParent);
 
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
@@ -35,7 +34,7 @@ public class TimerController extends AnchorPane {
     }
 
     public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml_files/HelpView.fxml"));
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/HelpView.fxml"));
         Scene timerViewScene = new Scene(timerViewParent);
 
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
