@@ -16,7 +16,7 @@ public class CalendarController extends AnchorPane {
     @FXML private Button backToOverviewButton;
 
     public void onClickBackToOverview(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent backToOverviewParent = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml_files/PlanOverview.fxml")));
+        Parent backToOverviewParent = FXMLLoader.load(getClass().getResource("/fxml_files/PlanOverview.fxml"));
         Scene backToOverviewScene = new Scene(backToOverviewParent);
 
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();

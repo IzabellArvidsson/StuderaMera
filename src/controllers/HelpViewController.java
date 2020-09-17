@@ -13,7 +13,7 @@ public class HelpViewController {
 
     @FXML
     private void onClickBackButton (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml_files/TimerView.fxml"));
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/TimerView.fxml"));
         Scene timerViewScene = new Scene(timerViewParent);
 
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
@@ -21,5 +21,14 @@ public class HelpViewController {
         window.show();
     }
 
+    @FXML
+    private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
+    }
 
 }

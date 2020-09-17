@@ -17,9 +17,9 @@
             <Image url="@../resources/Pennor.png" />
          </image>
       </ImageView>
-      <Text fill="#f5f4f4" layoutX="517.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kom igång med StuderaMera" textAlignment="CENTER" wrappingWidth="333.33673095703125">
+      <Text fill="#f5f4f4" layoutX="480.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kom igång med StuderaMera" textAlignment="CENTER" wrappingWidth="374.13671875">
          <font>
-            <Font name="Arial" size="48.0" />
+            <Font name="Georgia" size="64.0" />
          </font>
          <effect>
             <DropShadow color="#919090" />
@@ -27,15 +27,7 @@
       </Text>
       <Button fx:id="startstudybutton" layoutX="146.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#onClickStartStudy" prefHeight="126.0" prefWidth="216.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Börja studera" wrapText="true">
          <font>
-            <Font size="22.0" />
-         </font>
-         <effect>
-            <DropShadow color="#919090" />
-         </effect>
-      </Button>
-      <Button fx:id="startplanbutton" layoutX="541.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#onClickStartPlaning" prefHeight="126.0" prefWidth="216.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Börja planera" wrapText="true">
-         <font>
-            <Font size="22.0" />
+            <Font name="Georgia" size="24.0" />
          </font>
          <effect>
             <DropShadow color="#919090" />
@@ -44,25 +36,42 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Text fill="WHITE" layoutX="419.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ny användare?">
+      <Button fx:id="startplanbutton" layoutX="541.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#onClickStartPlaning" prefHeight="126.0" prefWidth="216.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Börja planera" wrapText="true">
          <font>
-            <Font size="15.0" />
+            <Font name="Georgia" size="24.0" />
          </font>
-      </Text>
-      <Text fx:id="newuser" fill="WHITE" layoutX="440.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck här" underline="true">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Circle fill="WHITE" layoutX="51.0" layoutY="563.0" radius="26.0" stroke="WHITE" strokeType="INSIDE">
          <effect>
             <DropShadow color="#919090" />
          </effect>
-      </Circle>
-      <Text layoutX="46.0" layoutY="572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="WHITE" layoutX="399.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ny användare?">
          <font>
-            <Font size="24.0" />
+            <Font name="Georgia" size="18.0" />
          </font>
+      </Text>
+      <Text fx:id="newuser" fill="WHITE" layoutX="430.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck här" underline="true">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Text>
+      <Circle fill="WHITE" layoutX="51.0" layoutY="563.0" onMouseClicked="#onClickGoToHelp" radius="26.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow color="#919090" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Text layoutX="46.0" layoutY="572.0" onMouseClicked="#onClickGoToHelp" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Text>
    </children>
 </AnchorPane>
