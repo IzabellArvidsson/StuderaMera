@@ -5,22 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 import java.io.IOException;
-import java.util.Objects;
 
-public class FirstSideController {
+public class TipsViewController {
 
-    @FXML private Button startstudybutton;
-    @FXML private Button startplanbutton;
-    @FXML private Text newuser;
-    @FXML private ImageView pens;
-
-
-    public void onClickStartStudy(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    @FXML
+    private void onClickBackButton (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/TimerView.fxml"));
         Scene timerViewScene = new Scene(timerViewParent);
 
@@ -29,12 +21,13 @@ public class FirstSideController {
         window.show();
     }
 
-    public void onClickStartPlaning(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent planOverviewParent = FXMLLoader.load(getClass().getResource("/fxml_files/PlanOverview.fxml"));
-        Scene planOverviewScene = new Scene(planOverviewParent);
+    @FXML
+    private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
 
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(planOverviewScene);
+        window.setScene(timerViewScene);
         window.show();
     }
 
@@ -46,4 +39,6 @@ public class FirstSideController {
         window.setScene(timerViewScene);
         window.show();
     }
+
+
 }

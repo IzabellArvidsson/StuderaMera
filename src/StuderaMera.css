@@ -1,12 +1,9 @@
 
-.text-normal {
-    -fx-font-family: "Georgia";
-}
 
 .root {
   -fx-font-size: 15pt ;
 }
 
-#transparentAnchorpane {
-    -fx-background-color: transparent;
+#StuderaMera:hover {
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
 }

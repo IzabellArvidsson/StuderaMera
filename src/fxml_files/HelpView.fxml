@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.effect.DropShadow?>
@@ -12,18 +13,27 @@
    <children>
       <AnchorPane prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;">
          <children>
-            <Text fill="WHITE" layoutX="28.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera">
+            <Text fill="WHITE" layoutX="28.0" layoutY="63.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera">
                <font>
                   <Font name="Georgia" size="38.0" />
                </font>
                <effect>
                   <DropShadow color="#919090" />
                </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Text>
             <Button layoutX="780.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#onClickBackButton" prefHeight="44.0" prefWidth="112.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
             </Button>
          </children>
       </AnchorPane>
@@ -34,16 +44,33 @@
       </Circle>
       <Text layoutX="63.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
          <font>
-            <Font size="64.0" />
+            <Font name="Georgia" size="64.0" />
          </font>
       </Text>
       <Text layoutX="252.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Här kan du få svar på vanliga frågor som kan uppkomma. " textAlignment="CENTER" wrappingWidth="431.93988037109375">
          <font>
-            <Font size="30.0" />
+            <Font name="Georgia" size="30.0" />
          </font>
       </Text>
-      <Text layoutX="315.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Om du inte hittar svaret på frågan kan du kontakta oss. Kontaktuppgifter hittar du nedan." textAlignment="CENTER" wrappingWidth="306.0" />
-    <TitledPane animated="false" layoutX="64.0" layoutY="427.0" prefHeight="46.0" prefWidth="734.0" style="-fx-background-color: FFFFFF;" text="Kontakt" />
-    <TitledPane animated="false" layoutX="63.0" layoutY="381.0" prefHeight="46.0" prefWidth="734.0" text="Vanliga frågor" />
+      <Text layoutX="315.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Om du inte hittar svaret på frågan kan du kontakta oss. Kontaktuppgifter hittar du nedan." textAlignment="CENTER" wrappingWidth="306.0">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font></Text>
+    <TitledPane animated="false" layoutX="64.0" layoutY="427.0" prefHeight="46.0" prefWidth="734.0" style="-fx-background-color: FFFFFF;" text="Kontakt">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TitledPane>
+    <TitledPane animated="false" layoutX="63.0" layoutY="381.0" prefHeight="46.0" prefWidth="734.0" style="-fx-background-color: #FFFFFF;" text="Vanliga frågor">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TitledPane>
    </children>
 </AnchorPane>
