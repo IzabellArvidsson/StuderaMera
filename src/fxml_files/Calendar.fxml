@@ -36,7 +36,7 @@
                         <DropShadow color="#919090" />
                      </effect>
                      <font>
-                        <Font size="17.0" />
+                        <Font name="Georgia" size="19.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -54,7 +54,7 @@
             </Circle>
             <Text layoutX="40.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
                <font>
-                  <Font size="35.0" />
+                  <Font name="Georgia" size="38.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -90,7 +90,7 @@
             </Circle>
             <Text layoutX="29.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+" wrappingWidth="40.208980560302734">
                <font>
-                  <Font size="60.0" />
+                  <Font name="Georgia" size="63.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -103,7 +103,7 @@
                      <children>
                         <Text layoutX="16.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Måndag">
                            <font>
-                              <Font size="19.0" />
+                              <Font name="Georgia" size="20.0" />
                            </font>
                         </Text>
                      </children>
@@ -112,7 +112,7 @@
                      <children>
                         <Text layoutX="23.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tisdag">
                            <font>
-                              <Font size="19.0" />
+                              <Font name="Georgia" size="20.0" />
                            </font>
                         </Text>
                      </children>
@@ -121,7 +121,7 @@
                      <children>
                         <Text layoutX="18.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onsdag">
                            <font>
-                              <Font size="19.0" />
+                              <Font name="Georgia" size="20.0" />
                            </font>
                         </Text>
                      </children>
@@ -130,7 +130,7 @@
                      <children>
                         <Text layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Torsdag">
                            <font>
-                              <Font size="19.0" />
+                              <Font name="Georgia" size="20.0" />
                            </font>
                         </Text>
                      </children>
@@ -139,7 +139,7 @@
                      <children>
                         <Text layoutX="22.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fredag">
                            <font>
-                              <Font size="19.0" />
+                              <Font name="Georgia" size="20.0" />
                            </font>
                         </Text>
                      </children>
@@ -148,7 +148,7 @@
                      <children>
                         <Text layoutX="19.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lördag ">
                            <font>
-                              <Font size="19.0" />
+                              <Font name="Georgia" size="20.0" />
                            </font>
                         </Text>
                      </children>
@@ -157,7 +157,7 @@
                      <children>
                         <Text layoutX="18.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Söndag">
                            <font>
-                              <Font size="19.0" />
+                              <Font name="Georgia" size="20.0" />
                            </font>
                         </Text>
                      </children>
