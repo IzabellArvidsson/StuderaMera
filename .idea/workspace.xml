@@ -23,19 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="Connectar startsidan till timersidan">
+      <change afterPath="$PROJECT_DIR$/src/fxml_files/firstSideView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/StuderaMera.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/CancelView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/CancelView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/HelpView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/TimerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/TipsView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/firstSideView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/StuderaMera.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/TimerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/TimerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/CancelView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/CancelView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/HelpView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/TimerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/TipsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Timer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,19 +224,7 @@
       <option name="presentableId" value="LOCAL−00016" />
       <updated>1600343949233</updated>
     </task>
-    <task id="LOCAL−00017" summary="Something wrong. Trying again">
-      <created>1600344681925</created>
-      <option name="number" value="LOCAL−00017" />
-      <option name="presentableId" value="LOCAL−00017" />
-      <updated>1600344681925</updated>
-    </task>
-    <task id="LOCAL−00018" summary="Fixing a small problem in OverviewController">
-      <created>1600344812933</created>
-      <option name="number" value="LOCAL−00018" />
-      <option name="presentableId" value="LOCAL−00018" />
-      <updated>1600344812933</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -273,10 +259,7 @@
     <MESSAGE value="Authors:Hanna and Iza. Created help view and added controller class for the fxml-file. You can go from timerview to help and go back. The &quot;go back&quot; method needs to be fixed so it can be applied to every controller-class." />
     <MESSAGE value="Authors: Hanna and Iza. Changed all the fxml-files to the same size" />
     <MESSAGE value="Authors: Hanna and Iza. Added fxml-file and controller for tips and connected all the buttons. Started with adding hover to different buttons for pliancy." />
-    <MESSAGE value="Something. Trying again" />
-    <MESSAGE value="Something wrong. Trying again" />
-    <MESSAGE value="Fixing a small problem in OverviewController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing a small problem in OverviewController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Authors: Hanna and Iza. Added fxml-file and controller for tips and connected all the buttons. Started with adding hover to different buttons for pliancy." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599639072526">
@@ -287,10 +270,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599571499643" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1600348583523">
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1600341016787">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600348583523" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600341016787" />
     <state x="551" y="277" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1600339133411">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -303,22 +286,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599638757517" />
-    <state width="1493" height="97" key="GridCell.Tab.0.bottom" timestamp="1600349896158">
+    <state width="1493" height="121" key="GridCell.Tab.0.bottom" timestamp="1600344452315">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600349896158" />
-    <state width="1493" height="97" key="GridCell.Tab.0.center" timestamp="1600349896158">
+    <state width="1493" height="121" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600344452315" />
+    <state width="1493" height="121" key="GridCell.Tab.0.center" timestamp="1600344452315">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600349896158" />
-    <state width="1493" height="97" key="GridCell.Tab.0.left" timestamp="1600349896158">
+    <state width="1493" height="121" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600344452315" />
+    <state width="1493" height="121" key="GridCell.Tab.0.left" timestamp="1600344452315">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600349896158" />
-    <state width="1493" height="97" key="GridCell.Tab.0.right" timestamp="1600349896158">
+    <state width="1493" height="121" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600344452315" />
+    <state width="1493" height="121" key="GridCell.Tab.0.right" timestamp="1600344452315">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="97" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600349896158" />
+    <state width="1493" height="121" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600344452315" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1599589054601">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -347,10 +330,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1599566720380" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600344817987">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600343954372">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600344817987" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600343954372" />
     <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600070035327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
