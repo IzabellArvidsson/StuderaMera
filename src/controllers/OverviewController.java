@@ -26,4 +26,32 @@ public class OverviewController extends AnchorPane{
         window.setScene(toCalendarScene);
         window.show();
     }
+
+    public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/HelpView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
+    }
+
+    @FXML
+    private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
+    }
+
+    public void onClickStartStudy(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/TimerView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
+    }
 }

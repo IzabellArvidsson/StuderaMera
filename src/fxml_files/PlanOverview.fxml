@@ -12,15 +12,18 @@
    <children>
       <AnchorPane layoutX="7.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Text fill="WHITE" layoutX="25.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
+            <Text fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
                <font>
                   <Font name="Georgia" size="38.0" />
                </font>
                <effect>
                   <DropShadow color="#919090" />
                </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Text>
-            <Button layoutX="778.0" layoutY="31.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Börja studera">
+            <Button layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickStartStudy" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Börja studera">
                <effect>
                   <DropShadow color="#919090" />
                </effect>
@@ -33,7 +36,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <Circle fill="WHITE" layoutX="42.0" layoutY="582.0" radius="28.0" stroke="WHITE" strokeType="INSIDE">
+      <Circle fill="WHITE" layoutX="42.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="28.0" stroke="WHITE" strokeType="INSIDE">
          <effect>
             <DropShadow color="#919090" />
          </effect>
@@ -41,7 +44,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Text layoutX="33.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
+      <Text layoutX="33.0" layoutY="595.0" onMouseClicked="#onClickGoToHelp" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
          <font>
             <Font name="Georgia" size="38.0" />
          </font>
