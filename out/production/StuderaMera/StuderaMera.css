@@ -4,7 +4,6 @@
   -fx-font-size: 15pt ;
 }
 
-
 #startstudybutton:hover{
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
 }

@@ -5,11 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelpViewController {
+public class HelpViewController extends Controller {
+
+    /*@Override
+    public void onClickButton(MouseEvent mouseEvent, String fxml) throws IOException {
+        super.onClickButton(mouseEvent, "/fxml_files/TimerView.fxml");
+    }*/
 
     @FXML
     private void onClickBackButton (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
@@ -30,5 +36,4 @@ public class HelpViewController {
         window.setScene(timerViewScene);
         window.show();
     }
-
 }
