@@ -23,14 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/Calendar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/PlanOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CalendarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/OverviewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/Calendar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/PlanOverview.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +240,13 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1600350562625</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="adding to files and creating addToCalender functions">
+      <created>1600709722476</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1600709722476</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -282,7 +283,8 @@
     <MESSAGE value="Adding fxml and controller + some functions for buttons" />
     <MESSAGE value="small fixes" />
     <MESSAGE value="in progress of making the calender" />
-    <option name="LAST_COMMIT_MESSAGE" value="in progress of making the calender" />
+    <MESSAGE value="adding to files and creating addToCalender functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding to files and creating addToCalender functions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599639072526">
