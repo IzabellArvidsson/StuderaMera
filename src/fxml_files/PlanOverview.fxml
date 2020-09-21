@@ -75,7 +75,7 @@
          </cursor>
       </Button>
       <AnchorPane layoutX="134.0" layoutY="404.0" prefHeight="147.0" prefWidth="666.0" style="-fx-background-color: #ffffff;" />
-      <Button layoutX="391.0" layoutY="561.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: #FFFFFF;" text="Till att-göra listorna">
+      <Button layoutX="391.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#onClickToToDo" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: #FFFFFF;" text="Till att-göra listorna">
          <effect>
             <DropShadow color="#bfbbbb" />
          </effect>

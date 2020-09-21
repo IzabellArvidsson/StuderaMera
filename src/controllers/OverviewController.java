@@ -54,4 +54,14 @@ public class OverviewController extends AnchorPane{
         window.setScene(timerViewScene);
         window.show();
     }
+
+    @FXML
+    public void onClickToToDo(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        Parent toCalendarParent = FXMLLoader.load(getClass().getResource("/fxml_files/todo.fxml"));
+        Scene toCalendarScene = new Scene(toCalendarParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(toCalendarScene);
+        window.show();
+    }
 }
