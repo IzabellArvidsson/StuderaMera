@@ -16,10 +16,24 @@ public class TimerModel {
     @FXML private Button startplanbutton, startTimerButton;
     @FXML private Label timerLabel;
 
+    private int studyTime;
+    private int restTime;
+    private int repTime;
 
+    public void setStudyTimeSpinner(int studyTime) {
+        if(studyTime>0 && studyTime<=100){
+            this.studyTime = studyTime;
+        }
+    }
 
+    public void setRestTimerSpinner(int restTime) {
+        if(restTime>0 && restTime<= 40){
+            this.restTime = restTime;
+        }
+    }
 
-
-
-
+    public void setRepTimerSpinner(int repTime) {
+        if(repTime> 0 && repTime<=10)
+            this.repTime = repTime;
+    }
 }

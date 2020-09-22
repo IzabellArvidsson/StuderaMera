@@ -11,7 +11,7 @@ public class main extends Application {
    @Override
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml_files/firstSideView.fxml")));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
         stage.setTitle("StuderaMera");
         Scene scene = new Scene (root);
         stage.setResizable(false);
