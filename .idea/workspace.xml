@@ -23,13 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/TimerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/TimerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/TimerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/TimerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/TimerModel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +45,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="HannaSoderstrom &lt;57448560+hannasoderstrom@users.noreply.github.com&gt;" />
         <option value="Hanna och Iza" />
       </list>
     </option>
@@ -275,7 +272,13 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1600756885380</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="Utvidgat TimerController, plus tagit bort CancelView för istället ha den i de existerade fxml-filerna">
+      <created>1600785550091</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1600785550091</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -314,7 +317,8 @@
     <MESSAGE value="in progress of making the calender" />
     <MESSAGE value="adding to files and creating addToCalender functions" />
     <MESSAGE value="adding to files and creating to-do list" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding to files and creating to-do list" />
+    <MESSAGE value="Utvidgat TimerController, plus tagit bort CancelView för istället ha den i de existerade fxml-filerna" />
+    <option name="LAST_COMMIT_MESSAGE" value="Utvidgat TimerController, plus tagit bort CancelView för istället ha den i de existerade fxml-filerna" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599639072526">

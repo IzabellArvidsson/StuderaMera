@@ -14,41 +14,44 @@
 
 <AnchorPane fx:id="TimerView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TimerController">
    <children>
-      <AnchorPane fx:id="popupPane" opacity="0.34" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #000000;" />
-      <AnchorPane fx:id="cancelPane" prefHeight="263.0" prefWidth="490.0" style="-fx-background-color: #DBEFF2;">
+      <AnchorPane fx:id="cancelPane" opacity="0.68" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;">
          <children>
-            <Button fx:id="yescancelbutton" layoutX="69.0" layoutY="171.0" mnemonicParsing="false" onMouseClicked="#onCLickYesButton" prefHeight="21.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Ja">
-               <font>
-                  <Font name="Georgia" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow color="#909191" />
-               </effect>
-            </Button>
-            <Button fx:id="nocancelbutton" layoutX="312.0" layoutY="171.0" mnemonicParsing="false" onMouseClicked="#onClickNoButton" prefHeight="21.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Nej">
-               <font>
-                  <Font name="Georgia" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow color="#909191" />
-               </effect>
-            </Button>
-            <Text layoutX="69.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Är du säker på att du vill avsluta?">
-               <font>
-                  <Font name="Georgia" size="24.0" />
-               </font>
-            </Text>
-            <Text layoutX="102.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Inga ändringar kommer att sparas)">
-               <font>
-                  <Font name="Georgia" size="18.0" />
-               </font>
-            </Text>
+            <AnchorPane layoutX="258.0" layoutY="189.0" prefHeight="200.0" prefWidth="385.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Text layoutX="25.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Är du säker på att du vill avsluta?">
+                     <font>
+                        <Font name="Georgia" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="58.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Inga ändringar kommer att sparas)">
+                     <font>
+                        <Font name="Georgia" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="yescancelbutton" layoutX="69.0" layoutY="141.0" mnemonicParsing="false" onMouseClicked="#onCLickYesButton" prefHeight="21.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Ja">
+                     <font>
+                        <Font name="Georgia" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow color="#909191" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="nocancelbutton" layoutX="216.0" layoutY="141.0" mnemonicParsing="false" onMouseClicked="#onClickNoButton" prefHeight="21.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Nej">
+                     <font>
+                        <Font name="Georgia" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow color="#909191" />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="timerOnView" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;" styleClass="StuderaMera.css">

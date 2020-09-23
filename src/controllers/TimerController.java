@@ -1,17 +1,27 @@
 package controllers;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import models.TimerModel;
 
 import java.io.IOException;
@@ -20,12 +30,31 @@ import java.util.ResourceBundle;
 
 public class TimerController extends AnchorPane implements Initializable {
 
+    private static final Integer startTime = 10;
     TimerModel timerModel = new TimerModel();
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView;
     @FXML private Spinner studyTimerSpinner, restTimerSpinner, repTimerSpinner;
+    @FXML Button startTimerButton;
+    @FXML Label timerLabel;
+    private Timeline timeline;
+    private final IntegerProperty seconds = new SimpleIntegerProperty();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        timerLabel.textProperty().bind(seconds.asString());
+        startTimerButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                if(timeline != null){
+                    timeline.stop();
+                }
+                seconds.set(startTime);
+                timeline = new Timeline();
+                timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(startTime+1), new KeyValue(seconds,0)));
+                timeline.playFromStart();
+            }
+        });
 
         SpinnerValueFactory<Integer> studyFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(10, 100, 20, 5);
         this.studyTimerSpinner.setValueFactory(studyFactory);
