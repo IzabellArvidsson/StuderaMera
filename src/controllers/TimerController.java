@@ -53,6 +53,7 @@ public class TimerController extends AnchorPane implements Initializable {
                 timeline = new Timeline();
                 timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(startTime+1), new KeyValue(seconds,0)));
                 timeline.playFromStart();
+                System.out.println("hej");
             }
         });
 
