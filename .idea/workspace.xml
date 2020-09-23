@@ -22,7 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="Connectar startsidan till timersidan" />
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/TimerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/TimerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/TimerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/TimerModel.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +45,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="HannaSoderstrom &lt;57448560+hannasoderstrom@users.noreply.github.com&gt;" />
         <option value="Hanna och Iza" />
       </list>
     </option>
@@ -267,7 +272,19 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1600756885380</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="Connectar startsidan till timersidan">
+      <created>1600853294299</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1600853294299</updated>
+    </task>
+    <task id="LOCAL−00025" summary="påbörjat en basic timer med en bestämd tid">
+      <created>1600853413230</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1600853413230</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -296,7 +313,6 @@
     <MESSAGE value="Fick bild till startsidan" />
     <MESSAGE value="Försöker fixa scene builder" />
     <MESSAGE value="Finjusterat lite kod" />
-    <MESSAGE value="Connectar startsidan till timersidan" />
     <MESSAGE value="Försöker koppla ihop startsidan till timersidan" />
     <MESSAGE value="The startstudy button is now connected to the Timer.fxml file" />
     <MESSAGE value="Every fxml-file has different controllers now. The stop-button works. Changed some small design things. Created map for tests. Authors: Hanna and Iza" />
@@ -306,7 +322,9 @@
     <MESSAGE value="in progress of making the calender" />
     <MESSAGE value="adding to files and creating addToCalender functions" />
     <MESSAGE value="adding to files and creating to-do list" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding to files and creating to-do list" />
+    <MESSAGE value="Connectar startsidan till timersidan" />
+    <MESSAGE value="påbörjat en basic timer med en bestämd tid" />
+    <option name="LAST_COMMIT_MESSAGE" value="påbörjat en basic timer med en bestämd tid" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="73" key="#Project_Structure" timestamp="1600350786160">

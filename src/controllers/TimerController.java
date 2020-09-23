@@ -30,11 +30,15 @@ import java.util.ResourceBundle;
 
 public class TimerController extends AnchorPane implements Initializable {
 
-    private static final Integer startTime = 10;
-    TimerModel timerModel = new TimerModel();
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView;
-    @FXML private Spinner studyTimerSpinner, restTimerSpinner, repTimerSpinner;
-    @FXML Button startTimerButton;
+
+
+
+    private static Integer startTime;
+    TimerModel timerModel = new TimerModel();
+
+    @FXML public Spinner studyTimerSpinner, restTimerSpinner, repTimerSpinner;
+    @FXML Button startTimerButton, stopTimerButton;
     @FXML Label timerLabel;
     private Timeline timeline;
     private final IntegerProperty seconds = new SimpleIntegerProperty();
@@ -49,11 +53,11 @@ public class TimerController extends AnchorPane implements Initializable {
                 if(timeline != null){
                     timeline.stop();
                 }
+                startTime = (Integer) studyTimerSpinner.getValue();
                 seconds.set(startTime);
                 timeline = new Timeline();
                 timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(startTime+1), new KeyValue(seconds,0)));
                 timeline.playFromStart();
-                System.out.println("hej");
             }
         });
 
@@ -63,6 +67,7 @@ public class TimerController extends AnchorPane implements Initializable {
             @Override
             public void changed(ObservableValue<? extends Integer> observableValue, Integer integer, Integer newValue) {
                 timerModel.setStudyTimeSpinner(newValue);
+                System.out.println(newValue);
             }
         });
 
@@ -90,6 +95,7 @@ public class TimerController extends AnchorPane implements Initializable {
     }
 
     public void onCLickStopButton () {
+        timeline.pause();
         timerOnView.toFront();
         cancelPane.toFront();
     }
@@ -99,7 +105,8 @@ public class TimerController extends AnchorPane implements Initializable {
     }
 
     public void onClickNoButton () {
-       timerOnView.toFront();
+        timeline.play();
+        timerOnView.toFront();
     }
 
     public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
