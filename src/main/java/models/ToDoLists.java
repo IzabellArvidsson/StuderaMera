@@ -12,6 +12,11 @@ public class ToDoLists {
         this.tasks = tasks;
     }
 
+    public String getName() {
+        return name;
+    }
 
-
+    public int getTasks() {
+        return tasks;
+    }
 }

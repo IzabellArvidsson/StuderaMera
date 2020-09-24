@@ -1,15 +1,19 @@
 package controllers;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
+import models.ToDoLists;
 
 import java.io.IOException;
 
 public class listInToDoController extends AnchorPane {
 
+    @FXML  Text nameText;
 
-    public listInToDoController(){
+    public listInToDoController(ToDoLists toDoLists){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/listInToDo.fxml"));
         fxmlLoader.setController(this);
         fxmlLoader.setRoot(this);
@@ -18,11 +22,6 @@ public class listInToDoController extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
-    }
-
-    @Override
-    public Node getStyleableNode() {
-        return null;
+        nameText.setText(toDoLists.getName());
     }
 }

@@ -7,7 +7,7 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="619.0" style="-fx-background-color: #ffffff; -fx-border-color: #b8b8b8;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Handlar lista" wrappingWidth="393.57263946533203">
+      <Text fx:id="nameText" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Handlar lista" wrappingWidth="393.57263946533203">
          <font>
             <Font name="Georgia" size="20.0" />
          </font>

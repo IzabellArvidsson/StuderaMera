@@ -62,7 +62,7 @@ public class TodoController {
     @FXML
     private void addToDoList(ActionEvent event){
         ToDoLists toDoLists = new ToDoLists(nameTextField.getText(), task);
-        toDoListFlowPane.getChildren().add(new listInToDoController());
+        toDoListFlowPane.getChildren().add(new listInToDoController(toDoLists));
         closeAddToCalendar();
     }
 

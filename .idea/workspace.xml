@@ -23,15 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TodoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/listInToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/listInToDoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/ToDoLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ToDoLists.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/todo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/todo.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +273,13 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1600756885380</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="adding to files and creating to-do list">
+      <created>1600949462510</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1600949462510</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -423,9 +426,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/TodoController.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/listInToDoController.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
