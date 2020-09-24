@@ -1,18 +1,27 @@
 package controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import models.ToDoLists;
+
 import java.io.IOException;
 
 public class TodoController {
 
     @FXML private AnchorPane addToList;
+    @FXML private AnchorPane toDoListAnchorPane;
+    @FXML private TextField nameTextField;
+
+    String name = "Handlarlista";
+    int task = 3;
 
     public void onClickBackToOverview(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         Parent backToOverviewParent = FXMLLoader.load(getClass().getResource("/fxml_files/PlanOverview.fxml"));
@@ -50,7 +59,12 @@ public class TodoController {
         window.show();
     }
 
-
+    @FXML
+        private void addToDoList(ActionEvent event){
+            //ToDoLists toDoLists = new ToDoLists(name, task);
+            toDoListAnchorPane.getChildren().add(new listInToDoController());
+            closeAddToCalendar();
+        }
 
 
 }

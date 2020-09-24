@@ -109,7 +109,7 @@
                         <Font name="Georgia" size="18.0" />
                      </font>
                   </Text>
-                  <Button layoutX="432.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#closeAddToCalendar" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: #ffffff;" text="Lägg till / spara">
+                  <Button layoutX="432.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#addToDoList" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: #ffffff;" text="Lägg till / spara">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>
@@ -216,7 +216,7 @@
       </Text>
       <ScrollPane layoutX="150.0" layoutY="208.0" prefHeight="324.0" prefWidth="635.0">
          <content>
-            <AnchorPane prefHeight="326.0" prefWidth="619.0" style="-fx-background-color: #ffffff;" />
+            <AnchorPane fx:id="toDoListAnchorPane" prefHeight="326.0" prefWidth="619.0" style="-fx-background-color: #ffffff;" />
          </content>
       </ScrollPane>
    </children>

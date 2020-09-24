@@ -23,11 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/listInToDoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/ToDoLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/TimerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/TimerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/TimerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/TimerModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StuderaMera/fxml_files/todo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml_files/todo.fxml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +48,6 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="HannaSoderstrom &lt;57448560+hannasoderstrom@users.noreply.github.com&gt;" />
         <option value="Hanna och Iza" />
       </list>
     </option>
@@ -79,10 +81,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../grafiska gränsnitt/Lab3" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -272,19 +274,7 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1600756885380</updated>
     </task>
-    <task id="LOCAL−00024" summary="Connectar startsidan till timersidan">
-      <created>1600853294299</created>
-      <option name="number" value="LOCAL−00024" />
-      <option name="presentableId" value="LOCAL−00024" />
-      <updated>1600853294299</updated>
-    </task>
-    <task id="LOCAL−00025" summary="påbörjat en basic timer med en bestämd tid">
-      <created>1600853413230</created>
-      <option name="number" value="LOCAL−00025" />
-      <option name="presentableId" value="LOCAL−00025" />
-      <updated>1600853413230</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -313,6 +303,7 @@
     <MESSAGE value="Fick bild till startsidan" />
     <MESSAGE value="Försöker fixa scene builder" />
     <MESSAGE value="Finjusterat lite kod" />
+    <MESSAGE value="Connectar startsidan till timersidan" />
     <MESSAGE value="Försöker koppla ihop startsidan till timersidan" />
     <MESSAGE value="The startstudy button is now connected to the Timer.fxml file" />
     <MESSAGE value="Every fxml-file has different controllers now. The stop-button works. Changed some small design things. Created map for tests. Authors: Hanna and Iza" />
@@ -322,15 +313,9 @@
     <MESSAGE value="in progress of making the calender" />
     <MESSAGE value="adding to files and creating addToCalender functions" />
     <MESSAGE value="adding to files and creating to-do list" />
-    <MESSAGE value="Connectar startsidan till timersidan" />
-    <MESSAGE value="påbörjat en basic timer med en bestämd tid" />
-    <option name="LAST_COMMIT_MESSAGE" value="påbörjat en basic timer med en bestämd tid" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding to files and creating to-do list" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="73" key="#Project_Structure" timestamp="1600350786160">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="73" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1600350786160" />
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599639072526">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -351,22 +336,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599638757517" />
-    <state width="1493" height="47" key="GridCell.Tab.0.bottom" timestamp="1600350809256">
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1600094976387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="47" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600350809256" />
-    <state width="1493" height="47" key="GridCell.Tab.0.center" timestamp="1600350809255">
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600094976387" />
+    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1600094976387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="47" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600350809255" />
-    <state width="1493" height="47" key="GridCell.Tab.0.left" timestamp="1600350809255">
+    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600094976387" />
+    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1600094976387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="47" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600350809255" />
-    <state width="1493" height="47" key="GridCell.Tab.0.right" timestamp="1600350809256">
+    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600094976387" />
+    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1600094976387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="47" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600350809256" />
+    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600094976387" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1599589054601">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -387,10 +372,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1599562890373" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1600437930817">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1599818365572">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600437930817" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599818365572" />
     <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1599566720380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -441,8 +426,5 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StuderaMera1$main.ic" NAME="main Coverage Results" MODIFIED="1600350809200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
