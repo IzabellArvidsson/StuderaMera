@@ -2,10 +2,11 @@ package controllers;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class listInToDoController extends Node {
+public class listInToDoController extends AnchorPane {
 
 
     public listInToDoController(){
@@ -17,6 +18,7 @@ public class listInToDoController extends Node {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+
     }
 
     @Override
