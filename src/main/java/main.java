@@ -8,7 +8,6 @@ public class main extends Application {
 
    @Override
     public void start(Stage stage) throws Exception {
-
         Parent root = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
         stage.setTitle("StuderaMera");
         Scene scene = new Scene (root);
@@ -19,7 +18,5 @@ public class main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-
-        System.out.println("Hello world");
     }
 }
