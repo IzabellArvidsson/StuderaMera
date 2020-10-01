@@ -5,12 +5,12 @@ public class ToDoLists  {
 
     String name;
     String description;
-    int checklists;
+    ArrayList checklists;
     String time;
     String deadline;
 
 
-    public ToDoLists(String name, int checklists){
+    public ToDoLists(String name, ArrayList checklists){
         this.name = name;
         //this.description = description;
         this.checklists = checklists;
@@ -26,8 +26,13 @@ public class ToDoLists  {
         return description;
     }
 
-    public int getChecklists() {
+    public ArrayList getChecklists() {
+
         return checklists;
+    }
+
+    public int getNOfChecklists(){
+        return checklists.size();
     }
 
     public String getTime() {

@@ -23,20 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ToDoObservable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ToDoObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ToDo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ToDoListHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/listInToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listInToDoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/ToDoLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/todo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/listInToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listInToDoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/todo.fxml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -4,7 +4,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -12,6 +11,7 @@ import javafx.stage.Stage;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class TodoController implements ToDoObserver {
 
@@ -21,7 +21,7 @@ public class TodoController implements ToDoObserver {
     @FXML private FlowPane checklistFlowPane;
     @FXML private ScrollPane checklistScrollPane;
 
-    int checklist = 3;
+    ArrayList<TextField> nChecklist = new ArrayList<TextField>();
 
     private ToDoViewModel toDoViewModel = new ToDoViewModel();
 
@@ -67,8 +67,10 @@ public class TodoController implements ToDoObserver {
 
     @FXML
     private void onClickSaveToDoTask(){
-        toDoViewModel.addToDoLists(nameTextField.getText(), checklist, toDoListFlowPane);
+        toDoViewModel.addToDoLists(nameTextField.getText(), nChecklist, toDoListFlowPane);
         closeAddToCalendar();
+        nChecklist.clear();
+        nameTextField.clear();
     }
 
     @FXML
@@ -78,6 +80,7 @@ public class TodoController implements ToDoObserver {
         checklistFlowPane.setVgap(7);
         textField.setPrefSize(229,27);
         checklistScrollPane.vvalueProperty().bind(checklistFlowPane.heightProperty());
+        nChecklist.add(textField);
     }
 
     @Override

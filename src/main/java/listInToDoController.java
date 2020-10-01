@@ -22,7 +22,7 @@ public class listInToDoController extends AnchorPane {
             throw new RuntimeException(exception);
         }
         nameText.setText(toDoLists.getName());
-        numberOfChecklistsText.setText("0/" + toDoLists.getChecklists());
+        numberOfChecklistsText.setText("0/" + toDoLists.getNOfChecklists());
     }
 
 

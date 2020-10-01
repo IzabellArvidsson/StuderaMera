@@ -14,77 +14,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TodoController">
    <children>
-      <AnchorPane prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;">
-         <children>
-            <Text layoutX="361.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Din To-Do lista" underline="true">
-               <font>
-                  <Font name="Georgia" size="34.0" />
-               </font>
-            </Text>
-            <ScrollPane layoutX="158.0" layoutY="227.0" prefHeight="324.0" prefWidth="635.0">
-               <content>
-                  <FlowPane fx:id="toDoListFlowPane" prefHeight="322.0" prefWidth="619.0" />
-               </content>
-            </ScrollPane>
-         </children></AnchorPane>
-      <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Text fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
-               <font>
-                  <Font name="Georgia" size="38.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#919090" />
-               </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Text>
-            <Button layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
-               <effect>
-                  <DropShadow color="#919090" />
-               </effect>
-               <font>
-                  <Font name="Georgia" size="17.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-         </children>
-      </AnchorPane>
-      <Circle fill="WHITE" layoutX="48.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="28.0" stroke="WHITE" strokeType="INSIDE">
-         <effect>
-            <DropShadow color="#919090" />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Text layoutX="40.0" layoutY="596.0" onMouseClicked="#onClickGoToHelp" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
-         <font>
-            <Font size="35.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Text>
-      <Circle fill="WHITE" layoutX="50.0" layoutY="151.0" onMouseClicked="#openAddToCalendar" radius="35.0" stroke="WHITE" strokeType="INSIDE">
-         <effect>
-            <DropShadow color="#919090" />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Text layoutX="29.0" layoutY="168.0" onMouseClicked="#openAddToCalendar" strokeType="OUTSIDE" strokeWidth="0.0" text="+" wrappingWidth="40.208980560302734">
-         <font>
-            <Font size="60.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Text>
       <AnchorPane fx:id="addToList" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
             <AnchorPane layoutX="110.0" layoutY="75.0" prefHeight="474.0" prefWidth="715.0" style="-fx-background-color: DBEFF2;">
@@ -224,5 +153,76 @@
             </AnchorPane>
          </children>
       </AnchorPane>
+      <AnchorPane prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;">
+         <children>
+            <Text layoutX="361.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Din To-Do lista" underline="true">
+               <font>
+                  <Font name="Georgia" size="34.0" />
+               </font>
+            </Text>
+            <ScrollPane layoutX="158.0" layoutY="227.0" prefHeight="324.0" prefWidth="635.0">
+               <content>
+                  <FlowPane fx:id="toDoListFlowPane" prefHeight="322.0" prefWidth="619.0" />
+               </content>
+            </ScrollPane>
+         </children></AnchorPane>
+      <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
+               <font>
+                  <Font name="Georgia" size="38.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#919090" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Button layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
+               <effect>
+                  <DropShadow color="#919090" />
+               </effect>
+               <font>
+                  <Font name="Georgia" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Circle fill="WHITE" layoutX="48.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="28.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow color="#919090" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Text layoutX="40.0" layoutY="596.0" onMouseClicked="#onClickGoToHelp" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+      <Circle fill="WHITE" layoutX="50.0" layoutY="151.0" onMouseClicked="#openAddToCalendar" radius="35.0" stroke="WHITE" strokeType="INSIDE">
+         <effect>
+            <DropShadow color="#919090" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Text layoutX="29.0" layoutY="168.0" onMouseClicked="#openAddToCalendar" strokeType="OUTSIDE" strokeWidth="0.0" text="+" wrappingWidth="40.208980560302734">
+         <font>
+            <Font size="60.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
    </children>
 </AnchorPane>
