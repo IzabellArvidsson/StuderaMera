@@ -4,7 +4,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
@@ -16,20 +15,18 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TimerController extends AnchorPane implements Initializable, TimerObserver {
+public class TimerViewController extends AnchorPane implements Initializable, TimerObserver {
 
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView;
-    @FXML private Spinner studyTimerSpinner, restTimerSpinner, repTimerSpinner;
-    @FXML private Button startTimerButton, stopTimerButton;
-    @FXML Label timerLabel;
+    @FXML private Spinner<Integer> studyTimerSpinner, restTimerSpinner, repTimerSpinner;
+    @FXML Label timerLabel, restTimerLabel;
 
-    private TimerModel timerModel = new TimerModel();
+    private final TimerViewModel timerModel = new TimerViewModel();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-/*-----------------------------------Register this class ass an observer---------------------------------------------*/
-
+/*-----------------------------------Register this class as an observer----------------------------------------------*/
         timerModel.register(this);
 
 /*----------------------------------------Spinner initialize---------------------------------------------------------*/
@@ -45,12 +42,22 @@ public class TimerController extends AnchorPane implements Initializable, TimerO
     }
 
     @FXML
+    public void setStudyTime(){
+        timerModel.setStudyTimeSpinner(studyTimerSpinner.getValue());
+    }
+
+    @FXML
+    public void setRestTime() { timerModel.setRestTimerSpinner(restTimerSpinner.getValue()); }
+
+/*--------------------------------------------OnClick methods--------------------------------------------------------*/
+
+    @FXML
     public void onClickStartTimer() {
-        timerLabel.textProperty().bind(timerModel.seconds.asString());
-        if (timerModel.timeline != null) {
+        if (timerModel.studyTimeline != null) {
             timerModel.stopTimer();
         }
-        timerModel.startTimer();
+        timerLabel.setText(timerModel.timer.toString());
+        timerModel.startStudyTimer();
         timerOnView.toFront();
     }
 
@@ -65,7 +72,7 @@ public class TimerController extends AnchorPane implements Initializable, TimerO
     }
 
     public void onClickNoButton() {
-        timerModel.timeline.play();
+        timerModel.studyTimeline.play();
         timerOnView.toFront();
     }
 
@@ -106,20 +113,15 @@ public class TimerController extends AnchorPane implements Initializable, TimerO
         window.show();
     }
 
-    @FXML
-    public void setStudyTime(){
-        timerModel.setStudyTimeSpinner(studyTimerSpinner.getValue());
-    }
-
 /*----------------------------------------Observer pattern methods---------------------------------------------------*/
 
     @Override
     public void update(int time) {
-        try {
-            timerLabel.setText(String.valueOf(time));
-        } catch (Exception e){
-            System.out.println(e);
-        }
+        timerLabel.setText(String.valueOf(time));
     }
 
+    @Override
+    public void update(Timer timer) {
+        timerLabel.setText(timer.toString());
+    }
 }
