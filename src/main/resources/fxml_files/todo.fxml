@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TodoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TodoController">
    <children>
       <AnchorPane fx:id="addToList" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
@@ -37,7 +37,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <TextArea layoutX="51.0" layoutY="137.0" prefHeight="122.0" prefWidth="246.0" promptText="Lägg till beskrivning... ">
+                  <TextArea fx:id="descriptionTextArea" layoutX="51.0" layoutY="137.0" prefHeight="122.0" prefWidth="246.0" promptText="Lägg till beskrivning... ">
                      <font>
                         <Font name="Georgia" size="16.0" />
                      </font>
@@ -110,7 +110,7 @@
                         <Font name="Georgia" size="18.0" />
                      </font>
                   </Text>
-                  <Button layoutX="432.0" layoutY="411.0" mnemonicParsing="false" onAction="#addToDoList" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: #ffffff;" text="Lägg till / spara">
+                  <Button layoutX="432.0" layoutY="411.0" mnemonicParsing="false" onAction="#onClickSaveToDoTask" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: #ffffff;" text="Lägg till / spara">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>
@@ -131,10 +131,12 @@
                         <Font name="Georgia" size="20.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="51.0" layoutY="313.0" prefHeight="26.0" prefWidth="245.0" />
-                  <TextField layoutX="51.0" layoutY="346.0" prefHeight="26.0" prefWidth="245.0" />
-                  <TextField layoutX="51.0" layoutY="379.0" prefHeight="26.0" prefWidth="245.0" />
-                  <Circle fill="WHITE" layoutX="174.0" layoutY="428.0" onMouseClicked="#onClickGoToHelp" radius="16.0" stroke="WHITE" strokeType="INSIDE">
+                  <ScrollPane fx:id="checklistScrollPane" layoutX="51.0" layoutY="314.0" prefHeight="95.0" prefWidth="245.0" style="-fx-background-color: DBEFF2;">
+                     <content>
+                        <FlowPane fx:id="checklistFlowPane" prefHeight="92.0" prefWidth="229.0" style="-fx-background-color: DBEFF2;" stylesheets="@../ToDo.css" />
+                     </content>
+                  </ScrollPane>
+                  <Circle fill="WHITE" layoutX="174.0" layoutY="428.0" onMouseClicked="#addTextField" radius="16.0" stroke="WHITE" strokeType="INSIDE">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>
@@ -142,7 +144,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Circle>
-                  <Text layoutX="164.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+" y="-1.0">
+                  <Text layoutX="164.0" layoutY="438.0" onMouseClicked="#addTextField" strokeType="OUTSIDE" strokeWidth="0.0" text="+" y="-1.0">
                      <font>
                         <Font name="Georgia" size="31.0" />
                      </font>
@@ -151,7 +153,19 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;" />
+      <AnchorPane prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;">
+         <children>
+            <Text layoutX="361.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Din To-Do lista" underline="true">
+               <font>
+                  <Font name="Georgia" size="34.0" />
+               </font>
+            </Text>
+            <ScrollPane layoutX="158.0" layoutY="227.0" prefHeight="324.0" prefWidth="635.0">
+               <content>
+                  <FlowPane fx:id="toDoListFlowPane" prefHeight="322.0" prefWidth="619.0" />
+               </content>
+            </ScrollPane>
+         </children></AnchorPane>
       <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Text fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
@@ -170,7 +184,7 @@
                   <DropShadow color="#919090" />
                </effect>
                <font>
-                  <Font size="17.0" />
+                  <Font name="Georgia" size="17.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -194,11 +208,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Text>
-      <Text layoutX="344.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dina to-do listor" underline="true">
-         <font>
-            <Font name="Georgia" size="34.0" />
-         </font>
-      </Text>
       <Circle fill="WHITE" layoutX="50.0" layoutY="151.0" onMouseClicked="#openAddToCalendar" radius="35.0" stroke="WHITE" strokeType="INSIDE">
          <effect>
             <DropShadow color="#919090" />
@@ -215,10 +224,5 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Text>
-      <ScrollPane layoutX="150.0" layoutY="208.0" prefHeight="324.0" prefWidth="635.0">
-         <content>
-            <FlowPane fx:id="toDoListFlowPane" prefHeight="322.0" prefWidth="619.0" />
-         </content>
-      </ScrollPane>
    </children>
 </AnchorPane>
