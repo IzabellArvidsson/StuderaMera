@@ -32,7 +32,7 @@ public class TimerViewModel implements TimerObservable {
     }
 
     public void setRestTimerSpinner(Object restTime) {
-        this.restTime = (int) restTime;
+        this.restTime = minutes;
         notifyObserver();
     }
 
