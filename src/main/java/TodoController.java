@@ -1,29 +1,32 @@
-package controllers;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
-import models.ToDoLists;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-public class TodoController {
+public class TodoController implements ToDoObserver {
 
     @FXML private AnchorPane addToList;
     @FXML private FlowPane toDoListFlowPane;
     @FXML private TextField nameTextField;
+    @FXML private FlowPane checklistFlowPane;
+    @FXML private ScrollPane checklistScrollPane;
 
-    //String name = "Handlarlista";
-    int task = 3;
+    ArrayList<TextField> nChecklist = new ArrayList<TextField>();
 
-    public void onClickBackToOverview(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    private ToDoViewModel toDoViewModel = new ToDoViewModel();
+
+
+    public void onClickBackToOverview(MouseEvent mouseEvent) throws IOException {
         Parent backToOverviewParent = FXMLLoader.load(getClass().getResource("/fxml_files/PlanOverview.fxml"));
         Scene backToOverviewScene = new Scene(backToOverviewParent);
 
@@ -32,7 +35,7 @@ public class TodoController {
         window.show();
     }
 
-    public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    public void onClickGoToHelp (MouseEvent mouseEvent) throws IOException {
         Parent toDoParent = FXMLLoader.load(getClass().getResource("/fxml_files/HelpView.fxml"));
         Scene toDoScene = new Scene(toDoParent);
 
@@ -43,6 +46,9 @@ public class TodoController {
 
     public void openAddToCalendar(){
         addToList.toFront();
+        addTextField();
+        addTextField();
+        addTextField();
     }
 
     public void closeAddToCalendar(){
@@ -50,7 +56,7 @@ public class TodoController {
     }
 
     @FXML
-    private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    private void onClickStuderaMera (MouseEvent mouseEvent) throws IOException {
         Parent toDoParent = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
         Scene toDoScene = new Scene(toDoParent);
 
@@ -60,11 +66,25 @@ public class TodoController {
     }
 
     @FXML
-    private void addToDoList(ActionEvent event){
-        ToDoLists toDoLists = new ToDoLists(nameTextField.getText(), task);
-        toDoListFlowPane.getChildren().add(new listInToDoController(toDoLists));
+    private void onClickSaveToDoTask(){
+        toDoViewModel.addToDoLists(nameTextField.getText(), nChecklist, toDoListFlowPane);
         closeAddToCalendar();
+        nChecklist.clear();
+        nameTextField.clear();
     }
 
+    @FXML
+    private void addTextField(){
+        TextField textField = new TextField();
+        checklistFlowPane.getChildren().add(textField);
+        checklistFlowPane.setVgap(7);
+        textField.setPrefSize(229,27);
+        checklistScrollPane.vvalueProperty().bind(checklistFlowPane.heightProperty());
+        nChecklist.add(textField);
+    }
 
+    @Override
+    public void update(int checklist) {
+
+    }
 }
