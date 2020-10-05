@@ -1,3 +1,8 @@
+package ViewControllers;
+
+import Models.TimerModel;
+import ObserverInterfaces.TimerObserver;
+import ViewModels.TimerViewModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,22 +24,22 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
 
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView;
     @FXML private Spinner<Integer> studyTimerSpinner, restTimerSpinner, repTimerSpinner;
-    @FXML Label timerLabel, restTimerLabel;
+    @FXML Label timerLabel, restTimerLabel, repTimerLabel, totalRepTimerLabel;
 
-    private final TimerViewModel timerModel = new TimerViewModel();
+    private final TimerViewModel timerViewModel = new TimerViewModel();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 /*-----------------------------------Register this class as an observer----------------------------------------------*/
-        timerModel.register(this);
+        timerViewModel.register(this);
 
 /*----------------------------------------Spinner initialize---------------------------------------------------------*/
 
-        SpinnerValueFactory<Integer> studyFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(10, 100, 20, 5);
+        SpinnerValueFactory<Integer> studyFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 20, 5);
         this.studyTimerSpinner.setValueFactory(studyFactory);
 
-        SpinnerValueFactory<Integer> restFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(5, 40, 5, 5);
+        SpinnerValueFactory<Integer> restFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory( 1, 40, 5, 5);
         this.restTimerSpinner.setValueFactory(restFactory);
 
         SpinnerValueFactory<Integer> repFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1, 1);
@@ -43,36 +48,48 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
 
     @FXML
     public void setStudyTime(){
-        timerModel.setStudyTimeSpinner(studyTimerSpinner.getValue());
+        timerViewModel.setStudyTimeSpinner(studyTimerSpinner.getValue());
     }
 
     @FXML
-    public void setRestTime() { timerModel.setRestTimerSpinner(restTimerSpinner.getValue()); }
+    public void setRestTime() { timerViewModel.setRestTimerSpinner(restTimerSpinner.getValue()); }
+
+    @FXML
+    public void setRep() {
+        timerViewModel.setRepTimerSpinner(repTimerSpinner.getValue());
+    }
 
 /*--------------------------------------------OnClick methods--------------------------------------------------------*/
 
     @FXML
     public void onClickStartTimer() {
-        if (timerModel.studyTimeline != null) {
-            timerModel.stopTimer();
+        if (timerViewModel.studyTimeline != null) {
+            timerViewModel.stopTimer(timerViewModel.studyTimeline);
         }
-        timerLabel.setText(timerModel.timer.toString());
-        timerModel.startStudyTimer();
+        timerViewModel.setStudyTimeSpinner(studyTimerSpinner.getValue());
+        //timerViewModel.setRestTimerSpinner(restTimerSpinner.getValue());
+        //timerViewModel.setRepTimerSpinner(repTimerSpinner.getValue());
+
+        timerLabel.setText(timerViewModel.timerModel.toString());
+        //restTimerLabel.setText(timerViewModel.timerModel.toString()); //Denna blir konstig
+        //totalRepTimerLabel.setText(timerViewModel.timerModel.setRepNumber());
+
+        timerViewModel.startStudyTimer();
         timerOnView.toFront();
     }
 
     public void onCLickStopButton() {
-        timerModel.pauseTimer();
-        timerOnView.toFront();
+        timerViewModel.pauseTimer(timerViewModel.studyTimeline);
         cancelPane.toFront();
     }
 
     public void onCLickYesButton() {
+        timerViewModel.stopTimer(timerViewModel.studyTimeline);
         setTimerView.toFront();
     }
 
     public void onClickNoButton() {
-        timerModel.studyTimeline.play();
+        timerViewModel.studyTimeline.play();
         timerOnView.toFront();
     }
 
@@ -118,10 +135,14 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     @Override
     public void update(int time) {
         timerLabel.setText(String.valueOf(time));
+        //restTimerLabel.setText(String.valueOf(time));
     }
 
     @Override
-    public void update(Timer timer) {
+    public void update(TimerModel timer) {
         timerLabel.setText(timer.toString());
+        //restTimerLabel.setText(timer.toString());
     }
+
+
 }

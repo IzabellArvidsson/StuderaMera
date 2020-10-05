@@ -1,16 +1,1 @@
-controllers\FirstSideController.class
-main.class
-controllers\HelpViewController.class
-controllers\TimerController$1.class
-controllers\TipsViewController.class
-controllers\OverviewController.class
-controllers\listInToDoController.class
-controllers\TimerController$2.class
-controllers\TimerController$4.class
-controllers\TodoController.class
-controllers\TimerController$3.class
-models\ToDoLists.class
-models\TimerModel.class
-controllers\CalendarController.class
-controllers\Controller.class
-controllers\TimerController.class
+Models\TimerModel.class

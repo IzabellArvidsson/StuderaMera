@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="TimerView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimerViewController">
+<AnchorPane fx:id="TimerView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControllers.TimerViewController">
    <children>
       <AnchorPane fx:id="cancelPane" opacity="0.68" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;">
          <children>
@@ -112,7 +112,7 @@
                         <Font name="Georgia" size="24.0" />
                      </font>
                   </Text>
-                  <Label fx:id="repTimerLabel1" layoutX="683.0" layoutY="441.0" text="5">
+                  <Label fx:id="totalRepTimerLabel" layoutX="683.0" layoutY="441.0" text="5">
                      <font>
                         <Font name="Georgia" size="36.0" />
                      </font>
@@ -173,7 +173,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Spinner>
-            <Spinner fx:id="repTimerSpinner" layoutX="595.0" layoutY="467.0" prefHeight="44.0" prefWidth="124.0">
+            <Spinner fx:id="repTimerSpinner" layoutX="595.0" layoutY="467.0" onMouseClicked="#setRep" prefHeight="44.0" prefWidth="124.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
