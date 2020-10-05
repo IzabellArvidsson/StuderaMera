@@ -1,20 +1,14 @@
-package controllers;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class OverviewController extends AnchorPane{
-
-    @FXML private Button toCalendarButton;
-    @FXML private AnchorPane calendarPane;
+public class OverviewController {
 
     public void onClickToCalendar(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         Parent toCalendarParent = FXMLLoader.load(getClass().getResource("/fxml_files/Calendar.fxml"));
@@ -23,9 +17,10 @@ public class OverviewController extends AnchorPane{
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         window.setScene(toCalendarScene);
         window.show();
+
     }
 
-    public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    public void onClickGoToHelp(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/HelpView.fxml"));
         Scene timerViewScene = new Scene(timerViewParent);
 
@@ -35,7 +30,7 @@ public class OverviewController extends AnchorPane{
     }
 
     @FXML
-    private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    private void onClickStuderaMera(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
         Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
         Scene timerViewScene = new Scene(timerViewParent);
 
@@ -55,11 +50,12 @@ public class OverviewController extends AnchorPane{
 
     @FXML
     public void onClickToToDo(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent toCalendarParent = FXMLLoader.load(getClass().getResource("/fxml_files/todo.fxml"));
-        Scene toCalendarScene = new Scene(toCalendarParent);
+        Parent toToDoParent = FXMLLoader.load(getClass().getResource("/fxml_files/todo.fxml"));
+        Scene toToDoScene = new Scene(toToDoParent);
 
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(toCalendarScene);
+        window.setScene(toToDoScene);
         window.show();
     }
 }
+

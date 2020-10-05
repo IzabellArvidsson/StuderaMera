@@ -13,7 +13,7 @@ import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class TodoController implements ToDoObserver {
+public class TodoController {
 
     @FXML private AnchorPane addToList;
     @FXML private FlowPane toDoListFlowPane;
@@ -21,10 +21,8 @@ public class TodoController implements ToDoObserver {
     @FXML private FlowPane checklistFlowPane;
     @FXML private ScrollPane checklistScrollPane;
 
-    ArrayList<TextField> nChecklist = new ArrayList<TextField>();
 
-    private ToDoViewModel toDoViewModel = new ToDoViewModel();
-
+    private ArrayList<String> nChecklist = new ArrayList<>();
 
     public void onClickBackToOverview(MouseEvent mouseEvent) throws IOException {
         Parent backToOverviewParent = FXMLLoader.load(getClass().getResource("/fxml_files/PlanOverview.fxml"));
@@ -67,7 +65,8 @@ public class TodoController implements ToDoObserver {
 
     @FXML
     private void onClickSaveToDoTask(){
-        toDoViewModel.addToDoLists(nameTextField.getText(), nChecklist, toDoListFlowPane);
+       // writingSavedToDoLists();
+        ToDoViewModel.addToDoLists(nameTextField.getText(), nChecklist, toDoListFlowPane);
         closeAddToCalendar();
         nChecklist.clear();
         nameTextField.clear();
@@ -80,11 +79,13 @@ public class TodoController implements ToDoObserver {
         checklistFlowPane.setVgap(7);
         textField.setPrefSize(229,27);
         checklistScrollPane.vvalueProperty().bind(checklistFlowPane.heightProperty());
-        nChecklist.add(textField);
+        nChecklist.add(textField.toString());
     }
 
-    @Override
-    public void update(int checklist) {
 
+    @FXML
+    public void writingSavedToDoLists(){
+        ToDoViewModel.writeToDoList(toDoListFlowPane);
     }
+
 }

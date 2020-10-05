@@ -22,8 +22,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoListHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoListHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/listInToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listInToDoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -287,7 +298,13 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1601587771046</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL−00026" summary="adding to files and creating to-do lists functions">
+      <created>1601623125793</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1601623125793</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -380,5 +397,24 @@
     <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/TodoController.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ToDoViewModel.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1601661113390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
