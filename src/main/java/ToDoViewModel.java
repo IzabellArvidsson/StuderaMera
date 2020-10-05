@@ -1,9 +1,11 @@
+import ObserverInterfaces.ToDoObservable;
+import ObserverInterfaces.ToDoObserver;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 
 import java.util.ArrayList;
 
-public class ToDoViewModel implements ToDoObservable{
+public class ToDoViewModel implements ToDoObservable {
 
     private ArrayList<ToDoLists> allToDoLists = new ArrayList<>();
 

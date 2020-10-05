@@ -1,9 +1,13 @@
-public class Timer {
+package Models;
+
+public class TimerModel {
 
     private String minutes;
     private String seconds;
 
-    public Timer() {
+    private String repNumber;
+
+    public TimerModel() {
         this.minutes = "00";
         this.seconds = "00";
     }
@@ -30,6 +34,10 @@ public class Timer {
         } else {
             this.seconds = sec + "";
         }
+    }
+
+    public String setRepNumber() {
+        return this.repNumber = String.valueOf(repNumber);
     }
 
     public String toString() {

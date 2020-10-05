@@ -1,9 +1,10 @@
+package ViewModels;
+
+import ObserverInterfaces.TimerObservable;
+import ObserverInterfaces.TimerObserver;
+import Models.TimerModel;
 import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,43 +13,47 @@ public class TimerViewModel implements TimerObservable {
 
     private final List<TimerObserver> timerObservers = new ArrayList<>();
 
-    public final Timer timer = new Timer();
+    public TimerModel timerModel = new TimerModel();
 
     public Timeline studyTimeline = new Timeline();
     public Timeline restTimeLine = new Timeline();
 
-    private int studyTime = 20;
+    private int studyTime;
     private int restTime;
     private int repNumber;
 
-    private int minutes = 20;
-    private int seconds= 0;
+    private int minutes;
+    private int seconds;
+    private int reps;
 
-    /*------------------------------------------Spinner methods----------------------------------------------------------*/
+    /*------------------------------------------Spinner methods-------------------------------------------------------*/
 
     public void setStudyTimeSpinner(Object studyTime) {
-        this.studyTime = minutes;
+        this.studyTime = (int) studyTime;
+        this.minutes = this.studyTime;
         notifyObserver();
     }
 
     public void setRestTimerSpinner(Object restTime) {
-        this.restTime = minutes;
+        this.restTime = (int) restTime;
+        this.minutes = this.restTime;
         notifyObserver();
     }
 
     public void setRepTimerSpinner(Object repNumber) {
         this.repNumber = (int) repNumber;
+        this.reps = this.repNumber;
         notifyObserver();
     }
 
 /*------------------------------------------Timer methods------------------------------------------------------------*/
 
-    public void pauseTimer() {
-        studyTimeline.pause();
+    public void pauseTimer(Timeline timeLine) {
+        timeLine.pause();
     }
 
-    public void stopTimer() {
-        studyTimeline.stop();
+    public void stopTimer(Timeline timeline) {
+        timeline.stop();
     }
 
     public void startStudyTimer() {
@@ -63,15 +68,25 @@ public class TimerViewModel implements TimerObservable {
         restTimeLine.play();
     }
 
+    public void repNumberCountdown() {
+        if(repNumber != 0) {
+            repNumber--;
+        }
+    }
+
     public void countDown() {
         if (seconds == 0) {
-            minutes--;
+           this.minutes--;
             seconds = 59;
-        } else {
+        }
+        /*else if (minutes == 0 && seconds == 0){
+            repNumberCountdown();
+        }*/
+        else {
             seconds--;
         }
-        timer.setMinutes(minutes);
-        timer.setSeconds(seconds);
+        timerModel.setMinutes(this.minutes);
+        timerModel.setSeconds(seconds);
         notifyObserver();
     }
 
@@ -86,10 +101,8 @@ public class TimerViewModel implements TimerObservable {
     public void notifyObserver() {
         for(TimerObserver timerObserver : timerObservers) {
             timerObserver.update(studyTime);
-            timerObserver.update(timer);
-        }
-        if(studyTimeline == null) {
-            startRestTimer();
+           // timerObserver.update(restTime);
+            timerObserver.update(timerModel);
         }
     }
 }
