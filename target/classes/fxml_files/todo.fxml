@@ -133,7 +133,7 @@
                   </Text>
                   <ScrollPane fx:id="checklistScrollPane" layoutX="51.0" layoutY="314.0" prefHeight="95.0" prefWidth="245.0" style="-fx-background-color: DBEFF2;">
                      <content>
-                        <FlowPane fx:id="checklistFlowPane" prefHeight="92.0" prefWidth="229.0" style="-fx-background-color: DBEFF2;" stylesheets="@../ToDo.css" />
+                        <FlowPane fx:id="checklistFlowPane" prefHeight="92.0" prefWidth="229.0" style="-fx-background-color: DBEFF2;" />
                      </content>
                   </ScrollPane>
                   <Circle fill="WHITE" layoutX="174.0" layoutY="428.0" onMouseClicked="#addTextField" radius="16.0" stroke="WHITE" strokeType="INSIDE">
