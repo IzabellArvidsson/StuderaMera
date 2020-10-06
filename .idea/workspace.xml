@@ -22,12 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/IPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PaneFactory.java" afterDir="false" />
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
+      <change afterPath="$PROJECT_DIR$/src/main/java/PaneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoObservable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PaneFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PaneFactory.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +39,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -303,7 +302,13 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1601909104818</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL−00028" summary="adding to files and creating to-do lists functions">
+      <created>1601986817133</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1601986817133</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="UnknownFeatures">
