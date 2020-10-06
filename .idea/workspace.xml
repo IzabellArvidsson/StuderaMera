@@ -23,18 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/IPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PaneFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoListHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoListHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listInToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listInToDoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoObservable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoObserver.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +40,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -304,7 +297,13 @@
       <option name="presentableId" value="LOCAL−00026" />
       <updated>1601623125793</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL−00027" summary="adding to files and creating to-do lists functions">
+      <created>1601909104818</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1601909104818</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="UnknownFeatures">
