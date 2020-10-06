@@ -1,53 +1,73 @@
-import ObserverInterfaces.ToDoObservable;
-import ObserverInterfaces.ToDoObserver;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
-
+import java.io.*;
 import java.util.ArrayList;
 
-public class ToDoViewModel implements ToDoObservable {
 
-    private ArrayList<ToDoLists> allToDoLists = new ArrayList<>();
+public class ToDoViewModel {
 
+    private static ArrayList<ToDoLists> allToDoLists = new ArrayList<>();
 
-
-
-
-    void addToDoLists(String nameTextField, ArrayList<TextField> checklist, FlowPane toDoListFlowPane){
+     public static void addToDoLists(String nameTextField, ArrayList<String> checklist, FlowPane toDoListFlowPane){
         ToDoLists toDoLists = new ToDoLists(nameTextField, checkListEmpty(checklist));
         toDoListFlowPane.getChildren().add(new listInToDoController(toDoLists));
         addToDoList(toDoLists);
+        saveToDoList(allToDoLists);
     }
     
-    private ArrayList<TextField> checkListEmpty(ArrayList<TextField> checklist){
-        ArrayList<TextField> noEmptyChecklist = new ArrayList<>();
-        for (TextField textField: checklist) {
-            if(!textField.getText().equals("")){
-                noEmptyChecklist.add(textField);
+    private static ArrayList<String> checkListEmpty(ArrayList<String> checklist){
+        ArrayList<String> noEmptyChecklist = new ArrayList<>();
+        for (String string: checklist) {
+            if(!string.equals("")){
+                noEmptyChecklist.add(string);
             }
         }
         return noEmptyChecklist;
     }
 
-    private ArrayList<ToDoLists> addToDoList(ToDoLists toDoLists){
+    private static void addToDoList(ToDoLists toDoLists){
         allToDoLists.add(toDoLists);
-
-        return allToDoLists;
-    }
-
-    public ArrayList<ToDoLists> getAllToDoLists() {
-        return allToDoLists;
     }
 
 
 
-    @Override
-    public void addObserver(ToDoObserver toDoObserver) {
 
+
+
+
+
+
+
+    public static void saveToDoList(ArrayList<ToDoLists> toDoLists) {
+        try {
+            FileOutputStream fileOut = new FileOutputStream("ToDoLists.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(toDoLists);
+            out.close();
+            fileOut.close();
+            System.out.print("Serialized data is saved in ToDoLists.ser");
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
     }
 
-    @Override
-    public void notifyObserver() {
-
+    public static void writeToDoList(FlowPane toDoListFlowPane) {
+        try {
+            FileInputStream fileIn = new FileInputStream("ToDoLists.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            ArrayList<ToDoLists> toDoLists = (ArrayList<ToDoLists>) in.readObject();
+            for (int i = 0; i < toDoLists.size(); i++){
+                String name = toDoLists.get(i).getName();
+                ArrayList nChecklist = toDoLists.get(i).getChecklists();
+                addToDoLists(name, nChecklist, toDoListFlowPane);
+            }
+            in.close();
+            fileIn.close();
+        } catch (IOException i) {
+            i.printStackTrace();
+        } catch (ClassNotFoundException c) {
+            System.out.println("ToDoLists class not found");
+            c.printStackTrace();
+        }
     }
+
 }

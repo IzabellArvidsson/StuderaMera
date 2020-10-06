@@ -16,6 +16,7 @@ public class main extends Application {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+        //TodoController.writingSavedToDoLists();
     }
 
     public static void main(String[] args) {
