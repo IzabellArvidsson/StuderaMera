@@ -1,65 +1,44 @@
 package ViewControllers;
 
+import Factory.IPane;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class OverviewController extends AnchorPane{
+public class OverviewController implements IPane {
 
-    @FXML private Button toCalendarButton;
-    @FXML private AnchorPane calendarPane;
+    private PaneController paneController = new PaneController();
 
     public void onClickToCalendar(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent toCalendarParent = FXMLLoader.load(getClass().getResource("/fxml_files/Calendar.fxml"));
-        Scene toCalendarScene = new Scene(toCalendarParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(toCalendarScene);
-        window.show();
+        paneController.showCalendarPane();
     }
 
-    public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/HelpView.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+    public void onClickGoToHelp(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        paneController.showHelpPane();
     }
 
     @FXML
-    private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+    private void onClickStuderaMera(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+        paneController.showFirstViewPane();
     }
 
     public void onClickStartStudy(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/TimerView.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+        paneController.showTimerViewPane();
     }
 
     @FXML
     public void onClickToToDo(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent toCalendarParent = FXMLLoader.load(getClass().getResource("/fxml_files/todo.fxml"));
-        Scene toCalendarScene = new Scene(toCalendarParent);
+        paneController.showToDoPane();
+    }
 
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(toCalendarScene);
-        window.show();
+    @Override
+    public void initPane(PaneController paneController) {
+        this.paneController = paneController;
     }
 }
+

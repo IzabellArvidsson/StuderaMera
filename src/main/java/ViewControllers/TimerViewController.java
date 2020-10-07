@@ -1,5 +1,6 @@
 package ViewControllers;
 
+import Factory.IPane;
 import Models.TimerModel;
 import ObserverInterfaces.TimerObserver;
 import ViewModels.TimerViewModel;
@@ -20,13 +21,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TimerViewController extends AnchorPane implements Initializable, TimerObserver {
+public class TimerViewController extends AnchorPane implements IPane, Initializable, TimerObserver {
 
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView;
     @FXML private Spinner<Integer> studyTimerSpinner, restTimerSpinner, repTimerSpinner;
     @FXML Label timerLabel, restTimerLabel, repTimerLabel, totalRepTimerLabel;
 
     private final TimerViewModel timerViewModel = new TimerViewModel();
+
+    PaneController paneController = new PaneController();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -94,40 +97,20 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     }
 
     public void onClickGoToHelp(MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/HelpView.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+        paneController.showHelpPane();
     }
 
     public void onCLickGoToTips(MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/TipsView.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+        paneController.showTipsViewPane();
     }
 
     public void onClickStartPlanning(MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/PlanOverview.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+        paneController.showOverviewPane();
     }
 
     @FXML
     private void onClickStuderaMera(MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+        paneController.showFirstViewPane();
     }
 
 /*----------------------------------------Observer pattern methods---------------------------------------------------*/
@@ -145,4 +128,8 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     }
 
 
+    @Override
+    public void initPane(PaneController paneController) {
+        this.paneController = paneController;
+    }
 }

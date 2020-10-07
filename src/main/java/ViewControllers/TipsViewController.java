@@ -1,5 +1,6 @@
 package ViewControllers;
 
+import Factory.IPane;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,36 +10,27 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TipsViewController {
+public class TipsViewController implements IPane {
+
+    private PaneController paneController = new PaneController();
 
     @FXML
     private void onClickBackButton (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/TimerView.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+        paneController.showTimerViewPane();
     }
 
     @FXML
     private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+        paneController.showFirstViewPane();
     }
 
     public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/HelpView.fxml"));
-        Scene timerViewScene = new Scene(timerViewParent);
-
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(timerViewScene);
-        window.show();
+        paneController.showHelpPane();
     }
 
 
+    @Override
+    public void initPane(PaneController paneController) {
+        this.paneController = paneController;
+    }
 }
