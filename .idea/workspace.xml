@@ -23,48 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/PaneController.java" afterDir="false" />
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Models/TimerModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/StuderaMera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StuderaMera.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PaneFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PaneFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TimerObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObservable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TimerObserver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TimerViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoObservable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/FirstSideController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/FirstSideController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HelpViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/HelpViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/OverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TipsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TipsViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/Calendar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/HelpView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TipsView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/Calendar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/HelpView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,10 +87,9 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StuderaMera - kopia (3)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -434,11 +403,11 @@
       <option name="presentableId" value="LOCAL−00024" />
       <updated>1601397417660</updated>
     </task>
-    <task id="LOCAL−00025" summary="adding to files and creating to-do lists functions">
-      <created>1601587771046</created>
+    <task id="LOCAL−00025" summary="Author: Hanna and Iza. Created new packages. Started doing a few tests and added some things to the timer.">
+      <created>1601901862606</created>
       <option name="number" value="LOCAL−00025" />
       <option name="presentableId" value="LOCAL−00025" />
-      <updated>1601587771046</updated>
+      <updated>1601901862606</updated>
     </task>
     <task id="LOCAL−00026" summary="adding to files and creating to-do lists functions">
       <created>1601623125793</created>
@@ -458,8 +427,7 @@
       <option name="presentableId" value="LOCAL−00028" />
       <updated>1601986817133</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -498,7 +466,8 @@
     <MESSAGE value="adding to files and creating addToCalender functions" />
     <MESSAGE value="adding to files and creating to-do list" />
     <MESSAGE value="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview." />
+    <MESSAGE value="Author: Hanna and Iza. Created new packages. Started doing a few tests and added some things to the timer." />
+    <option name="LAST_COMMIT_MESSAGE" value="Author: Hanna and Iza. Created new packages. Started doing a few tests and added some things to the timer." />
   </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" timestamp="1601394976848">
@@ -509,10 +478,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601467529042" />
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599571499643">
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601995331377">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599571499643" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1601995331377" />
     <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1601897375897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -529,42 +498,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601388781748" />
-    <state x="520" y="110" key="FileChooserDialogImpl" timestamp="1601885355658">
+    <state x="520" y="110" key="FileChooserDialogImpl" timestamp="1602139827920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601885355658" />
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1601901676026">
+    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602139827920" />
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom" timestamp="1602228613194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1601901676026">
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602228613194" />
+    <state width="1493" height="150" key="GridCell.Tab.0.center" timestamp="1602228613194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1601901676026">
+    <state width="1493" height="150" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602228613194" />
+    <state width="1493" height="150" key="GridCell.Tab.0.left" timestamp="1602228613194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1601901676026">
+    <state width="1493" height="150" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602228613194" />
+    <state width="1493" height="150" key="GridCell.Tab.0.right" timestamp="1602228613194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1601888979475">
+    <state width="1493" height="150" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602228613194" />
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1602146684759">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601888979475" />
-    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1601888979474">
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602146684759" />
+    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1602146684759">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601888979474" />
-    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1601888979474">
+    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602146684759" />
+    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1602146684759">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601888979474" />
-    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1601888979474">
+    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602146684759" />
+    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1602146684759">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601888979474" />
+    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602146684759" />
     <state x="349" y="155" key="IDE.errors.dialog" timestamp="1601386531752">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -585,10 +554,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1599566720380" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601879194948">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601901876084">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601879194948" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601901876084" />
     <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600070035327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -597,10 +566,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1599813835479" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601879486032">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602162709407">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601879486032" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1602162709407" />
     <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1601897391998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -609,22 +578,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1599588987569" />
+    <state x="0" y="0" width="1267" height="810" key="dock-window-1" timestamp="1602227225507">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" width="1267" height="810" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1602227225507" />
     <state x="209" y="33" key="new project wizard" timestamp="1601552309732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1601552309732" />
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1601299456473">
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1602138693470">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1601299456473" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1602138693470" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1601393807202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601393807202" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601888602582">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601973543929">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601888602582" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601973543929" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -643,9 +616,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1601661113390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/StuderaMera$All_in_StuderaMera.ic" NAME="All in StuderaMera Coverage Results" MODIFIED="1601908910510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/StuderaMera1$main.ic" NAME="main Coverage Results" MODIFIED="1600350809200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1601390041179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>

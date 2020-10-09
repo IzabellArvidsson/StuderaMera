@@ -30,7 +30,7 @@ public class TimerViewModelTest {
     void startStudyTimer() {
         Timeline timeline = new Timeline();
         TimerViewModel timerViewModel = new TimerViewModel();
-        timerViewModel.startStudyTimer();
+        startStudyTimer();
         timeline = timerViewModel.studyTimeline;
         assertSame(timeline.getStatus(), Animation.Status.RUNNING);
     }
@@ -39,8 +39,8 @@ public class TimerViewModelTest {
     void startRestTimer() {
         Timeline timeline = new Timeline();
         TimerViewModel timerViewModel = new TimerViewModel();
-        timerViewModel.startRestTimer();
-        timeline = timerViewModel.restTimeLine;
+        //timerViewModel.startTimer(timerViewModel.restTimeLine);
+        //timeline = timerViewModel.restTimeLine;
         assertSame(timeline.getStatus(), Animation.Status.RUNNING);
     }
 

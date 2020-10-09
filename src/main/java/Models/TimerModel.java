@@ -4,12 +4,12 @@ public class TimerModel {
 
     private String minutes;
     private String seconds;
-
-    private String repNumber;
+    private String reps;
 
     public TimerModel() {
-        this.minutes = "00";
+        minutes = "00";
         this.seconds = "00";
+        this.reps = "0";
     }
 
     /* public String getMinutes() {
@@ -36,9 +36,7 @@ public class TimerModel {
         }
     }
 
-    public String setRepNumber() {
-        return this.repNumber = String.valueOf(repNumber);
-    }
+    public String stringOf() { return this.reps; }
 
     public String toString() {
         return this.minutes + ":" + this.seconds;
