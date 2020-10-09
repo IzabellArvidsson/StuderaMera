@@ -26,37 +26,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TodoViewModels/CheckTodoValid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models.ToDoLists.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Models.ToDoLists.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/IOnClickPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/IOnClickPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ToDoListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ToDoListModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObservable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObservable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/CalendarViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/CalendarViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TodoViewModels/ToDoViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/CalendarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/FirstSideController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/FirstSideView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/HelpViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/HelpView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/ListInToDoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/ListInToDoView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/OverviewView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/TimerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/TimerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/TipsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/TipsView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/TodoListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/TodoListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/HelpView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TipsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ViewControllers/TimerViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewControllers/TimerViewTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ViewModels/ToDoViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewModels/ToDoViewModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/HelpView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -540,45 +510,107 @@
     <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1603195523790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603195523790" />
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1602861923820" />
-    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1602861923820" />
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="496" y="115" key="RollbackChangesDialog" timestamp="1602861923820" />
-    <state x="496" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1602861923820" />
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1602861923820" />
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602861923820" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1602861923820" />
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602861923820" />
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602861923820" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1602861923820" />
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602861923820" />
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="209" y="33" key="new project wizard" timestamp="1602861923820" />
-    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1602861923820" />
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1602861923820" />
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602861923820" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601388781748" />
+    <state x="520" y="110" key="FileChooserDialogImpl" timestamp="1602139827920">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602139827920" />
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom" timestamp="1602233508014">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602233508014" />
+    <state width="1493" height="150" key="GridCell.Tab.0.center" timestamp="1602233508014">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602233508014" />
+    <state width="1493" height="150" key="GridCell.Tab.0.left" timestamp="1602233508014">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602233508014" />
+    <state width="1493" height="150" key="GridCell.Tab.0.right" timestamp="1602233508014">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602233508014" />
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1602146684759">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602146684759" />
+    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1602146684759">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602146684759" />
+    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1602146684759">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602146684759" />
+    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1602146684759">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602146684759" />
+    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1601386531752">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1601386531752" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1599562890373">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1599562890373" />
+    <state x="496" y="115" key="RollbackChangesDialog" timestamp="1601883785711">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="496" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601883785711" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1601885774457">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601885774457" />
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1599566720380">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1599566720380" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601901876084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601901876084" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600070035327">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1600070035327" />
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599813835479">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1599813835479" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602162709407">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1602162709407" />
+    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1601897391998">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1601897391998" />
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599588987569">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1599588987569" />
+    <state x="0" y="0" width="1267" height="810" key="dock-window-1" timestamp="1602227225507">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" width="1267" height="810" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1602227225507" />
+    <state x="209" y="33" key="new project wizard" timestamp="1601552309732">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1601552309732" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1602138693470">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1602138693470" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1601393807202">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601393807202" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601973543929">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601973543929" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
