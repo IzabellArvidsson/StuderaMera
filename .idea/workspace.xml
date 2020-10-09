@@ -23,33 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/PaneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/mainAnchorPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/IPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OverviewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PaneController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PaneFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/PaneFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoListHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoListHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ToDoLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/FirstSideController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/FirstSideController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/HelpViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/HelpViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/OverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TipsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TipsViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listInToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/listInToDoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/todo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/todo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -498,130 +477,68 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1601394976848">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1601394976848" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601467529042">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601467529042" />
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599571499643">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599571499643" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1601897375897">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601897375897" />
-    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1601887716129">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1601887716129" />
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601881243124">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1601881243124" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601388781748">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601388781748" />
-    <state x="520" y="110" key="FileChooserDialogImpl" timestamp="1601885355658">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601885355658" />
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1601901676026">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1601901676026">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1601901676026">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1601901676026">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1601888979475">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601888979475" />
-    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1601888979474">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601888979474" />
-    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1601888979474">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601888979474" />
-    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1601888979474">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601888979474" />
-    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1601386531752">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1601386531752" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1599562890373">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1599562890373" />
-    <state x="496" y="115" key="RollbackChangesDialog" timestamp="1601883785711">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="496" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601883785711" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1601885774457">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601885774457" />
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1599566720380">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1599566720380" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601879194948">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601879194948" />
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600070035327">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1600070035327" />
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599813835479">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1599813835479" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601879486032">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601879486032" />
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1601897391998">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1601897391998" />
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599588987569">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1599588987569" />
-    <state x="209" y="33" key="new project wizard" timestamp="1601552309732">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1601552309732" />
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1601299456473">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1601299456473" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1601393807202">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601393807202" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601888602582">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601888602582" />
+    <state x="249" y="0" key="#Project_Structure" />
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" />
+    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" />
+    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" />
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" />
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="520" y="110" key="FileChooserDialogImpl" />
+    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom" />
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="294" key="GridCell.Tab.0.center" />
+    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="294" key="GridCell.Tab.0.left" />
+    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="294" key="GridCell.Tab.0.right" />
+    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom" />
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="263" key="GridCell.Tab.1.center" />
+    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="263" key="GridCell.Tab.1.left" />
+    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="263" key="GridCell.Tab.1.right" />
+    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" />
+    <state x="349" y="155" key="IDE.errors.dialog" />
+    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" />
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="496" y="115" key="RollbackChangesDialog" />
+    <state x="496" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="249" y="0" key="SettingsEditor" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" />
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog" />
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" />
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" />
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" />
+    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" />
+    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" />
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" />
+    <state x="209" y="33" key="new project wizard" />
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="425" y="187" key="run.anything.popup" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

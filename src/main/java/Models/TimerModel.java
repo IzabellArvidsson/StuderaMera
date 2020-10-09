@@ -1,25 +1,22 @@
 package Models;
 
-public class TimerModel {
 
+
+public class TimerModel {
     private String minutes;
     private String seconds;
-
-    private String repNumber;
-
+    private String reps;
     public TimerModel() {
-        this.minutes = "00";
+        minutes = "00";
         this.seconds = "00";
+        this.reps = "0";
     }
-
     /* public String getMinutes() {
         return this.minutes;
     }
-
     public String getSeconds() {
         return this.seconds;
     }*/
-
     public void setMinutes(int min) {
         if (min < 10) {
             this.minutes =  String.valueOf(min);
@@ -27,7 +24,6 @@ public class TimerModel {
             this.minutes = min + "";
         }
     }
-
     public void setSeconds(int sec) {
         if (sec < 10) {
             this.seconds = String.valueOf(sec);
@@ -35,11 +31,7 @@ public class TimerModel {
             this.seconds = sec + "";
         }
     }
-
-    public String setRepNumber() {
-        return this.repNumber = String.valueOf(repNumber);
-    }
-
+    public String stringOf() { return this.reps; }
     public String toString() {
         return this.minutes + ":" + this.seconds;
     }
