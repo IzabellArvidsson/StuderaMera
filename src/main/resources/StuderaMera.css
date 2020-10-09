@@ -44,6 +44,10 @@
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
 }
 
+#understandButton:hover{
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+}
+
 .accordion .titled-pane > *.content {
     -fx-background-color: #DBEFF2;
     -fx-pref-height: 80.0;
