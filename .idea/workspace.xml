@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
-    </list>
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -399,11 +396,11 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1601901862606</updated>
     </task>
-    <task id="LOCAL−00026" summary="adding to files and creating to-do lists functions">
-      <created>1601623125793</created>
+    <task id="LOCAL−00026" summary="The timer is working. There still needs to be some small changes.">
+      <created>1602235719333</created>
       <option name="number" value="LOCAL−00026" />
       <option name="presentableId" value="LOCAL−00026" />
-      <updated>1601623125793</updated>
+      <updated>1602235719333</updated>
     </task>
     <task id="LOCAL−00027" summary="adding to files and creating to-do lists functions">
       <created>1601909104818</created>
@@ -417,7 +414,7 @@
       <option name="presentableId" value="LOCAL−00028" />
       <updated>1601986817133</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -457,7 +454,8 @@
     <MESSAGE value="adding to files and creating to-do list" />
     <MESSAGE value="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview." />
     <MESSAGE value="Author: Hanna and Iza. Created new packages. Started doing a few tests and added some things to the timer." />
-    <option name="LAST_COMMIT_MESSAGE" value="Author: Hanna and Iza. Created new packages. Started doing a few tests and added some things to the timer." />
+    <MESSAGE value="The timer is working. There still needs to be some small changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="The timer is working. There still needs to be some small changes." />
   </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" timestamp="1601394976848">
@@ -544,10 +542,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1599566720380" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601901876084">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602235926716">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601901876084" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602235926716" />
     <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600070035327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
