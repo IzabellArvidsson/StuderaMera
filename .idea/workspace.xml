@@ -26,6 +26,16 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/PaneController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/mainAnchorPane.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PaneController.java" afterDir="false" />
+    </list>
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview.">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Models/TimerModelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/StuderaMera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StuderaMera.iml" afterDir="false" />
+    </list>
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/StuderaMera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StuderaMera.iml" afterDir="false" />

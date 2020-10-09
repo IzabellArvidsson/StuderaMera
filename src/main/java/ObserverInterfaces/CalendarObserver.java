@@ -1,2 +1,4 @@
-package ObserverInterfaces;public interface CalendarObserver {
+package ObserverInterfaces;
+
+public interface CalendarObserver {
 }
