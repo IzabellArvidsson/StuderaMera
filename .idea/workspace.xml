@@ -24,17 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -502,22 +492,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602139827920" />
-    <state width="1493" height="150" key="GridCell.Tab.0.bottom" timestamp="1602228613194">
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom" timestamp="1602233508014">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602228613194" />
-    <state width="1493" height="150" key="GridCell.Tab.0.center" timestamp="1602228613194">
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602233508014" />
+    <state width="1493" height="150" key="GridCell.Tab.0.center" timestamp="1602233508014">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602228613194" />
-    <state width="1493" height="150" key="GridCell.Tab.0.left" timestamp="1602228613194">
+    <state width="1493" height="150" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602233508014" />
+    <state width="1493" height="150" key="GridCell.Tab.0.left" timestamp="1602233508014">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602228613194" />
-    <state width="1493" height="150" key="GridCell.Tab.0.right" timestamp="1602228613194">
+    <state width="1493" height="150" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602233508014" />
+    <state width="1493" height="150" key="GridCell.Tab.0.right" timestamp="1602233508014">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602228613194" />
+    <state width="1493" height="150" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602233508014" />
     <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1602146684759">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

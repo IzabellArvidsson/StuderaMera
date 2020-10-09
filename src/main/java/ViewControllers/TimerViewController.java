@@ -68,7 +68,8 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
 
     public void imageLoader() {
         int totalTime = studyTimerSpinner.getValue() * repTimerSpinner.getValue();
-        int divideTotalTime = totalTime / repTimerSpinner.getValue();
+        int numberOfImages = 7;
+        int divideTotalTime = totalTime / numberOfImages;
 
         if(timerLabel.getText().equals(String.valueOf(divideTotalTime))) {
             flowerChangingImage.getClass().getResource("/images/flower/plant_1.png");
