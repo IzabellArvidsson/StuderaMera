@@ -47,6 +47,16 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Text fill="WHITE" layoutX="399.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ny användare?">
+         <font>
+            <Font name="Georgia" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="newuser" fill="WHITE" layoutX="430.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tryck här" underline="true">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Text>
       <Circle fx:id="HelpButton" fill="WHITE" layoutX="51.0" layoutY="563.0" onMouseClicked="#onClickGoToHelp" radius="26.0" stroke="WHITE" strokeType="INSIDE">
          <effect>
             <DropShadow color="#919090" />

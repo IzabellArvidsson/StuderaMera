@@ -15,7 +15,6 @@
 
 <AnchorPane fx:id="TimerView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControllers.TimerViewController">
    <children>
-      <AnchorPane fx:id="popupPane" opacity="0.71" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: ffffff;" />
       <AnchorPane fx:id="cancelPane" opacity="0.68" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;">
          <children>
             <AnchorPane layoutX="258.0" layoutY="189.0" prefHeight="200.0" prefWidth="385.0" style="-fx-background-color: #FFFFFF;">
@@ -56,95 +55,88 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="failPane" opacity="0.82" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #ffffff;">
-         <children>
-            <Text layoutX="210.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du misslyckades med uppdraget">
-               <font>
-                  <Font name="Georgia" size="36.0" />
-               </font>
-            </Text>
-            <Text layoutX="136.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tänk på att sätta en rimlig tid för dig för att du ska ha så stor möjlighet att få känslan av att ha klarat av det!">
-               <font>
-                  <Font name="Georgia" size="14.0" />
-               </font>
-            </Text>
-            <Button fx:id="understandButton" layoutX="371.0" layoutY="463.0" mnemonicParsing="false" onMouseClicked="#onClickUnderstandButton" style="-fx-background-color: ffffff; -fx-background-radius: 0;" text="Jag förstår">
-               <effect>
-                  <DropShadow color="#909191" />
-               </effect>
-               <font>
-                  <Font name="Georgia" size="24.0" />
-               </font>
-            </Button>
-         </children>
-         <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
-         </cursor>
-      </AnchorPane>
       <AnchorPane fx:id="timerOnView" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;" styleClass="StuderaMera.css">
          <children>
             <AnchorPane fx:id="hhhh" prefHeight="624.0" prefWidth="936.0" stylesheets="@../StuderaMera.css">
                <children>
-                  <Label fx:id="repTimerLabel" layoutX="568.0" layoutY="399.0" text="1">
+                  <Label fx:id="repTimerLabel" layoutX="599.0" layoutY="441.0" text="1">
                      <font>
                         <Font name="Georgia" size="36.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="flowerChangingImage" fitHeight="139.0" fitWidth="222.0" layoutX="365.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="278.0" fitWidth="342.0" layoutX="289.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/flower/plant_0_pot.png" />
                      </image>
                   </ImageView>
-                  <Line endX="292.79998779296875" layoutX="466.0" layoutY="378.0" startX="-305.5999755859375" stroke="WHITE">
-                     <effect>
-                        <DropShadow />
-                     </effect></Line>
-                  <Label fx:id="typeOfTimerLabel" layoutX="245.0" layoutY="332.0" text="Studera">
+                  <Line endX="292.79998779296875" layoutX="468.0" layoutY="420.0" startX="-305.5999755859375" />
+                  <Label fx:id="typeOfTimerLabel" layoutX="227.0" layoutY="386.0" text="Studera">
                      <font>
-                        <Font name="Georgia" size="24.0" />
+                        <Font name="Georgia" size="18.0" />
                      </font>
-                     <effect>
-                        <DropShadow color="#909191" />
-                     </effect>
                   </Label>
-                  <Label layoutX="568.0" layoutY="332.0" text="Repetition">
+                  <Label layoutX="607.0" layoutY="383.0" text="Repetition">
                      <font>
-                        <Font name="Georgia" size="24.0" />
+                        <Font name="Georgia" size="18.0" />
                      </font>
-                     <effect>
-                        <DropShadow color="#909191" />
-                     </effect>
                   </Label>
-                  <Label fx:id="timerLabel" layoutX="227.0" layoutY="392.0" text="00">
+                  <Label fx:id="timerLabel" layoutX="197.0" layoutY="427.0" text="00">
                      <font>
                         <Font name="Georgia" size="48.0" />
                      </font>
                   </Label>
-                  <Button fx:id="stopTimerButton" layoutX="402.0" layoutY="528.0" mnemonicParsing="false" onMouseClicked="#onCLickStopButton" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 0;" text="Stop">
+                  <Button fx:id="stopTimerButton" layoutX="430.0" layoutY="565.0" mnemonicParsing="false" onMouseClicked="#onCLickStopButton" style="-fx-background-color: FFFFFF; -fx-background-radius: 0;" text="Stop">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>
                      <font>
-                        <Font name="Georgia" size="24.0" />
+                        <Font name="Georgia" size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Line endX="497.00006103515625" layoutX="261.0" layoutY="465.0" startX="-100.0" stroke="WHITE">
-                     <effect>
-                        <DropShadow />
-                     </effect></Line>
-                  <Text layoutX="618.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                  <Line endX="497.00006103515625" layoutX="263.0" layoutY="515.0" startX="-100.0" />
+                  <Text layoutX="205.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minuter">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="274.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sekunder">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="643.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
                      <font>
                         <Font name="Georgia" size="24.0" />
                      </font>
                   </Text>
-                  <Label fx:id="totalRepTimerLabel" layoutX="660.0" layoutY="398.0" text="5">
+                  <Label fx:id="totalRepTimerLabel" layoutX="683.0" layoutY="441.0" text="5">
                      <font>
                         <Font name="Georgia" size="36.0" />
                      </font>
                   </Label>
+                  <Label fx:id="typeOfTimerLabel1" layoutX="444.0" layoutY="386.0" text="Vila">
+                     <font>
+                        <Font name="Georgia" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="restTimerLabel" layoutX="392.0" layoutY="427.0" text="00">
+                     <font>
+                        <Font name="Georgia" size="48.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="400.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minuter">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="465.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sekunder">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </Text>
                </children></AnchorPane>
          </children>
       </AnchorPane>
@@ -251,11 +243,6 @@
                   <DropShadow color="#909191" />
                </effect>
             </Button>
-            <ImageView fitHeight="332.0" fitWidth="151.0" layoutX="373.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/flower/plant_7_done.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
    </children>
