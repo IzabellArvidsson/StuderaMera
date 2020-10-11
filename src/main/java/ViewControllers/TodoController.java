@@ -81,6 +81,6 @@ public class TodoController implements IPane {
     @Override
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
-        writingSavedToDoLists();
+        //writingSavedToDoLists();
     }
 }

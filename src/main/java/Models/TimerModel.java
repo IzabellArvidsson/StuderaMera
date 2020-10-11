@@ -11,12 +11,13 @@ public class TimerModel {
         this.seconds = "00";
         this.reps = "0";
     }
-    /* public String getMinutes() {
+    public String getMinutes() {
         return this.minutes;
     }
     public String getSeconds() {
         return this.seconds;
-    }*/
+    }
+
     public void setMinutes(int min) {
         if (min < 10) {
             this.minutes =  String.valueOf(min);

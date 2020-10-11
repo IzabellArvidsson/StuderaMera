@@ -1,8 +1,15 @@
 package ViewModels;
 
+import Models.TimerModel;
+import ObserverInterfaces.TimerObserver;
 import javafx.animation.Animation;
 import javafx.animation.Timeline;
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
+
+import java.sql.Time;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,6 +26,7 @@ public class TimerViewModelTest {
 
     @Test
     void stopTimer() {
+
         Timeline timeline = new Timeline();
         timeline.play();
         TimerViewModel timerViewModel = new TimerViewModel();
@@ -28,7 +36,7 @@ public class TimerViewModelTest {
 
     @Test
     void startStudyTimer() {
-        Timeline timeline = new Timeline();
+        Timeline timeline;
         TimerViewModel timerViewModel = new TimerViewModel();
         timerViewModel.startStudyTimer();
         timeline = timerViewModel.studyTimeline;
@@ -37,16 +45,11 @@ public class TimerViewModelTest {
 
     @Test
     void startRestTimer() {
-        Timeline timeline = new Timeline();
+        Timeline timeline;
         TimerViewModel timerViewModel = new TimerViewModel();
         timerViewModel.startRestTimer();
         timeline = timerViewModel.restTimeLine;
         assertSame(timeline.getStatus(), Animation.Status.RUNNING);
-    }
-
-    @Test
-    void repNumberCountdown() {
-
     }
 
     @Test
@@ -56,6 +59,13 @@ public class TimerViewModelTest {
 
     @Test
     void register() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        final List<TimerObserver> timerObservers = new ArrayList<>();
+        TimerObserver timerObserver = null;
+
+        timerViewModel.register(timerObserver);
+
+       // assertEquals(1, timerObservers.size());
 
     }
 
