@@ -4,18 +4,10 @@ import Factory.IPane;
 import ViewModels.ToDoListHandler;
 import ViewModels.ToDoViewModel;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.stage.Stage;
-import javafx.scene.input.MouseEvent;
-
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class TodoController implements IPane {
@@ -28,15 +20,27 @@ public class TodoController implements IPane {
 
     PaneController paneController = new PaneController();
 
-    private ArrayList<String> nChecklist = new ArrayList<>();
+    private ArrayList<TextField> nChecklist = new ArrayList<>();
 
-    public void onClickBackToOverview(MouseEvent mouseEvent) throws IOException {
+    /**
+     * This method takes the program from the "ToDo"-Pane to the "Overview"-Pane
+     */
+
+    public void onClickBackToOverview() {
         paneController.showOverviewPane();
     }
 
-    public void onClickGoToHelp (MouseEvent mouseEvent) throws IOException {
+    /**
+     * This method takes the program from the "ToDo"-Pane to the "Help"-Pane
+     */
+
+    public void onClickGoToHelp (){
         paneController.showHelpPane();
     }
+
+    /**
+     * This method brings forward the "addToDoList"-pane and calls on a method which creates text fields
+     */
 
     public void openAddToCalendar(){
         addToList.toFront();
@@ -45,22 +49,40 @@ public class TodoController implements IPane {
         addTextField();
     }
 
+    /**
+     * This method brings back the "addToDoList"-pane so that the "toDo"-pane is in view
+     */
+
     public void closeAddToCalendar(){
         addToList.toBack();
     }
 
+    /**
+     * This method takes the program from the "ToDo"-Pane to the "FirstView"-Pane
+     */
+
     @FXML
-    private void onClickStuderaMera (MouseEvent mouseEvent) throws IOException {
+    private void onClickStuderaMera () {
         paneController.showFirstViewPane();
     }
 
+    /**
+     * This method calls on a method that creates a toTo-list and then closes the "addToDo"-Pane and then clears all
+     * text fields.
+     */
+
     @FXML
     private void onClickSaveToDoTask(){
-        ToDoViewModel.addToDoLists(nameTextField.getText(), nChecklist, toDoListFlowPane);
+        String id = "toDo";
+        ToDoViewModel.addToDoLists(nameTextField.getText(), nChecklist, toDoListFlowPane, id);
         closeAddToCalendar();
         nChecklist.clear();
         nameTextField.clear();
     }
+
+    /**
+     * This method creates a text field and adds it to a flowPane and adds it on to an arrayList of text fields
+     */
 
     @FXML
     private void addTextField(){
@@ -69,18 +91,19 @@ public class TodoController implements IPane {
         checklistFlowPane.setVgap(7);
         textField.setPrefSize(229,27);
         checklistScrollPane.vvalueProperty().bind(checklistFlowPane.heightProperty());
-        nChecklist.add(textField.toString());
+        nChecklist.add(textField);
+
     }
 
-
-    @FXML
-    public void writingSavedToDoLists(){
-        ToDoListHandler.writeToDoList(toDoListFlowPane);
-    }
+    /**
+     *
+     *
+     * @param paneController
+     */
 
     @Override
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
-        writingSavedToDoLists();
+        ToDoListHandler.writeToDoList(toDoListFlowPane);
     }
 }

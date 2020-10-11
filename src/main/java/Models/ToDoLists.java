@@ -1,5 +1,7 @@
 package Models;
 
+import javafx.scene.control.TextField;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,15 +10,15 @@ public class ToDoLists implements Serializable {
 
     String name;
     String description;
-    ArrayList checklists;
+    private ArrayList checklists;
     String time;
     String deadline;
 
 
-    public ToDoLists(String name, ArrayList checklists){
+    public ToDoLists(String name){
         this.name = name;
         //this.description = description;
-        this.checklists = checklists;
+        //this.checklists = checklists;
         //this.time = time;
         //this.deadline = deadline;
     }
@@ -32,6 +34,10 @@ public class ToDoLists implements Serializable {
     public ArrayList getChecklists() {
 
         return checklists;
+    }
+
+    public void setChecklists(ArrayList checklists) {
+        this.checklists = checklists;
     }
 
     public int getNOfChecklists(){

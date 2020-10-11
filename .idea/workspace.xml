@@ -22,19 +22,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="fixed emptyChecklist method">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Models/ToDoListsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ViewModels/ToDoListHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ViewModels/ToDoViewModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models.ToDoLists.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Models.ToDoLists.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ToDoLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ToDoLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoObservable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/OverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/listInToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/listInToDoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoListHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoListHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="209" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -205,7 +217,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ViewModels in StuderaMera" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ToDoViewModelTest.addToDoLists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StuderaMera" />
       <extension name="coverage">
         <pattern>
@@ -214,7 +226,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ViewModels" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="ViewModels.ToDoViewModelTest" />
+      <option name="METHOD_NAME" value="addToDoLists" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -246,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ToDoViewModelTest.addToDoLists" />
         <item itemvalue="JUnit.TimerViewModelTest.startRestTimer" />
         <item itemvalue="JUnit.TimerViewModelTest.startStudyTimer" />
         <item itemvalue="JUnit.TimerViewModelTest.stopTimer" />
         <item itemvalue="JUnit.TimerViewModelTest.pauseTimer" />
-        <item itemvalue="JUnit.ViewModels in StuderaMera" />
       </list>
     </recent_temporary>
   </component>
@@ -410,11 +424,11 @@
       <option name="presentableId" value="LOCAL−00024" />
       <updated>1601397417660</updated>
     </task>
-    <task id="LOCAL−00025" summary="adding to files and creating to-do lists functions">
-      <created>1601587771046</created>
+    <task id="LOCAL−00025" summary="Author:hanna and Iza&#10;Julia fixing a merge-problem she created">
+      <created>1602241451000</created>
       <option name="number" value="LOCAL−00025" />
       <option name="presentableId" value="LOCAL−00025" />
-      <updated>1601587771046</updated>
+      <updated>1602241451000</updated>
     </task>
     <task id="LOCAL−00026" summary="adding to files and creating to-do lists functions">
       <created>1601623125793</created>
@@ -434,7 +448,7 @@
       <option name="presentableId" value="LOCAL−00028" />
       <updated>1601986817133</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -474,7 +488,9 @@
     <MESSAGE value="adding to files and creating addToCalender functions" />
     <MESSAGE value="adding to files and creating to-do list" />
     <MESSAGE value="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview." />
+    <MESSAGE value="Author:hanna and Iza&#10;Julia fixing a merge-problem she created" />
+    <MESSAGE value="fixed emptyChecklist method" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed emptyChecklist method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" />
@@ -558,16 +574,11 @@
           <line>15</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main/main.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1601390041179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1602248418212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/StuderaMera1$main.ic" NAME="main Coverage Results" MODIFIED="1600350809200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

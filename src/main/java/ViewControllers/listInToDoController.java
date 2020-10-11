@@ -31,5 +31,9 @@ public class listInToDoController extends AnchorPane {
         numberOfChecklistsText.setText("0/" + toDoLists.getNOfChecklists());
     }
 
+    public void onClickDelete(){
+        System.out.println("clicked on delete");
+    }
+
 
 }
