@@ -1,15 +1,22 @@
 package ViewModels;
 
-import Models.CalendarEventModel;
-import ViewControllers.EventInCalendarController;
+import Models.CalendarEvent;
+import Models.ToDoLists;
+import ViewControllers.listInToDoController;
+import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Text;
 
 import java.awt.*;
+import java.time.LocalDate;
+import java.time.YearMonth;
 import java.util.ArrayList;
 
 public class CalendarViewModel {
 
-    private static ArrayList<CalendarEventModel> allCalendarEventModels = new ArrayList<>();
+
+    private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
 
     public static void addCalendarEvents(String nameTextField, String hour, String min, String year, String month, String day, Color color){
        // CalendarEventModel calendarEventsModel = new CalendarEventModel(nameTextField, hour, min, year, month, day, color );
@@ -17,13 +24,13 @@ public class CalendarViewModel {
       //  addCalendarEvent(calendarEventsModel);
         //TODO save list between program startups
         //ToDoListHandler.saveToDoList(allToDoLists);
+
     }
 
-    public void addCalendarEvent(String title, String time, FlowPane eventCalendarPane){
-        CalendarEventModel calendarEventModel = new CalendarEventModel(title,time);
-        eventCalendarPane.getChildren().add(new EventInCalendarController(calendarEventModel));
 
-        addEventToCalendar(calendarEventModel);
+
+    private static void addCalendarEvent(CalendarEvent calendarEvent){
+        allCalendarEvents.add(calendarEvent);
     }
 
 
@@ -32,3 +39,5 @@ public class CalendarViewModel {
         allCalendarEventModels.add(calendarEventModel);
     }
 }
+
+
