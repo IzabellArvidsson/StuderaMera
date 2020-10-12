@@ -5,8 +5,13 @@ import Models.CalendarModel;
 import ViewModels.CalendarViewModel;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -14,6 +19,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+import java.io.IOException;
+import java.util.Date;
+import java.util.Calendar;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -132,7 +141,7 @@ public class CalendarController implements IPane, Initializable {
     }
 
     @FXML
-    private void onClickStuderaMera ()  {
+    private void onClickStuderaMera () {
         paneController.showFirstViewPane();
     }
 
@@ -140,5 +149,7 @@ public class CalendarController implements IPane, Initializable {
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
     }
+
+
 }
 

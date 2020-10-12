@@ -10,6 +10,7 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
@@ -434,7 +435,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Text>
-                  <Button fx:id="backPlanToOverviewButton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
+                  <Button fx:id="backToOverviewButton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>
@@ -505,7 +506,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <FlowPane fx:id= "mondayFlowPane" prefHeight="200.0" prefWidth="200.0" />
+                        <FlowPane prefHeight="200.0" prefWidth="200.0" />
                         <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
                         <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
                         <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
