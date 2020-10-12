@@ -1,14 +1,20 @@
 package ViewModels;
 
 import Models.CalendarEvent;
-import Models.ToDoListModel;
-import Views.ListInToDoView;
+import Models.ToDoLists;
+import ViewControllers.listInToDoController;
+import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Text;
 
 import java.awt.*;
+import java.time.LocalDate;
+import java.time.YearMonth;
 import java.util.ArrayList;
 
 public class CalendarViewModel {
+
 
     private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
 
@@ -18,8 +24,14 @@ public class CalendarViewModel {
         addCalendarEvent(calendarEvents);
         //TODO save list between program startups
         //ToDoListHandler.saveToDoList(allToDoLists);
+
     }
+
+
+
     private static void addCalendarEvent(CalendarEvent calendarEvent){
         allCalendarEvents.add(calendarEvent);
     }
 }
+
+
