@@ -95,7 +95,7 @@
                         <Font name="Georgia" size="20.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="timeHourTextField" alignment="CENTER" layoutX="420.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="00">
+                  <TextField fx:id="startTimeHourTextField" alignment="CENTER" layoutX="420.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
                      <font>
                         <Font name="Georgia" size="17.0" />
                      </font>
@@ -103,7 +103,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <TextField fx:id="timeMinTextField" alignment="CENTER" layoutX="493.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="00">
+                  <TextField fx:id="startTimeMinTextField" alignment="CENTER" layoutX="493.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
                      <font>
                         <Font name="Georgia" size="17.0" />
                      </font>
@@ -155,6 +155,32 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                  <TextField fx:id="endTimeMinTextField" alignment="CENTER" layoutX="644.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
+                     <font>
+                        <Font name="Georgia" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="endTimeHourTextField" alignment="CENTER" layoutX="566.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
+                     <font>
+                        <Font name="Georgia" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Text layoutX="621.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="545.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </children>
@@ -174,7 +200,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Text>
-                  <Button fx:id="backToOverviewButton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
+                  <Button fx:id="backPlanToOverviewButton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>
@@ -245,7 +271,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" />
+                        <FlowPane fx:id="mondayFlowPane" prefHeight="200.0" prefWidth="200.0" />
                         <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
                         <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
                         <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
