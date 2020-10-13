@@ -1,6 +1,7 @@
 package ViewControllers;
 
 import Factory.IPane;
+import ViewModels.CalendarViewModel;
 import Models.CalendarModel;
 import ViewModels.CalendarViewModel;
 import javafx.event.EventHandler;
@@ -12,8 +13,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
@@ -32,6 +36,17 @@ import java.util.ResourceBundle;
 
 public class CalendarController implements IPane, Initializable {
 
+    @FXML private AnchorPane addToCalendarPane;
+    @FXML TextField dateDay;
+    @FXML TextField dateMonth;
+    @FXML TextField dateYear;
+    @FXML Button nextMonthButton, lastMonthButton;
+    @FXML TextField nameTextField;
+    @FXML TextField startTimeHourTextField, startTimeMinTextField, endTimeHourTextField, endTimeMinTextField;
+    @FXML TextField locationTextField;
+    @FXML TextArea descriptionTextArea;
+    @FXML Button addEventButton;
+    @FXML FlowPane mondayFlowPane;
     @FXML private AnchorPane addToCalendarPane, eventPane;
     @FXML private GridPane gridPane;
     @FXML private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?
@@ -41,6 +56,8 @@ public class CalendarController implements IPane, Initializable {
 
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
+
+
 
     private PaneController paneController = new PaneController();
 
@@ -149,6 +166,25 @@ public class CalendarController implements IPane, Initializable {
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
     }
+
+    @FXML
+    private void onClickSaveEvent(){
+        CalendarViewModel.addCalendarEvents(nameTextField.getText(), startTimeHourTextField.getText(), startTimeMinTextField.getText(), endTimeMinTextField.getText(), endTimeHourTextField.getText(), dateYear.getText(), dateMonth.getText(), dateDay.getText(), mondayFlowPane);
+        closeAddToCalendar();
+        nameTextField.clear();
+        dateDay.clear();
+        dateMonth.clear();
+        dateYear.clear();
+        endTimeMinTextField.clear();
+        endTimeHourTextField.clear();
+        startTimeHourTextField.clear();
+        startTimeMinTextField.clear();
+        locationTextField.clear();
+        descriptionTextArea.clear();
+
+    }
+
+
 
 
 }
