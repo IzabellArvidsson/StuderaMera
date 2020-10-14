@@ -11,16 +11,13 @@ public class ToDoLists implements Serializable {
     String name;
     String description;
     private ArrayList checklists;
-    String time;
-    String deadline;
+    private ArrayList timeAndDeadline;
 
 
-    public ToDoLists(String name){
+    public ToDoLists(String name, String description, ArrayList timeAndDeadline){
         this.name = name;
-        //this.description = description;
-        //this.checklists = checklists;
-        //this.time = time;
-        //this.deadline = deadline;
+        this.description = description;
+        this.timeAndDeadline = timeAndDeadline;
     }
 
     public String getName() {
@@ -31,24 +28,14 @@ public class ToDoLists implements Serializable {
         return description;
     }
 
-    public ArrayList getChecklists() {
+    public ArrayList getChecklists() { return checklists; }
 
-        return checklists;
-    }
+    public ArrayList getTimeAndDeadline() { return timeAndDeadline; }
 
-    public void setChecklists(ArrayList checklists) {
-        this.checklists = checklists;
-    }
+    public void setChecklists(ArrayList checklists) { this.checklists = checklists; }
 
     public int getNOfChecklists(){
         return checklists.size();
     }
 
-    public String getTime() {
-        return time;
-    }
-
-    public String getDeadline() {
-        return deadline;
-    }
 }

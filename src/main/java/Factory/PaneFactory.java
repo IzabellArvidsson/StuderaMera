@@ -75,8 +75,6 @@ public class PaneFactory {
     }
 
 
-
-
     static class Pane<T> {
         AnchorPane aPane;
         T controller;
