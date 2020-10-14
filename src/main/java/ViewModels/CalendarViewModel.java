@@ -1,11 +1,7 @@
 package ViewModels;
 
-import Models.CalendarEvent;
-import Models.ToDoLists;
+import Models.CalendarEventModel;
 import ViewControllers.EventInCalendarController;
-import ViewControllers.listInToDoController;
-import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 
@@ -16,20 +12,28 @@ import java.util.ArrayList;
 
 public class CalendarViewModel {
 
+    private static ArrayList<CalendarEventModel> allCalendarEventModels = new ArrayList<>();
 
-    private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
-
-    public static void addCalendarEvents(String nameTextField, String sHour, String sMin, String eMin, String eHour, String year, String month, String day, /*Color color,*/ FlowPane mondayFlowPane){
-        CalendarEvent calendarEvents = new CalendarEvent(nameTextField, sHour, sMin, eMin, eHour, year, month, day /*, color*/);
-        mondayFlowPane.getChildren().add(new EventInCalendarController(calendarEvents));
-        addCalendarEvent(calendarEvents);
+    public static void addCalendarEvents(String nameTextField, String hour, String min, String year, String month, String day, Color color){
+       // CalendarEventModel calendarEventsModel = new CalendarEventModel(nameTextField, hour, min, year, month, day, color );
+        // TODO add to GUI
+      //  addCalendarEvent(calendarEventsModel);
         //TODO save list between program startups
         //ToDoListHandler.saveToDoList(allToDoLists);
 
     }
 
-    private static void addCalendarEvent(CalendarEvent calendarEvent){
-        allCalendarEvents.add(calendarEvent);
+    public void addCalendarEvent(String title, String time, FlowPane eventCalendarPane){
+        CalendarEventModel calendarEventModel = new CalendarEventModel(title,time);
+        eventCalendarPane.getChildren().add(new EventInCalendarController(calendarEventModel));
+
+        addEventToCalendar(calendarEventModel);
+    }
+
+
+
+    private void addEventToCalendar(CalendarEventModel calendarEventModel){
+        allCalendarEventModels.add(calendarEventModel);
     }
 }
 

@@ -24,10 +24,19 @@
   <component name="ChangeListManager">
 <<<<<<< refs/remotes/origin/master
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TodoViewModels/CheckTodoValid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarHandlerModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/EventInCalendarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models.ToDoLists.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Models.ToDoLists.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/CalendarEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarEventModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/CalendarViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/CalendarViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StuderaMera.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/Calendar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StuderaMera.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/Calendar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
     </list>
 =======
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions" />
@@ -86,8 +95,8 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StuderaMera - kopia" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
@@ -235,6 +244,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.main" />
+      <item itemvalue="Application.main (1)" />
       <item itemvalue="JUnit.All in StuderaMera" />
       <item itemvalue="JUnit.ViewModels in StuderaMera" />
       <item itemvalue="JUnit.TimerViewModelTest.pauseTimer" />
@@ -242,6 +252,7 @@
       <item itemvalue="JUnit.TimerViewModelTest.startStudyTimer" />
       <item itemvalue="JUnit.TimerViewModelTest.stopTimer" />
       <item itemvalue="Maven.StuderaMera [test] (1)" />
+      <item itemvalue="Maven.StuderaMera [javafx:compile,javafx:run]" />
     </list>
     <recent_temporary>
       <list>
