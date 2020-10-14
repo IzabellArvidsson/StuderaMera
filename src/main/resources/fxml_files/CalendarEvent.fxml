@@ -5,8 +5,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="calEventAncorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="137.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="137.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="AnchorPane">
    <children>
+      <AnchorPane fx:id="calEventAncorPane" layoutX="-1.0" layoutY="-5.0" prefHeight="70.0" prefWidth="141.0" />
       <Label fx:id="startTimeLabel" layoutX="13.0" layoutY="9.0" prefHeight="12.0" prefWidth="50.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="6.0">
          <font>
             <Font name="Georgia" size="9.0" />
@@ -17,7 +18,7 @@
             <Font name="Georgia" size="9.0" />
          </font>
       </Label>
-      <Label fx:id="EventNameLabel" layoutX="8.0" layoutY="23.0" prefHeight="16.0" prefWidth="98.0">
+      <Label fx:id="eventNameLabel" layoutX="8.0" layoutY="23.0" prefHeight="16.0" prefWidth="98.0">
          <font>
             <Font name="Georgia" size="13.0" />
          </font>
@@ -26,4 +27,4 @@
    <cursor>
       <Cursor fx:constant="HAND" />
    </cursor>
-</AnchorPane>
+</fx:root>
