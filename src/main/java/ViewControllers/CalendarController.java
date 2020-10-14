@@ -1,7 +1,9 @@
 package ViewControllers;
 
 import Factory.IPane;
+import ViewModels.CalendarEventHandler;
 import ViewModels.CalendarViewModel;
+import ViewModels.ToDoListHandler;
 import Models.CalendarModel;
 import ViewModels.CalendarViewModel;
 import javafx.event.EventHandler;
@@ -46,6 +48,7 @@ public class CalendarController implements IPane, Initializable {
     @FXML TextField locationTextField;
     @FXML TextArea descriptionTextArea;
     @FXML Button addEventButton;
+    @FXML MenuButton colorMenuButton;
     @FXML FlowPane mondayFlowPane;
     @FXML private AnchorPane addToCalendarPane, eventPane;
     @FXML private GridPane gridPane;
@@ -53,12 +56,8 @@ public class CalendarController implements IPane, Initializable {
 
     private CalendarViewModel calendarViewModel = new CalendarViewModel();
     private CalendarModel calendarModel = new CalendarModel();
-
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
-
-
-
     private PaneController paneController = new PaneController();
 
     @Override
@@ -162,10 +161,11 @@ public class CalendarController implements IPane, Initializable {
         paneController.showFirstViewPane();
     }
 
-    @Override
+    /*@Override
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
     }
+    */
 
     @FXML
     private void onClickSaveEvent(){
@@ -184,7 +184,16 @@ public class CalendarController implements IPane, Initializable {
 
     }
 
+    @FXML
+    public void writingSavedCalendarEvent(){
+       // CalendarEventHandler.writeCalendarEvent(mondayFlowPane/*remember to change this bich*/);
+    }
 
+    @Override
+    public void initPane(PaneController paneController) {
+        this.paneController = paneController;
+        writingSavedCalendarEvent();
+    }
 
 
 }
