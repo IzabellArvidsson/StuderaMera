@@ -1,8 +1,7 @@
 package ViewModels;
 
-import Models.CalendarEvent;
-import Models.ToDoLists;
-import ViewControllers.listInToDoController;
+import Models.CalendarEventModel;
+import ViewControllers.EventInCalendarController;
 import javafx.scene.layout.FlowPane;
 
 import java.awt.*;
@@ -10,16 +9,26 @@ import java.util.ArrayList;
 
 public class CalendarViewModel {
 
-    private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
+    private static ArrayList<CalendarEventModel> allCalendarEventModels = new ArrayList<>();
 
     public static void addCalendarEvents(String nameTextField, String hour, String min, String year, String month, String day, Color color){
-        CalendarEvent calendarEvents = new CalendarEvent(nameTextField, hour, min, year, month, day, color );
+       // CalendarEventModel calendarEventsModel = new CalendarEventModel(nameTextField, hour, min, year, month, day, color );
         // TODO add to GUI
-        addCalendarEvent(calendarEvents);
+      //  addCalendarEvent(calendarEventsModel);
         //TODO save list between program startups
         //ToDoListHandler.saveToDoList(allToDoLists);
     }
-    private static void addCalendarEvent(CalendarEvent calendarEvent){
-        allCalendarEvents.add(calendarEvent);
+
+    public void addCalendarEvent(String title, String time, FlowPane eventCalendarPane){
+        CalendarEventModel calendarEventModel = new CalendarEventModel(title,time);
+        eventCalendarPane.getChildren().add(new EventInCalendarController(calendarEventModel));
+
+        addEventToCalendar(calendarEventModel);
+    }
+
+
+
+    private void addEventToCalendar(CalendarEventModel calendarEventModel){
+        allCalendarEventModels.add(calendarEventModel);
     }
 }

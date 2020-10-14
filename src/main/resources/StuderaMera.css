@@ -53,3 +53,7 @@
     -fx-background-color: #93CFD9;
     -fx-pref-height: 50.0;
 }
+
+.dateNow{
+-fx-background-color: white;
+}

@@ -23,13 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
-      <change beforePath="$PROJECT_DIR$/.idea/StuderaMera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StuderaMera.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarHandlerModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/EventInCalendarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Models/TimerModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Models/TimerModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models.ToDoLists.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Models.ToDoLists.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/CalendarEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarEventModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/CalendarViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/CalendarViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StuderaMera.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/Calendar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StuderaMera.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/Calendar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +53,8 @@
         <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,10 +97,7 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../grafiska gränsnitt/Lab3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StuderaMera - kopia" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -292,6 +295,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.main" />
+      <item itemvalue="Application.main (1)" />
       <item itemvalue="JUnit.All in StuderaMera" />
       <item itemvalue="JUnit.TimerViewModelTest.pauseTimer" />
       <item itemvalue="JUnit.TimerViewModelTest.startRestTimer" />
@@ -299,7 +303,6 @@
       <item itemvalue="JUnit.TimerViewModelTest.stopTimer" />
       <item itemvalue="Maven.StuderaMera [test] (1)" />
       <item itemvalue="Maven.StuderaMera [javafx:compile,javafx:run]" />
-      <item itemvalue="Application.main (1)" />
     </list>
     <recent_temporary>
       <list>
