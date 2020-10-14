@@ -143,7 +143,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </MenuButton>
-                  <Button layoutX="456.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#closeAddToCalendar" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #ffffff;" text="Lägg till">
+                  <Button fx:id="addEventButton" layoutX="456.0" layoutY="354.0" mnemonicParsing="false" onAction="#onClickSaveEvent" onMouseClicked="#closeAddToCalendar" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #ffffff;" text="Lägg till">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>

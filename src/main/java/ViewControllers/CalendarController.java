@@ -1,13 +1,15 @@
 package ViewControllers;
 
 import Factory.IPane;
-import Models.CalendarModel;
-import javafx.event.EventHandler;
+import ViewModels.CalendarEventHandler;
+import ViewModels.CalendarViewModel;
+import ViewModels.ToDoListHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-
-
-import javafx.scene.input.MouseEvent;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
@@ -24,25 +26,20 @@ import javafx.scene.control.Button;
 
 public class CalendarController implements IPane, Initializable {
 
-    @FXML private AnchorPane addToCalendarPane, eventPane;
-    //@FXML private ScrollPane calendarScrollPane;
-    @FXML private GridPane gridPane;
-    @FXML private Text dateText;
-    //@FXML private Button nextMonthButton, previousMonthButton;
-
-
-    private YearMonth yearMonth = YearMonth.now();
-    private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
+    @FXML private AnchorPane addToCalendarPane;
+    @FXML TextField dateDay;
+    @FXML TextField dateMonth;
+    @FXML TextField dateYear;
+    @FXML Button nextMonthButton, lastMonthButton;
+    @FXML TextField nameTextField;
+    @FXML TextField startTimeHourTextField, startTimeMinTextField, endTimeHourTextField, endTimeMinTextField;
+    @FXML TextField locationTextField;
+    @FXML TextArea descriptionTextArea;
+    @FXML Button addEventButton;
+    @FXML MenuButton colorMenuButton;
+    @FXML FlowPane mondayFlowPane;
 
     private PaneController paneController = new PaneController();
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        dateText.setText(String.valueOf(yearMonth));
-        columnAndRows();
-        populateMonth(YearMonth.now());
-
-    }
 
     public void clickGridPane(){
         gridPane.getChildren().forEach(item -> {
@@ -141,11 +138,25 @@ public class CalendarController implements IPane, Initializable {
         paneController.showFirstViewPane();
     }
 
-    @Override
+    /*@Override
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
     }
+    */
 
 
 }
 
+    @FXML
+    public void writingSavedCalendarEvent(){
+       // CalendarEventHandler.writeCalendarEvent(mondayFlowPane/*remember to change this bich*/);
+    }
+
+    @Override
+    public void initPane(PaneController paneController) {
+        this.paneController = paneController;
+        writingSavedCalendarEvent();
+    }
+
+
+}
