@@ -20,7 +20,9 @@ public class CalendarViewModel {
     private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
 
     public static void addCalendarEvents(String nameTextField, String sHour, String sMin, String eMin, String eHour, String year, String month, String day, /*Color color,*/ FlowPane mondayFlowPane){
-        CalendarEvent calendarEvents = new CalendarEvent(nameTextField, sHour, sMin, eMin, eHour, year, month, day /*, color*/);
+        CalendarEvent calendarEvents;
+        calendarEvents = new CalendarEvent(nameTextField, sHour, sMin, eMin, eHour, year, month, day /*, color*/);
+        System.out.println(calendarEvents);
         mondayFlowPane.getChildren().add(new EventInCalendarController(calendarEvents));
         addCalendarEvent(calendarEvents);
         //TODO save list between program startups

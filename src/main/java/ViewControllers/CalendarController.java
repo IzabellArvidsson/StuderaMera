@@ -1,17 +1,16 @@
 package ViewControllers;
 
 import Factory.IPane;
+import ViewModels.CalendarEventHandler;
 import ViewModels.CalendarViewModel;
+import ViewModels.ToDoListHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
@@ -35,11 +34,8 @@ public class CalendarController implements IPane {
     @FXML TextField locationTextField;
     @FXML TextArea descriptionTextArea;
     @FXML Button addEventButton;
+    @FXML MenuButton colorMenuButton;
     @FXML FlowPane mondayFlowPane;
-
-
-
-
 
     private PaneController paneController = new PaneController();
 
@@ -66,10 +62,11 @@ public class CalendarController implements IPane {
         paneController.showFirstViewPane();
     }
 
-    @Override
+    /*@Override
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
     }
+    */
 
     @FXML
     private void onClickSaveEvent(){
@@ -88,7 +85,16 @@ public class CalendarController implements IPane {
 
     }
 
+    @FXML
+    public void writingSavedCalendarEvent(){
+       // CalendarEventHandler.writeCalendarEvent(mondayFlowPane/*remember to change this bich*/);
+    }
 
+    @Override
+    public void initPane(PaneController paneController) {
+        this.paneController = paneController;
+        writingSavedCalendarEvent();
+    }
 
 
 }
