@@ -23,32 +23,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
-      <change beforePath="$PROJECT_DIR$/.idea/StuderaMera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StuderaMera.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/ImageModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models.ToDoLists.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Models.ToDoLists.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/TimerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/TimerObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TimerViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StuderaMera.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Models/TimerModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Models/TimerModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewModels/TimerViewModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StuderaMera.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StuderaMera.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="235" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="JUnit5 Test Class" />
-        <option value="FxmlFile" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -68,7 +73,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -91,10 +96,7 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../grafiska gränsnitt/Lab3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StuderaMera2.0 - kopia" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -102,8 +104,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="Models" />
       <recent name="ViewModels" />
+      <recent name="Models" />
       <recent name="" />
       <recent name="models" />
     </key>
@@ -118,34 +120,9 @@
       <recent name="C:\Users\Hanna Söderström\IdeaProjects\StuderaMera\src" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.main (1)">
-    <configuration name="main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main.main" />
-      <module name="StuderaMera" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.main">
     <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="Main.main" />
       <module name="StuderaMera" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Java\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
@@ -163,35 +140,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in StuderaMera" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
-      <module name="StuderaMera" />
-      <useClassPathOnly />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TimerViewModelTest.pauseTimer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TimerModelTest.toStringRep" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StuderaMera" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="Models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ViewModels" />
-      <option name="MAIN_CLASS_NAME" value="ViewModels.TimerViewModelTest" />
-      <option name="METHOD_NAME" value="pauseTimer" />
+      <option name="PACKAGE_NAME" value="Models" />
+      <option name="MAIN_CLASS_NAME" value="Models.TimerModelTest" />
+      <option name="METHOD_NAME" value="toStringRep" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimerViewModelTest.startRestTimer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TimerViewModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StuderaMera" />
       <extension name="coverage">
         <pattern>
@@ -201,13 +166,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="ViewModels" />
       <option name="MAIN_CLASS_NAME" value="ViewModels.TimerViewModelTest" />
-      <option name="METHOD_NAME" value="startRestTimer" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimerViewModelTest.startStudyTimer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TimerViewModelTest.TestStartTimer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StuderaMera" />
       <extension name="coverage">
         <pattern>
@@ -217,13 +181,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ViewModels" />
       <option name="MAIN_CLASS_NAME" value="ViewModels.TimerViewModelTest" />
-      <option name="METHOD_NAME" value="startStudyTimer" />
+      <option name="METHOD_NAME" value="TestStartTimer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimerViewModelTest.stopTimer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TimerViewModelTest.countDown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StuderaMera" />
       <extension name="coverage">
         <pattern>
@@ -233,37 +197,27 @@
       </extension>
       <option name="PACKAGE_NAME" value="ViewModels" />
       <option name="MAIN_CLASS_NAME" value="ViewModels.TimerViewModelTest" />
-      <option name="METHOD_NAME" value="stopTimer" />
+      <option name="METHOD_NAME" value="countDown" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StuderaMera [javafx:compile,javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="javafx:compile" />
-                <option value="javafx:run" />
-              </list>
-            </option>
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
+    <configuration name="TimerViewModelTest.testCheckIfStudyTimeIsRunning" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StuderaMera" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ViewModels.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ViewModels" />
+      <option name="MAIN_CLASS_NAME" value="ViewModels.TimerViewModelTest" />
+      <option name="METHOD_NAME" value="testCheckIfStudyTimeIsRunning" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="StuderaMera [test] (1)" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -290,28 +244,17 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Application.main" />
-      <item itemvalue="JUnit.All in StuderaMera" />
-      <item itemvalue="JUnit.TimerViewModelTest.pauseTimer" />
-      <item itemvalue="JUnit.TimerViewModelTest.startRestTimer" />
-      <item itemvalue="JUnit.TimerViewModelTest.startStudyTimer" />
-      <item itemvalue="JUnit.TimerViewModelTest.stopTimer" />
-      <item itemvalue="Maven.StuderaMera [test] (1)" />
-      <item itemvalue="Maven.StuderaMera [javafx:compile,javafx:run]" />
-      <item itemvalue="Application.main (1)" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main (1)" />
-        <item itemvalue="JUnit.TimerViewModelTest.startRestTimer" />
-        <item itemvalue="JUnit.TimerViewModelTest.startStudyTimer" />
-        <item itemvalue="JUnit.TimerViewModelTest.stopTimer" />
-        <item itemvalue="JUnit.TimerViewModelTest.pauseTimer" />
+        <item itemvalue="JUnit.TimerViewModelTest" />
+        <item itemvalue="JUnit.TimerViewModelTest.TestStartTimer" />
+        <item itemvalue="JUnit.TimerViewModelTest.testCheckIfStudyTimeIsRunning" />
+        <item itemvalue="JUnit.TimerViewModelTest.countDown" />
+        <item itemvalue="JUnit.TimerModelTest.toStringRep" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -502,13 +445,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="???" />
@@ -534,254 +476,96 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1601394976848">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1602421101497" />
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602421101497" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602421101497" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1602523568584">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1601394976848" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601467529042">
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1602523568584" />
+    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1602421101497" />
+    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602421101497" />
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602421101497" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="520" y="110" key="FileChooserDialogImpl" timestamp="1602585512594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601467529042" />
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599571499643">
+    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602585512594" />
+    <state width="1493" height="61" key="GridCell.Tab.0.bottom" timestamp="1602659944139">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599571499643" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1601897375897">
+    <state width="1493" height="61" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602659944139" />
+    <state width="1493" height="61" key="GridCell.Tab.0.center" timestamp="1602659944139">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601897375897" />
-    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1601887716129">
+    <state width="1493" height="61" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602659944139" />
+    <state width="1493" height="61" key="GridCell.Tab.0.left" timestamp="1602659944131">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1601887716129" />
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601881243124">
+    <state width="1493" height="61" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602659944131" />
+    <state width="1493" height="61" key="GridCell.Tab.0.right" timestamp="1602659944139">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1601881243124" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601388781748">
+    <state width="1493" height="61" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602659944139" />
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1602572384642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601388781748" />
-    <state x="520" y="110" key="FileChooserDialogImpl" timestamp="1601885355658">
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602572384642" />
+    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1602572384642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601885355658" />
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1601901676026">
+    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602572384642" />
+    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1602572384642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1601901676026">
+    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602572384642" />
+    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1602572384642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1601901676026">
+    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602572384642" />
+    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1602421101497" />
+    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1602421101497" />
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="496" y="115" key="RollbackChangesDialog" timestamp="1602421101497" />
+    <state x="496" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1602421111259">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1601901676026">
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602421111259" />
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1602421101497" />
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602421101497" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1602421101497" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602421101497" />
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602516491519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601901676026" />
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1601888979475">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1602516491519" />
+    <state x="540" y="193" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1602570123715">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601888979475" />
-    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1601888979474">
+    <state x="540" y="193" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1602570123715" />
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602421101497" />
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="209" y="33" key="new project wizard" timestamp="1602585503186">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601888979474" />
-    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1601888979474">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601888979474" />
-    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1601888979474">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601888979474" />
-    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1601386531752">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1601386531752" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1599562890373">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1599562890373" />
-    <state x="496" y="115" key="RollbackChangesDialog" timestamp="1601883785711">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="496" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601883785711" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1601885774457">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601885774457" />
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1599566720380">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1599566720380" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601879194948">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601879194948" />
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600070035327">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1600070035327" />
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599813835479">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1599813835479" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601879486032">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601879486032" />
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1601897391998">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1601897391998" />
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599588987569">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1599588987569" />
-    <state x="209" y="33" key="new project wizard" timestamp="1601552309732">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1601552309732" />
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1601299456473">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1601299456473" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1601393807202">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601393807202" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601888602582">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601888602582" />
-    <state x="249" y="0" key="#Project_Structure" timestamp="1601394976848">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1601394976848" />
-    <state x="279" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601405760699">
-      <screen x="0" y="0" width="1920" height="1042" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601373112334" />
-    <state x="279" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1042@0.0.1920.1042" timestamp="1601405760699" />
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599571499643">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599571499643" />
-    <state x="718" y="150" width="374" height="561" key="#com.intellij.ide.util.MemberChooser" timestamp="1601451995054">
-      <screen x="0" y="0" width="1920" height="1042" />
-    </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601389490619" />
-    <state x="718" y="150" width="374" height="561" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1042@0.0.1920.1042" timestamp="1601451995054" />
-    <state x="551" y="303" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1601365437574">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="551" y="303" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1601365437574" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601388781748">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601388781748" />
-    <state x="650" y="139" key="FileChooserDialogImpl" timestamp="1601405130850">
-      <screen x="0" y="0" width="1920" height="1042" />
-    </state>
-    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601366998314" />
-    <state x="650" y="139" key="FileChooserDialogImpl/0.0.1920.1042@0.0.1920.1042" timestamp="1601405130850" />
-    <state width="1864" height="417" key="GridCell.Tab.0.bottom" timestamp="1601624748654">
-      <screen x="0" y="0" width="1920" height="1042" />
-    </state>
-    <state width="1493" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601396771315" />
-    <state width="1864" height="417" key="GridCell.Tab.0.bottom/0.0.1920.1042@0.0.1920.1042" timestamp="1601624748654" />
-    <state width="1864" height="417" key="GridCell.Tab.0.center" timestamp="1601624748653">
-      <screen x="0" y="0" width="1920" height="1042" />
-    </state>
-    <state width="1493" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601396771314" />
-    <state width="1864" height="417" key="GridCell.Tab.0.center/0.0.1920.1042@0.0.1920.1042" timestamp="1601624748653" />
-    <state width="1864" height="417" key="GridCell.Tab.0.left" timestamp="1601624748653">
-      <screen x="0" y="0" width="1920" height="1042" />
-    </state>
-    <state width="1493" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601396771314" />
-    <state width="1864" height="417" key="GridCell.Tab.0.left/0.0.1920.1042@0.0.1920.1042" timestamp="1601624748653" />
-    <state width="1864" height="417" key="GridCell.Tab.0.right" timestamp="1601624748654">
-      <screen x="0" y="0" width="1920" height="1042" />
-    </state>
-    <state width="1493" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601396771315" />
-    <state width="1864" height="417" key="GridCell.Tab.0.right/0.0.1920.1042@0.0.1920.1042" timestamp="1601624748654" />
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1601394173581">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601394173581" />
-    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1601394173581">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601394173581" />
-    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1601394173580">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601394173580" />
-    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1601394173581">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601394173581" />
-    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1601386531752">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1601386531752" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1599562890373">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1599562890373" />
-    <state x="311" y="0" key="SettingsEditor" timestamp="1601405330659">
-      <screen x="0" y="0" width="1920" height="1042" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599818365572" />
-    <state x="311" y="0" key="SettingsEditor/0.0.1920.1042@0.0.1920.1042" timestamp="1601405330659" />
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1599566720380">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1599566720380" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600076469539">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600076469539" />
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600070035327">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1600070035327" />
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599813835479">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1599813835479" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601373655711">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601373655711" />
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1601039599733">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1601039599733" />
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599588987569">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1599588987569" />
-    <state x="209" y="33" key="new project wizard" timestamp="1599638966232">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1599638966232" />
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1601299456473">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1601299456473" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1601393807202">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601393807202" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600071704277">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600071704277" />
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1602585503186" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1602421101497" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1602421101497" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602421101497" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602421101497" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -796,19 +580,14 @@
           <line>10</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ViewControllers/FirstSideController.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1601390041179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/StuderaMera$main__1_.ic" NAME="main (1) Coverage Results" MODIFIED="1602248474821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Main.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/StuderaMera1$main.ic" NAME="main Coverage Results" MODIFIED="1600350809200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/StuderaMera2_0$TimerViewModelTest.ic" NAME="TimerViewModelTest Coverage Results" MODIFIED="1602599320338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ViewModels.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1601390041179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
