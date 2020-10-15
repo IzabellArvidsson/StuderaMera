@@ -1,5 +1,5 @@
 package ViewControllers;
-import Factory.IPane;
+
 import Models.TimerModel;
 import ObserverInterfaces.TimerObserver;
 import ViewModels.TimerViewModel;
@@ -17,10 +17,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-public class TimerViewController extends AnchorPane implements Initializable, TimerObserver, IPane {
+
+public class TimerViewController extends AnchorPane implements Initializable, TimerObserver {
 
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView, popupPane, failPane;
     @FXML private Spinner<Integer> studyTimerSpinner, restTimerSpinner, repTimerSpinner;
@@ -28,39 +30,46 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     @FXML ImageView flowerChangingImage;
 
     private final TimerViewModel timerViewModel = new TimerViewModel();
-    PaneController paneController = new PaneController();
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        /*-----------------------------------Register this class as an observer----------------------------------------------*/
+
+/*-----------------------------------Register this class as an observer----------------------------------------------*/
         timerViewModel.register(this);
-        /*----------------------------------------Spinner initialize---------------------------------------------------------*/
+/*----------------------------------------Spinner initialize---------------------------------------------------------*/
+
         SpinnerValueFactory<Integer> studyFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 20, 5);
         this.studyTimerSpinner.setValueFactory(studyFactory);
+
         SpinnerValueFactory<Integer> restFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory( 1, 40, 5, 5);
         this.restTimerSpinner.setValueFactory(restFactory);
+
         SpinnerValueFactory<Integer> repFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1, 1);
         this.repTimerSpinner.setValueFactory(repFactory);
     }
+
     @FXML
     public void setStudyTime(){
         timerViewModel.setStudyTimeSpinner(studyTimerSpinner.getValue());
     }
+
     @FXML
     public void setRestTime() { timerViewModel.setRestTimerSpinner(restTimerSpinner.getValue()); }
+
     @FXML
     public void setRep() {
         timerViewModel.setRepTimerSpinner(repTimerSpinner.getValue());
     }
+
     public void anchorPaneChange() {
         popupPane.toFront();
         popupPane.toBack();
     }
+
     public void imageLoader() {
         int totalTime = studyTimerSpinner.getValue() * repTimerSpinner.getValue();
-        int numberOfImages = 7;
-        int divideTotalTime = totalTime / numberOfImages;
+        int divideTotalTime = totalTime / repTimerSpinner.getValue();
+
         if(timerLabel.getText().equals(String.valueOf(divideTotalTime))) {
             flowerChangingImage.getClass().getResource("/images/flower/plant_1.png");
         }
@@ -83,7 +92,9 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
             flowerChangingImage.getClass().getResource("/images/flower/plant_7_done.png");
         }
     }
-    /*--------------------------------------------OnClick methods--------------------------------------------------------*/
+
+/*--------------------------------------------OnClick methods--------------------------------------------------------*/
+
     /**
      * This method gets the value of the spinners and makes sure that the right values are written to the Labels. This
      * method also starts the timer.
@@ -95,12 +106,16 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
         }
         timerViewModel.setStudyTimeSpinner(studyTimerSpinner.getValue());
         timerLabel.setText(timerViewModel.timerModel.toString());
+
         timerViewModel.setRestTimerSpinner(restTimerSpinner.getValue());
+
         timerViewModel.setRepTimerSpinner(repTimerSpinner.getValue());
         totalRepTimerLabel.setText(timerViewModel.timerModel.stringOf());
+
         timerViewModel.startStudyTimer();
         timerOnView.toFront();
     }
+
     /**
      * Timer pauses whenever the user wants to stop the timer.
      */
@@ -108,6 +123,7 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
         timerViewModel.pauseTimer(timerViewModel.studyTimeline);
         cancelPane.toFront();
     }
+
     /**
      * Stops the timer and return the user to the setTimerView.
      */
@@ -121,23 +137,50 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
         timerViewModel.studyTimeline.play();
         timerOnView.toFront();
     }
+
     public void onClickUnderstandButton () {
         setTimerView.toFront();
     }
+
     public void onClickGoToHelp(MouseEvent mouseEvent) throws IOException {
-        paneController.showHelpPane();
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/HelpView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
     }
+
     public void onCLickGoToTips(MouseEvent mouseEvent) throws IOException {
-        paneController.showTipsViewPane();
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/TipsView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
     }
+
     public void onClickStartPlanning(MouseEvent mouseEvent) throws IOException {
-        paneController.showOverviewPane();
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/PlanOverview.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
     }
+
     @FXML
     private void onClickStuderaMera(MouseEvent mouseEvent) throws IOException {
-        paneController.showFirstViewPane();
+        Parent timerViewParent = FXMLLoader.load(getClass().getResource("/fxml_files/firstSideView.fxml"));
+        Scene timerViewScene = new Scene(timerViewParent);
+
+        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(timerViewScene);
+        window.show();
     }
-    /*----------------------------------------Observer pattern methods---------------------------------------------------*/
+
+/*----------------------------------------Observer pattern methods---------------------------------------------------*/
+
     @Override
     public void update(int time, int reps, String string, int currentRep) {
         timerLabel.setText(String.valueOf(time));
@@ -145,13 +188,10 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
         typeOfTimerLabel.setText(string);
         repTimerLabel.setText(String.valueOf(currentRep));
     }
+
     @Override
     public void update(TimerModel timer) {
         timerLabel.setText(timer.toString());
     }
 
-    @Override
-    public void initPane(PaneController paneController) {
-        this.paneController = paneController;
-    }
 }
