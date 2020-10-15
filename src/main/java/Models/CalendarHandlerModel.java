@@ -21,12 +21,26 @@ public class CalendarHandlerModel {
         }
     }
 
-    public static void writeToDoList(FlowPane daysFlowPane) {
+    public void writeToDoList(FlowPane daysInMonthFlowPane) {
         try {
             FileInputStream fileIn = new FileInputStream("Models.ToDoLists.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
             ArrayList<CalendarEventModel> calendarEventModelArrayList = (ArrayList<CalendarEventModel>) in.readObject();
 
+            for( int i = 0; i < calendarEventModelArrayList.size(); i++ ){
+                String titleText = calendarEventModelArrayList.get(i).getTitleText();
+                String timeText = calendarEventModelArrayList.get(i).getTimeText();
+
+
+            }
+
+            /*for (int i = 0; i < toDoLists.size(); i++){
+                String name = toDoLists.get(i).getName();
+                ArrayList nChecklist = toDoLists.get(i).getChecklists();
+                ToDoViewModel.addToDoLists(name, nChecklist, toDoListFlowPane);
+            }
+
+             */
 
             //TODO: Write a method so the events shows!
 
@@ -40,9 +54,4 @@ public class CalendarHandlerModel {
             c.printStackTrace();
         }
     }
-
-
-
-    //public void
-
 }

@@ -2,34 +2,33 @@ package ViewControllers;
 
 import Factory.IPane;
 import Models.CalendarModel;
+import ViewModels.CalendarViewModel;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.control.Label;
-import java.awt.*;
 
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javafx.scene.control.Button;
 
 public class CalendarController implements IPane, Initializable {
 
     @FXML private AnchorPane addToCalendarPane, eventPane;
-    //@FXML private ScrollPane calendarScrollPane;
     @FXML private GridPane gridPane;
-    @FXML private Text dateText;
-    //@FXML private Button nextMonthButton, previousMonthButton;
+    @FXML private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?
 
+    private CalendarViewModel calendarViewModel = new CalendarViewModel();
+    private CalendarModel calendarModel = new CalendarModel();
 
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
@@ -41,7 +40,6 @@ public class CalendarController implements IPane, Initializable {
         dateText.setText(String.valueOf(yearMonth));
         columnAndRows();
         populateMonth(YearMonth.now());
-
     }
 
     public void clickGridPane(){
@@ -50,7 +48,6 @@ public class CalendarController implements IPane, Initializable {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
                     eventPane.toFront();
-
                 }
             });
         });
@@ -59,8 +56,6 @@ public class CalendarController implements IPane, Initializable {
     public void onClickCloseEventButton(){
         eventPane.toBack();
     }
-
-
 
 
     private void populateMonth (YearMonth yearMonthNow){
@@ -76,14 +71,8 @@ public class CalendarController implements IPane, Initializable {
             calendarModel.setLocalDate(localDate);
 
             Label label = new Label();
-            label.setText(String.valueOf(localDate.getDayOfMonth() + "/" + localDate.getMonthValue()));
+            label.setText((localDate.getDayOfMonth() + "/" + localDate.getMonthValue()));
             label.setFont(Font.font("Georgia", 20));
-
-
-           // calendarModel.se(label, 5.0);
-           // calendarModel.setLeftAnchor(label, 5.0);
-
-
             calendarModel.getChildren().add(label);
 
             localDate = localDate.plusDays(1);
@@ -91,11 +80,8 @@ public class CalendarController implements IPane, Initializable {
             if(calendarModel.getLocalDate().equals(LocalDate.now())){
                 calendarModel.setStyle("-fx-background-color: white");
             }
-
-
         }
     }
-
 
 
     private void columnAndRows(){
@@ -110,15 +96,24 @@ public class CalendarController implements IPane, Initializable {
         }
     }
 
+
     public void previousMonth(){
         yearMonth = yearMonth.minusMonths(1);
         dateText.setText(String.valueOf(yearMonth));
+        populateMonth(yearMonth);
     }
 
     public void nextMonth(){
         yearMonth = yearMonth.plusMonths(1);
         dateText.setText(String.valueOf(yearMonth));
+        populateMonth(yearMonth);
     }
+
+
+   public void onClickSaveEvent(){
+       calendarViewModel.addCalendarEvent(eventTitleText.getText(), eventTimeText.getText(), calendarModel);
+       closeAddToCalendar();
+   }
 
     public void onClickBackToOverview() {
         paneController.showOverviewPane();
@@ -145,7 +140,5 @@ public class CalendarController implements IPane, Initializable {
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
     }
-
-
 }
 

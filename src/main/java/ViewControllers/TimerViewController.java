@@ -1,5 +1,6 @@
 package ViewControllers;
 
+import Factory.IPane;
 import Models.TimerModel;
 import ObserverInterfaces.TimerObserver;
 import ViewModels.TimerViewModel;
@@ -22,7 +23,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TimerViewController extends AnchorPane implements Initializable, TimerObserver {
+public class TimerViewController extends AnchorPane implements Initializable, TimerObserver, IPane {
 
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView, popupPane, failPane;
     @FXML private Spinner<Integer> studyTimerSpinner, restTimerSpinner, repTimerSpinner;
@@ -30,6 +31,7 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     @FXML ImageView flowerChangingImage;
 
     private final TimerViewModel timerViewModel = new TimerViewModel();
+    private PaneController paneController = new PaneController();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -177,6 +179,11 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         window.setScene(timerViewScene);
         window.show();
+    }
+
+    @Override
+    public void initPane(PaneController paneController) {
+        this.paneController = paneController;
     }
 
 /*----------------------------------------Observer pattern methods---------------------------------------------------*/
