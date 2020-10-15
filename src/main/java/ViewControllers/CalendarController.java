@@ -186,7 +186,7 @@ public class CalendarController implements IPane, Initializable {
 
     @FXML
     public void writingSavedCalendarEvent(){
-       // CalendarEventHandler.writeCalendarEvent(mondayFlowPane/*remember to change this bich*/);
+        CalendarEventHandler.writeCalendarEvent(mondayFlowPane/*remember to change this bich*/);
     }
 
     @Override

@@ -1,9 +1,10 @@
 package Models;
 
 import java.awt.*;
+import java.io.Serializable;
 import java.util.Calendar;
 
-public class CalendarEvent {
+public class CalendarEvent implements Serializable {
     String name;
     String sHour;
     String sMin;
