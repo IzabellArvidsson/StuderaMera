@@ -25,8 +25,7 @@ public class CalendarViewModel {
         System.out.println(calendarEvents);
         mondayFlowPane.getChildren().add(new EventInCalendarController(calendarEvents));
         addCalendarEvent(calendarEvents);
-        //TODO save list between program startups
-        //ToDoListHandler.saveToDoList(allToDoLists);
+        CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
 
     }
 
