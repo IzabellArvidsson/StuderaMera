@@ -2,6 +2,7 @@ package ViewModels;
 
 import Models.CalendarEvent;
 import Models.ToDoLists;
+import ViewControllers.EventInCalendarController;
 import ViewControllers.listInToDoController;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
@@ -27,8 +28,6 @@ public class CalendarViewModel {
         CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
 
     }
-
-
 
     private static void addCalendarEvent(CalendarEvent calendarEvent){
         allCalendarEvents.add(calendarEvent);
