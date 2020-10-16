@@ -11,6 +11,9 @@ import javafx.animation.Timeline;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Handles the timer functionalities
+ */
 public class TimerViewModel implements TimerObservable {
 
     private final List<TimerObserver> timerObservers = new ArrayList<>();
@@ -18,8 +21,8 @@ public class TimerViewModel implements TimerObservable {
     public TimerModel timerModel = new TimerModel();
     public ImageModel imageModel = new ImageModel();
 
-    public Timeline studyTimeline = new Timeline(/*new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown())*/);
-    public Timeline restTimeLine = new Timeline(/*new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown())*/);
+    public Timeline studyTimeline = new Timeline();
+    public Timeline restTimeLine = new Timeline();
 
     private String labelType = "Studera";
     private int currentRep = 1;
@@ -41,6 +44,7 @@ public class TimerViewModel implements TimerObservable {
     public void setTimelines() {
         studyTimeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown(studyTimeline)));
         restTimeLine = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown(restTimeLine)));
+
     }
 
     /**
@@ -114,7 +118,7 @@ public class TimerViewModel implements TimerObservable {
      * be set in TimerModel
      * @param timeline Which timeline that is supposed to count down
      */
-    public void countDown(Timeline timeline) {
+    protected void countDown(Timeline timeline) {
         checkIfStudyTimeIsRunning(timeline);
         if (seconds == 0 && minutes == 0) {
             timerOnGoing();
@@ -136,18 +140,16 @@ public class TimerViewModel implements TimerObservable {
      * Checks if it's the studytimeline that is running and if it is, the countUp ads 1 to to itself
      * @param timeline The timeline that is supposed to be used
      */
-    public void checkIfStudyTimeIsRunning(Timeline timeline) {
-        if (timeline.getStatus() == Animation.Status.RUNNING) {
-            if(timeline == studyTimeline) {
-                imageModel.countUp++;
-            }
+    protected void checkIfStudyTimeIsRunning(Timeline timeline) {
+        if (timeline.getStatus() == Animation.Status.RUNNING && timeline == studyTimeline) {
+            imageModel.countUp++;
         }
     }
 
     /**
      * Checks which timeline that i running
      */
-    public void timerOnGoing() {
+    protected void timerOnGoing() {
         if (studyTimeline.getStatus() == Animation.Status.RUNNING) {
             studyTimeIsRunning();
         }
@@ -159,7 +161,7 @@ public class TimerViewModel implements TimerObservable {
     /**
      * Checks if the timer is done or if it isn't. Then doing some tasks depending on the result
      */
-    public void studyTimeIsRunning() {
+    protected void studyTimeIsRunning() {
         if(currentRep == repNumber) {
             stopTimer(studyTimeline);
             stopped = true;
@@ -168,8 +170,8 @@ public class TimerViewModel implements TimerObservable {
         }
         else {
             stopTimer(studyTimeline);
-            setStudyTimerSpinner(restTime);
             labelType = "Vila";
+            setStudyTimerSpinner(restTime);
             startTimer(restTimeLine);
         }
     }
@@ -177,7 +179,7 @@ public class TimerViewModel implements TimerObservable {
     /**
      * Switches back to studytimeline and adding 1 to the current repetitions
      */
-    public void restTimeIsRunning() {
+    protected void restTimeIsRunning() {
         stopTimer(restTimeLine);
         setStudyTimerSpinner(studyTime);
         labelType = "Studera";

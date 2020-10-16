@@ -6,6 +6,15 @@ import static org.junit.Assert.*;
 class TimerModelTest {
 
     @Test
+    void testSetReps() {
+        int reps = 2;
+        TimerModel timerModel = new TimerModel();
+        timerModel.setReps(reps);
+
+        assertEquals("2", timerModel.getReps());
+    }
+
+    @Test
     void testSetMinutes() {
         int minutes = 11;
         TimerModel timerModel = new TimerModel();
@@ -26,22 +35,42 @@ class TimerModelTest {
     }
 
     @Test
-    void toStringRep() {
-        int rep = 2;
+    void testGetMinutes() {
+        int minutes = 2;
         TimerModel timerModel = new TimerModel();
-        timerModel.setReps(rep);
-        String string = String.valueOf(rep);
+        timerModel.setMinutes(minutes);
 
-        assertEquals("2", string);
+        assertEquals(2, Integer.parseInt(timerModel.getMinutes()));
 
     }
 
     @Test
-    void checkChangeImage() {
-        int countUp = 10;
-        int totalTime = 60;
-
+    void testGetSeconds() {
+        int seconds = 59;
         TimerModel timerModel = new TimerModel();
-        //assertEquals(1, ImageModel.checkChangeImage(countUp, totalTime));
+        timerModel.setSeconds(seconds);
+
+        assertEquals(59, Integer.parseInt(timerModel.getSeconds()));
+    }
+
+    @Test
+    void testGetReps() {
+        int reps = 2;
+        TimerModel timerModel = new TimerModel();
+        timerModel.setReps(reps);
+
+        assertEquals(2, Integer.parseInt(timerModel.getReps()));
+    }
+
+    @Test
+    void testToString() {
+        int minutes = 2;
+        int seconds = 59;
+        TimerModel timerModel = new TimerModel();
+        timerModel.setMinutes(minutes);
+        timerModel.setSeconds(seconds);
+
+        assertEquals("2:59", timerModel.toString());
+
     }
 }

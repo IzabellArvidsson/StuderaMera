@@ -69,7 +69,7 @@ public class PaneFactory {
     }
 
     public static AnchorPane timerViewPane(){
-        Pane <TimerViewController> pane = loadInPane("fxml_files/TimerView.fxml");
+        Pane <TimerView> pane = loadInPane("fxml_files/TimerView.fxml");
         pane.controller.initPane(paneController);
         return pane.aPane;
     }

@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
  * The controller class for the view. This class handles all the information about the view. It also updates the view
  * after updates from other classes.
  */
-public class TimerViewController extends AnchorPane implements Initializable, TimerObserver, IPane {
+public class TimerView extends AnchorPane implements Initializable, TimerObserver, IPane {
 
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView, failPane, finishedPane;
     @FXML private Spinner<Integer> studyTimerSpinner, restTimerSpinner, repTimerSpinner;
@@ -57,7 +57,7 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
      * Sends the value of the studyspinner to a method in TimerViewModel
      */
     @FXML
-    public void setStudyTime(){
+    private void setStudyTime(){
         timerViewModel.setStudyTimerSpinner(studyTimerSpinner.getValue());
     }
 
@@ -65,20 +65,20 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
      * Sends the value of the restspinner to a method in TimerViewModel
      */
     @FXML
-    public void setRestTime() { timerViewModel.setRestTimerSpinner(restTimerSpinner.getValue()); }
+    private void setRestTime() { timerViewModel.setRestTimerSpinner(restTimerSpinner.getValue()); }
 
     /**
      * Sends the value of the repetition spinner to a method in TimerViewModel
      */
     @FXML
-    public void setRep() {
+    private void setRep() {
         timerViewModel.setRepTimerSpinner(repTimerSpinner.getValue());
     }
 
     /**
      * Sets the first picture when you start the timer
      */
-    public void setImage() {
+    private void setImage() {
         flowerChangingImage.setImage(new Image("/images/flower/plant_0_pot.png"));
     }
 
@@ -86,7 +86,7 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
      * Changes the image of the flower depending on how big part of the studying the user has done
      * @param countUp Is the variable that decides when the application should change the image
      */
-    public void imageLoader(int countUp) {
+    private void imageLoader(int countUp) {
 
         int totalTime = (studyTimerSpinner.getValue() * repTimerSpinner.getValue())*60;
 
@@ -124,20 +124,13 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
      * This method makes sure that the right values are written to the Labels. This method also starts the timer.
      */
     @FXML
-    public void onClickStartTimer() {
-        if (timerViewModel.studyTimeline != null) {
-            timerViewModel.stopTimer(timerViewModel.studyTimeline);
-        }
-
+    private void onClickStartTimer() {
         setStudyTime();
         setRestTime();
         setRep();
         setImage();
         timerViewModel.setCountUpInt();
         timerViewModel.setTimelines();
-
-        timerLabel.setText(timerViewModel.timerModel.toString());
-        totalRepTimerLabel.setText(timerViewModel.timerModel.toStringRep());
 
         timerViewModel.startTimer(timerViewModel.studyTimeline);
 
@@ -147,7 +140,8 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     /**
      * Timer pauses whenever the user wants to stop the timer.
      */
-    public void onCLickStopButton() {
+    @FXML
+    private void onCLickStopButton() {
         timerViewModel.pauseTimer(timerViewModel.studyTimeline);
         cancelPane.toFront();
     }
@@ -155,7 +149,8 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     /**
      * Stops the timer and return the user to the setTimerView.
      */
-    public void onCLickYesButton() {
+    @FXML
+    private void onCLickYesButton() {
         timerViewModel.stopTimer(timerViewModel.studyTimeline);
         setTimerView.toFront();
         failPane.toFront();
@@ -165,7 +160,8 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     /**
      * Returns the user to the timer and starts the timer again
      */
-    public void onClickNoButton() {
+    @FXML
+    private void onClickNoButton() {
         timerViewModel.studyTimeline.play();
         timerOnView.toFront();
     }
@@ -173,35 +169,40 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     /**
      * Sends the user to the view where you set values
      */
-    public void onClickUnderstandButton () {
+    @FXML
+    private void onClickUnderstandButton () {
         setTimerView.toFront();
     }
 
     /**
      * Sends the user to the help part of the application
      */
-    public void onClickGoToHelp() {
+    @FXML
+    private void onClickGoToHelp() {
         paneController.showHelpPane();
     }
 
     /**
      * Sends the user to the tips part of the application
      */
-    public void onCLickGoToTips() {
+    @FXML
+    private void onCLickGoToTips() {
         paneController.showTipsViewPane();
     }
 
     /**
      * Sends the user to the overview in the planning part of the application
      */
-    public void onClickStartPlanning() {
+    @FXML
+    private void onClickStartPlanning() {
         paneController.showOverviewPane();
     }
 
     /**
      * Takes the user back to the view where you set the values
      */
-    public void onClickBackToStart() {
+    @FXML
+    private void onClickBackToStart() {
         setTimerView.toFront();
     }
 
