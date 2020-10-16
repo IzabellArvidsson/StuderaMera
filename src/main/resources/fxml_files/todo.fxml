@@ -18,7 +18,7 @@
          <children>
             <AnchorPane layoutX="110.0" layoutY="75.0" prefHeight="474.0" prefWidth="715.0" style="-fx-background-color: DBEFF2;">
                <children>
-                  <Button layoutX="649.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeAddToCalendar" style="-fx-background-color: #ffffff;" text="Stäng">
+                  <Button layoutX="649.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeAddToDoList" style="-fx-background-color: #ffffff;" text="Stäng">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>
@@ -97,7 +97,18 @@
                         <Font name="Georgia" size="18.0" />
                      </font>
                   </Text>
-                  <Button layoutX="432.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#onClickSaveToDoTask" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: #ffffff;" text="Lägg till / spara">
+                  <Button fx:id="saveButton" layoutX="432.0" layoutY="412.0" mnemonicParsing="false" onMouseClicked="#onClickSaveToDoTask" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: #ffffff;" text="Spara">
+                     <effect>
+                        <DropShadow color="#919090" />
+                     </effect>
+                     <font>
+                        <Font name="Georgia" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="addButton" layoutX="432.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#onClickAddToDoTask" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: #ffffff;" text="Lägg till ">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>

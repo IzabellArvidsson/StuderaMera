@@ -1,5 +1,6 @@
 package Models;
 
+import Views.ListInToDoView;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
@@ -13,8 +14,6 @@ public class ToDoListModel implements Serializable {
     private String description;
     private ArrayList checklists;
     private ArrayList timeAndDeadline;
-
-
     private ArrayList checkboxes;
 
 
@@ -37,6 +36,12 @@ public class ToDoListModel implements Serializable {
     public ArrayList getCheckboxes() { return checkboxes; }
 
     public ArrayList getTimeAndDeadline() { return timeAndDeadline; }
+
+    public void setName(String name) { this.name = name; }
+
+    public void setDescription(String description) { this.description = description; }
+
+    public void setTimeAndDeadline(ArrayList timeAndDeadline) { this.timeAndDeadline = timeAndDeadline; }
 
     public void setChecklists(ArrayList checklists) { this.checklists = checklists; }
 

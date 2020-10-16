@@ -18,11 +18,11 @@ public class ToDoViewModel  {
     /**
      * This method creates a toDoList and a ListInToDoView and adds it to a Pane
      *
-     * @param nameTextField
-     * @param description
-     * @param checklist
-     * @param string
-     * @param toDoListFlowPane
+     * @param nameTextField a string with a name for the toDoList
+     * @param description a string with a description for the toDoList
+     * @param checklist an arrayList with textFields for the toDoList
+     * @param string an arrayList with strings, with the time and deadline for the toDoList
+     * @param toDoListFlowPane the FlowPane where the list will appear
      * @param id an indicator which indicates which method called up on this method
      * @param todoListView
      */
@@ -45,6 +45,22 @@ public class ToDoViewModel  {
         listInToDoView.addOpen(todoListView);
         toDoListFlowPane.getChildren().add(listInToDoView);
         saveToDoList(allToDoLists);
+    }
+
+
+
+    public void updateToDoInList(String nameTextField, String description, ArrayList<TextField> checklist, ArrayList<CheckBox>
+            nCheckboxes, ArrayList<String> string, ToDoListModel toDoListModel){
+         for(ToDoListModel toDoListModelInList : allToDoLists){
+             if(toDoListModelInList.equals(toDoListModel)){
+                 toDoListModelInList.setName(nameTextField);
+                 toDoListModelInList.setDescription(description);
+                 toDoListModelInList.setCheckboxes(isCheckboxClicked(nCheckboxes));
+                 toDoListModelInList.setChecklists(checkListEmpty(checklist));
+                 toDoListModelInList.setTimeAndDeadline(string);
+                 saveToDoList(allToDoLists);
+             }
+         }
     }
 
     /**

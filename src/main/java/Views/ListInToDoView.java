@@ -7,7 +7,6 @@ import ObserverInterfaces.ToDoListRemoveObservable;
 import ObserverInterfaces.ToDoListRemoveObserver;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import java.io.IOException;
@@ -17,12 +16,16 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
 
     @FXML  Text nameText;
     @FXML  Text numberOfChecklistsText;
-    @FXML  Button deleteButton;
     ToDoListModel toDoList;
 
     ArrayList<ToDoListRemoveObserver> observerArrayList = new ArrayList<>();
     ArrayList<ToDoListOpenObserver> openObserverArrayList = new ArrayList<>();
 
+    /**
+     * This method
+     *
+     * @param toDoListModel
+     */
 
     public ListInToDoView(ToDoListModel toDoListModel){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/listInToDo.fxml"));
@@ -38,10 +41,20 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
         toDoList = toDoListModel;
     }
 
+    /**
+     * This method calls on another method, which notify observers, when someone clicks on the delete button
+     */
+
     @FXML
-    private void onDeleteButtonClick(){
-        notifyObservers();
-    }
+    private void onDeleteButtonClick(){ notifyObservers(); }
+
+    /**
+     * This method calls on another method, which notify observers, when someone clicks on the listInToDo
+     */
+
+    @FXML
+    private void onTodoListClicked(){
+        notifyOpenObservers();}
 
     @Override
     public void add(ToDoListRemoveObserver o) {
@@ -65,9 +78,5 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
         for (ToDoListRemoveObserver o: observerArrayList) {
             o.update(toDoList,this);
         }
-    }
-    @FXML
-    private void onTodoListClicked(){
-        notifyOpenObservers();
     }
 }
