@@ -1,66 +1,128 @@
 package ViewModels;
 
+import Models.TimerModel;
 import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TimerViewModelTest {
 
     @Test
-    public void pauseTimer() {
+    void testSetTimelines() {
+
+    }
+
+    @Test
+    void testSetStudyTimerSpinner() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        int studyTime = 20;
+        timerViewModel.setStudyTimerSpinner(studyTime);
+
+        //assertEquals(20, timerViewModel.minutes);
+    }
+
+    @Test
+    void testSetRestTimerSpinner() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+
+
+    }
+
+    @Test
+    void testSetRepTimerSpinner() {
+
+    }
+
+    @Test
+    public void testPauseTimer() {
         Timeline timeline = new Timeline();
         timeline.playFromStart();
         TimerViewModel timerViewModel = new TimerViewModel();
         timerViewModel.pauseTimer(timeline);
-        assertSame(timeline.getStatus(), Animation.Status.STOPPED); //Pauses time but stops evaluating
+
+        assertSame(timeline.getStatus(), Animation.Status.STOPPED);
     }
 
     @Test
-    void stopTimer() {
+    void testStopTimer() {
         Timeline timeline = new Timeline();
         timeline.play();
         TimerViewModel timerViewModel = new TimerViewModel();
         timerViewModel.stopTimer(timeline);
-        assertSame(timeline.getStatus(), Animation.Status.STOPPED); //Stop the timer
+
+        assertSame(timeline.getStatus(), Animation.Status.STOPPED);
     }
 
     @Test
-    void startStudyTimer() {
-        Timeline timeline = new Timeline();
+    void testStartTimer() {
         TimerViewModel timerViewModel = new TimerViewModel();
-        timerViewModel.startStudyTimer();
-        timeline = timerViewModel.studyTimeline;
+        Timeline timeline = new Timeline();
+        Timeline finalTimeline = timeline;
+        timeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> timerViewModel.countDown(finalTimeline)));
+        timerViewModel.startTimer(timeline);
         assertSame(timeline.getStatus(), Animation.Status.RUNNING);
     }
 
     @Test
-    void startRestTimer() {
-        Timeline timeline = new Timeline();
+    void testCountDown() {
         TimerViewModel timerViewModel = new TimerViewModel();
-        timerViewModel.startRestTimer();
-        timeline = timerViewModel.restTimeLine;
-        assertSame(timeline.getStatus(), Animation.Status.RUNNING);
+        TimerModel timerModel = new TimerModel();
+        timerModel.setMinutes(3);
+        timerModel.setSeconds(0);
+
+        int minutes = 3;
+        timerViewModel.setStudyTimerSpinner(minutes);
+        Timeline timeline = new Timeline();
+        Timeline finalTimeline = timeline;
+        timeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> timerViewModel.countDown(finalTimeline)));
+
+        timerViewModel.countDown(timeline);
+
+        assertEquals(2, Integer.parseInt(timerViewModel.timerModel.getMinutes()));
+        assertEquals(59, Integer.parseInt(timerViewModel.timerModel.getSeconds()));
     }
 
     @Test
-    void repNumberCountdown() {
+    void testCheckIfStudyTimeIsRunning() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.studyTimeline.playFromStart();
+        timerViewModel.checkIfStudyTimeIsRunning(timerViewModel.studyTimeline);
 
+        assertEquals(1, timerViewModel.imageModel.countUp);
     }
 
     @Test
-    void countDown() {
+    void testTimerOnGoing() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.studyTimeline.playFromStart();
+        timerViewModel.timerOnGoing();
 
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
     }
 
     @Test
-    void register() {
+    void testStudyTimeIsRunning() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.studyTimeline.playFromStart();
 
+        timerViewModel.studyTimeIsRunning();
+
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
     }
 
     @Test
-    void notifyObserver() {
+    void testRestTimeIsRunning() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.restTimeLine.playFromStart();
 
+        timerViewModel.restTimeIsRunning();
+
+        assertEquals(Animation.Status.STOPPED, timerViewModel.restTimeLine.getStatus());
     }
 }
