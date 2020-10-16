@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="TimerView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControllers.TimerViewController">
+<AnchorPane fx:id="TimerView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControllers.TimerView">
    <children>
       <AnchorPane fx:id="finishedPane" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: #DBEFF2;">
          <children>
@@ -183,9 +183,9 @@
                   <Font name="Georgia" size="24.0" />
                </font>
             </Button>
-            <ImageView fx:id="deadFlowerImage" fitHeight="252.0" fitWidth="269.0" layoutX="319.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="deadFlowerImage" fitHeight="174.0" fitWidth="247.0" layoutX="326.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/flower/plant_1_dead.png" />
+                  <Image url="@../images/flower/plant_0_pot.png" />
                </image>
             </ImageView>
          </children>

@@ -1,20 +1,39 @@
 package ViewModels;
 
-import Models.ImageModel;
 import Models.TimerModel;
-import ObserverInterfaces.TimerObserver;
-import ViewControllers.TimerViewController;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TimerViewModelTest {
+
+    @Test
+    void testSetTimelines() {
+
+    }
+
+    @Test
+    void testSetStudyTimerSpinner() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        int studyTime = 20;
+        timerViewModel.setStudyTimerSpinner(studyTime);
+
+        //assertEquals(20, timerViewModel.minutes);
+    }
+
+    @Test
+    void testSetRestTimerSpinner() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+
+
+    }
+
+    @Test
+    void testSetRepTimerSpinner() {
+
+    }
 
     @Test
     public void testPauseTimer() {
@@ -22,7 +41,8 @@ public class TimerViewModelTest {
         timeline.playFromStart();
         TimerViewModel timerViewModel = new TimerViewModel();
         timerViewModel.pauseTimer(timeline);
-        assertSame(timeline.getStatus(), Animation.Status.STOPPED); //Pauses time but stops evaluating
+
+        assertSame(timeline.getStatus(), Animation.Status.STOPPED);
     }
 
     @Test
@@ -31,77 +51,78 @@ public class TimerViewModelTest {
         timeline.play();
         TimerViewModel timerViewModel = new TimerViewModel();
         timerViewModel.stopTimer(timeline);
-        assertSame(timeline.getStatus(), Animation.Status.STOPPED); //Stop the timer
+
+        assertSame(timeline.getStatus(), Animation.Status.STOPPED);
     }
 
     @Test
     void testStartTimer() {
-        Timeline timeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown()));
         TimerViewModel timerViewModel = new TimerViewModel();
+        Timeline timeline = new Timeline();
+        Timeline finalTimeline = timeline;
+        timeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> timerViewModel.countDown(finalTimeline)));
         timerViewModel.startTimer(timeline);
         assertSame(timeline.getStatus(), Animation.Status.RUNNING);
     }
 
     @Test
-    void countDown() {
+    void testCountDown() {
         TimerViewModel timerViewModel = new TimerViewModel();
-        Timeline timeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown()));
+        TimerModel timerModel = new TimerModel();
+        timerModel.setMinutes(3);
+        timerModel.setSeconds(0);
+
+        int minutes = 3;
+        timerViewModel.setStudyTimerSpinner(minutes);
+        Timeline timeline = new Timeline();
+        Timeline finalTimeline = timeline;
+        timeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> timerViewModel.countDown(finalTimeline)));
+
         timerViewModel.countDown(timeline);
 
-
+        assertEquals(2, Integer.parseInt(timerViewModel.timerModel.getMinutes()));
+        assertEquals(59, Integer.parseInt(timerViewModel.timerModel.getSeconds()));
     }
 
     @Test
     void testCheckIfStudyTimeIsRunning() {
         TimerViewModel timerViewModel = new TimerViewModel();
-        ImageModel imageModel = new ImageModel();
         timerViewModel.setTimelines();
         timerViewModel.studyTimeline.playFromStart();
-
         timerViewModel.checkIfStudyTimeIsRunning(timerViewModel.studyTimeline);
 
-        assertEquals(1, imageModel.countUp);
+        assertEquals(1, timerViewModel.imageModel.countUp);
     }
 
     @Test
     void testTimerOnGoing() {
         TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
         timerViewModel.studyTimeline.playFromStart();
         timerViewModel.timerOnGoing();
 
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
     }
 
     @Test
-    void studyTimeIsRunning() {
-    }
-
-    @Test
-    void restTimeIsRunning() {
-    }
-
-    @Test
-    void register() {
+    void testStudyTimeIsRunning() {
         TimerViewModel timerViewModel = new TimerViewModel();
-        List<TimerObserver> timerObservers = new ArrayList<>();
-        TimerObserver timerObserver = new TimerObserver() {
-            @Override
-            public void update(int time, int reps, String string, int currentRep, boolean stopped, int countUp) {
+        timerViewModel.setTimelines();
+        timerViewModel.studyTimeline.playFromStart();
 
-            }
+        timerViewModel.studyTimeIsRunning();
 
-            @Override
-            public void update(TimerModel timer) {
-
-            }
-        };
-        timerViewModel.register(timerObserver);
-
-        assertEquals(1, timerObservers.size());
-
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
     }
 
     @Test
-    void testNotifyObserver() {
+    void testRestTimeIsRunning() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.restTimeLine.playFromStart();
 
+        timerViewModel.restTimeIsRunning();
+
+        assertEquals(Animation.Status.STOPPED, timerViewModel.restTimeLine.getStatus());
     }
 }

@@ -10,7 +10,7 @@ public class TimerModel {
     private String reps;
 
     public TimerModel() {
-        minutes = "00";
+        this.minutes = "00";
         this.seconds = "00";
         this.reps = "0";
     }
@@ -29,7 +29,7 @@ public class TimerModel {
      */
     public void setMinutes(int min) {
         if (min < 10) {
-            this.minutes =  String.valueOf(min);
+             this.minutes =  String.valueOf(min);
         } else {
             this.minutes = min + "";
         }
@@ -48,10 +48,28 @@ public class TimerModel {
     }
 
     /**
-     * Makes sure that the repetitions has the right format
-     * @return The number of reps
+     * Gets the value of minutes
+     * @return The value of minutes
      */
-    public String toStringRep() { return this.reps; }
+    public String getMinutes() {
+        return minutes;
+    }
+
+    /**
+     * Gets the value of seconds
+     * @return The value of seconds
+     */
+    public String getSeconds() {
+        return seconds;
+    }
+
+    /**
+     * Gets the value of reps
+     * @return The value of reps
+     */
+    public String getReps() {
+        return reps;
+    }
 
     /**
      * Makes sure that the timer has the format of a timer
