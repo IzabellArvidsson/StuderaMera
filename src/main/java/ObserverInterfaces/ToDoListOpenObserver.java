@@ -1,8 +1,8 @@
 package ObserverInterfaces;
 
-import Models.ToDoLists;
+import Models.ToDoListModel;
 
 public interface ToDoListOpenObserver {
-    void updateOpen(ToDoLists toDoList);
+    void updateOpen(ToDoListModel toDoList);
 
 }

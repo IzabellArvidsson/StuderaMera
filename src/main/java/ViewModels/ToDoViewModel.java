@@ -1,8 +1,9 @@
 package ViewModels;
 
-import Models.ToDoLists;
-import ViewControllers.TodoController;
-import ViewControllers.listInToDoController;
+import Models.ToDoListModel;
+import Views.TodoListView;
+import Views.ListInToDoView;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 
@@ -12,28 +13,46 @@ import java.util.ArrayList;
 
 public class ToDoViewModel  {
 
-    public ArrayList<ToDoLists> allToDoLists = new ArrayList<>();
+    public ArrayList<ToDoListModel> allToDoLists = new ArrayList<>();
 
-     public void addToDoLists(String nameTextField, String description, ArrayList<TextField> checklist, ArrayList<String>
-             string, FlowPane toDoListFlowPane, String id, String id2, TodoController todoController){
-         ToDoLists toDoLists = new ToDoLists(nameTextField, description, string);
+    /**
+     * This method creates a toDoList and a ListInToDoView and adds it to a Pane
+     *
+     * @param nameTextField
+     * @param description
+     * @param checklist
+     * @param string
+     * @param toDoListFlowPane
+     * @param id an indicator which indicates which method called up on this method
+     * @param todoListView
+     */
+
+     public void addToDoListsToPane(String nameTextField, String description, ArrayList<TextField> checklist, ArrayList<CheckBox>
+             nCheckboxes, ArrayList<String> string, FlowPane toDoListFlowPane, String id, TodoListView todoListView){
+         ToDoListModel toDoListModel = new ToDoListModel(nameTextField, description, string);
 
         if(id.equals("handler")){
-            toDoLists.setChecklists(checklist);
-            if(id2.equals("yes")){
-                addToDoList(toDoLists);
-            }
+            toDoListModel.setChecklists(checklist);
+            toDoListModel.setCheckboxes(nCheckboxes);
         }
         else{
-            toDoLists.setChecklists(checkListEmpty(checklist));
-            addToDoList(toDoLists);
+            toDoListModel.setChecklists(checkListEmpty(checklist));
+            toDoListModel.setCheckboxes(isCheckboxClicked(nCheckboxes));
         }
-        listInToDoController listInToDoController = new listInToDoController(toDoLists);
-        listInToDoController.add(todoController);
-        listInToDoController.addOpen(todoController);
-        toDoListFlowPane.getChildren().add(listInToDoController);
+        addToDoListToArrayList(toDoListModel);
+        ListInToDoView listInToDoView = new ListInToDoView(toDoListModel);
+        listInToDoView.add(todoListView);
+        listInToDoView.addOpen(todoListView);
+        toDoListFlowPane.getChildren().add(listInToDoView);
         saveToDoList(allToDoLists);
     }
+
+    /**
+     * This method checks if a text field is empty and removes it if that is the case
+     *
+     * @param checklist an arrayList with all the textFields that will be check if they are empty or not.
+     * @return ArrayList with textFields that is not empty
+     */
     
     private ArrayList<String> checkListEmpty(ArrayList<TextField> checklist){
         ArrayList<String> noEmptyChecklist = new ArrayList<>();
@@ -45,16 +64,51 @@ public class ToDoViewModel  {
         return noEmptyChecklist;
     }
 
-    private void addToDoList(ToDoLists toDoLists){
-        allToDoLists.add(toDoLists);
+    /**
+     * This method checks if the checkboxes has been clicked on
+     *
+     * @param nCheckboxes ArrayList with checkboxes
+     * @return return an arrayList with strings
+     */
+
+    private ArrayList<String> isCheckboxClicked(ArrayList<CheckBox> nCheckboxes){
+        ArrayList<String> checkboxArraylist = new ArrayList<>();
+        for (CheckBox checkBox: nCheckboxes) {
+            if(checkBox.isSelected()){
+                checkboxArraylist.add("clickOn");
+            }
+            else{
+                checkboxArraylist.add("notClicked");
+            }
+        }
+        return checkboxArraylist;
     }
 
-    public boolean isTextFieldValid(String deadline){
-        String onlyDigits = deadline.replaceAll("[^0-9]+", "");
+    /**
+     * This method adds a toDoList to an arrayList
+     *
+     * @param toDoList the toDoList which will be add to the arrayList
+     */
+
+    private void addToDoListToArrayList(ToDoListModel toDoList){
+        allToDoLists.add(toDoList);
+    }
+
+    /**
+     * This method checks if a text field is valid or not
+     *
+     * @param textField the text field which will be tested
+     * @return the return value is a boolean which indicates if the text field is valid or not.
+     */
+
+    public boolean isTextFieldValid(TextField textField){
+        String onlyDigits = textField.getText().replaceAll("[^0-9]+", "");
         if (onlyDigits.length()==2){
+            textField.setStyle(" -fx-border-color: white;");
             return true;
         }
         else {
+            textField.setStyle(" -fx-border-color: RED;");
             return false;
         }
     }
@@ -65,7 +119,7 @@ public class ToDoViewModel  {
      * @param toDoLists a list with all the toDoLists which will be saved
      */
 
-    public void saveToDoList(ArrayList<ToDoLists> toDoLists) {
+    public void saveToDoList(ArrayList<ToDoListModel> toDoLists) {
         try {
             FileOutputStream fileOut = new FileOutputStream("Models.ToDoLists.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -81,21 +135,22 @@ public class ToDoViewModel  {
      * This method reads from the .ser file and writes out the toDoLists on the flowPane given in the parameter
      *
      * @param toDoListFlowPane the FlowPane which the toDoList will be added on
-     * @param todoController
+     * @param todoListView
      */
 
-    public void writeToDoList(FlowPane toDoListFlowPane, String yesOrNo, TodoController todoController) {
+    public void writeToDoList(FlowPane toDoListFlowPane, TodoListView todoListView) {
         try {
             FileInputStream fileIn = new FileInputStream("Models.ToDoLists.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
-            ArrayList<ToDoLists> toDoLists = (ArrayList<ToDoLists>) in.readObject();
+            ArrayList<ToDoListModel> toDoLists = (ArrayList<ToDoListModel>) in.readObject();
             String id = "handler";
-            for (int i = 0; i < toDoLists.size(); i++){
-                String name = toDoLists.get(i).getName();
-                String description = toDoLists.get(i).getDescription();
-                ArrayList<TextField> nChecklist = toDoLists.get(i).getChecklists();
-                ArrayList<String> timeAndDeadline = toDoLists.get(i).getTimeAndDeadline();
-                addToDoLists(name, description, nChecklist, timeAndDeadline, toDoListFlowPane, id, yesOrNo, todoController);
+            for (ToDoListModel toDoList : toDoLists) {
+                String name = toDoList.getName();
+                String description = toDoList.getDescription();
+                ArrayList<TextField> nChecklist = toDoList.getChecklists();
+                ArrayList<CheckBox> nCheckboxes = toDoList.getCheckboxes();
+                ArrayList<String> timeAndDeadline = toDoList.getTimeAndDeadline();
+                addToDoListsToPane(name, description, nChecklist, nCheckboxes, timeAndDeadline, toDoListFlowPane, id, todoListView);
             }
             in.close();
             fileIn.close();

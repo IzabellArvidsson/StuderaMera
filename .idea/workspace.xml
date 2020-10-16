@@ -22,33 +22,44 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="fixed emptyChecklist method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObservable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObservable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/StuderaMera.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StuderaMera.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models.ToDoLists.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Models.ToDoLists.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/PaneFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/PaneFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/IPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/IOnClickPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/PaneFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ToDoLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ToDoLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/OverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/PaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/PaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/listInToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/listInToDoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoListHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoListHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ToDoLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ToDoListModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/CalendarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/FirstSideController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/FirstSideController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/HelpViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/HelpViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/OverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/OverviewView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/PaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/TimerViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TipsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/TipsViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/TodoListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/listInToDoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/ListInToDoView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoListHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/listInToDo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/Calendar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/HelpView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TipsView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/mainAnchorPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/mainAnchorPane.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/todo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/listInToDo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ViewModels/ToDoListHandlerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ViewModels/ToDoViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewModels/ToDoViewModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/Calendar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/HelpView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/mainAnchorPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/mainAnchorPane.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/todo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/todo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/StuderaMera.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,22 +163,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimerViewModelTest.pauseTimer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StuderaMera" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ViewModels" />
-      <option name="MAIN_CLASS_NAME" value="ViewModels.TimerViewModelTest" />
-      <option name="METHOD_NAME" value="pauseTimer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TimerViewModelTest.startRestTimer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StuderaMera" />
       <extension name="coverage">
@@ -200,7 +195,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimerViewModelTest.stopTimer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ToDoViewModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StuderaMera" />
       <extension name="coverage">
         <pattern>
@@ -209,9 +204,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ViewModels" />
-      <option name="MAIN_CLASS_NAME" value="ViewModels.TimerViewModelTest" />
-      <option name="METHOD_NAME" value="stopTimer" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ViewModels.ToDoViewModelTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -228,6 +222,20 @@
       <option name="MAIN_CLASS_NAME" value="ViewModels.ToDoViewModelTest" />
       <option name="METHOD_NAME" value="addToDoLists" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewModels in StuderaMera" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StuderaMera" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ViewModels.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ViewModels" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -260,20 +268,20 @@
     <list>
       <item itemvalue="Application.main" />
       <item itemvalue="JUnit.All in StuderaMera" />
-      <item itemvalue="JUnit.TimerViewModelTest.pauseTimer" />
       <item itemvalue="JUnit.TimerViewModelTest.startRestTimer" />
       <item itemvalue="JUnit.TimerViewModelTest.startStudyTimer" />
-      <item itemvalue="JUnit.TimerViewModelTest.stopTimer" />
       <item itemvalue="JUnit.ToDoViewModelTest.addToDoLists" />
       <item itemvalue="Maven.StuderaMera [test] (1)" />
+      <item itemvalue="JUnit.ViewModels in StuderaMera" />
+      <item itemvalue="JUnit.ToDoViewModelTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ToDoViewModelTest" />
         <item itemvalue="JUnit.ToDoViewModelTest.addToDoLists" />
+        <item itemvalue="JUnit.ViewModels in StuderaMera" />
         <item itemvalue="JUnit.TimerViewModelTest.startRestTimer" />
         <item itemvalue="JUnit.TimerViewModelTest.startStudyTimer" />
-        <item itemvalue="JUnit.TimerViewModelTest.stopTimer" />
-        <item itemvalue="JUnit.TimerViewModelTest.pauseTimer" />
       </list>
     </recent_temporary>
   </component>
@@ -445,11 +453,11 @@
       <option name="presentableId" value="LOCAL−00026" />
       <updated>1602452188631</updated>
     </task>
-    <task id="LOCAL−00027" summary="adding to files and creating to-do lists functions">
-      <created>1601909104818</created>
+    <task id="LOCAL−00027" summary="added a remove method and see more method plus implemented observer pattern">
+      <created>1602678217038</created>
       <option name="number" value="LOCAL−00027" />
       <option name="presentableId" value="LOCAL−00027" />
-      <updated>1601909104818</updated>
+      <updated>1602678217038</updated>
     </task>
     <task id="LOCAL−00028" summary="adding to files and creating to-do lists functions">
       <created>1601986817133</created>
@@ -457,7 +465,7 @@
       <option name="presentableId" value="LOCAL−00028" />
       <updated>1601986817133</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -498,7 +506,8 @@
     <MESSAGE value="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview." />
     <MESSAGE value="Author:hanna and Iza&#10;Julia fixing a merge-problem she created" />
     <MESSAGE value="fixed emptyChecklist method" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed emptyChecklist method" />
+    <MESSAGE value="added a remove method and see more method plus implemented observer pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a remove method and see more method plus implemented observer pattern" />
   </component>
   <component name="WindowStateProjectService">
     <state x="520" y="236" key="#Notifications" timestamp="1602619924225">
@@ -519,8 +528,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="117" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.824@0.0.1536.824" timestamp="1602621048202" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1602618192874" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1602618192874" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1602762382162">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1602762382162" />
     <state x="500" y="101" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1602622323986">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -531,34 +542,36 @@
     <state x="441" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1602622157549" />
     <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1602618192874" />
     <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1602618192874" />
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602618192874" />
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1602618192874" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602618192874" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602618192874" />
-    <state x="386" y="0" key="CommitChangelistDialog2" timestamp="1602620696966">
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602839124447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="386" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602620696966" />
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1602839124447" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602618192874" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602618192874" />
+    <state x="386" y="0" key="CommitChangelistDialog2" timestamp="1602678215140">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="386" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602678215140" />
     <state x="520" y="110" key="FileChooserDialogImpl" timestamp="1602676431510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602676431510" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1602677509935">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1602847456925">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602677509935" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1602677509934">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602847456925" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1602847456924">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602677509934" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1602677509934">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602847456924" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1602847456924">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602677509934" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1602677509934">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602847456924" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1602847456924">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602677509934" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602847456924" />
     <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1602618192874" />
     <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602618192874" />
     <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1602618192874" />
@@ -583,8 +596,10 @@
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602677005363" />
     <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1602618192874" />
     <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1602618192874" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602618192874" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602618192874" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602678234120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602678234120" />
     <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1602618192874" />
     <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1602618192874" />
     <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602618192874" />
@@ -624,15 +639,29 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ViewControllers/FirstSideController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/Views/FirstSideController.java</url>
           <line>15</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Views/ListInToDoView.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/StuderaMera$ViewModels_in_StuderaMera.ic" NAME="ViewModels in StuderaMera Coverage Results" MODIFIED="1602837520950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ViewModels.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/StuderaMera1$main.ic" NAME="main Coverage Results" MODIFIED="1600350809200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1602619556652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/StuderaMera$ToDoViewModelTest.ic" NAME="ToDoViewModelTest Coverage Results" MODIFIED="1602838248068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ViewModels.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/StuderaMera$ToDoViewModelTest_addToDoLists.ic" NAME="ToDoViewModelTest.addToDoLists Coverage Results" MODIFIED="1602837814555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ViewModels.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1602838080200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

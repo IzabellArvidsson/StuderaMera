@@ -1,26 +1,22 @@
-package ViewControllers;
-import Factory.IPane;
+package Views;
+import Factory.IOnClickPane;
+import Factory.OnClickPaneController;
 import Models.TimerModel;
 import ObserverInterfaces.TimerObserver;
 import ViewModels.TimerViewModel;
-import javafx.animation.Timeline;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-public class TimerViewController extends AnchorPane implements Initializable, TimerObserver, IPane {
+public class TimerViewController extends AnchorPane implements Initializable, TimerObserver, IOnClickPane {
 
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView, popupPane, failPane;
     @FXML private Spinner<Integer> studyTimerSpinner, restTimerSpinner, repTimerSpinner;
@@ -28,7 +24,7 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     @FXML ImageView flowerChangingImage;
 
     private final TimerViewModel timerViewModel = new TimerViewModel();
-    PaneController paneController = new PaneController();
+    OnClickPaneController onClickPaneController = new OnClickPaneController();
 
 
     @Override
@@ -125,17 +121,17 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
         setTimerView.toFront();
     }
     public void onClickGoToHelp(MouseEvent mouseEvent) throws IOException {
-        paneController.showHelpPane();
+        onClickPaneController.showHelpPane();
     }
     public void onCLickGoToTips(MouseEvent mouseEvent) throws IOException {
-        paneController.showTipsViewPane();
+        onClickPaneController.showTipsViewPane();
     }
     public void onClickStartPlanning(MouseEvent mouseEvent) throws IOException {
-        paneController.showOverviewPane();
+        onClickPaneController.showOverviewPane();
     }
     @FXML
     private void onClickStuderaMera(MouseEvent mouseEvent) throws IOException {
-        paneController.showFirstViewPane();
+        onClickPaneController.showFirstViewPane();
     }
     /*----------------------------------------Observer pattern methods---------------------------------------------------*/
     @Override
@@ -151,7 +147,7 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
     }
 
     @Override
-    public void initPane(PaneController paneController) {
-        this.paneController = paneController;
+    public void initPane(OnClickPaneController onClickPaneController) {
+        this.onClickPaneController = onClickPaneController;
     }
 }

@@ -1,20 +1,24 @@
 package Models;
 
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ToDoLists implements Serializable {
+public class ToDoListModel implements Serializable {
 
-    String name;
-    String description;
+    private String name;
+    private String description;
     private ArrayList checklists;
     private ArrayList timeAndDeadline;
 
 
-    public ToDoLists(String name, String description, ArrayList timeAndDeadline){
+    private ArrayList checkboxes;
+
+
+    public ToDoListModel(String name, String description, ArrayList timeAndDeadline){
         this.name = name;
         this.description = description;
         this.timeAndDeadline = timeAndDeadline;
@@ -30,12 +34,27 @@ public class ToDoLists implements Serializable {
 
     public ArrayList getChecklists() { return checklists; }
 
+    public ArrayList getCheckboxes() { return checkboxes; }
+
     public ArrayList getTimeAndDeadline() { return timeAndDeadline; }
 
     public void setChecklists(ArrayList checklists) { this.checklists = checklists; }
 
+    public void setCheckboxes(ArrayList checkboxes) { this.checkboxes = checkboxes; }
+
     public int getNOfChecklists(){
         return checklists.size();
     }
+
+    public int getNOfCheckboxesClicked(){
+        int n = 0;
+        for(int i = 0; i < checkboxes.size(); i++){
+            if(checkboxes.get(i).equals("clickOn")){
+                n++;
+            }
+        }
+        return n;
+    }
+
 
 }

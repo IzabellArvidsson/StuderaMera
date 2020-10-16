@@ -1,28 +1,29 @@
 package ViewModels;
 
-import Models.ToDoLists;
+import Models.ToDoListModel;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ToDoViewModelTest {
 
-    /*
+
     @Test
     void addToDoLists() {
         String string = "Handlarlista";
+        String description = "Handla på Willys på fredag";
         ArrayList<String> arrayListString = new ArrayList<>();
-        arrayListString.add("tomat");
-        arrayListString.add("gurka");
+        arrayListString.add("11");
+        arrayListString.add("11");
+        arrayListString.add("11");
+        arrayListString.add("11");
 
-        ArrayList<ToDoLists> arrayListToDoList = new ArrayList<>();
-        ToDoLists toDoList = new ToDoLists(string, arrayListString);
+        ArrayList<ToDoListModel> arrayListToDoList = new ArrayList<>();
+        ToDoListModel toDoList = new ToDoListModel(string, description, arrayListString);
 
         arrayListToDoList.add(toDoList);
-        assertEquals(1, arrayListToDoList.size());
+        assertEquals (1, arrayListToDoList.size());
     }
 
-     */
 }

@@ -1,8 +1,8 @@
 package ObserverInterfaces;
 
-import Models.ToDoLists;
+import Models.ToDoListModel;
 
 public interface ToDoListRemoveObserver {
 
-    void update(ToDoLists toDoList, ToDoListRemoveObservable o);
+    void update(ToDoListModel toDoList, ToDoListRemoveObservable o);
 }

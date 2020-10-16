@@ -1,6 +1,6 @@
-package ViewControllers;
+package Views;
 
-import Models.ToDoLists;
+import Models.ToDoListModel;
 import ObserverInterfaces.ToDoListOpenObservable;
 import ObserverInterfaces.ToDoListOpenObserver;
 import ObserverInterfaces.ToDoListRemoveObservable;
@@ -13,18 +13,18 @@ import javafx.scene.text.Text;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class listInToDoController extends AnchorPane implements ToDoListRemoveObservable, ToDoListOpenObservable {
+public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservable, ToDoListOpenObservable {
 
     @FXML  Text nameText;
     @FXML  Text numberOfChecklistsText;
     @FXML  Button deleteButton;
-    ToDoLists toDoList;
+    ToDoListModel toDoList;
 
     ArrayList<ToDoListRemoveObserver> observerArrayList = new ArrayList<>();
     ArrayList<ToDoListOpenObserver> openObserverArrayList = new ArrayList<>();
 
 
-    public listInToDoController(ToDoLists toDoLists){
+    public ListInToDoView(ToDoListModel toDoListModel){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/listInToDo.fxml"));
         fxmlLoader.setController(this);
         fxmlLoader.setRoot(this);
@@ -33,9 +33,9 @@ public class listInToDoController extends AnchorPane implements ToDoListRemoveOb
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        nameText.setText(toDoLists.getName());
-        numberOfChecklistsText.setText("0/" + toDoLists.getNOfChecklists());
-        toDoList = toDoLists;
+        nameText.setText(toDoListModel.getName());
+        numberOfChecklistsText.setText(toDoListModel.getNOfCheckboxesClicked() + "/" + toDoListModel.getNOfChecklists());
+        toDoList = toDoListModel;
     }
 
     @FXML
