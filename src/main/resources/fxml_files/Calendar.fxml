@@ -10,7 +10,6 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
@@ -35,7 +34,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField layoutX="51.0" layoutY="62.0" prefHeight="43.0" prefWidth="555.0" promptText="Lägg till titel...">
+                  <TextField fx:id="nameTextField" layoutX="51.0" layoutY="62.0" prefHeight="43.0" prefWidth="555.0" promptText="Lägg till titel...">
                      <font>
                         <Font name="Georgia" size="20.0" />
                      </font>
@@ -43,7 +42,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <TextArea layoutX="51.0" layoutY="137.0" prefHeight="278.0" prefWidth="245.0" promptText="Lägg till beskrivning... ">
+                  <TextArea fx:id="descriptionTextArea" layoutX="51.0" layoutY="137.0" prefHeight="278.0" prefWidth="245.0" promptText="Lägg till beskrivning... ">
                      <font>
                         <Font name="Georgia" size="16.0" />
                      </font>
@@ -51,7 +50,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextArea>
-                  <TextField alignment="CENTER" layoutX="566.0" layoutY="137.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
+                  <TextField fx:id="dateMonth" alignment="CENTER" layoutX="493.0" layoutY="137.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
                      <font>
                         <Font name="Georgia" size="17.0" />
                      </font>
@@ -59,20 +58,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <TextField alignment="CENTER" layoutX="493.0" layoutY="137.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
-                     <font>
-                        <Font name="Georgia" size="17.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="TEXT" />
-                     </cursor>
-                  </TextField>
-                  <Text layoutX="546.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Text>
-                  <TextField alignment="CENTER" layoutX="420.0" layoutY="137.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
+                  <TextField fx:id="dateDay" alignment="CENTER" layoutX="420.0" layoutY="137.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
                      <font>
                         <Font name="Georgia" size="17.0" />
                      </font>
@@ -121,7 +107,7 @@
                         <Font name="Georgia" size="20.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="419.0" layoutY="236.0" prefHeight="28.0" prefWidth="187.0" promptText="Hubben">
+                  <TextField fx:id="locationTextField" layoutX="419.0" layoutY="236.0" prefHeight="28.0" prefWidth="187.0" promptText="Hubben">
                      <font>
                         <Font name="Georgia" size="14.0" />
                      </font>
@@ -129,11 +115,11 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <MenuButton layoutX="419.0" layoutY="291.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-color: #c6c6c6;" text="Färg">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
-                    </items>
+                  <MenuButton fx:id="colorMenuButton" layoutX="419.0" layoutY="291.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-color: #c6c6c6;" text="Färg">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                     </items>
                      <font>
                         <Font name="Georgia" size="14.0" />
                      </font>
@@ -155,7 +141,32 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="endTimeMinTextField" alignment="CENTER" layoutX="644.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
+                  <TextField fx:id="endTimeMinTextField" alignment="CENTER" layoutX="637.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
+                     <font>
+                        <Font name="Georgia" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="endTimeHourTextField" alignment="CENTER" layoutX="565.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
+                     <font>
+                        <Font name="Georgia" size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Text layoutX="617.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="546.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </children>
@@ -275,158 +286,12 @@
       </AnchorPane>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;">
          <children>
-            <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Text fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
-                     <font>
-                        <Font name="Georgia" size="17.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="TEXT" />
-                     </cursor>
-                  </TextField>
-                  <TextField fx:id="endTimeHourTextField" alignment="CENTER" layoutX="566.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
-                     <font>
-                        <Font name="Georgia" size="17.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="TEXT" />
-                     </cursor>
-                  </TextField>
-                  <Text layoutX="621.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="545.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="endTimeMinTextField" alignment="CENTER" layoutX="644.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
-                     <font>
-                        <Font name="Georgia" size="17.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="TEXT" />
-                     </cursor>
-                  </TextField>
-                  <TextField fx:id="endTimeHourTextField" alignment="CENTER" layoutX="566.0" layoutY="185.0" prefHeight="28.0" prefWidth="40.0" promptText="01">
-                     <font>
-                        <Font name="Georgia" size="17.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="TEXT" />
-                     </cursor>
-                  </TextField>
-                  <Text layoutX="621.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="545.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
-                     <font>
-                        <Font size="23.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
-            <Circle fill="WHITE" layoutX="48.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="28.0" stroke="WHITE" strokeType="INSIDE">
-               <effect>
-                  <DropShadow color="#919090" />
-               </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Circle>
-            <Text layoutX="40.0" layoutY="596.0" onMouseClicked="#onClickGoToHelp" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
-               <font>
-                  <Font size="35.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Text>
-            <Text layoutX="370.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Din kalender">
-               <font>
-                  <Font name="Georgia" size="34.0" />
-               </font>
-            </Text>
             <Text fx:id="dateText" layoutX="346.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2020 v.38" textAlignment="CENTER" wrappingWidth="244.964038848877">
-               <font>
-                  <Font name="Georgia" size="25.0" />
-               </font>
+                  <font>
+                     <Font name="Georgia" size="25.0" />
+                  </font>
             </Text>
-            <Circle fill="WHITE" layoutX="50.0" layoutY="151.0" onMouseClicked="#openAddToCalendar" radius="35.0" stroke="WHITE" strokeType="INSIDE">
-               <effect>
-                  <DropShadow color="#919090" />
-               </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Circle>
-            <Text layoutX="29.0" layoutY="168.0" onMouseClicked="#openAddToCalendar" strokeType="OUTSIDE" strokeWidth="0.0" text="+" wrappingWidth="40.208980560302734">
-               <font>
-                  <Font size="60.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Text>
-            <ScrollPane layoutX="100.0" layoutY="252.0" prefHeight="330.0" prefWidth="753.0" style="-fx-border-color: #000000;">
-               <content>
-                  <GridPane fx:id="gridPane" gridLinesVisible="true" onMouseClicked="#clickGridPane" prefHeight="330.0" prefWidth="3100.0">
-                    <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                  </GridPane>
-               </content>
-            </ScrollPane>
-            <Button fx:id="previousMonthButton" layoutX="193.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#previousMonth" style="-fx-background-color: ffffff; -fx-background-radius: 0;" text="Föregående">
-               <effect>
-                  <DropShadow color="#909191" />
-               </effect></Button>
-            <Button fx:id="nextMonthButton" layoutX="691.0" layoutY="141.0" mnemonicParsing="false" onMouseClicked="#nextMonth" style="-fx-background-color: ffffff; -fx-background-radius: 0;" text="Nästa">
-               <effect>
-                  <DropShadow color="#909191" />
-               </effect></Button>
-         </children>
-      </AnchorPane>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;">
-         <children>
+
             <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Text fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
@@ -440,7 +305,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Text>
-                  <Button fx:id="backToOverviewButton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
+                  <Button fx:id="backToOverviewButton" layoutX="718.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>
@@ -451,7 +316,8 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-               </children>
+
+                           </children>
             </AnchorPane>
             <Circle fill="WHITE" layoutX="48.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="28.0" stroke="WHITE" strokeType="INSIDE">
                <effect>
@@ -474,11 +340,6 @@
                   <Font name="Georgia" size="34.0" />
                </font>
             </Text>
-            <Text fx:id="dateText" layoutX="346.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2020 v.38" textAlignment="CENTER" wrappingWidth="244.964038848877">
-               <font>
-                  <Font name="Georgia" size="25.0" />
-               </font>
-            </Text>
             <Circle fill="WHITE" layoutX="50.0" layoutY="151.0" onMouseClicked="#openAddToCalendar" radius="35.0" stroke="WHITE" strokeType="INSIDE">
                <effect>
                   <DropShadow color="#919090" />
@@ -497,134 +358,56 @@
             </Text>
             <ScrollPane layoutX="100.0" layoutY="252.0" prefHeight="330.0" prefWidth="753.0" style="-fx-border-color: #000000;">
                <content>
-                  <GridPane fx:id="gridPane" gridLinesVisible="true" prefHeight="324.0" prefWidth="751.0">
-                    <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <GridPane fx:id="gridPane" gridLinesVisible="true" minWidth="-Infinity" onMouseClicked="#clickGridPane" prefHeight="330.0" prefWidth="3100.0">
+                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" />
-                     </children>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
                   </GridPane>
                </content>
             </ScrollPane>
-            <Button fx:id="nextMonthButton" layoutX="629.0" layoutY="135.0" mnemonicParsing="false" text="Nästa" />
-            <Button fx:id="lastMonthButton" layoutX="238.0" layoutY="135.0" mnemonicParsing="false" text="Föregående" />
-         </children>
-      </AnchorPane>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;">
-         <children>
-            <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Text fill="WHITE" layoutX="25.0" layoutY="64.0" onMouseClicked="#onClickStuderaMera" strokeType="OUTSIDE" strokeWidth="0.0" text="StuderaMera" textAlignment="CENTER" wrappingWidth="244.96403884887695" AnchorPane.leftAnchor="25.0">
-                     <font>
-                        <Font name="Georgia" size="38.0" />
-                     </font>
-                     <effect>
-                        <DropShadow color="#919090" />
-                     </effect>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Text>
-                  <Button fx:id="backPlanToOverviewButton" layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
-                     <effect>
-                        <DropShadow color="#919090" />
-                     </effect>
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <Circle fill="WHITE" layoutX="48.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="28.0" stroke="WHITE" strokeType="INSIDE">
+            <Button fx:id="lastMonthButton" layoutX="183.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#previousMonth" style="-fx-background-color: ffffff; -fx-background-radius: 0;" text="Föregående">
                <effect>
-                  <DropShadow color="#919090" />
+                  <DropShadow color="#909191" />
                </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Circle>
-            <Text layoutX="40.0" layoutY="596.0" onMouseClicked="#onClickGoToHelp" strokeType="OUTSIDE" strokeWidth="0.0" text="?">
-               <font>
-                  <Font size="35.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Text>
-            <Text layoutX="370.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Din kalender">
-               <font>
-                  <Font name="Georgia" size="34.0" />
-               </font>
-            </Text>
-            <Text fx:id="dateText" layoutX="346.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2020 v.38" textAlignment="CENTER" wrappingWidth="244.964038848877">
-               <font>
-                  <Font name="Georgia" size="25.0" />
-               </font>
-            </Text>
-            <Circle fill="WHITE" layoutX="50.0" layoutY="151.0" onMouseClicked="#openAddToCalendar" radius="35.0" stroke="WHITE" strokeType="INSIDE">
+            </Button>
+            <Button fx:id="nextMonthButton" layoutX="672.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#nextMonth" style="-fx-background-color: ffffff; -fx-background-radius: 0;" text="Nästa">
                <effect>
-                  <DropShadow color="#919090" />
+                  <DropShadow color="#909191" />
                </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Circle>
-            <Text layoutX="29.0" layoutY="168.0" onMouseClicked="#openAddToCalendar" strokeType="OUTSIDE" strokeWidth="0.0" text="+" wrappingWidth="40.208980560302734">
-               <font>
-                  <Font size="60.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Text>
-            <ScrollPane layoutX="100.0" layoutY="252.0" prefHeight="330.0" prefWidth="753.0" style="-fx-border-color: #000000;">
-               <content>
-                  <GridPane fx:id="gridPane" gridLinesVisible="true" prefHeight="324.0" prefWidth="751.0">
-                    <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <FlowPane fx:id= "mondayFlowPane" prefHeight="200.0" prefWidth="200.0" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" />
-                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" />
-                     </children>
-                  </GridPane>
-               </content>
-            </ScrollPane>
-            <Button fx:id="nextMonthButton" layoutX="629.0" layoutY="135.0" mnemonicParsing="false" text="Nästa" />
-            <Button fx:id="lastMonthButton" layoutX="238.0" layoutY="135.0" mnemonicParsing="false" text="Föregående" />
+            </Button>
          </children>
       </AnchorPane>
    </children>

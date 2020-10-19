@@ -10,13 +10,11 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -24,7 +22,6 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Date;
@@ -39,23 +36,23 @@ import java.util.ResourceBundle;
 public class CalendarController implements IPane, Initializable {
 
     @FXML private AnchorPane addToCalendarPane;
-    @FXML TextField dateDay;
-    @FXML TextField dateMonth;
-    @FXML TextField dateYear;
-    @FXML Button nextMonthButton, lastMonthButton;
-    @FXML TextField nameTextField;
-    @FXML TextField startTimeHourTextField, startTimeMinTextField, endTimeHourTextField, endTimeMinTextField;
-    @FXML TextField locationTextField;
-    @FXML TextArea descriptionTextArea;
-    @FXML Button addEventButton;
-    @FXML MenuButton colorMenuButton;
-    @FXML FlowPane mondayFlowPane;
-    @FXML private AnchorPane addToCalendarPane, eventPane;
+    @FXML private TextField dateDay;
+    @FXML private TextField dateMonth;
+    @FXML private TextField dateYear;
+    @FXML private Button nextMonthButton, lastMonthButton;
+    @FXML private TextField nameTextField;
+    @FXML private TextField startTimeHourTextField, startTimeMinTextField, endTimeHourTextField, endTimeMinTextField;
+    @FXML private TextField locationTextField;
+    @FXML private TextArea descriptionTextArea;
+    @FXML private Button addEventButton;
+    @FXML private MenuButton colorMenuButton;
+    private FlowPane flowPane;
+    @FXML private AnchorPane eventPane;
     @FXML private GridPane gridPane;
     @FXML private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?
 
-    private CalendarViewModel calendarViewModel = new CalendarViewModel();
-    private CalendarModel calendarModel = new CalendarModel();
+    private final CalendarViewModel calendarViewModel = new CalendarViewModel();
+    private final CalendarModel calendarModel = new CalendarModel();
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
     private PaneController paneController = new PaneController();
@@ -134,12 +131,6 @@ public class CalendarController implements IPane, Initializable {
         populateMonth(yearMonth);
     }
 
-
-   public void onClickSaveEvent(){
-       calendarViewModel.addCalendarEvent(eventTitleText.getText(), eventTimeText.getText(), calendarModel);
-       closeAddToCalendar();
-   }
-
     public void onClickBackToOverview() {
         paneController.showOverviewPane();
     }
@@ -169,12 +160,19 @@ public class CalendarController implements IPane, Initializable {
 
     @FXML
     private void onClickSaveEvent(){
-        CalendarViewModel.addCalendarEvents(nameTextField.getText(), startTimeHourTextField.getText(), startTimeMinTextField.getText(), endTimeMinTextField.getText(), endTimeHourTextField.getText(), dateYear.getText(), dateMonth.getText(), dateDay.getText(), mondayFlowPane);
+        CalendarModel flowPane = findFlowPane(dateDay.getText(), dateMonth.getText());
+        CalendarViewModel.addCalendarEvents(nameTextField.getText(),
+                startTimeHourTextField.getText(),
+                startTimeMinTextField.getText(),
+                endTimeMinTextField.getText(),
+                endTimeHourTextField.getText(),
+                dateMonth.getText(),
+                dateDay.getText(),
+                flowPane);
         closeAddToCalendar();
         nameTextField.clear();
         dateDay.clear();
         dateMonth.clear();
-        dateYear.clear();
         endTimeMinTextField.clear();
         endTimeHourTextField.clear();
         startTimeHourTextField.clear();
@@ -186,13 +184,25 @@ public class CalendarController implements IPane, Initializable {
 
     @FXML
     public void writingSavedCalendarEvent(){
-        CalendarEventHandler.writeCalendarEvent(mondayFlowPane/*remember to change this bich*/);
+        CalendarEventHandler.writeCalendarEvent(flowPane);
     }
 
     @Override
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
         writingSavedCalendarEvent();
+    }
+
+    CalendarModel findFlowPane(String day, String month){
+        String c = (day + "/" + month);
+        for(int i =0; i<allCalendarDays.size() ; i++ ){
+        String s =(allCalendarDays.get(i).getLocalDate().getDayOfMonth() + "/" + allCalendarDays.get(i).getLocalDate().getMonthValue());
+        System.out.println(s);
+            if (c.equals(s)){
+                return allCalendarDays.get(i);
+            }
+        }
+        return null;
     }
 
 
