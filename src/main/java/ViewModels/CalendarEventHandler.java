@@ -36,12 +36,11 @@ public class CalendarEventHandler {
                 String eHour = calendarEvents.get(i).geteHour();
                 String eMin = calendarEvents.get(i).geteMin();
                 String place = calendarEvents.get(i).getPlace();
-                String year = calendarEvents.get(i).getYear();
                 String month = calendarEvents.get(i).getMonth();
                 String description = calendarEvents.get(i).getDescription();
                 Color color = calendarEvents.get(i).getColor();
 
-                CalendarViewModel.addCalendarEvents(name, sHour, sMin, eMin, eHour, year, month, day, flowPane);
+                CalendarViewModel.addCalendarEvents(name, sHour, sMin, eMin, eHour, month, day, flowPane);
             }
             in.close();
             fileIn.close();

@@ -19,11 +19,19 @@ public class CalendarViewModel {
 
     private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
 
-    public static void addCalendarEvents(String nameTextField, String sHour, String sMin, String eMin, String eHour, String year, String month, String day, /*Color color,*/ FlowPane mondayFlowPane){
+    public static void addCalendarEvents(String nameTextField,
+                                         String sHour,
+                                         String sMin,
+                                         String eMin,
+                                         String eHour,
+                                         String month,
+                                         String day,
+                                        /*Color color,*/
+                                         FlowPane flowPane){
         CalendarEvent calendarEvents;
-        calendarEvents = new CalendarEvent(nameTextField, sHour, sMin, eMin, eHour, year, month, day /*, color*/);
+        calendarEvents = new CalendarEvent(nameTextField, sHour, sMin, eMin, eHour, month, day /*, color*/);
         System.out.println(calendarEvents);
-        mondayFlowPane.getChildren().add(new EventInCalendarController(calendarEvents));
+        flowPane.getChildren().add(new EventInCalendarController(calendarEvents));
         addCalendarEvent(calendarEvents);
         CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
 
@@ -34,10 +42,6 @@ public class CalendarViewModel {
     }
 
 
-
-    private void addEventToCalendar(CalendarEventModel calendarEventModel){
-        allCalendarEventModels.add(calendarEventModel);
-    }
 }
 
 

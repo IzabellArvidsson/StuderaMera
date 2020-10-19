@@ -11,20 +11,28 @@ public class CalendarEvent implements Serializable {
     String eHour;
     String eMin;
     String place;
-    String year;
+
     String month;
     String day;
     String description;
     Color color;
 
-    public CalendarEvent(String name, String sHour, String sMin, String eMin, String eHour, /*String place,*/ String year, String month, String day/*, String description,Color color*/ ) {
+    public CalendarEvent(String name,
+                         String sHour,
+                         String sMin,
+                         String eMin,
+                         String eHour,
+                        /*String place,*/
+                         String month,
+                         String day/*,
+                          String description,
+                          Color color*/ ) {
         this.name = name;
         this.sHour = sHour;
         this.sMin = sMin;
         this.eMin = eMin;
         this.eHour = eHour;
         //this.place = place;
-        this.year = year;
         this.month = month;
         this.day = day;
         //this.description = description;
@@ -77,14 +85,6 @@ public class CalendarEvent implements Serializable {
 
     public void setPlace(String place) {
         this.place = place;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
     }
 
     public String getMonth() {
