@@ -1,31 +1,19 @@
 package ViewControllers;
 
 import Factory.IPane;
+import Models.CalendarEvent;
 import ViewModels.CalendarEventHandler;
 import ViewModels.CalendarViewModel;
-import ViewModels.ToDoListHandler;
 import Models.CalendarModel;
-import ViewModels.CalendarViewModel;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import java.io.IOException;
-import java.util.Date;
-import java.util.Calendar;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -55,6 +43,7 @@ public class CalendarController implements IPane, Initializable {
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
     private PaneController paneController = new PaneController();
+    private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -100,7 +89,7 @@ public class CalendarController implements IPane, Initializable {
                 calendarModel.setStyle("-fx-background-color: white");
             }
         }
-        writingSavedCalendarEvent();
+
     }
 
 
@@ -121,12 +110,14 @@ public class CalendarController implements IPane, Initializable {
         yearMonth = yearMonth.minusMonths(1);
         dateText.setText(String.valueOf(yearMonth));
         populateMonth(yearMonth);
+        loadSavedCalendarEvent();
     }
 
     public void nextMonth(){
         yearMonth = yearMonth.plusMonths(1);
         dateText.setText(String.valueOf(yearMonth));
         populateMonth(yearMonth);
+        loadSavedCalendarEvent();
     }
 
     public void onClickBackToOverview() {
@@ -159,14 +150,16 @@ public class CalendarController implements IPane, Initializable {
     @FXML
     private void onClickSaveEvent(){
         CalendarModel flowPane = findFlowPane(dateDay.getText(), dateMonth.getText());
-        CalendarViewModel.addCalendarEvents(nameTextField.getText(),
+        CalendarEvent calEvent = new CalendarEvent(nameTextField.getText(),
                 startTimeHourTextField.getText(),
                 startTimeMinTextField.getText(),
                 endTimeMinTextField.getText(),
                 endTimeHourTextField.getText(),
                 dateMonth.getText(),
-                dateDay.getText(),
-                flowPane);
+                dateDay.getText());
+        CalendarViewModel.addCalendarEvents(calEvent, flowPane);
+        addToAllCalendarEvents(calEvent);
+        saveList();
         closeAddToCalendar();
         nameTextField.clear();
         dateDay.clear();
@@ -181,26 +174,33 @@ public class CalendarController implements IPane, Initializable {
     }
 
     @FXML
-    public void writingSavedCalendarEvent(){
-        CalendarEventHandler.writeCalendarEvent(allCalendarDays);
+    public void loadSavedCalendarEvent(){
+        CalendarEventHandler.loadCalendarEvent(allCalendarDays);
     }
 
     @Override
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
-        writingSavedCalendarEvent();
+        loadSavedCalendarEvent();
     }
 
     public CalendarModel findFlowPane(String day, String month){
         String c = (day + "/" + month);
-        for(int i =0; i<allCalendarDays.size() ; i++ ){
-        String s =(allCalendarDays.get(i).getLocalDate().getDayOfMonth() + "/" + allCalendarDays.get(i).getLocalDate().getMonthValue());
-            if (c.equals(s)){
-                return allCalendarDays.get(i);
+        for (CalendarModel allCalendarDay : allCalendarDays) {
+            String s = (allCalendarDay.getLocalDate().getDayOfMonth() + "/" + allCalendarDay.getLocalDate().getMonthValue());
+            if (c.equals(s)) {
+                return allCalendarDay;
             }
         }
         return null;
     }
+    public void saveList(){
+        CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
+    }
+
+        private static void addToAllCalendarEvents(CalendarEvent calendarEvent){
+            allCalendarEvents.add(calendarEvent);
+        }
 
 
 }
