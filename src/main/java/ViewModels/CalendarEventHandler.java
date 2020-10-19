@@ -12,6 +12,11 @@ import java.util.ArrayList;
 
 public class CalendarEventHandler {
 
+    /**
+     * Saves the content of allCalendarEvents to Models.CalendarEvents.ser to save events between program restarts.
+     * @param calEvents a list of all CalendarEvents that are in the calendar
+     */
+
     public static void saveCalendarEvent(ArrayList<CalendarEvent> calEvents) {
         try {
             FileOutputStream fileOut = new FileOutputStream("Models.CalendarEvents.ser");
@@ -26,6 +31,11 @@ public class CalendarEventHandler {
         }
     }
 
+
+    /**
+     * reads saved CalendarEvent file and adds events to GUI (on startup and when viewed month is switched)
+     * @param dayList a list containing the CalendarModel (FlowPanes) in which the CalendarEvents are to be placed.
+     */
     public static void loadCalendarEvent(ArrayList<CalendarModel> dayList) {
         try {
             FileInputStream fileIn = new FileInputStream("Models.CalendarEvents.ser");
@@ -47,6 +57,14 @@ public class CalendarEventHandler {
             c.printStackTrace();
         }
     }
+
+    /**
+     * 
+     * @param day
+     * @param month
+     * @param dayList
+     * @return
+     */
     public static CalendarModel findFlowPane(String day, String month, ArrayList<CalendarModel> dayList){
         String c = (day + "/" + month);
         for (CalendarModel calendarModel : dayList) {
