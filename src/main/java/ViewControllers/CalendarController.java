@@ -110,14 +110,14 @@ public class CalendarController implements IPane, Initializable {
         yearMonth = yearMonth.minusMonths(1);
         dateText.setText(String.valueOf(yearMonth));
         populateMonth(yearMonth);
-        loadSavedCalendarEvent();
+        loadSavedCalendarEvents();
     }
 
     public void nextMonth(){
         yearMonth = yearMonth.plusMonths(1);
         dateText.setText(String.valueOf(yearMonth));
         populateMonth(yearMonth);
-        loadSavedCalendarEvent();
+        loadSavedCalendarEvents();
     }
 
     public void onClickBackToOverview() {
@@ -174,14 +174,15 @@ public class CalendarController implements IPane, Initializable {
     }
 
     @FXML
-    public void loadSavedCalendarEvent(){
+    public void loadSavedCalendarEvents(){
         CalendarEventHandler.loadCalendarEvent(allCalendarDays);
     }
 
     @Override
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
-        loadSavedCalendarEvent();
+        loadSavedCalendarEvents();
+        allCalendarEvents.addAll(CalendarEventHandler.loadOldCalendarEvent());
     }
 
     public CalendarModel findFlowPane(String day, String month){

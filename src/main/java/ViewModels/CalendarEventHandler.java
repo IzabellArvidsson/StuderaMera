@@ -76,6 +76,24 @@ public class CalendarEventHandler {
         return null;
     }
 
+    public static ArrayList<CalendarEvent> loadOldCalendarEvent() {
+        try {
+            FileInputStream fileIn = new FileInputStream("Models.CalendarEvents.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            ArrayList<CalendarEvent> calendarEvents = (ArrayList<CalendarEvent>) in.readObject();
+
+            in.close();
+            fileIn.close();
+            return calendarEvents;
+        } catch (IOException i) {
+            i.printStackTrace();
+        } catch (ClassNotFoundException c) {
+            System.out.println("Models.CalendarEvents class not found");
+            c.printStackTrace();
+        }
+        return null;
+    }
+
 }
 
 

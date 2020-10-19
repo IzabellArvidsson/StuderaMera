@@ -18,7 +18,9 @@ public class CalendarViewModel {
 
     public static void addCalendarEvents(CalendarEvent calendarEvent, FlowPane flowPane){
         System.out.println(calendarEvent);
-        flowPane.getChildren().add(new EventInCalendarController(calendarEvent));
+        if(flowPane != null) {
+            flowPane.getChildren().add(new EventInCalendarController(calendarEvent));
+        }
 
     }
 
