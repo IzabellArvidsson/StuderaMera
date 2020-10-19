@@ -17,30 +17,11 @@ import java.util.ArrayList;
 public class CalendarViewModel {
 
 
-    private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
-
-    public static void addCalendarEvents(String nameTextField,
-                                         String sHour,
-                                         String sMin,
-                                         String eMin,
-                                         String eHour,
-                                         String month,
-                                         String day,
-                                        /*Color color,*/
-                                         FlowPane flowPane){
-        CalendarEvent calendarEvents;
-        calendarEvents = new CalendarEvent(nameTextField, sHour, sMin, eMin, eHour, month, day /*, color*/);
-        System.out.println(calendarEvents);
-        flowPane.getChildren().add(new EventInCalendarController(calendarEvents));
-        addCalendarEvent(calendarEvents);
-        CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
+    public static void addCalendarEvents(CalendarEvent calendarEvent, FlowPane flowPane){
+        System.out.println(calendarEvent);
+        flowPane.getChildren().add(new EventInCalendarController(calendarEvent));
 
     }
-
-    private static void addCalendarEvent(CalendarEvent calendarEvent){
-        allCalendarEvents.add(calendarEvent);
-    }
-
 
 }
 
