@@ -46,7 +46,6 @@ public class CalendarController implements IPane, Initializable {
     @FXML private TextArea descriptionTextArea;
     @FXML private Button addEventButton;
     @FXML private MenuButton colorMenuButton;
-    private FlowPane flowPane;
     @FXML private AnchorPane eventPane;
     @FXML private GridPane gridPane;
     @FXML private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?
@@ -86,9 +85,7 @@ public class CalendarController implements IPane, Initializable {
         LocalDate localDate = LocalDate.of(yearMonth.getYear(), yearMonth.getMonthValue(), 1);
 
         for(CalendarModel calendarModel : allCalendarDays){
-            if(calendarModel.getChildren().size() != 0){
-                calendarModel.getChildren().remove(0);
-            }
+            calendarModel.getChildren().clear();
 
             calendarModel.setLocalDate(localDate);
 
@@ -103,6 +100,7 @@ public class CalendarController implements IPane, Initializable {
                 calendarModel.setStyle("-fx-background-color: white");
             }
         }
+        writingSavedCalendarEvent();
     }
 
 
@@ -184,7 +182,7 @@ public class CalendarController implements IPane, Initializable {
 
     @FXML
     public void writingSavedCalendarEvent(){
-        CalendarEventHandler.writeCalendarEvent(flowPane);
+        CalendarEventHandler.writeCalendarEvent(allCalendarDays);
     }
 
     @Override
@@ -193,11 +191,10 @@ public class CalendarController implements IPane, Initializable {
         writingSavedCalendarEvent();
     }
 
-    CalendarModel findFlowPane(String day, String month){
+    public CalendarModel findFlowPane(String day, String month){
         String c = (day + "/" + month);
         for(int i =0; i<allCalendarDays.size() ; i++ ){
         String s =(allCalendarDays.get(i).getLocalDate().getDayOfMonth() + "/" + allCalendarDays.get(i).getLocalDate().getMonthValue());
-        System.out.println(s);
             if (c.equals(s)){
                 return allCalendarDays.get(i);
             }
