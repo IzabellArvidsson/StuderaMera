@@ -1,6 +1,7 @@
 package ViewControllers;
 
 import Models.ImageModel;
+import Views.TimerView;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

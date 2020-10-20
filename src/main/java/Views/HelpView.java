@@ -1,18 +1,14 @@
-package ViewControllers;
+package Views;
 
-import Factory.IPane;
+import Factory.IOnClickPane;
+import Factory.OnClickPaneController;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelpViewController implements IPane {
+public class HelpView implements IOnClickPane {
 
-    private PaneController paneController = new PaneController();
+    private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
     /*@Override
     public void onClickButton(MouseEvent mouseEvent, String fxml) throws IOException {
@@ -21,16 +17,16 @@ public class HelpViewController implements IPane {
 
     @FXML
     private void onClickBackButton (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        paneController.showTimerViewPane();
+        onClickPaneController.showTimerViewPane();
     }
 
     @FXML
     private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        paneController.showFirstViewPane();
+        onClickPaneController.showFirstViewPane();
     }
 
     @Override
-    public void initPane(PaneController paneController) {
-        this.paneController = paneController;
+    public void initPane(OnClickPaneController onClickPaneController) {
+        this.onClickPaneController = onClickPaneController;
     }
 }
