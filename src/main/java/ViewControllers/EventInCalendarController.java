@@ -30,14 +30,16 @@ public class EventInCalendarController extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+        setColors();
         eventNameLabel.setText(calEvent.getName());
         startTimeLabel.setText(calEvent.getsHour() +":"+ calEvent.getsMin());
         endTimeLabel.setText(calEvent.geteHour() + ":" + calEvent.geteMin());
+        System.out.println("Anchorpane " + calEventAnchorPane);
         setEventColor( calEvent, calEventAnchorPane);
 
     }
 
-    private HashMap<String, Color> stringToColor = new HashMap<>();
+    private final HashMap<String, Color> stringToColor = new HashMap<>();
 
     public void setColors() {
         stringToColor.put("Röd", Color.RED);
@@ -46,6 +48,7 @@ public class EventInCalendarController extends AnchorPane {
         stringToColor.put("Gul", Color.YELLOW);
         stringToColor.put("Orange", Color.ORANGE);
         stringToColor.put("Rosa", Color.PINK);
+        stringToColor.put("Färg", Color.GRAY);
     }
     @FXML
     private void setEventColor(CalendarEvent calEvent, AnchorPane anchPane){
