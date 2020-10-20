@@ -117,8 +117,12 @@
                   </TextField>
                   <MenuButton fx:id="colorMenuButton" layoutX="419.0" layoutY="291.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-color: #c6c6c6;" text="Färg">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                        <MenuItem mnemonicParsing="false" text="Blå" />
+                        <MenuItem mnemonicParsing="false" text="Grön" />
+                        <MenuItem mnemonicParsing="false" text="Gul" />
+                        <MenuItem mnemonicParsing="false" text="Orange" />
+                        <MenuItem mnemonicParsing="false" text="Röd" />
+                        <MenuItem mnemonicParsing="false" text="Rosa" />
                      </items>
                      <font>
                         <Font name="Georgia" size="14.0" />

@@ -59,11 +59,11 @@ public class CalendarEventHandler {
     }
 
     /**
-     * 
-     * @param day
-     * @param month
-     * @param dayList
-     * @return
+     * Finds FlowPane for right day to add event to.
+     * @param day String from calendarEvent with day of month
+     * @param month String from calendarEvent with mont of year
+     * @param dayList list of all the calendarModels in GUI
+     * @return CalendarModel (FlowPane) with date matching CalendarEvents date
      */
     public static CalendarModel findFlowPane(String day, String month, ArrayList<CalendarModel> dayList){
         String c = (day + "/" + month);
@@ -76,6 +76,10 @@ public class CalendarEventHandler {
         return null;
     }
 
+    /**
+     * upon program startup adds events from save file to list to be added to allCalendarEvents
+     * @return list of previous CalendarEvents
+     */
     public static ArrayList<CalendarEvent> loadOldCalendarEvent() {
         try {
             FileInputStream fileIn = new FileInputStream("Models.CalendarEvents.ser");
