@@ -1,6 +1,7 @@
-package ViewControllers;
+package Views;
 
-import Factory.IPane;
+import Factory.IOnClickPane;
+import Factory.OnClickPaneController;
 import Models.CalendarEvent;
 import Models.CalendarModel;
 import ViewModels.CalendarEventHandler;
@@ -21,7 +22,7 @@ import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class CalendarController implements IPane, Initializable {
+public class CalendarView implements IOnClickPane, Initializable {
 
     private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
     private final CalendarViewModel calendarViewModel = new CalendarViewModel();
@@ -56,11 +57,10 @@ public class CalendarController implements IPane, Initializable {
     ComboBox colorComboBox;
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
-    private PaneController paneController = new PaneController();
+    private OnClickPaneController paneController;
 
 
-
-    public CalendarController() {
+    public CalendarView() {
     }
 
     /**
@@ -163,10 +163,6 @@ public class CalendarController implements IPane, Initializable {
         loadSavedCalendarEvents();
     }
 
-    public void onClickBackToOverview() {
-        paneController.showOverviewPane();
-    }
-
     public void onClickGoToHelp() {
         paneController.showHelpPane();
     }
@@ -231,7 +227,7 @@ public class CalendarController implements IPane, Initializable {
      * @param paneController sets painController of CalendarPanes
      */
     @Override
-    public void initPane(PaneController paneController) {
+    public void initPane(OnClickPaneController paneController) {
         this.paneController = paneController;
         loadSavedCalendarEvents();
         if (CalendarEventHandler.loadOldCalendarEvent() != null) {
@@ -263,11 +259,6 @@ public class CalendarController implements IPane, Initializable {
     public void saveList() {
         CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
     }
-
-
-
-
-
 
 }
 

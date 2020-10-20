@@ -1,4 +1,4 @@
-package ViewControllers;
+package Views;
 
 import Models.CalendarEvent;
 import javafx.fxml.FXML;
@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class EventInCalendarController extends AnchorPane {
+public class EventInCalendarView extends AnchorPane {
     @FXML Label startTimeLabel;
     @FXML Label eventNameLabel;
     @FXML Label endTimeLabel;
@@ -21,7 +21,7 @@ public class EventInCalendarController extends AnchorPane {
      *sets values for the graphic representation of CalendarEvents
      * @param calEvent CalendarEvent used to create graphic representation
      */
-    public EventInCalendarController(CalendarEvent calEvent){
+    public EventInCalendarView(CalendarEvent calEvent){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/CalendarEvent.fxml"));
         fxmlLoader.setController(this);
         fxmlLoader.setRoot(this);
