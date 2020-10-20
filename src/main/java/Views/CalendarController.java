@@ -14,7 +14,7 @@ public class CalendarController implements IOnClickPane {
     private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
     public void onClickBackToOverview(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        onClickPaneController.showOverviewPane();
+        onClickPaneController.showFirstViewPane();
     }
 
     public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {

@@ -12,6 +12,13 @@ import javafx.scene.text.Text;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ *  This class...
+ *  Used by: ToDoViewModel
+ *
+ *  Author: Julia
+ */
+
 public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservable, ToDoListOpenObservable {
 
     @FXML  Text nameText;
@@ -22,7 +29,7 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
     ArrayList<ToDoListOpenObserver> openObserverArrayList = new ArrayList<>();
 
     /**
-     * This method
+     * This method...
      *
      * @param toDoListModel
      */

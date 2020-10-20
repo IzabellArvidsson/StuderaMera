@@ -6,7 +6,8 @@ import Models.ToDoListModel;
 import ObserverInterfaces.ToDoListOpenObserver;
 import ObserverInterfaces.ToDoListRemoveObservable;
 import ObserverInterfaces.ToDoListRemoveObserver;
-import ViewModels.ToDoViewModel;
+import ViewModels.TodoViewModels.CheckTodoValid;
+import ViewModels.TodoViewModels.ToDoViewModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -14,7 +15,11 @@ import javafx.scene.layout.FlowPane;
 import java.util.ArrayList;
 
 /**
+ * This class updates the todoView for the user
  *
+ * Uses: CheckTodoValid and ToDoViewModel
+ *
+ * Author: Julia
  */
 
 public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoListOpenObserver {
@@ -38,18 +43,19 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
     private final ArrayList<TextField> nChecklist = new ArrayList<>();
     private final ArrayList<CheckBox> nCheckboxes = new ArrayList<>();
     ToDoViewModel toDoViewModel = new ToDoViewModel();
+    CheckTodoValid checkTodoValid = new CheckTodoValid();
     ToDoListModel toDoListModelForSave;
 
     /**
-     * This method takes the program from the "ToDo"-Pane to the "Overview"-Pane
+     * This method takes the program from the ToDoPane to the "FirstPane"-Pane
      */
 
     public void onClickBackToOverview() {
-        onClickPaneController.showOverviewPane();
+        onClickPaneController.showFirstViewPane();
     }
 
     /**
-     * This method takes the program from the "ToDo"-Pane to the "Help"-Pane
+     * This method takes the program from the ToDoPane to the "Help"-Pane
      */
 
     public void onClickGoToHelp (){
@@ -70,7 +76,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
     }
 
     /**
-     * This method brings back the "addToDoList"-pane so that the "toDo"-pane is in view
+     * This method brings back the "addToDoList"-pane so that the toDoPane is in view
      */
 
     public void closeAddToDoList(){
@@ -78,7 +84,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
     }
 
     /**
-     * This method takes the program from the "ToDo"-Pane to the "FirstView"-Pane
+     * This method takes the program from the ToDoPane to the "FirstView"-Pane
      */
 
     @FXML
@@ -93,21 +99,22 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
 
     @FXML
     private void onClickAddToDoTask(){
-        toDoViewModel.isTextFieldValid(deadline1);
-        toDoViewModel.isTextFieldValid(deadline2);
-        toDoViewModel.isTextFieldValid(timeItTakes1);
-        toDoViewModel.isTextFieldValid(timeItTakes2);
+        checkTodoValid.isTextFieldValid(deadline1);
+        checkTodoValid.isTextFieldValid(deadline2);
+        checkTodoValid.isTextFieldValid(timeItTakes1);
+        checkTodoValid.isTextFieldValid(timeItTakes2);
 
-        if (toDoViewModel.isTextFieldValid(deadline1) && toDoViewModel.isTextFieldValid(deadline2) &&
-                toDoViewModel.isTextFieldValid(timeItTakes1) && toDoViewModel.isTextFieldValid(timeItTakes2)){
+        if (checkTodoValid.isTextFieldValid(deadline1) && checkTodoValid.isTextFieldValid(deadline2) &&
+                checkTodoValid.isTextFieldValid(timeItTakes1) && checkTodoValid.isTextFieldValid(timeItTakes2)){
 
             timeAndDeadlineStringList.add(deadline1.getText());
             timeAndDeadlineStringList.add(deadline2.getText());
             timeAndDeadlineStringList.add(timeItTakes1.getText());
             timeAndDeadlineStringList.add(timeItTakes2.getText());
 
-            toDoViewModel.addToDoListsToPane(nameTextField.getText(), descriptionTextArea.getText(), nChecklist,
-                    nCheckboxes, timeAndDeadlineStringList, toDoListFlowPane, "toDo",this);
+
+            toDoViewModel.addToDoListsToPane(nameTextField.getText(), descriptionTextArea.getText(), checkTodoValid.checkListEmpty(nChecklist),
+                    checkTodoValid.isCheckboxClicked(nCheckboxes), timeAndDeadlineStringList, toDoListFlowPane,this);
             closeAddToDoList();
             checklistFlowPane.getChildren().clear();
         }
@@ -119,7 +126,8 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
 
     @FXML
     private void onClickSaveToDoTask() {
-        toDoViewModel.updateToDoInList(nameTextField.getText(), descriptionTextArea.getText(), nChecklist, nCheckboxes,
+        toDoViewModel.updateToDoInList(nameTextField.getText(), descriptionTextArea.getText(), checkTodoValid.checkListEmpty(nChecklist),
+                checkTodoValid.isCheckboxClicked(nCheckboxes),
                 timeAndDeadlineStringList, toDoListModelForSave);
         toDoListFlowPane.getChildren().clear();
         toDoViewModel.writeToDoList(toDoListFlowPane, this);
@@ -179,8 +187,9 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
     }
 
     /**
+     * This method sets all the textFields and checkboxes with there values from the list
      *
-     * @param toDoListModel
+     * @param toDoListModel the list with all the values that will be set in the view
      */
 
     private void setTextFieldsAndCheckboxes (ToDoListModel toDoListModel){

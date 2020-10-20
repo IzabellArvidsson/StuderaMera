@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="firstView" prefHeight="624.0" prefWidth="936.0" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.FirstSideController">
+<AnchorPane fx:id="firstView" prefHeight="624.0" prefWidth="936.0" stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.FirstSideView">
    <children>
       <ImageView fx:id="pens" fitHeight="624.0" fitWidth="936.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -25,7 +25,7 @@
             <DropShadow color="#919090" />
          </effect>
       </Text>
-      <Button fx:id="startstudybutton" layoutX="146.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#onClickStartStudy" prefHeight="126.0" prefWidth="216.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Börja studera" wrapText="true">
+      <Button fx:id="startstudybutton" layoutX="89.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#onClickStartStudy" prefHeight="126.0" prefWidth="216.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Till timer" wrapText="true">
          <font>
             <Font name="Georgia" size="24.0" />
          </font>
@@ -36,7 +36,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="startplanbutton" layoutX="541.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#onClickStartPlaning" prefHeight="126.0" prefWidth="216.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Börja planera" wrapText="true">
+      <Button layoutX="619.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#onClickToTodoList" prefHeight="126.0" prefWidth="216.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Till att-göra lista" wrapText="true">
          <font>
             <Font name="Georgia" size="24.0" />
          </font>
@@ -63,5 +63,16 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Text>
+      <Button layoutX="354.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#onClickToCalendar" prefHeight="126.0" prefWidth="216.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Till kalendern" wrapText="true">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow color="#919090" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

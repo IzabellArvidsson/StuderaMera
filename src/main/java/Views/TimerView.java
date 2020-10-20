@@ -1,6 +1,7 @@
-package ViewControllers;
+package Views;
 
-import Factory.IPane;
+import Factory.IOnClickPane;
+import Factory.OnClickPaneController;
 import Models.TimerModel;
 import ObserverInterfaces.TimerObserver;
 import ViewModels.TimerViewModel;
@@ -19,7 +20,7 @@ import java.util.ResourceBundle;
  * The controller class for the view. This class handles all the information about the view. It also updates the view
  * after updates from other classes.
  */
-public class TimerView extends AnchorPane implements Initializable, TimerObserver, IPane {
+public class TimerView extends AnchorPane implements Initializable, TimerObserver, IOnClickPane {
 
     @FXML private AnchorPane timerOnView, cancelPane, setTimerView, failPane, finishedPane;
     @FXML private Spinner<Integer> studyTimerSpinner, restTimerSpinner, repTimerSpinner;
@@ -28,7 +29,7 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
 
     private final TimerViewModel timerViewModel = new TimerViewModel();
 
-    PaneController paneController = new PaneController();
+    OnClickPaneController paneController = new OnClickPaneController();
 
     /**
      * Initializes the different spinner values and register the class as an observer
@@ -195,7 +196,7 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
      */
     @FXML
     private void onClickStartPlanning() {
-        paneController.showOverviewPane();
+        paneController.showFirstViewPane();
     }
 
     /**
@@ -255,7 +256,7 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
      * @param paneController Initializes the panecontroller
      */
     @Override
-    public void initPane(PaneController paneController) {
+    public void initPane(OnClickPaneController paneController) {
         this.paneController = paneController;
     }
 

@@ -1,12 +1,13 @@
 package Models;
-
-import Views.ListInToDoView;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextField;
-
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
+
+/**
+ * This class creates a todoList with the values it got from the user
+ * Used by: ToDoViewModel
+ *
+ * Author: Julia
+ */
 
 public class ToDoListModel implements Serializable {
 
@@ -17,10 +18,14 @@ public class ToDoListModel implements Serializable {
     private ArrayList checkboxes;
 
 
-    public ToDoListModel(String name, String description, ArrayList timeAndDeadline){
+    public ToDoListModel(String name, String description, ArrayList timeAndDeadline, ArrayList<String> checklists,
+                         ArrayList<String>  checkboxes){
         this.name = name;
         this.description = description;
         this.timeAndDeadline = timeAndDeadline;
+        this.checklists = checklists;
+        this.checkboxes =checkboxes;
+
     }
 
     public String getName() {
@@ -47,14 +52,26 @@ public class ToDoListModel implements Serializable {
 
     public void setCheckboxes(ArrayList checkboxes) { this.checkboxes = checkboxes; }
 
+    /**
+     * This method return the size of the checklist
+     *
+     * @return the number of checklist there are
+     */
+
     public int getNOfChecklists(){
         return checklists.size();
     }
 
+    /**
+     * This method checks which checkboxes have been clicked on
+     *
+     * @return the number of how many checkboxes are clicked
+     */
+
     public int getNOfCheckboxesClicked(){
         int n = 0;
-        for(int i = 0; i < checkboxes.size(); i++){
-            if(checkboxes.get(i).equals("clickOn")){
+        for (Object checkbox : checkboxes) {
+            if (checkbox.equals("clickOn")) {
                 n++;
             }
         }

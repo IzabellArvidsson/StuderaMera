@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 class ToDoViewModelTest {
 
-
+/*
     @Test
     void addToDoLists() {
         String string = "Handlarlista";
@@ -25,5 +25,7 @@ class ToDoViewModelTest {
         arrayListToDoList.add(toDoList);
         assertEquals (1, arrayListToDoList.size());
     }
+
+ */
 
 }

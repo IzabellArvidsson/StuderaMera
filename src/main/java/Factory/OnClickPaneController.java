@@ -3,10 +3,18 @@ package Factory;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 
+/**
+ * This class initializes all the fxml-panes and shows the different pages according to the users mouse clicks
+ *
+ * Uses: OnClickPaneFactory
+ * Used by: CalendarView, FirstSideView, HelpView, ListInToDoView, TimerView, TipsView, TodoListView and IOnClickPane
+ *
+ * Author: Julia
+ */
+
 public class OnClickPaneController {
 
     private AnchorPane firstViewPane;
-    private AnchorPane overViewPane;
     private AnchorPane todoPane;
     private AnchorPane calendarPane;
     private AnchorPane tipsViewPane;
@@ -15,34 +23,43 @@ public class OnClickPaneController {
 
     @FXML private AnchorPane mainAnchorPane;
 
+    /**
+     * This method uses variables and assigns them to different pages that can be called upon by the method showPane():
+     */
 
     public void init(){
         firstViewPane = OnClickPaneFactory.fistViewPane();
         todoPane = OnClickPaneFactory.toDoPane();
-        overViewPane = OnClickPaneFactory.overviewPane();
         calendarPane = OnClickPaneFactory.calendarPane();
         tipsViewPane = OnClickPaneFactory.tipsViewPane();
         helpPane = OnClickPaneFactory.helpViewPane();
         timerViewPane = OnClickPaneFactory.timerViewPane();
-        showPage(firstViewPane);
+        showPane(firstViewPane);
     }
 
+    /**
+     * These methods uses the method showPane() to show the desired fxml-file
+     */
 
-    public void showFirstViewPane(){ showPage(firstViewPane);}
+    public void showFirstViewPane(){ showPane(firstViewPane);}
 
-    public void showToDoPane(){ showPage(todoPane);}
+    public void showToDoPane(){ showPane(todoPane);}
 
-    public void showOverviewPane(){ showPage(overViewPane);}
+    public void showCalendarPane(){ showPane(calendarPane);}
 
-    public void showCalendarPane(){ showPage(calendarPane);}
+    public void showTipsViewPane(){ showPane(tipsViewPane);}
 
-    public void showTipsViewPane(){ showPage(tipsViewPane);}
+    public void showHelpPane(){ showPane(helpPane);}
 
-    public void showHelpPane(){ showPage(helpPane);}
+    public void showTimerViewPane(){  showPane(timerViewPane);}
 
-    public void showTimerViewPane(){  showPage(timerViewPane);}
+    /**
+     * This method shows the desired AnchorPane to the user
+     *
+     * @param anchorPane the pane that will be displayed in the view
+     */
 
-    private void showPage(AnchorPane anchorPane){
+    private void showPane(AnchorPane anchorPane){
         mainAnchorPane.getChildren().clear();
         mainAnchorPane.getChildren().add(anchorPane);
         mainAnchorPane.toFront();

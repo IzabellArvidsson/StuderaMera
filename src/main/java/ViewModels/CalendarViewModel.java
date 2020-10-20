@@ -1,8 +1,8 @@
 package ViewModels;
 
 import Models.CalendarEvent;
-import Models.ToDoLists;
-import ViewControllers.listInToDoController;
+import Models.ToDoListModel;
+import Views.ListInToDoView;
 import javafx.scene.layout.FlowPane;
 
 import java.awt.*;

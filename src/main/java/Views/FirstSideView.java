@@ -3,22 +3,23 @@ package Views;
 import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
 
-import java.io.IOException;
-
-public class FirstSideController implements IOnClickPane {
+public class FirstSideView implements IOnClickPane {
 
     private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
-    public void onClickStartStudy(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    public void onClickStartStudy() {
         onClickPaneController.showTimerViewPane();
     }
 
-
-    public void onClickStartPlaning(javafx.scene.input.MouseEvent mouseEvent) throws IOException {
-        onClickPaneController.showOverviewPane();
+    public void onClickToCalendar(){
+        onClickPaneController.showCalendarPane();
     }
 
-    public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    public void onClickToTodoList(){
+        onClickPaneController.showToDoPane();
+    }
+
+    public void onClickGoToHelp (){
         onClickPaneController.showHelpPane();
     }
 
