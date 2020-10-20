@@ -47,16 +47,21 @@ public class CalendarController implements IPane, Initializable {
     @FXML
     private Button addEventButton;
     @FXML
-    private MenuButton colorMenuButton;
-    @FXML
     private AnchorPane eventPane;
     @FXML
     private GridPane gridPane;
     @FXML
-    private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?
+    private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?FXML
+    @FXML
+    ComboBox colorComboBox;
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
     private PaneController paneController = new PaneController();
+
+
+
+    public CalendarController() {
+    }
 
     /**
      * adds event to list allCalendarEvent
@@ -72,6 +77,8 @@ public class CalendarController implements IPane, Initializable {
         dateText.setText(String.valueOf(yearMonth));
         columnAndRows();
         populateMonth(YearMonth.now());
+        colorComboBox.getItems().addAll("Färg", "Blå", "Grön", "Gul", "Orange", "Röd", "Rosa");
+        colorComboBox.getSelectionModel().select("Färg");
     }
 
     /**
@@ -193,7 +200,7 @@ public class CalendarController implements IPane, Initializable {
                 dateMonth.getText(),
                 dateDay.getText(),
                 descriptionTextArea.getText(),
-                colorMenuButton.getText());
+                colorComboBox.getSelectionModel().selectedItemProperty().getValue().toString());
         CalendarViewModel.addCalendarEvents(calEvent, flowPane);
         addToAllCalendarEvents(calEvent);
         saveList();
@@ -256,6 +263,10 @@ public class CalendarController implements IPane, Initializable {
     public void saveList() {
         CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
     }
+
+
+
+
 
 
 }
