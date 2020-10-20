@@ -182,6 +182,13 @@ public class TimerViewController extends AnchorPane implements Initializable, Ti
 /*----------------------------------------Observer pattern methods---------------------------------------------------*/
 
     @Override
+    public void initPane(PaneController paneController) {
+        this.paneController = paneController;
+    }
+
+/*----------------------------------------Observer pattern methods---------------------------------------------------*/
+
+    @Override
     public void update(int time, int reps, String string, int currentRep) {
         timerLabel.setText(String.valueOf(time));
         totalRepTimerLabel.setText(String.valueOf(reps));
