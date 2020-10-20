@@ -2,7 +2,6 @@ package Models;
 
 import java.awt.*;
 import java.io.Serializable;
-import java.util.Calendar;
 
 public class CalendarEvent implements Serializable {
     String name;
@@ -11,31 +10,30 @@ public class CalendarEvent implements Serializable {
     String eHour;
     String eMin;
     String place;
-
     String month;
     String day;
     String description;
-    Color color;
+    String color;
 
     public CalendarEvent(String name,
                          String sHour,
                          String sMin,
                          String eMin,
                          String eHour,
-                        /*String place,*/
+                         String place,
                          String month,
-                         String day/*,
-                          String description,
-                          Color color*/ ) {
+                         String day,
+                         String description,
+                         String color) {
         this.name = name;
         this.sHour = sHour;
         this.sMin = sMin;
         this.eMin = eMin;
         this.eHour = eHour;
-        //this.place = place;
+        this.place = place;
         this.month = month;
         this.day = day;
-        //this.description = description;
+        this.description = description;
         this.color = color;
     }
 
@@ -111,11 +109,11 @@ public class CalendarEvent implements Serializable {
         this.description = description;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 }

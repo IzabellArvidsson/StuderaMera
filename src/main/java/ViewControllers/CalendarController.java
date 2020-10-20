@@ -2,9 +2,9 @@ package ViewControllers;
 
 import Factory.IPane;
 import Models.CalendarEvent;
+import Models.CalendarModel;
 import ViewModels.CalendarEventHandler;
 import ViewModels.CalendarViewModel;
-import Models.CalendarModel;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,27 +23,49 @@ import java.util.ResourceBundle;
 
 public class CalendarController implements IPane, Initializable {
 
-    @FXML private AnchorPane addToCalendarPane;
-    @FXML private TextField dateDay;
-    @FXML private TextField dateMonth;
-    @FXML private TextField dateYear;
-    @FXML private Button nextMonthButton, lastMonthButton;
-    @FXML private TextField nameTextField;
-    @FXML private TextField startTimeHourTextField, startTimeMinTextField, endTimeHourTextField, endTimeMinTextField;
-    @FXML private TextField locationTextField;
-    @FXML private TextArea descriptionTextArea;
-    @FXML private Button addEventButton;
-    @FXML private MenuButton colorMenuButton;
-    @FXML private AnchorPane eventPane;
-    @FXML private GridPane gridPane;
-    @FXML private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?
-
+    private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
     private final CalendarViewModel calendarViewModel = new CalendarViewModel();
     private final CalendarModel calendarModel = new CalendarModel();
+    @FXML
+    private AnchorPane addToCalendarPane;
+    @FXML
+    private TextField dateDay;
+    @FXML
+    private TextField dateMonth;
+    @FXML
+    private TextField dateYear;
+    @FXML
+    private Button nextMonthButton, lastMonthButton;
+    @FXML
+    private TextField nameTextField;
+    @FXML
+    private TextField startTimeHourTextField, startTimeMinTextField, endTimeHourTextField, endTimeMinTextField;
+    @FXML
+    private TextField locationTextField;
+    @FXML
+    private TextArea descriptionTextArea;
+    @FXML
+    private Button addEventButton;
+    @FXML
+    private MenuButton colorMenuButton;
+    @FXML
+    private AnchorPane eventPane;
+    @FXML
+    private GridPane gridPane;
+    @FXML
+    private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
     private PaneController paneController = new PaneController();
-    private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
+
+    /**
+     * adds event to list allCalendarEvent
+     *
+     * @param calendarEvent event to be added
+     */
+    private static void addToAllCalendarEvents(CalendarEvent calendarEvent) {
+        allCalendarEvents.add(calendarEvent);
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -52,7 +74,10 @@ public class CalendarController implements IPane, Initializable {
         populateMonth(YearMonth.now());
     }
 
-    public void clickGridPane(){
+    /**
+     * show event details when event is pressed
+     */
+    public void clickGridPane() {
         gridPane.getChildren().forEach(item -> {
             item.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
@@ -63,17 +88,21 @@ public class CalendarController implements IPane, Initializable {
         });
     }
 
-    public void onClickCloseEventButton(){
+    public void onClickCloseEventButton() {
         eventPane.toBack();
     }
 
-
-    private void populateMonth (YearMonth yearMonthNow){
+    /**
+     * sets new month, clears children of all CalendarModels, adds labels with dates for new month
+     *
+     * @param yearMonthNow Month of which to show dates
+     */
+    private void populateMonth(YearMonth yearMonthNow) {
         yearMonth = yearMonthNow;
 
         LocalDate localDate = LocalDate.of(yearMonth.getYear(), yearMonth.getMonthValue(), 1);
 
-        for(CalendarModel calendarModel : allCalendarDays){
+        for (CalendarModel calendarModel : allCalendarDays) {
             calendarModel.getChildren().clear();
 
             calendarModel.setLocalDate(localDate);
@@ -85,35 +114,42 @@ public class CalendarController implements IPane, Initializable {
 
             localDate = localDate.plusDays(1);
 
-            if(calendarModel.getLocalDate().equals(LocalDate.now())){
+            if (calendarModel.getLocalDate().equals(LocalDate.now())) {
                 calendarModel.setStyle("-fx-background-color: white");
             }
         }
 
     }
 
-
-    private void columnAndRows(){
-        for(int i=0; i<1; i++){
-            for(int j = 0; j<31; j++){
+    /**
+     * adds a CalendarModel to each column of the calendar GridPane
+     */
+    private void columnAndRows() {
+        for (int i = 0; i < 1; i++) {
+            for (int j = 0; j < 31; j++) {
                 CalendarModel calendarModel = new CalendarModel();
-                calendarModel.setPrefSize(70,gridPane.getHeight());
+                calendarModel.setPrefSize(70, gridPane.getHeight());
 
-                gridPane.add(calendarModel,j,i);
+                gridPane.add(calendarModel, j, i);
                 allCalendarDays.add(calendarModel);
             }
         }
     }
 
-
-    public void previousMonth(){
+    /**
+     * changes month to previous month by changing dates in CalendarModels and loading the CalendarEvents corresponding to those days
+     */
+    public void previousMonth() {
         yearMonth = yearMonth.minusMonths(1);
         dateText.setText(String.valueOf(yearMonth));
         populateMonth(yearMonth);
         loadSavedCalendarEvents();
     }
 
-    public void nextMonth(){
+    /**
+     * changes month to next month by changing dates in CalendarModels and loading the CalendarEvents corresponding to those days
+     */
+    public void nextMonth() {
         yearMonth = yearMonth.plusMonths(1);
         dateText.setText(String.valueOf(yearMonth));
         populateMonth(yearMonth);
@@ -124,39 +160,40 @@ public class CalendarController implements IPane, Initializable {
         paneController.showOverviewPane();
     }
 
-    public void onClickGoToHelp () {
+    public void onClickGoToHelp() {
         paneController.showHelpPane();
     }
 
-    public void openAddToCalendar(){
+    public void openAddToCalendar() {
         addToCalendarPane.toFront();
     }
 
-    public void closeAddToCalendar(){
+    public void closeAddToCalendar() {
         addToCalendarPane.toBack();
     }
 
     @FXML
-    private void onClickStuderaMera () {
+    private void onClickStuderaMera() {
         paneController.showFirstViewPane();
     }
 
-    /*@Override
-    public void initPane(PaneController paneController) {
-        this.paneController = paneController;
-    }
-    */
-
+    /**
+     * Gets parameters from GUI and creates CalendarEvent then adds it to FlowPane and allCalendarEvents List,
+     * saves the list to Models.CalendarEvents.ser and clears fields in addToCalendarPane as well as sends it to back.
+     */
     @FXML
-    private void onClickSaveEvent(){
+    private void onClickSaveEvent() {
         CalendarModel flowPane = findFlowPane(dateDay.getText(), dateMonth.getText());
         CalendarEvent calEvent = new CalendarEvent(nameTextField.getText(),
                 startTimeHourTextField.getText(),
                 startTimeMinTextField.getText(),
                 endTimeMinTextField.getText(),
                 endTimeHourTextField.getText(),
+                locationTextField.getText(),
                 dateMonth.getText(),
-                dateDay.getText());
+                dateDay.getText(),
+                descriptionTextArea.getText(),
+                colorMenuButton.getText());
         CalendarViewModel.addCalendarEvents(calEvent, flowPane);
         addToAllCalendarEvents(calEvent);
         saveList();
@@ -173,19 +210,36 @@ public class CalendarController implements IPane, Initializable {
 
     }
 
+    /**
+     * calls loadCalendarEvent from CalendarEventHandler which adds CalendarEvents to FlowPane from saved file
+     */
     @FXML
-    public void loadSavedCalendarEvents(){
+    public void loadSavedCalendarEvents() {
         CalendarEventHandler.loadCalendarEvent(allCalendarDays);
     }
 
+    /**
+     * sets PaneController and loads old events int Calendar as well as adding them to the allCalendarEvents List
+     *
+     * @param paneController sets painController of CalendarPanes
+     */
     @Override
     public void initPane(PaneController paneController) {
         this.paneController = paneController;
         loadSavedCalendarEvents();
-        allCalendarEvents.addAll(CalendarEventHandler.loadOldCalendarEvent());
+        if (CalendarEventHandler.loadOldCalendarEvent() != null) {
+            allCalendarEvents.addAll(CalendarEventHandler.loadOldCalendarEvent());
+        }
     }
 
-    public CalendarModel findFlowPane(String day, String month){
+    /**
+     * Finds CalendarModel (FlowPane) in which to put CalendarEvent
+     *
+     * @param day   String with day og month
+     * @param month String with mont of year
+     * @return CalendarModel corresponding to current CalendarEvent
+     */
+    public CalendarModel findFlowPane(String day, String month) {
         String c = (day + "/" + month);
         for (CalendarModel allCalendarDay : allCalendarDays) {
             String s = (allCalendarDay.getLocalDate().getDayOfMonth() + "/" + allCalendarDay.getLocalDate().getMonthValue());
@@ -195,13 +249,13 @@ public class CalendarController implements IPane, Initializable {
         }
         return null;
     }
-    public void saveList(){
+
+    /**
+     * Saves contents of allCalendarEvents to Models.CalendarEvents.ser
+     */
+    public void saveList() {
         CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
     }
-
-        private static void addToAllCalendarEvents(CalendarEvent calendarEvent){
-            allCalendarEvents.add(calendarEvent);
-        }
 
 
 }

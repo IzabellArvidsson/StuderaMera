@@ -5,9 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 
-import java.awt.*;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class EventInCalendarController extends AnchorPane {
     @FXML Label startTimeLabel;
@@ -16,7 +17,10 @@ public class EventInCalendarController extends AnchorPane {
     @FXML AnchorPane calEventAnchorPane;
 
 
-
+    /**
+     *sets values for the graphic representation of CalendarEvents
+     * @param calEvent CalendarEvent used to create graphic representation
+     */
     public EventInCalendarController(CalendarEvent calEvent){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/CalendarEvent.fxml"));
         fxmlLoader.setController(this);
@@ -29,12 +33,24 @@ public class EventInCalendarController extends AnchorPane {
         eventNameLabel.setText(calEvent.getName());
         startTimeLabel.setText(calEvent.getsHour() +":"+ calEvent.getsMin());
         endTimeLabel.setText(calEvent.geteHour() + ":" + calEvent.geteMin());
-        //setEventColor( calEvent, calEventAnchorPane);
+        setEventColor( calEvent, calEventAnchorPane);
 
+    }
+
+    private HashMap<String, Color> stringToColor = new HashMap<>();
+
+    public void setColors() {
+        stringToColor.put("Röd", Color.RED);
+        stringToColor.put("Blå", Color.BLUE);
+        stringToColor.put("Grön",Color.GREEN);
+        stringToColor.put("Gul", Color.YELLOW);
+        stringToColor.put("Orange", Color.ORANGE);
+        stringToColor.put("Rosa", Color.PINK);
     }
     @FXML
     private void setEventColor(CalendarEvent calEvent, AnchorPane anchPane){
-        String color = toRGBCode(calEvent.getColor());
+        Color c = stringToColor.get(calEvent.getColor());
+        String color = toRGBCode(c);
         anchPane.setStyle("-fx-background-color: "+ color);
     }
 
@@ -45,4 +61,6 @@ public class EventInCalendarController extends AnchorPane {
                 (int)( color.getGreen() * 255 ),
                 (int)( color.getBlue() * 255 ) );
     }
+
+
 }
