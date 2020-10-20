@@ -291,9 +291,9 @@
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="936.0" style="-fx-background-color: DBEFF2;">
          <children>
             <Text fx:id="dateText" layoutX="346.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2020 v.38" textAlignment="CENTER" wrappingWidth="244.964038848877">
-                  <font>
-                     <Font name="Georgia" size="25.0" />
-                  </font>
+               <font>
+                  <Font name="Georgia" size="25.0" />
+               </font>
             </Text>
 
             <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -321,7 +321,7 @@
                      </cursor>
                   </Button>
 
-                           </children>
+               </children>
             </AnchorPane>
             <Circle fill="WHITE" layoutX="48.0" layoutY="582.0" onMouseClicked="#onClickGoToHelp" radius="28.0" stroke="WHITE" strokeType="INSIDE">
                <effect>
