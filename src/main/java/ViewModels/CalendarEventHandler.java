@@ -2,11 +2,6 @@ package ViewModels;
 
 import Models.CalendarEvent;
 import Models.CalendarModel;
-import Models.ToDoLists;
-import ViewControllers.CalendarController;
-import javafx.scene.layout.FlowPane;
-
-import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 
