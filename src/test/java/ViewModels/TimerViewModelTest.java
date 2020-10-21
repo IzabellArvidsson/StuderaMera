@@ -10,29 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TimerViewModelTest {
 
     @Test
-    void testSetTimelines() {
-
-    }
-
-    @Test
-    void testSetStudyTimerSpinner() {
+    void testStartStudyTime() {
         TimerViewModel timerViewModel = new TimerViewModel();
-        int studyTime = 20;
-        timerViewModel.setStudyTimerSpinner(studyTime);
+        timerViewModel.setTimelines();
+        //timerViewModel.studyTimeline.stop();
+        timerViewModel.startStudyTime();
 
-        //assertEquals(20, timerViewModel.minutes);
-    }
-
-    @Test
-    void testSetRestTimerSpinner() {
-        TimerViewModel timerViewModel = new TimerViewModel();
-
-
-    }
-
-    @Test
-    void testSetRepTimerSpinner() {
-
+        assertEquals(Animation.Status.RUNNING, timerViewModel.studyTimeline.getStatus());
     }
 
     @Test
@@ -91,7 +75,7 @@ public class TimerViewModelTest {
         timerViewModel.studyTimeline.playFromStart();
         timerViewModel.checkIfStudyTimeIsRunning(timerViewModel.studyTimeline);
 
-        assertEquals(1, timerViewModel.imageModel.countUp);
+        assertEquals(1, timerViewModel.countUp);
     }
 
     @Test

@@ -4,26 +4,23 @@ import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
 import javafx.fxml.FXML;
 
-import java.io.IOException;
-
 public class TipsView implements IOnClickPane {
 
     private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
     @FXML
-    private void onClickBackButton (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    private void onClickBackButton () {
         onClickPaneController.showTimerViewPane();
     }
 
     @FXML
-    private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    private void onClickStuderaMera () {
         onClickPaneController.showFirstViewPane();
     }
 
-    public void onClickGoToHelp (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    public void onClickGoToHelp () {
         onClickPaneController.showHelpPane();
     }
-
 
     @Override
     public void initPane(OnClickPaneController onClickPaneController) {

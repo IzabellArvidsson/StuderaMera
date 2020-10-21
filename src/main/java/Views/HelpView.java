@@ -4,24 +4,17 @@ import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
 import javafx.fxml.FXML;
 
-import java.io.IOException;
-
 public class HelpView implements IOnClickPane {
 
     private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
-    /*@Override
-    public void onClickButton(MouseEvent mouseEvent, String fxml) throws IOException {
-        super.onClickButton(mouseEvent, "/fxml_files/TimerView.fxml");
-    }*/
-
     @FXML
-    private void onClickBackButton (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    private void onClickBackButton () {
         onClickPaneController.showTimerViewPane();
     }
 
     @FXML
-    private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    private void onClickStuderaMera () {
         onClickPaneController.showFirstViewPane();
     }
 
