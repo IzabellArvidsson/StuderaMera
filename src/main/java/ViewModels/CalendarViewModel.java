@@ -1,7 +1,7 @@
 package ViewModels;
 
 import Models.CalendarEvent;
-import ViewControllers.EventInCalendarController;
+import Views.EventInCalendarView;
 import javafx.scene.layout.FlowPane;
 
 public class CalendarViewModel {
@@ -14,7 +14,7 @@ public class CalendarViewModel {
     public static void addCalendarEvents(CalendarEvent calendarEvent, FlowPane flowPane) {
         System.out.println(calendarEvent);
         if (flowPane != null) {
-            flowPane.getChildren().add(new EventInCalendarController(calendarEvent));
+            flowPane.getChildren().add(new EventInCalendarView(calendarEvent));
         }
 
     }

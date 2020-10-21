@@ -57,7 +57,7 @@ public class CalendarView implements IOnClickPane, Initializable {
     ComboBox colorComboBox;
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
-    private OnClickPaneController paneController;
+    private OnClickPaneController paneController = new OnClickPaneController();
 
 
     public CalendarView() {
@@ -258,6 +258,10 @@ public class CalendarView implements IOnClickPane, Initializable {
      */
     public void saveList() {
         CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
+    }
+
+    public void onClickBackToOverview() {
+        paneController.showFirstViewPane();
     }
 
 }

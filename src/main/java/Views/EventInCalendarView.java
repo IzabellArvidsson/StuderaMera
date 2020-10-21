@@ -1,5 +1,6 @@
 package Views;
 
+import Factory.OnClickPaneController;
 import Models.CalendarEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,10 +12,11 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class EventInCalendarView extends AnchorPane {
-    @FXML Label startTimeLabel;
-    @FXML Label eventNameLabel;
-    @FXML Label endTimeLabel;
-    @FXML AnchorPane calEventAnchorPane;
+    @FXML private Label startTimeLabel;
+    @FXML private Label eventNameLabel;
+    @FXML private Label endTimeLabel;
+    @FXML private AnchorPane calEventAnchorPane;
+    private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
 
     /**
@@ -39,31 +41,21 @@ public class EventInCalendarView extends AnchorPane {
 
     }
 
-    private final HashMap<String, Color> stringToColor = new HashMap<>();
+    private final HashMap<String, String> stringToColor = new HashMap<>();
 
     public void setColors() {
-        stringToColor.put("Röd", Color.RED);
-        stringToColor.put("Blå", Color.BLUE);
-        stringToColor.put("Grön",Color.GREEN);
-        stringToColor.put("Gul", Color.YELLOW);
-        stringToColor.put("Orange", Color.ORANGE);
-        stringToColor.put("Rosa", Color.PINK);
-        stringToColor.put("Färg", Color.GRAY);
+        stringToColor.put("Röd", "#ff5d5d");
+        stringToColor.put("Blå", "#b2b2ff");
+        stringToColor.put("Grön","#5cec5c");
+        stringToColor.put("Gul", "#ffff00");
+        stringToColor.put("Orange", "#ffc04c");
+        stringToColor.put("Rosa", "#ffa6b5");
+        stringToColor.put("Färg", "#c5c5c5");
     }
     @FXML
     private void setEventColor(CalendarEvent calEvent, AnchorPane anchPane){
-        Color c = stringToColor.get(calEvent.getColor());
-        String color = toRGBCode(c);
+        String color = stringToColor.get(calEvent.getColor());
         anchPane.setStyle("-fx-background-color: "+ color);
     }
-
-    private String toRGBCode( Color color )
-    {
-        return String.format( "#%02X%02X%02X",
-                (int)( color.getRed() * 255 ),
-                (int)( color.getGreen() * 255 ),
-                (int)( color.getBlue() * 255 ) );
-    }
-
 
 }
