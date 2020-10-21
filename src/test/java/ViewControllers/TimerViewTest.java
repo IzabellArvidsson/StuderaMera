@@ -1,17 +1,15 @@
 package ViewControllers;
 
-import Models.ImageModel;
+import ViewModels.ImageViewModel;
 import Views.TimerView;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class TimerViewTest {
 
     @Test
     void testImageLoader() {
         TimerView timerView = new TimerView();
-        ImageModel imageModel = new ImageModel();
+        ImageViewModel imageModel = new ImageViewModel();
         int countUp = 10;
         int totalTime = 70;
 

@@ -1,11 +1,12 @@
-package Models;
+package ViewModels;
 
 /**
+ * Author: Hanna
+ * Uses:
+ * Used by:
  * Handles the model functionality of the images
  */
-public class ImageModel {
-
-    public int countUp;
+public class ImageViewModel {
 
     /**
      * Checks if it is time to change the image and returns the number of the image

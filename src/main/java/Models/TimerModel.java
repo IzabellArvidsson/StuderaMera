@@ -1,6 +1,9 @@
 package Models;
 
 /**
+ * Author: Hanna and Iza
+ * Uses:
+ * Used by:
  * The modelclass for the timer part of the program. Contains much of the functionality.
  */
 public class TimerModel {

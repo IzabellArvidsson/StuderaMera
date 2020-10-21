@@ -2,9 +2,11 @@ package Views;
 
 import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
-import Models.TimerModel;
+import Interfaces.ITimerViewModel;
 import ObserverInterfaces.TimerObserver;
+import ViewModels.ImageViewModel;
 import ViewModels.TimerViewModel;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -17,6 +19,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
+ * Author: Hanna and Izabell
+ * Uses:
+ * Used by:
  * The controller class for the view. This class handles all the information about the view. It also updates the view
  * after updates from other classes.
  */
@@ -27,20 +32,21 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
     @FXML private Label timerLabel, repTimerLabel, totalRepTimerLabel, typeOfTimerLabel;
     @FXML private ImageView flowerChangingImage, deadFlowerImage;
 
-    private final TimerViewModel timerViewModel = new TimerViewModel();
+    private final ITimerViewModel iTimerViewModel = new TimerViewModel();
+    private final ImageViewModel imageViewModel = new ImageViewModel();
 
     OnClickPaneController paneController = new OnClickPaneController();
 
     /**
      * Initializes the different spinner values and register the class as an observer
-     * @param url
-     * @param resourceBundle
+     * @param url pointer to a "resource" on the world wide web
+     * @param resourceBundle contains local specific objects
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         /*-----------------------------------Register this class as an observer---------------------------------------*/
-        timerViewModel.register(this);
+        iTimerViewModel.register(this);
 
         /*----------------------------------------Spinner initialize--------------------------------------------------*/
 
@@ -59,21 +65,21 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
      */
     @FXML
     private void setStudyTime(){
-        timerViewModel.setStudyTimerSpinner(studyTimerSpinner.getValue());
+        iTimerViewModel.setStudyTimerSpinner(studyTimerSpinner.getValue());
     }
 
     /**
      * Sends the value of the restspinner to a method in TimerViewModel
      */
     @FXML
-    private void setRestTime() { timerViewModel.setRestTimerSpinner(restTimerSpinner.getValue()); }
+    private void setRestTime() { iTimerViewModel.setRestTimerSpinner(restTimerSpinner.getValue()); }
 
     /**
      * Sends the value of the repetition spinner to a method in TimerViewModel
      */
     @FXML
     private void setRep() {
-        timerViewModel.setRepTimerSpinner(repTimerSpinner.getValue());
+        iTimerViewModel.setRepTimerSpinner(repTimerSpinner.getValue());
     }
 
     /**
@@ -91,7 +97,7 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
 
         int totalTime = (studyTimerSpinner.getValue() * repTimerSpinner.getValue())*60;
 
-        switch(timerViewModel.imageModel.checkChangeImage(countUp, totalTime)) {
+        switch(imageViewModel.checkChangeImage(countUp, totalTime)) {
             case 1:
                 flowerChangingImage.setImage(new Image("/images/flower/plant_1.png"));
                 deadFlowerImage.setImage(new Image("/images/flower/plant_1_dead.png"));
@@ -130,10 +136,10 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
         setRestTime();
         setRep();
         setImage();
-        timerViewModel.setCountUpInt();
-        timerViewModel.setTimelines();
+        iTimerViewModel.setCountUpInt();
+        iTimerViewModel.setTimelines();
 
-        timerViewModel.startTimer(timerViewModel.studyTimeline);
+        iTimerViewModel.startStudyTime();
 
         timerOnView.toFront();
     }
@@ -143,7 +149,7 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
      */
     @FXML
     private void onCLickStopButton() {
-        timerViewModel.pauseTimer(timerViewModel.studyTimeline);
+        iTimerViewModel.pauseStudyTime();
         cancelPane.toFront();
     }
 
@@ -152,10 +158,9 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
      */
     @FXML
     private void onCLickYesButton() {
-        timerViewModel.stopTimer(timerViewModel.studyTimeline);
+        iTimerViewModel.stopStudyTime();
         setTimerView.toFront();
         failPane.toFront();
-
     }
 
     /**
@@ -163,7 +168,7 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
      */
     @FXML
     private void onClickNoButton() {
-        timerViewModel.studyTimeline.play();
+        iTimerViewModel.playStudyTime();
         timerOnView.toFront();
     }
 
@@ -219,7 +224,6 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
 
     /**
      * The method who receives information about updates from TimerViewModel and with this information updates the view
-     * @param time Updates which number the timer is on
      * @param reps Updates the total number of reps that the user has decided
      * @param string Updates the text that says if the user should study or rest
      * @param currentRep Updates which repetition the user is currently on
@@ -227,8 +231,7 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
      * @param countUp The integer variable who keeps track of how many seconds has passed
      */
     @Override
-    public void update(int time, int reps, String string, int currentRep, boolean stopped, int countUp) {
-        timerLabel.setText(String.valueOf(time));
+    public void update(int reps, String string, int currentRep, boolean stopped, int countUp) {
         totalRepTimerLabel.setText(String.valueOf(reps));
         typeOfTimerLabel.setText(string);
         repTimerLabel.setText(String.valueOf(currentRep));
@@ -242,11 +245,11 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
 
     /**
      * Updates the label of the timer with the current minutes and seconds
-     * @param timer The variable that will be updated
+     * @param time The variable that will be updated
      */
     @Override
-    public void update(TimerModel timer) {
-        timerLabel.setText(timer.toString());
+    public void update(String time) {
+        timerLabel.setText(time);
     }
 
     /*--------------------------------------------Factory method------------------------------------------------------*/
