@@ -235,7 +235,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
     @Override
     public void initPane(OnClickPaneController onClickPaneController) {
         this.onClickPaneController = onClickPaneController;
-        toDoViewModel.writeToDoList(toDoListFlowPane, this);
+        //toDoViewModel.writeToDoList(toDoListFlowPane, this);
     }
 
     @Override
