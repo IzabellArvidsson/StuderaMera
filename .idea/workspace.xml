@@ -22,50 +22,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< refs/remotes/origin/master
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TodoViewModels/CheckTodoValid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarHandlerModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/EventInCalendarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models.ToDoLists.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Models.ToDoLists.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/IOnClickPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/IOnClickPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/OnClickPaneFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/ToDoListModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/ToDoListModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObservable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListOpenObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObservable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ObserverInterfaces/ToDoListRemoveObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/CalendarViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/CalendarViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewModels/ToDoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TodoViewModels/ToDoViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/CalendarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/FirstSideController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/FirstSideView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/HelpViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/HelpView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/ListInToDoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/ListInToDoView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/OverviewView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/TimerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/TimerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/TipsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/TipsView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/TodoListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/TodoListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/HelpView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/PlanOverview.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/TipsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml_files/firstSideView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ViewControllers/TimerViewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewControllers/TimerViewTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ViewModels/ToDoViewModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewModels/ToDoViewModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/HelpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/HelpView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/PlanOverview.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/CalendarHandlerModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarHandlerModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/CalendarModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/CalendarModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/CalendarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewControllers/TimerViewController.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="235" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
@@ -89,7 +70,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.2\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -104,6 +85,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -112,8 +94,8 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StuderaMeraKopia" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
@@ -136,17 +118,54 @@
       <recent name="C:\Users\Hanna Söderström\IdeaProjects\StuderaMera\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
-    <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.main (1)">
+    <configuration name="main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.main" />
       <module name="StuderaMera" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\46767\Documents\java\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="StuderaMera" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Java\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="All in StuderaMera" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="StuderaMera" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in StuderaMera" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="StuderaMera" />
+      <useClassPathOnly />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -220,19 +239,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ViewModels in StuderaMera" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StuderaMera" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ViewModels.TodoViewModels.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ViewModels" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="StuderaMera [javafx:compile,javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javafx:compile" />
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="StuderaMera [test] (1)" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -261,25 +292,26 @@
     </configuration>
     <list>
       <item itemvalue="Application.main" />
+      <item itemvalue="Application.main (1)" />
       <item itemvalue="JUnit.All in StuderaMera" />
-      <item itemvalue="JUnit.ViewModels in StuderaMera" />
       <item itemvalue="JUnit.TimerViewModelTest.pauseTimer" />
       <item itemvalue="JUnit.TimerViewModelTest.startRestTimer" />
       <item itemvalue="JUnit.TimerViewModelTest.startStudyTimer" />
       <item itemvalue="JUnit.TimerViewModelTest.stopTimer" />
       <item itemvalue="Maven.StuderaMera [test] (1)" />
+      <item itemvalue="Maven.StuderaMera [javafx:compile,javafx:run]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main (1)" />
         <item itemvalue="JUnit.TimerViewModelTest.startRestTimer" />
         <item itemvalue="JUnit.TimerViewModelTest.startStudyTimer" />
         <item itemvalue="JUnit.TimerViewModelTest.stopTimer" />
         <item itemvalue="JUnit.TimerViewModelTest.pauseTimer" />
-        <item itemvalue="JUnit.ViewModels in StuderaMera" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -441,11 +473,11 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1601587771046</updated>
     </task>
-    <task id="LOCAL−00026" summary="adding to files and creating to-do lists functions">
-      <created>1601623125793</created>
+    <task id="LOCAL−00026" summary="The timer is working. There still needs to be some small changes.">
+      <created>1602235719333</created>
       <option name="number" value="LOCAL−00026" />
       <option name="presentableId" value="LOCAL−00026" />
-      <updated>1601623125793</updated>
+      <updated>1602235719333</updated>
     </task>
     <task id="LOCAL−00027" summary="adding to files and creating to-do lists functions">
       <created>1601909104818</created>
@@ -470,12 +502,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="???" />
@@ -501,84 +534,76 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed the observer pattern and the code is parted the way it is supposed to be. Changed some design in timerview." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1602861923820" />
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602862338968">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602862338968" />
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602861923820" />
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="548" y="117" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1602862299029">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="548" y="117" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.824@0.0.1536.824" timestamp="1602862299029" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1602861923820" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1603183376229">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="551" y="303" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1603183376229" />
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602861923820" />
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602861923820" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="520" y="110" key="FileChooserDialogImpl" timestamp="1602861923820" />
-    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1603195523790">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603195523790" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1603195523789">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603195523789" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1603195523789">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603195523789" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1603195523790">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603195523790" />
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.center" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.left" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.right" timestamp="1602861923820" />
-    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="349" y="155" key="IDE.errors.dialog" timestamp="1602861923820" />
-    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1602861923820" />
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="496" y="115" key="RollbackChangesDialog" timestamp="1602861923820" />
-    <state x="496" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1602861923820" />
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog" timestamp="1602861923820" />
-    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602861923820" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1602861923820" />
-    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602861923820" />
-    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602861923820" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1602861923820" />
-    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602861923820" />
-    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="209" y="33" key="new project wizard" timestamp="1602861923820" />
-    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1602861923820" />
-    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1602861923820" />
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602861923820" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602861923820" />
+    <state x="249" y="0" key="#Project_Structure" />
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" />
+    <state x="279" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="279" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1042@0.0.1920.1042" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" />
+    <state x="718" y="150" width="374" height="561" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" />
+    <state x="718" y="150" width="374" height="561" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1042@0.0.1920.1042" />
+    <state x="551" y="303" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" />
+    <state x="551" y="303" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" />
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" />
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="650" y="139" key="FileChooserDialogImpl" />
+    <state x="520" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" />
+    <state x="650" y="139" key="FileChooserDialogImpl/0.0.1920.1042@0.0.1920.1042" />
+    <state width="1864" height="417" key="GridCell.Tab.0.bottom" />
+    <state width="1493" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" />
+    <state width="1864" height="417" key="GridCell.Tab.0.bottom/0.0.1920.1042@0.0.1920.1042" />
+    <state width="1864" height="417" key="GridCell.Tab.0.center" />
+    <state width="1493" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" />
+    <state width="1864" height="417" key="GridCell.Tab.0.center/0.0.1920.1042@0.0.1920.1042" />
+    <state width="1864" height="417" key="GridCell.Tab.0.left" />
+    <state width="1493" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" />
+    <state width="1864" height="417" key="GridCell.Tab.0.left/0.0.1920.1042@0.0.1920.1042" />
+    <state width="1864" height="417" key="GridCell.Tab.0.right" />
+    <state width="1493" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" />
+    <state width="1864" height="417" key="GridCell.Tab.0.right/0.0.1920.1042@0.0.1920.1042" />
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom" />
+    <state width="1493" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="263" key="GridCell.Tab.1.center" />
+    <state width="1493" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="263" key="GridCell.Tab.1.left" />
+    <state width="1493" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="263" key="GridCell.Tab.1.right" />
+    <state width="1493" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" />
+    <state x="349" y="155" key="IDE.errors.dialog" />
+    <state x="349" y="155" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" />
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="496" y="115" key="RollbackChangesDialog" />
+    <state x="496" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="311" y="0" key="SettingsEditor" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" />
+    <state x="311" y="0" key="SettingsEditor/0.0.1920.1042@0.0.1920.1042" />
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog" />
+    <state x="527" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" />
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" />
+    <state x="377" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" />
+    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog" />
+    <state x="540" y="219" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" />
+    <state x="323" y="148" width="890" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" />
+    <state x="209" y="33" key="new project wizard" />
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog" />
+    <state x="469" y="170" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" />
+    <state x="425" y="187" key="run.anything.popup" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -598,25 +623,14 @@
           <line>15</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main/main.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StuderaMera$ViewModels_in_StuderaMera.ic" NAME="ViewModels in StuderaMera Coverage Results" MODIFIED="1602837520950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>ViewModels.*</FILTER>
+    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1601390041179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/StuderaMera$main__1_.ic" NAME="main (1) Coverage Results" MODIFIED="1602248474821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Main.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/StuderaMera1$main.ic" NAME="main Coverage Results" MODIFIED="1600350809200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/StuderaMera$ToDoViewModelTest.ic" NAME="ToDoViewModelTest Coverage Results" MODIFIED="1602838248068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>ViewModels.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/StuderaMera$ToDoViewModelTest_addToDoLists.ic" NAME="ToDoViewModelTest.addToDoLists Coverage Results" MODIFIED="1602837814555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>ViewModels.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/StuderaMera$main.ic" NAME="main Coverage Results" MODIFIED="1602838080200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
