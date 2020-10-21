@@ -30,11 +30,9 @@ public class CalendarView implements IOnClickPane, Initializable {
     @FXML
     private AnchorPane addToCalendarPane;
     @FXML
-    private TextField dateDay;
+    private ComboBox dateDay;
     @FXML
-    private TextField dateMonth;
-    @FXML
-    private TextField dateYear;
+    private ComboBox dateMonth;
     @FXML
     private Button nextMonthButton, lastMonthButton;
     @FXML
@@ -79,6 +77,10 @@ public class CalendarView implements IOnClickPane, Initializable {
         populateMonth(YearMonth.now());
         colorComboBox.getItems().addAll("Färg", "Blå", "Grön", "Gul", "Orange", "Röd", "Rosa");
         colorComboBox.getSelectionModel().select("Färg");
+        dateDay.getItems().addAll("Dag","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31");
+        dateDay.getSelectionModel().select("Dag");
+        dateMonth.getItems().addAll("Mån", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+        dateMonth.getSelectionModel().select("Mån");
     }
 
     /**
@@ -186,15 +188,15 @@ public class CalendarView implements IOnClickPane, Initializable {
      */
     @FXML
     private void onClickSaveEvent() {
-        CalendarModel flowPane = findFlowPane(dateDay.getText(), dateMonth.getText());
+        CalendarModel flowPane = findFlowPane(dateDay.getSelectionModel().selectedItemProperty().getValue().toString(), dateMonth.getSelectionModel().selectedItemProperty().getValue().toString());
         CalendarEvent calEvent = new CalendarEvent(nameTextField.getText(),
                 startTimeHourTextField.getText(),
                 startTimeMinTextField.getText(),
                 endTimeMinTextField.getText(),
                 endTimeHourTextField.getText(),
                 locationTextField.getText(),
-                dateMonth.getText(),
-                dateDay.getText(),
+                dateMonth.getSelectionModel().selectedItemProperty().getValue().toString(),
+                dateDay.getSelectionModel().selectedItemProperty().getValue().toString(),
                 descriptionTextArea.getText(),
                 colorComboBox.getSelectionModel().selectedItemProperty().getValue().toString());
         CalendarViewModel.addCalendarEvents(calEvent, flowPane);
@@ -202,14 +204,15 @@ public class CalendarView implements IOnClickPane, Initializable {
         saveList();
         closeAddToCalendar();
         nameTextField.clear();
-        dateDay.clear();
-        dateMonth.clear();
+        dateDay.getSelectionModel().select("Dag");
+        dateMonth.getSelectionModel().select("Mån");
         endTimeMinTextField.clear();
         endTimeHourTextField.clear();
         startTimeHourTextField.clear();
         startTimeMinTextField.clear();
         locationTextField.clear();
         descriptionTextArea.clear();
+        colorComboBox.getSelectionModel().select("Färg");
 
     }
 
