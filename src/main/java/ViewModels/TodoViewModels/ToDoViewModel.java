@@ -32,9 +32,9 @@ public class ToDoViewModel  {
      * @param todoListView
      */
 
-     public void addToDoListsToPane(String nameTextField, String description, ArrayList<String> checklist, ArrayList<String>
-             checkboxes, ArrayList<String> string, FlowPane toDoListFlowPane, TodoListView todoListView){
-         ToDoListModel toDoListModel = new ToDoListModel(nameTextField, description, string, checklist, checkboxes);
+    public void addToDoListsToPane(String nameTextField, String description, ArrayList<String> checklist, ArrayList<String>
+            checkboxes, ArrayList<String> string, FlowPane toDoListFlowPane, TodoListView todoListView){
+        ToDoListModel toDoListModel = new ToDoListModel(nameTextField, description, string, checklist, checkboxes);
 
         addToDoListToArrayList(toDoListModel);
         ListInToDoView listInToDoView = new ListInToDoView(toDoListModel);
@@ -57,17 +57,17 @@ public class ToDoViewModel  {
 
     public void updateToDoInList(String nameTextField, String description, ArrayList<String> checklist, ArrayList<String>
             nCheckboxes, ArrayList<String> string, ToDoListModel toDoListModel){
-         for(ToDoListModel toDoListModelInList : allToDoLists){
-             if(toDoListModelInList.equals(toDoListModel)){
-                 toDoListModelInList.setName(nameTextField);
-                 toDoListModelInList.setDescription(description);
-                 toDoListModelInList.setCheckboxes(nCheckboxes);
-                 toDoListModelInList.setChecklists(checklist);
-                 toDoListModelInList.setTimeAndDeadline(string);
-                 System.out.println(allToDoLists);
-                 saveToDoList(allToDoLists);
-             }
-         }
+        for(ToDoListModel toDoListModelInList : allToDoLists){
+            if(toDoListModelInList.equals(toDoListModel)){
+                toDoListModelInList.setName(nameTextField);
+                toDoListModelInList.setDescription(description);
+                toDoListModelInList.setCheckboxes(nCheckboxes);
+                toDoListModelInList.setChecklists(checklist);
+                toDoListModelInList.setTimeAndDeadline(string);
+                System.out.println(allToDoLists);
+                saveToDoList(allToDoLists);
+            }
+        }
     }
 
 

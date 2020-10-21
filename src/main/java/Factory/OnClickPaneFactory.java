@@ -68,7 +68,7 @@ public class OnClickPaneFactory {
     }
 
     public static AnchorPane calendarPane(){
-        Pane <CalendarController> pane = loadInPane("fxml_files/Calendar.fxml");
+        Pane <CalendarView> pane = loadInPane("fxml_files/Calendar.fxml");
         pane.controller.initPane(onClickPaneController);
         return pane.aPane;
     }
