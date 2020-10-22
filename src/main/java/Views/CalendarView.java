@@ -4,7 +4,6 @@ import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
 import Models.CalendarEvent;
 import Models.CalendarModel;
-import ViewModels.CalendarEventHandler;
 import ViewModels.CalendarViewModel;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -92,14 +91,14 @@ public class CalendarView implements IOnClickPane, Initializable {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
                     eventPane.toFront();
-                    showEventPane(item);
+                    //populateEventPane(item);
                 }
             });
         });
     }
 
-    public void showEventPane(Node node) {
-        CalendarEvent calevent = node.getCalendarEvent();
+    /*public void populateEventPane(Node node) {
+        CalendarEvent calEvent = node.p;
         showName.setText(calEvent.getName());
         showDescription.setText(calEvent.getDescription());
         showLocation.setText(calEvent.getPlace());
@@ -107,7 +106,7 @@ public class CalendarView implements IOnClickPane, Initializable {
         showEndTime.setText(calEvent.geteHour()+":"+calEvent.geteMin());
         showDateMonth.setText(calEvent.getMonth());
         showDateDay.setText(calEvent.getDay());
-    }
+    }*/
 
     public void onClickCloseEventButton() {
         eventPane.toBack();
@@ -240,7 +239,7 @@ public class CalendarView implements IOnClickPane, Initializable {
      */
     @FXML
     public void loadSavedCalendarEvents() {
-        CalendarEventHandler.loadCalendarEvent(allCalendarDays);
+        CalendarViewModel.loadCalendarEvent(allCalendarDays);
     }
 
     /**
@@ -252,8 +251,8 @@ public class CalendarView implements IOnClickPane, Initializable {
     public void initPane(OnClickPaneController paneController) {
         this.paneController = paneController;
         loadSavedCalendarEvents();
-        if (CalendarEventHandler.loadOldCalendarEvent() != null) {
-            allCalendarEvents.addAll(CalendarEventHandler.loadOldCalendarEvent());
+        if (CalendarViewModel.loadOldCalendarEvent() != null) {
+            allCalendarEvents.addAll(CalendarViewModel.loadOldCalendarEvent());
         }
     }
 
@@ -279,7 +278,7 @@ public class CalendarView implements IOnClickPane, Initializable {
      * Saves contents of allCalendarEvents to Models.CalendarEvents.ser
      */
     public void saveList() {
-        CalendarEventHandler.saveCalendarEvent(allCalendarEvents);
+        CalendarViewModel.saveCalendarEvent(allCalendarEvents);
     }
 
     public void onClickBackToOverview() {
