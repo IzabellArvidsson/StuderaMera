@@ -45,12 +45,13 @@ public class EventInCalendarView extends AnchorPane {
 
     public void setColors() {
         stringToColor.put("Röd", "#ff5d5d");
-        stringToColor.put("Blå", "#b2b2ff");
+        stringToColor.put("Blå", "#72bcff");
         stringToColor.put("Grön","#5cec5c");
         stringToColor.put("Gul", "#ffff00");
         stringToColor.put("Orange", "#ffc04c");
         stringToColor.put("Rosa", "#ffa6b5");
         stringToColor.put("Färg", "#c5c5c5");
+        stringToColor.put("Lila", "#d068ff");
     }
     @FXML
     private void setEventColor(CalendarEvent calEvent, AnchorPane anchPane){

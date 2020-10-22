@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Font?>
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0"
-         prefWidth="100.0" style="-fx-border-color: #b8b8b8;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1"
+         prefWidth="100.0" style="-fx-border-color: #999999;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1"
          xmlns:fx="http://javafx.com/fxml/1">
    <children>
    <AnchorPane fx:id="calEventAnchorPane" layoutX="-1.0" layoutY="-5.0" prefHeight="70.0" prefWidth="141.0"

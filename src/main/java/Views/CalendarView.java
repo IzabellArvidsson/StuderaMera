@@ -9,6 +9,7 @@ import ViewModels.CalendarViewModel;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -28,6 +29,8 @@ public class CalendarView implements IOnClickPane, Initializable {
     private final CalendarViewModel calendarViewModel = new CalendarViewModel();
     private final CalendarModel calendarModel = new CalendarModel();
     @FXML
+    ComboBox colorComboBox;
+    @FXML
     private AnchorPane addToCalendarPane;
     @FXML
     private ComboBox dateDay;
@@ -36,13 +39,13 @@ public class CalendarView implements IOnClickPane, Initializable {
     @FXML
     private Button nextMonthButton, lastMonthButton;
     @FXML
-    private TextField nameTextField;
+    private TextField nameTextField, showName;
     @FXML
-    private TextField startTimeHourTextField, startTimeMinTextField, endTimeHourTextField, endTimeMinTextField;
+    private TextField startTimeHourTextField, startTimeMinTextField, endTimeHourTextField, endTimeMinTextField, showStartTime, showEndTime, showDateDay, showDateMonth;
     @FXML
-    private TextField locationTextField;
+    private TextField locationTextField, showLocation;
     @FXML
-    private TextArea descriptionTextArea;
+    private TextArea descriptionTextArea, showDescription;
     @FXML
     private Button addEventButton;
     @FXML
@@ -51,8 +54,6 @@ public class CalendarView implements IOnClickPane, Initializable {
     private GridPane gridPane;
     @FXML
     private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?FXML
-    @FXML
-    ComboBox colorComboBox;
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
     private OnClickPaneController paneController = new OnClickPaneController();
@@ -75,12 +76,11 @@ public class CalendarView implements IOnClickPane, Initializable {
         dateText.setText(String.valueOf(yearMonth));
         columnAndRows();
         populateMonth(YearMonth.now());
-        colorComboBox.getItems().addAll("Färg", "Blå", "Grön", "Gul", "Orange", "Röd", "Rosa");
+        colorComboBox.getItems().addAll("Färg", "Blå", "Grön", "Gul", "Orange", "Röd", "Rosa", "Lila");
         colorComboBox.getSelectionModel().select("Färg");
-        dateDay.getItems().addAll("Dag","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31");
-        dateDay.getSelectionModel().select("Dag");
-        dateMonth.getItems().addAll("Mån", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
-        dateMonth.getSelectionModel().select("Mån");
+        dateDay.getItems().addAll("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31");
+        dateMonth.getItems().addAll("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+
     }
 
     /**
@@ -92,13 +92,32 @@ public class CalendarView implements IOnClickPane, Initializable {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
                     eventPane.toFront();
+                    showEventPane(item);
                 }
             });
         });
     }
 
+    public void showEventPane(Node node) {
+        CalendarEvent calevent = node.getCalendarEvent();
+        showName.setText(calEvent.getName());
+        showDescription.setText(calEvent.getDescription());
+        showLocation.setText(calEvent.getPlace());
+        showStartTime.setText(calEvent.getsHour() + ":" + calEvent.getsMin());
+        showEndTime.setText(calEvent.geteHour()+":"+calEvent.geteMin());
+        showDateMonth.setText(calEvent.getMonth());
+        showDateDay.setText(calEvent.getDay());
+    }
+
     public void onClickCloseEventButton() {
         eventPane.toBack();
+        showDateDay.clear();
+        showDateMonth.clear();
+        showDescription.clear();
+        showEndTime.clear();
+        showStartTime.clear();
+        showName.clear();
+        showLocation.clear();
     }
 
     /**
