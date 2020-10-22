@@ -3,6 +3,12 @@ package Models;
 import java.awt.*;
 import java.io.Serializable;
 
+/**
+ * This class is the backend representation of the CalendarEvents and holds the constructor and setters and getters for it.
+ *
+ * Used in: CalendarViewModel, Calendar
+ */
+
 public class CalendarEvent implements Serializable {
     String name;
     String sHour;

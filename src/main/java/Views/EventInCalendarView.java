@@ -11,12 +11,21 @@ import javafx.scene.paint.Color;
 import java.io.IOException;
 import java.util.HashMap;
 
+/**
+ * This class is responsible for setting the values for the calendarEvent in the Calendar (Name, time, color)
+ *
+ * Used in CalendarViewModel
+ *
+ * Author: Ida
+ */
+
 public class EventInCalendarView extends AnchorPane {
     @FXML private Label startTimeLabel;
     @FXML private Label eventNameLabel;
     @FXML private Label endTimeLabel;
     @FXML private AnchorPane calEventAnchorPane;
-    private OnClickPaneController onClickPaneController = new OnClickPaneController();
+    //private OnClickPaneController onClickPaneController = new OnClickPaneController();
+    //CalendarEvent calendarEvent;
 
 
     /**
@@ -33,6 +42,7 @@ public class EventInCalendarView extends AnchorPane {
             throw new RuntimeException(exception);
         }
         setColors();
+        //this.calendarEvent = calEvent;
         eventNameLabel.setText(calEvent.getName());
         startTimeLabel.setText(calEvent.getsHour() +":"+ calEvent.getsMin());
         endTimeLabel.setText(calEvent.geteHour() + ":" + calEvent.geteMin());
