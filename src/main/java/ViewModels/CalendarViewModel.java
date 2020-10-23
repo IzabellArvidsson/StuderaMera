@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * This class is responsible for adding events to the calendarGUI and saving them between startups of the program
  * <p>
- * Uses EventInCalendarModel
+ * Uses EventInCalendarView, CalendarEventModel
  * <p>
  * Is used in CalendarView
  * <p>
@@ -19,10 +19,6 @@ import java.util.ArrayList;
  */
 
 public class CalendarViewModel {
-
-    public ArrayList<CalendarEventModel> getAllCalendarEvents() {
-        return allCalendarEvents;
-    }
 
     private static ArrayList<CalendarEventModel> allCalendarEvents = new ArrayList<>();
 
@@ -34,7 +30,7 @@ public class CalendarViewModel {
      * @param dayList list of all the calendarModels in GUI
      * @return CalendarModel (FlowPane) with date matching CalendarEvents date
      */
-    public static CalendarModel findFlowPane(String day, String month, ArrayList<CalendarModel> dayList) {
+    public CalendarModel findFlowPane(String day, String month, ArrayList<CalendarModel> dayList) {
         String c = (day + "/" + month);
         for (CalendarModel calendarModel : dayList) {
             String s = (calendarModel.getLocalDate().getDayOfMonth() + "/" + calendarModel.getLocalDate().getMonthValue());
@@ -43,6 +39,10 @@ public class CalendarViewModel {
             }
         }
         return null;
+    }
+
+    public ArrayList<CalendarEventModel> getAllCalendarEvents() {
+        return allCalendarEvents;
     }
 
     /**
@@ -62,7 +62,6 @@ public class CalendarViewModel {
         } catch (IOException i) {
             i.printStackTrace();
         } catch (ClassNotFoundException c) {
-            System.out.println("Models.CalendarEvents class not found");
             c.printStackTrace();
         }
         return null;
@@ -70,28 +69,29 @@ public class CalendarViewModel {
 
     /**
      * The logic that adds CalendarEvents to GUI is called methods that add new events to GUI
-     * @param name name from GUI
-     * @param sHour Star hour from GUI
-     * @param sMin Start minute from GUI
-     * @param eHour End hour from GUI
-     * @param eMin End minute from GUI
-     * @param location Location from GUI
-     * @param month month from GUI
-     * @param day day from GUI
+     *
+     * @param name        name from GUI
+     * @param sHour       Star hour from GUI
+     * @param sMin        Start minute from GUI
+     * @param eHour       End hour from GUI
+     * @param eMin        End minute from GUI
+     * @param location    Location from GUI
+     * @param month       month from GUI
+     * @param day         day from GUI
      * @param description description from GUI
-     * @param color color from GUI
-     * @param flowPane FlowPane calculated from date/month
+     * @param color       color from GUI
+     * @param flowPane    FlowPane calculated from date/month
      */
     public void addCalendarEvent(String name,
-                                  String sHour,
-                                  String sMin,
-                                  String eHour,
-                                  String eMin,
-                                  String location,
-                                  String month,
-                                  String day,
-                                  String description,
-                                  String color, FlowPane flowPane) {
+                                 String sHour,
+                                 String sMin,
+                                 String eHour,
+                                 String eMin,
+                                 String location,
+                                 String month,
+                                 String day,
+                                 String description,
+                                 String color, FlowPane flowPane) {
         CalendarEventModel calendarEvent = new CalendarEventModel(name,
                 sHour,
                 sMin,
@@ -102,20 +102,20 @@ public class CalendarViewModel {
                 day,
                 description,
                 color);
-        System.out.println(calendarEvent);
         if (flowPane != null) {
             flowPane.getChildren().add(new EventInCalendarView(calendarEvent));
-        }allCalendarEvents.add(calendarEvent);
+        }
+        allCalendarEvents.add(calendarEvent);
 
     }
 
     /**
      * The logic that adds CalendarEvents to GUI is called when adding previously created CalendarEvents to GUI
+     *
      * @param calendarEvent CalendarEvent to be added
-     * @param flowPane CalendarModel (FlowPane) for event to be added to
+     * @param flowPane      CalendarModel (FlowPane) for event to be added to
      */
     public void addCalendarEvents(CalendarEventModel calendarEvent, FlowPane flowPane) {
-        System.out.println(calendarEvent);
         if (flowPane != null) {
             flowPane.getChildren().add(new EventInCalendarView(calendarEvent));
         }
@@ -124,7 +124,6 @@ public class CalendarViewModel {
 
     /**
      * Saves the content of allCalendarEvents to Models.CalendarEvents.ser to save events between program restarts.
-     *
      */
 
     public void saveCalendarEvent() {
@@ -135,8 +134,6 @@ public class CalendarViewModel {
             out.writeObject(calEvents);
             out.close();
             fileOut.close();
-            System.out.println("Serialized data is saved in Models.CalendarEvents.ser");
-            System.out.println(calEvents.size());
         } catch (IOException i) {
             i.printStackTrace();
         }
@@ -155,7 +152,6 @@ public class CalendarViewModel {
             for (CalendarEventModel calEvent : calendarEvents) {
                 CalendarModel flowPane = findFlowPane(calEvent.getDay(), calEvent.getMonth(), dayList);
                 if (flowPane != null) {
-                    System.out.println("Adding cal event " + calEvent.getName());
                     addCalendarEvents(calEvent, flowPane);
                 }
             }
@@ -164,7 +160,6 @@ public class CalendarViewModel {
         } catch (IOException i) {
             i.printStackTrace();
         } catch (ClassNotFoundException c) {
-            System.out.println("Models.CalendarEvents class not found");
             c.printStackTrace();
         }
     }

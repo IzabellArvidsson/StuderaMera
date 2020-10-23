@@ -58,7 +58,7 @@ public class CalendarView implements IOnClickPane, Initializable {
     @FXML
     private Text dateText;
     private YearMonth yearMonth = YearMonth.now();
-    private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
+    private final ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
     private OnClickPaneController paneController = new OnClickPaneController();
 
 

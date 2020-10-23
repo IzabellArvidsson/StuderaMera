@@ -52,13 +52,12 @@ public class EventInCalendarView extends AnchorPane {
         eventNameLabel.setText(calEvent.getName());
         startTimeLabel.setText(calEvent.getsHour() + ":" + calEvent.getsMin());
         endTimeLabel.setText(calEvent.geteHour() + ":" + calEvent.geteMin());
-        System.out.println("Anchorpane " + calEventAnchorPane);
         setEventColor(calEvent, calEventAnchorPane);
 
 
     }
 
-    public void setColors() {
+    private void setColors() {
         stringToColor.put("Röd", "#ff5d5d");
         stringToColor.put("Blå", "#72bcff");
         stringToColor.put("Grön", "#5cec5c");
