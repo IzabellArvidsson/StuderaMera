@@ -35,7 +35,7 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
      * @param toDoListModel the todoList the ListInToDoView is connected to
      */
 
-    public ListInToDoView(final ToDoListModel toDoListModel){
+    public ListInToDoView(ToDoListModel toDoListModel){
         final FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/listInToDo.fxml"));
         fxmlLoader.setController(this);
         fxmlLoader.setRoot(this);

@@ -14,11 +14,11 @@ public class HelpView implements IOnClickPane {
     private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
     /**
-     * Makes sure that the view goes to TimerView when the user clicks the backbutton
+     * Makes sure that the view goes to FirstView when the user clicks the backButton
      */
     @FXML
     private void onClickBackButton () {
-        onClickPaneController.showTimerViewPane();
+        onClickPaneController.showFirstViewPane();
     }
 
     /**

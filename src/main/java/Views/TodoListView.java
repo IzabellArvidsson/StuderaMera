@@ -44,6 +44,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
     private final List<CheckBox> nCheckboxes = new ArrayList<>();
     private final ToDoViewModel toDoViewModel = new ToDoViewModel();
     private final CheckTodoValid checkTodoValid = new CheckTodoValid();
+    private String orgName;
 
     /**
      * This method takes the program from the ToDoPane to the "Help"-Pane
@@ -121,7 +122,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
         timeAndDeadlineStringList.add(timeItTakes1.getText());
         timeAndDeadlineStringList.add(timeItTakes2.getText());
 
-        toDoViewModel.updateToDoInList(nameTextField.getText(), descriptionTextArea.getText(), checklistsToString(nChecklist),
+        toDoViewModel.updateToDoInList(nameTextField.getText(), orgName, descriptionTextArea.getText(), checklistsToString(nChecklist),
                 checkboxesToString(nCheckboxes), timeAndDeadlineStringList);
         toDoListFlowPane.getChildren().clear();
         toDoViewModel.writeToDoList(toDoListFlowPane, this);
@@ -239,7 +240,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      * @param checkboxes the arrayList with the checkboxes that will be set
      */
 
-    private void setTextFieldsAndCheckboxes (final List<String> checklists, final List<String>  checkboxes){
+    private void setTextFieldsAndCheckboxes (List<String> checklists, List<String>  checkboxes){
         for (int i=0; i < checklists.size(); i++){
             final TextField textField = new TextField();
             final CheckBox checkBox = new CheckBox();
@@ -268,12 +269,13 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      */
 
     @FXML
-    private void openToDoList(final String name, final String description, final List<String > timeAndDeadline, final List<String> checklists,
-                              final List<String> checkboxes){
+    private void openToDoList(String name, String description, List<String > timeAndDeadline, List<String> checklists,
+                              List<String> checkboxes){
         showSaveButton();
         clearPane();
         addToList.toFront();
         nameTextField.setText(name);
+        orgName = nameTextField.getText();
         descriptionTextArea.setText(description);
         setTextFieldsAndCheckboxes(checklists, checkboxes);
 
@@ -306,7 +308,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      */
 
     @Override
-    public void update(final String name, final ToDoListRemoveObservable o) {
+    public void update(String name, ToDoListRemoveObservable o) {
         toDoListFlowPane.getChildren().remove(o);
         toDoViewModel.removeToDoListFromArrayList(name);
         toDoViewModel.saveToDoList(toDoViewModel.allToDoLists);
@@ -323,8 +325,8 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      */
 
     @Override
-    public void updateOpen(final String name, final String description, final List<String > timeAndDeadline, final List<String> checklists,
-                           final List<String>  checkboxes) {
+    public void updateOpen(String name, String description, List<String > timeAndDeadline, List<String> checklists,
+                           List<String>  checkboxes) {
         openToDoList(name, description, timeAndDeadline, checklists, checkboxes);
     }
 }

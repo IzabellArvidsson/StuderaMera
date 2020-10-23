@@ -55,10 +55,10 @@ public class ToDoViewModel  {
      * @param string an arrayList with strings, with the time and deadline for the toDoList
      */
 
-    public void updateToDoInList(final String nameTextField, final String description, final List<String> checklist, final List<String>
+    public void updateToDoInList(final String nameTextField, String orgName, final String description, final List<String> checklist, final List<String>
             nCheckboxes, final List<String> string){
          for(final ToDoListModel toDoListModelInList : allToDoLists){
-             if(toDoListModelInList.getName().equals(nameTextField)){
+             if(toDoListModelInList.getName().equals(orgName)){
                  toDoListModelInList.setName(nameTextField);
                  toDoListModelInList.setDescription(description);
                  toDoListModelInList.setCheckboxes(nCheckboxes);
