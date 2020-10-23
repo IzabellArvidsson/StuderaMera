@@ -67,10 +67,10 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
 
         /*----------------------------------------Spinner initialize--------------------------------------------------*/
 
-        SpinnerValueFactory<Integer> studyFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 20, 5);
+        SpinnerValueFactory<Integer> studyFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(5, 100, 20, 5);
         this.studyTimerSpinner.setValueFactory(studyFactory);
 
-        SpinnerValueFactory<Integer> restFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory( 1, 40, 5, 5);
+        SpinnerValueFactory<Integer> restFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory( 5, 40, 5, 5);
         this.restTimerSpinner.setValueFactory(restFactory);
 
         SpinnerValueFactory<Integer> repFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1, 1);
@@ -138,10 +138,7 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
             case 6:
                 flowerChangingImage.setImage(new Image("/images/flower/plant_6.png"));
                 deadFlowerImage.setImage(new Image("/images/flower/plant_6_dead.png"));
-                break;
-            default:
-                flowerChangingImage.setImage(new Image("/images/flower/plant_0_pot.png"));
-                break;
+
         }
     }
 
