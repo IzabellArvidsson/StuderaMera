@@ -17,7 +17,7 @@
 
 <AnchorPane stylesheets="@../StuderaMera.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.CalendarView">
    <children>
-      <AnchorPane fx:id="eventPane" onMouseClicked="#closeAddToCalendar" prefHeight="634.0" prefWidth="936.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+      <AnchorPane fx:id="viewEventPane" prefHeight="634.0" prefWidth="936.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
          <children>
             <AnchorPane layoutX="110.0" layoutY="75.0" prefHeight="474.0" prefWidth="715.0" style="-fx-background-color: DBEFF2;">
                <children>
@@ -136,8 +136,8 @@
                      <Cursor fx:constant="TEXT" />
                   </cursor>
                </TextArea>
-               <ComboBox fx:id="dateDay" editable="true" layoutX="420.0" layoutY="137.0" prefHeight="41.0" prefWidth="113.0" promptText="Dag" style="-fx-background-color: ffffff; -fx-border-color: c6c6c6;" />
-               <ComboBox fx:id="dateMonth" editable="true" layoutX="565.0" layoutY="137.0" prefHeight="41.0" prefWidth="113.0" promptText="Mån" style="-fx-background-color: ffffff; -fx-border-color: c6c6c6;" />
+               <ComboBox fx:id="dateDay" layoutX="420.0" layoutY="137.0" prefHeight="41.0" prefWidth="113.0" promptText="Dag" style="-fx-background-color: ffffff; -fx-border-color: c6c6c6;" />
+               <ComboBox fx:id="dateMonth" layoutX="565.0" layoutY="137.0" prefHeight="41.0" prefWidth="113.0" promptText="Mån" style="-fx-background-color: ffffff; -fx-border-color: c6c6c6;" />
                <Button layoutX="649.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeAddToCalendar" style="-fx-background-color: #ffffff;" text="Stäng">
                   <effect>
                      <DropShadow color="#919090" />
@@ -314,7 +314,7 @@
             </Text>
             <ScrollPane layoutX="100.0" layoutY="252.0" prefHeight="330.0" prefWidth="753.0" style="-fx-border-color: #000000;">
                <content>
-                  <GridPane fx:id="gridPane" gridLinesVisible="true" minWidth="-Infinity" maxHeight="Infinity" onMouseClicked="#clickGridPane" prefHeight="330.0" prefWidth="3100.0">
+                  <GridPane fx:id="gridPane" gridLinesVisible="true" maxHeight="Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="3100.0">
                      <columnConstraints>
                         <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" prefWidth="100.0" />

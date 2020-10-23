@@ -1,6 +1,5 @@
 package Models;
 
-import java.awt.*;
 import java.io.Serializable;
 
 /**
@@ -9,34 +8,34 @@ import java.io.Serializable;
  * Used in: CalendarViewModel, Calendar
  */
 
-public class CalendarEvent implements Serializable {
+public class CalendarEventModel implements Serializable {
     String name;
     String sHour;
     String sMin;
     String eHour;
     String eMin;
-    String place;
+    String location;
     String month;
     String day;
     String description;
     String color;
 
-    public CalendarEvent(String name,
-                         String sHour,
-                         String sMin,
-                         String eMin,
-                         String eHour,
-                         String place,
-                         String month,
-                         String day,
-                         String description,
-                         String color) {
+    public CalendarEventModel(String name,
+                              String sHour,
+                              String sMin,
+                              String eMin,
+                              String eHour,
+                              String location,
+                              String month,
+                              String day,
+                              String description,
+                              String color) {
         this.name = name;
         this.sHour = sHour;
         this.sMin = sMin;
         this.eMin = eMin;
         this.eHour = eHour;
-        this.place = place;
+        this.location = location;
         this.month = month;
         this.day = day;
         this.description = description;
@@ -83,12 +82,12 @@ public class CalendarEvent implements Serializable {
         this.eMin = eMin;
     }
 
-    public String getPlace() {
-        return place;
+    public String getLocation(){
+        return location;
     }
 
-    public void setPlace(String place) {
-        this.place = place;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getMonth() {

@@ -1,6 +1,6 @@
 package ViewModels;
 
-import Models.CalendarEvent;
+import Models.CalendarEventModel;
 import Models.CalendarModel;
 import Views.EventInCalendarView;
 import javafx.scene.layout.FlowPane;
@@ -10,34 +10,125 @@ import java.util.ArrayList;
 
 /**
  * This class is responsible for adding events to the calendarGUI and saving them between startups of the program
- *
+ * <p>
  * Uses EventInCalendarView
- *
+ * <p>
  * Is used in CalendarView
- *
+ * <p>
  * Author: Ida
  */
 
 public class CalendarViewModel {
 
+    public ArrayList<CalendarEventModel> getAllCalendarEvents() {
+        return allCalendarEvents;
+    }
+
+    private static ArrayList<CalendarEventModel> allCalendarEvents = new ArrayList<>();
+
     /**
-     * The logic that adds CalendarEvents to GUI is called in all methods that add things to GUI
+     * Finds FlowPane for right day to add event to.
+     *
+     * @param day     String from calendarEvent with day of month
+     * @param month   String from calendarEvent with mont of year
+     * @param dayList list of all the calendarModels in GUI
+     * @return CalendarModel (FlowPane) with date matching CalendarEvents date
+     */
+    public static CalendarModel findFlowPane(String day, String month, ArrayList<CalendarModel> dayList) {
+        String c = (day + "/" + month);
+        for (CalendarModel calendarModel : dayList) {
+            String s = (calendarModel.getLocalDate().getDayOfMonth() + "/" + calendarModel.getLocalDate().getMonthValue());
+            if (c.equals(s)) {
+                return calendarModel;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * upon program startup adds events from save file to list to be added to allCalendarEvents
+     *
+     * @return list of previous CalendarEvents
+     */
+    public ArrayList<CalendarEventModel> loadOldCalendarEvent() {
+        try {
+            FileInputStream fileIn = new FileInputStream("Models.CalendarEvents.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            ArrayList<CalendarEventModel> calendarEvents = (ArrayList<CalendarEventModel>) in.readObject();
+
+            in.close();
+            fileIn.close();
+            return calendarEvents;
+        } catch (IOException i) {
+            i.printStackTrace();
+        } catch (ClassNotFoundException c) {
+            System.out.println("Models.CalendarEvents class not found");
+            c.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * The logic that adds CalendarEvents to GUI is called methods that add new events to GUI
+     * @param name name from GUI
+     * @param sHour Star hour from GUI
+     * @param sMin Start minute from GUI
+     * @param eHour End hour from GUI
+     * @param eMin End minute from GUI
+     * @param location Location from GUI
+     * @param month month from GUI
+     * @param day day from GUI
+     * @param description description from GUI
+     * @param color color from GUI
+     * @param flowPane FlowPane calculated from date/month
+     */
+    public void addCalendarEvent(String name,
+                                  String sHour,
+                                  String sMin,
+                                  String eHour,
+                                  String eMin,
+                                  String location,
+                                  String month,
+                                  String day,
+                                  String description,
+                                  String color, FlowPane flowPane) {
+        CalendarEventModel calendarEvent = new CalendarEventModel(name,
+                sHour,
+                sMin,
+                eHour,
+                eMin,
+                location,
+                month,
+                day,
+                description,
+                color);
+        System.out.println(calendarEvent);
+        if (flowPane != null) {
+            flowPane.getChildren().add(new EventInCalendarView(calendarEvent));
+        }allCalendarEvents.add(calendarEvent);
+
+    }
+
+    /**
+     * The logic that adds CalendarEvents to GUI is called when adding previously created CalendarEvents to GUI
      * @param calendarEvent CalendarEvent to be added
      * @param flowPane CalendarModel (FlowPane) for event to be added to
      */
-    public static void addCalendarEvents(CalendarEvent calendarEvent, FlowPane flowPane) {
+    public void addCalendarEvents(CalendarEventModel calendarEvent, FlowPane flowPane) {
         System.out.println(calendarEvent);
         if (flowPane != null) {
             flowPane.getChildren().add(new EventInCalendarView(calendarEvent));
         }
 
     }
+
     /**
      * Saves the content of allCalendarEvents to Models.CalendarEvents.ser to save events between program restarts.
-     * @param calEvents a list of all CalendarEvents that are in the calendar
+     *
      */
 
-    public static void saveCalendarEvent(ArrayList<CalendarEvent> calEvents) {
+    public void saveCalendarEvent() {
+        ArrayList<CalendarEventModel> calEvents = getAllCalendarEvents();
         try {
             FileOutputStream fileOut = new FileOutputStream("Models.CalendarEvents.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -51,21 +142,21 @@ public class CalendarViewModel {
         }
     }
 
-
     /**
      * reads saved CalendarEvent file and adds events to GUI (on startup and when viewed month is switched)
+     *
      * @param dayList a list containing the CalendarModel (FlowPanes) in which the CalendarEvents are to be placed.
      */
-    public static void loadCalendarEvent(ArrayList<CalendarModel> dayList) {
+    public void loadCalendarEvent(ArrayList<CalendarModel> dayList) {
         try {
             FileInputStream fileIn = new FileInputStream("Models.CalendarEvents.ser");
             ObjectInputStream in = new ObjectInputStream(fileIn);
-            ArrayList<CalendarEvent> calendarEvents = (ArrayList<CalendarEvent>) in.readObject();
-            for (CalendarEvent calEvent : calendarEvents) {
+            ArrayList<CalendarEventModel> calendarEvents = (ArrayList<CalendarEventModel>) in.readObject();
+            for (CalendarEventModel calEvent : calendarEvents) {
                 CalendarModel flowPane = findFlowPane(calEvent.getDay(), calEvent.getMonth(), dayList);
                 if (flowPane != null) {
                     System.out.println("Adding cal event " + calEvent.getName());
-                    CalendarViewModel.addCalendarEvents(calEvent, flowPane);
+                    addCalendarEvents(calEvent, flowPane);
                 }
             }
             in.close();
@@ -78,45 +169,6 @@ public class CalendarViewModel {
         }
     }
 
-    /**
-     * Finds FlowPane for right day to add event to.
-     * @param day String from calendarEvent with day of month
-     * @param month String from calendarEvent with mont of year
-     * @param dayList list of all the calendarModels in GUI
-     * @return CalendarModel (FlowPane) with date matching CalendarEvents date
-     */
-    public static CalendarModel findFlowPane(String day, String month, ArrayList<CalendarModel> dayList){
-        String c = (day + "/" + month);
-        for (CalendarModel calendarModel : dayList) {
-            String s = (calendarModel.getLocalDate().getDayOfMonth() + "/" + calendarModel.getLocalDate().getMonthValue());
-            if (c.equals(s)) {
-                return calendarModel;
-            }
-        }
-        return null;
-    }
-
-    /**
-     * upon program startup adds events from save file to list to be added to allCalendarEvents
-     * @return list of previous CalendarEvents
-     */
-    public static ArrayList<CalendarEvent> loadOldCalendarEvent() {
-        try {
-            FileInputStream fileIn = new FileInputStream("Models.CalendarEvents.ser");
-            ObjectInputStream in = new ObjectInputStream(fileIn);
-            ArrayList<CalendarEvent> calendarEvents = (ArrayList<CalendarEvent>) in.readObject();
-
-            in.close();
-            fileIn.close();
-            return calendarEvents;
-        } catch (IOException i) {
-            i.printStackTrace();
-        } catch (ClassNotFoundException c) {
-            System.out.println("Models.CalendarEvents class not found");
-            c.printStackTrace();
-        }
-        return null;
-    }
 
 }
 
