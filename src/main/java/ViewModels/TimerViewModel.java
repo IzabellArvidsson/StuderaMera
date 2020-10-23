@@ -13,8 +13,9 @@ import java.util.List;
 
 /**
  * Author: Hanna and Izabell
- * Uses:
- * Used by:
+ * Uses: Implements TimerObservable to send information. ITimerViewModel is also implemented for sending data purposes.
+ * This class also uses TimerModel to get information from.
+ * Used by: TimerView uses this class to get data.
  * Handles the timer functionalities
  */
 public class TimerViewModel implements TimerObservable, ITimerViewModel {
@@ -31,7 +32,7 @@ public class TimerViewModel implements TimerObservable, ITimerViewModel {
 
     public int countUp;
 
-    private boolean stopped = false;
+    private boolean stopped;
 
     private int studyTime;
     private int restTime;
@@ -45,6 +46,7 @@ public class TimerViewModel implements TimerObservable, ITimerViewModel {
     /**
      * Sets the timelines to their values
      */
+    @Override
     public void setTimelines() {
         studyTimeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown(studyTimeline)));
         restTimeLine = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown(restTimeLine)));
@@ -54,6 +56,7 @@ public class TimerViewModel implements TimerObservable, ITimerViewModel {
      * Takes in a value of the studytimerspinner and sets minutes and seconds to the right values
      * @param studyTime The value of the studytimerspinner from controller
      */
+    @Override
     public void setStudyTimerSpinner(Object studyTime) {
         this.studyTime = (int) studyTime;
         this.minutes = this.studyTime;
@@ -65,6 +68,7 @@ public class TimerViewModel implements TimerObservable, ITimerViewModel {
      * Takes in a value of the resttimerspinner and sets minutes and seconds to the right values
      * @param restTime The value of the resttimerspinner from controller
      */
+    @Override
     public void setRestTimerSpinner(Object restTime) {
         this.restTime = (int) restTime;
         this.seconds = 0;
@@ -76,6 +80,7 @@ public class TimerViewModel implements TimerObservable, ITimerViewModel {
      * to the right values
      * @param repNumber The value of the reptimerspinner from controller
      */
+    @Override
     public void setRepTimerSpinner(Object repNumber) {
         this.repNumber = (int) repNumber;
         currentRep = 1;
@@ -85,6 +90,7 @@ public class TimerViewModel implements TimerObservable, ITimerViewModel {
     /**
      * Sets the value of countUp to 0 so that it always begins on that value when you start the timer
      */
+    @Override
     public void setCountUpInt() {
         countUp = 0;
     }
@@ -180,7 +186,7 @@ public class TimerViewModel implements TimerObservable, ITimerViewModel {
      * @param timeline The timeline that is supposed to be used
      */
     protected void checkIfStudyTimeIsRunning(Timeline timeline) {
-        if (timeline.getStatus() == Animation.Status.RUNNING && timeline == studyTimeline) {
+        if (timeline.getStatus().equals(Animation.Status.RUNNING) && timeline.equals(studyTimeline)) {
             countUp++;
         }
     }
@@ -202,6 +208,7 @@ public class TimerViewModel implements TimerObservable, ITimerViewModel {
      */
     protected void studyTimeIsRunning() {
         if(currentRep == repNumber) {
+            stopped = false;
             stopTimer(studyTimeline);
             stopped = true;
             notifyObserver();

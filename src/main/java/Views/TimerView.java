@@ -20,17 +20,31 @@ import java.util.ResourceBundle;
 
 /**
  * Author: Hanna and Izabell
- * Uses:
- * Used by:
+ * Uses: TimerObserver to send information. IOnClickPane and ITimerViewModel to get data. ImageViewModel to
+ * get information on image. OnClickPaneController to get information.
+ * Used by: OnClickPaneFactory to send information.
  * The controller class for the view. This class handles all the information about the view. It also updates the view
  * after updates from other classes.
  */
 public class TimerView extends AnchorPane implements Initializable, TimerObserver, IOnClickPane {
 
-    @FXML private AnchorPane timerOnView, cancelPane, setTimerView, failPane, finishedPane;
-    @FXML private Spinner<Integer> studyTimerSpinner, restTimerSpinner, repTimerSpinner;
-    @FXML private Label timerLabel, repTimerLabel, totalRepTimerLabel, typeOfTimerLabel;
-    @FXML private ImageView flowerChangingImage, deadFlowerImage;
+    @FXML private AnchorPane timerOnView;
+    @FXML private AnchorPane cancelPane;
+    @FXML private AnchorPane setTimerView;
+    @FXML private AnchorPane failPane;
+    @FXML private AnchorPane finishedPane;
+
+    @FXML private Spinner<Integer> studyTimerSpinner;
+    @FXML private Spinner<Integer> restTimerSpinner;
+    @FXML private Spinner<Integer> repTimerSpinner;
+
+    @FXML private Label timerLabel;
+    @FXML private Label repTimerLabel;
+    @FXML private Label totalRepTimerLabel;
+    @FXML private Label typeOfTimerLabel;
+
+    @FXML private ImageView flowerChangingImage;
+    @FXML private ImageView deadFlowerImage;
 
     private final ITimerViewModel iTimerViewModel = new TimerViewModel();
     private final ImageViewModel imageViewModel = new ImageViewModel();

@@ -1,21 +1,19 @@
-package ViewControllers;
+package ViewModels;
 
-import ViewModels.ImageViewModel;
-import Views.TimerView;
 import org.junit.jupiter.api.Test;
 
-class TimerViewTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class ImageViewModelTest {
 
     @Test
-    void testImageLoader() {
-        TimerView timerView = new TimerView();
+    void checkChangeImage() {
         ImageViewModel imageModel = new ImageViewModel();
         int countUp = 10;
         int totalTime = 70;
 
         int i = imageModel.checkChangeImage(countUp, totalTime);
 
-        //timerView.
+        assertEquals(1, i);
     }
-
 }

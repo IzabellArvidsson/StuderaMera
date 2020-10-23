@@ -13,8 +13,40 @@ public class TimerViewModelTest {
     void testStartStudyTime() {
         TimerViewModel timerViewModel = new TimerViewModel();
         timerViewModel.setTimelines();
-        //timerViewModel.studyTimeline.stop();
+        timerViewModel.startTimer(timerViewModel.studyTimeline);
+        timerViewModel.stopTimer(timerViewModel.studyTimeline);
         timerViewModel.startStudyTime();
+
+        assertEquals(Animation.Status.RUNNING, timerViewModel.studyTimeline.getStatus());
+    }
+
+    @Test
+    void testPauseStudyTime() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.startTimer(timerViewModel.studyTimeline);
+        timerViewModel.pauseStudyTime();
+
+        assertEquals(Animation.Status.PAUSED, timerViewModel.studyTimeline.getStatus());
+    }
+
+    @Test
+    void testStopStudyTime() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.startTimer(timerViewModel.studyTimeline);
+        timerViewModel.stopStudyTime();
+
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
+    }
+
+    @Test
+    void testPlayStudyTime() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.startTimer(timerViewModel.studyTimeline);
+        timerViewModel.pauseTimer(timerViewModel.studyTimeline);
+        timerViewModel.playStudyTime();
 
         assertEquals(Animation.Status.RUNNING, timerViewModel.studyTimeline.getStatus());
     }
@@ -65,7 +97,6 @@ public class TimerViewModelTest {
         timerViewModel.countDown(timeline);
 
         assertEquals(2, Integer.parseInt(timerViewModel.timerModel.getMinutes()));
-        assertEquals(59, Integer.parseInt(timerViewModel.timerModel.getSeconds()));
     }
 
     @Test

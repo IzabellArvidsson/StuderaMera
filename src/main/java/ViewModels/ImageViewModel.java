@@ -2,8 +2,8 @@ package ViewModels;
 
 /**
  * Author: Hanna
- * Uses:
- * Used by:
+ * Uses: None
+ * Used by: This class is used by TimerView to update the image
  * Handles the model functionality of the images
  */
 public class ImageViewModel {
