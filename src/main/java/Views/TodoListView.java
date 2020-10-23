@@ -2,7 +2,6 @@ package Views;
 
 import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
-import Models.ToDoListModel;
 import ObserverInterfaces.ToDoListOpenObserver;
 import ObserverInterfaces.ToDoListRemoveObservable;
 import ObserverInterfaces.ToDoListRemoveObserver;
@@ -37,22 +36,13 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
     @FXML private Button addButton;
     @FXML private Button saveButton;
 
-    OnClickPaneController onClickPaneController = new OnClickPaneController();
+    private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
     private final ArrayList<String> timeAndDeadlineStringList = new ArrayList<>();
     private final ArrayList<TextField> nChecklist = new ArrayList<>();
     private final ArrayList<CheckBox> nCheckboxes = new ArrayList<>();
-    ToDoViewModel toDoViewModel = new ToDoViewModel();
-    CheckTodoValid checkTodoValid = new CheckTodoValid();
-    ToDoListModel toDoListModelForSave;
-
-    /**
-     * This method takes the program from the ToDoPane to the "FirstPane"-Pane
-     */
-
-    public void onClickBackToOverview() {
-        onClickPaneController.showFirstViewPane();
-    }
+    private final ToDoViewModel toDoViewModel = new ToDoViewModel();
+    private final CheckTodoValid checkTodoValid = new CheckTodoValid();
 
     /**
      * This method takes the program from the ToDoPane to the "Help"-Pane
@@ -99,39 +89,92 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
 
     @FXML
     private void onClickAddToDoTask(){
-        checkTodoValid.isTextFieldValid(deadline1);
-        checkTodoValid.isTextFieldValid(deadline2);
-        checkTodoValid.isTextFieldValid(timeItTakes1);
-        checkTodoValid.isTextFieldValid(timeItTakes2);
+        isTextFieldValid(deadline1);
+        isTextFieldValid(deadline2);
+        isTextFieldValid(timeItTakes1);
+        isTextFieldValid(timeItTakes2);
 
-        if (checkTodoValid.isTextFieldValid(deadline1) && checkTodoValid.isTextFieldValid(deadline2) &&
-                checkTodoValid.isTextFieldValid(timeItTakes1) && checkTodoValid.isTextFieldValid(timeItTakes2)){
+        if (isTextFieldValid(deadline1) && isTextFieldValid(deadline2) && isTextFieldValid(timeItTakes1) && isTextFieldValid(timeItTakes2)){
 
             timeAndDeadlineStringList.add(deadline1.getText());
             timeAndDeadlineStringList.add(deadline2.getText());
             timeAndDeadlineStringList.add(timeItTakes1.getText());
             timeAndDeadlineStringList.add(timeItTakes2.getText());
 
-
-            toDoViewModel.addToDoListsToPane(nameTextField.getText(), descriptionTextArea.getText(), checkTodoValid.checkListEmpty(nChecklist),
-                    checkTodoValid.isCheckboxClicked(nCheckboxes), timeAndDeadlineStringList, toDoListFlowPane,this);
+            toDoViewModel.addToDoListsToPane(nameTextField.getText(), descriptionTextArea.getText(), checklistsToString(nChecklist),
+                    checkboxesToString(nCheckboxes), timeAndDeadlineStringList, toDoListFlowPane,this);
             closeAddToDoList();
             checklistFlowPane.getChildren().clear();
         }
     }
 
     /**
-     *  This method calls another methods
+     *  This method calls on other methods
      */
 
     @FXML
     private void onClickSaveToDoTask() {
-        toDoViewModel.updateToDoInList(nameTextField.getText(), descriptionTextArea.getText(), checkTodoValid.checkListEmpty(nChecklist),
-                checkTodoValid.isCheckboxClicked(nCheckboxes),
-                timeAndDeadlineStringList, toDoListModelForSave);
+        toDoViewModel.removeDoubleLists();
+        timeAndDeadlineStringList.add(deadline1.getText());
+        timeAndDeadlineStringList.add(deadline2.getText());
+        timeAndDeadlineStringList.add(timeItTakes1.getText());
+        timeAndDeadlineStringList.add(timeItTakes2.getText());
+
+        toDoViewModel.updateToDoInList(nameTextField.getText(), descriptionTextArea.getText(), checklistsToString(nChecklist),
+                checkboxesToString(nCheckboxes), timeAndDeadlineStringList);
         toDoListFlowPane.getChildren().clear();
         toDoViewModel.writeToDoList(toDoListFlowPane, this);
         closeAddToDoList();
+        timeAndDeadlineStringList.clear();
+    }
+
+    /**
+     * This method converts an arrayList with textField to an arrayList with strings
+     *
+     * @param nChecklist a list with the checklist that will be converted
+     * @return an arrayList with no empty fields
+     */
+
+    private ArrayList<String> checklistsToString(ArrayList<TextField> nChecklist){
+        ArrayList<String> checklistsString = new ArrayList<>();
+        for (TextField textField: nChecklist){
+            checklistsString.add(textField.getText());
+        }
+        return checkTodoValid.checkListEmpty(checklistsString);
+    }
+
+    /**
+     * This method converts an arrayList with checkboxes to an arrayList with string
+     *
+     * @param nCheckboxes a list with the checkboxes that will be converted
+     * @return an arrayList with the status of the checkboxes
+     */
+
+    private ArrayList<String> checkboxesToString(ArrayList<CheckBox> nCheckboxes){
+        ArrayList<Boolean> checkboxesBool = new ArrayList<>();
+        for (CheckBox checkBox: nCheckboxes){
+            checkboxesBool.add(checkBox.isSelected());
+        }
+        return checkTodoValid.isCheckboxClicked(checkboxesBool);
+    }
+
+    /**
+     * This method checks if a text field is valid or not
+     *
+     * @param textField the text field which will be tested
+     * @return the return value is a boolean which indicates if the text field is valid or not.
+     */
+
+    private boolean isTextFieldValid(TextField textField){
+        String onlyDigits = textField.getText().replaceAll("[^0-9]+", "");
+        if (onlyDigits.length()==2){
+            textField.setStyle(" -fx-border-color: white;");
+            return true;
+        }
+        else {
+            textField.setStyle(" -fx-border-color: RED;");
+            return false;
+        }
     }
 
     /**
@@ -186,14 +229,17 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
         saveButton.setVisible(false);
     }
 
+
+
     /**
      * This method sets all the textFields and checkboxes with there values from the list
      *
-     * @param toDoListModel the list with all the values that will be set in the view
+     * @param checklists the arrayList with the checklist that will be set
+     * @param checkboxes the arrayList with the checkboxes that will be set
      */
 
-    private void setTextFieldsAndCheckboxes (ToDoListModel toDoListModel){
-        for (int i=0; i < toDoListModel.getChecklists().size(); i++){
+    private void setTextFieldsAndCheckboxes (ArrayList<String> checklists, ArrayList<String>  checkboxes){
+        for (int i=0; i < checklists.size(); i++){
             TextField textField = new TextField();
             CheckBox checkBox = new CheckBox();
             checklistFlowPane.getChildren().add(checkBox);
@@ -201,10 +247,10 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
             checklistFlowPane.setVgap(7);
             checklistFlowPane.setHgap(9);
             textField.setPrefSize(200,27);
-            textField.setText(toDoListModel.getChecklists().get(i).toString());
+            textField.setText(checklists.get(i));
             nChecklist.add(textField);
             nCheckboxes.add(checkBox);
-            if (toDoListModel.getCheckboxes().get(i).equals("clickOn")){
+            if (checkboxes.get(i).equals("clickOn")){
                 checkBox.setSelected(true);
             }
         }
@@ -213,40 +259,71 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
     /**
      * This method opens up a ToDoList
      *
-     * @param toDoListModel the object which will be opened
+     * @param name the name of the List
+     * @param description the description of the list
+     * @param timeAndDeadline the arrayList with the timeline and deadline for the list
+     * @param checklists the arrayList with the checklists of the list
+     * @param checkboxes the arrayList with the checkboxes of the list
      */
 
     @FXML
-    private void openToDoList(ToDoListModel toDoListModel){
+    private void openToDoList(String name, String description, ArrayList<String > timeAndDeadline, ArrayList<String> checklists,
+                              ArrayList<String> checkboxes){
         showSaveButton();
         clearPane();
         addToList.toFront();
-        nameTextField.setText(toDoListModel.getName());
-        descriptionTextArea.setText(toDoListModel.getDescription());
-        toDoListModelForSave = toDoListModel;
-        setTextFieldsAndCheckboxes(toDoListModel);
+        nameTextField.setText(name);
+        descriptionTextArea.setText(description);
+        setTextFieldsAndCheckboxes(checklists, checkboxes);
 
-        deadline1.setText(toDoListModel.getTimeAndDeadline().get(0).toString());
-        deadline2.setText(toDoListModel.getTimeAndDeadline().get(1).toString());
-        timeItTakes1.setText(toDoListModel.getTimeAndDeadline().get(2).toString());
-        timeItTakes2.setText(toDoListModel.getTimeAndDeadline().get(3).toString());
+        deadline1.setText(timeAndDeadline.get(0));
+        deadline2.setText(timeAndDeadline.get(1));
+        timeItTakes1.setText(timeAndDeadline.get(2));
+        timeItTakes2.setText(timeAndDeadline.get(3));
     }
+
+    /**
+     * The method for the factory design pattern
+     *
+     * @param onClickPaneController Initializes the paneController
+     */
 
     @Override
     public void initPane(OnClickPaneController onClickPaneController) {
         this.onClickPaneController = onClickPaneController;
         toDoViewModel.writeToDoList(toDoListFlowPane, this);
+        toDoViewModel.removeDoubleLists();
+        toDoListFlowPane.getChildren().clear();
+        toDoViewModel.writeToDoList(toDoListFlowPane, this);
     }
 
+    /**
+     * This method updates the view that a list shall be removed
+     *
+     * @param name the name of the toDoList
+     * @param o the observable of the list
+     */
+
     @Override
-    public void update(ToDoListModel toDoList, ToDoListRemoveObservable o) {
+    public void update(String name, ToDoListRemoveObservable o) {
         toDoListFlowPane.getChildren().remove(o);
-        toDoViewModel.allToDoLists.remove(toDoList);
+        toDoViewModel.removeToDoListFromArrayList(name);
         toDoViewModel.saveToDoList(toDoViewModel.allToDoLists);
     }
 
+    /**
+     * This method updates the view that the information about a toDoLit shall be shown
+     *
+     * @param name the name of the list
+     * @param description the description of the list
+     * @param timeAndDeadline the arrayList with the values for the timeline and deadline
+     * @param checklists the arrayList with the checklists
+     * @param checkboxes the arrayList with the checkboxes
+     */
+
     @Override
-    public void updateOpen(ToDoListModel toDoList) {
-        openToDoList(toDoList);
+    public void updateOpen(String name, String description, ArrayList<String > timeAndDeadline, ArrayList<String> checklists,
+                           ArrayList<String>  checkboxes) {
+        openToDoList(name, description, timeAndDeadline, checklists, checkboxes);
     }
 }

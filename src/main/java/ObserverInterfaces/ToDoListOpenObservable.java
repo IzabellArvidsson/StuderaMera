@@ -2,7 +2,7 @@ package ObserverInterfaces;
 
 /**
  * Uses: ToDoListOpenObserver
- * Used by: ToDoViewModel and ListInToDoView by implementation
+ * Used by: ListInToDoView by implementation
  *
  * Author: Julia
  */
