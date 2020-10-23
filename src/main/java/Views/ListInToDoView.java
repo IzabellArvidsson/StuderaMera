@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- *  This class...
+ *  This class handles the functionality of the ListInToDoView
  *  Used by: ToDoViewModel
  *
  *  Author: Julia
@@ -31,7 +31,7 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
     /**
      * This method...
      *
-     * @param toDoListModel
+     * @param toDoListModel the todoList the ListInToDoView is connected to
      */
 
     public ListInToDoView(ToDoListModel toDoListModel){
@@ -53,7 +53,8 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
      */
 
     @FXML
-    private void onDeleteButtonClick(){ notifyObservers(); }
+    private void onDeleteButtonClick(){
+        notifyObservers(); }
 
     /**
      * This method calls on another method, which notify observers, when someone clicks on the listInToDo
@@ -63,27 +64,48 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
     private void onTodoListClicked(){
         notifyOpenObservers();}
 
+
+    /**
+     * This method adds an observer to the arrayList with all the remove observers
+     *
+     * @param o is a TodoListRemoveObserver
+     */
     @Override
     public void add(ToDoListRemoveObserver o) {
         observerArrayList.add(o);
     }
+
+    /**
+     * This method adds an observer to the arrayList with all the open observers
+     *
+     * @param o is a ToDoListOpenObserver
+     */
 
     @Override
     public void addOpen(ToDoListOpenObserver o) {
         openObserverArrayList.add(o);
     }
 
+    /**
+     * The method that notifies the openObservers that an update has happened and needs to be taken care of
+     */
+
     @Override
     public void notifyOpenObservers() {
         for (ToDoListOpenObserver o: openObserverArrayList) {
-            o.updateOpen(toDoList);
+            o.updateOpen(toDoList.getName(), toDoList.getDescription(), toDoList.getTimeAndDeadline(), toDoList.getChecklists(),
+                    toDoList.getCheckboxes());
         }
     }
+
+    /**
+     * The method that notifies the removeObservers that an update has happened and needs to be taken care of
+     */
 
     @Override
     public void notifyObservers() {
         for (ToDoListRemoveObserver o: observerArrayList) {
-            o.update(toDoList,this);
+            o.update(toDoList.getName(),this);
         }
     }
 }

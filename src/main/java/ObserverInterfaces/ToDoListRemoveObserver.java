@@ -1,15 +1,13 @@
 package ObserverInterfaces;
 
-import Models.ToDoListModel;
-
 /**
- * Uses: ToDoListModel and ToDoListRemoveObservable
- * Used by: ListInToDoView by implementation
+ * Uses: ToDoListRemoveObservable
+ * Used by: ToDoListView by implementation
  *
  * Author: Julia
  */
 
 public interface ToDoListRemoveObserver {
 
-    void update(ToDoListModel toDoList, ToDoListRemoveObservable o);
+    void update(String name, ToDoListRemoveObservable o);
 }
