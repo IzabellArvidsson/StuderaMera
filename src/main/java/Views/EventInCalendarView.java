@@ -1,7 +1,6 @@
 package Views;
 
 import Models.CalendarEventModel;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -11,7 +10,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 /**
- * This class is responsible for setting the values for the calendarEvent in the Calendar (Name, time, color) as well as showing the details of the
+ * This class is responsible for setting the values for the calendarEvent -FXML-component in the Calendar (Name, time, color)
  * <p>
  * Used in CalendarViewModel
  * <p>
@@ -22,7 +21,6 @@ public class EventInCalendarView extends AnchorPane {
     private final HashMap<String, String> stringToColor = new HashMap<>();
     CalendarEventModel calendarEvent;
     //private OnClickPaneController onClickPaneController = new OnClickPaneController();
-    private CalendarView calendarView = new CalendarView();
     @FXML
     private Label startTimeLabel;
     @FXML
@@ -77,24 +75,5 @@ public class EventInCalendarView extends AnchorPane {
         anchPane.setStyle("-fx-background-color: " + color);
     }
 
-    /**
-     * show event details when event is pressed
-     *//*
-    @FXML
-    public void onClickShowDetails() {
-        calendarView.showEventPane();
-        calendarView.populateEventPane(this.calendarEvent);
-
-    }
-
-    public void showEventPane() {
-        clickPane.setOnMouseClicked(new EventHandler<>() {
-            @Override
-            public void handle(javafx.scene.input.MouseEvent mouseEvent) {
-                onClickShowDetails();
-
-            }
-        });
-    }*/
 
 }

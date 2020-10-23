@@ -4,8 +4,10 @@ import java.io.Serializable;
 
 /**
  * This class is the backend representation of the CalendarEvents and holds the constructor and setters and getters for it.
+ * <p>
+ * Used in: CalendarViewModel, EventInCalendarView
  *
- * Used in: CalendarViewModel, Calendar
+ * Author: Ida
  */
 
 public class CalendarEventModel implements Serializable {
@@ -54,64 +56,22 @@ public class CalendarEventModel implements Serializable {
         return sHour;
     }
 
-    public void setsHour(String sHour) {
-        this.sHour = sHour;
-    }
-
     public String getsMin() {
         return sMin;
-    }
-
-    public void setsMin(String sMin) {
-        this.sMin = sMin;
     }
 
     public String geteHour() {
         return eHour;
     }
 
-    public void seteHour(String eHour) {
-        this.eHour = eHour;
-    }
-
     public String geteMin() {
         return eMin;
     }
 
-    public void seteMin(String eMin) {
-        this.eMin = eMin;
-    }
-
-    public String getLocation(){
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getMonth() {
-        return month;
-    }
-
-    public void setMonth(String month) {
-        this.month = month;
-    }
+    public String getMonth() { return month; }
 
     public String getDay() {
         return day;
-    }
-
-    public void setDay(String day) {
-        this.day = day;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getColor() {

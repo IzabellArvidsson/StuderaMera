@@ -2,7 +2,6 @@ package Views;
 
 import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
-import Models.CalendarEventModel;
 import Models.CalendarModel;
 import ViewModels.CalendarViewModel;
 import javafx.fxml.FXML;
@@ -19,11 +18,18 @@ import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * This class is responsible for handling the main page of the calendar and retrieving the information the user writes in for their calendarEvent
+ * <p>
+ * Uses: CalendarViewModel
+ * <p>
+ * Authors: Ida & Izabell
+ */
 public class CalendarView implements IOnClickPane, Initializable {
 
 
     private final CalendarViewModel calendarViewModel = new CalendarViewModel();
-    private final CalendarModel calendarModel = new CalendarModel();
+
     @FXML
     ComboBox colorComboBox;
     @FXML
@@ -71,7 +77,6 @@ public class CalendarView implements IOnClickPane, Initializable {
         dateMonth.getItems().addAll("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
 
     }
-
 
 
     /**
@@ -248,20 +253,6 @@ public class CalendarView implements IOnClickPane, Initializable {
         showName.clear();
         showLocation.clear();
     }
-    public void populateEventPane(CalendarEventModel calEvent) {
-        showName.setText(calEvent.getName());
-        showDescription.setText(calEvent.getDescription());
-        showLocation.setText(calEvent.getLocation());
-        showStartTime.setText(calEvent.getsHour() + ":" + calEvent.getsMin());
-        showEndTime.setText(calEvent.geteHour() + ":" + calEvent.geteMin());
-        showDateMonth.setText(calEvent.getMonth());
-        showDateDay.setText(calEvent.getDay());
-    }
 
-    public void showEventPane() {
-        if (viewEventPane != null) {
-            viewEventPane.toFront();
-        }
-    }
 }
 

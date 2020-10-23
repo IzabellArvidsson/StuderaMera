@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * This class is responsible for adding events to the calendarGUI and saving them between startups of the program
  * <p>
- * Uses EventInCalendarView
+ * Uses EventInCalendarModel
  * <p>
  * Is used in CalendarView
  * <p>
