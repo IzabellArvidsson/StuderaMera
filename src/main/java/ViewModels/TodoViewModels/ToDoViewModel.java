@@ -148,7 +148,7 @@ public class ToDoViewModel  {
         } catch (IOException i) {
             System.out.println("Exception found");
         } catch (ClassNotFoundException c) {
-            c.printStackTrace();
+            System.out.println("Models.ToDoLists class not found");
         }
     }
 
