@@ -22,6 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="a69b7195-767c-40f9-9187-f897eca6d3ed" name="Default Changelist" comment="adding to files and creating to-do lists functions">
       <change afterPath="$PROJECT_DIR$/src/main/java/ViewModels/TodoViewModels/CheckTodoValid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
@@ -57,12 +58,17 @@
       <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TimerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/TipsView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml_files/firstSideView.fxml" afterDir="false" />
+=======
+    <list default="true" id="1efb43a1-4512-4458-bad2-d044fc40ee35" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -73,19 +79,17 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Hanna och Iza" />
-      </list>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="HannasBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -460,10 +464,13 @@
       <updated>1601986817133</updated>
     </task>
     <option name="localTasksCounter" value="25" />
-    <servers />
+=======
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  <component name="TaskManager">
+>>>>>>> Stashed changes
+    <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -476,6 +483,7 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+<<<<<<< Updated upstream
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="???" />
@@ -609,6 +617,29 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/StuderaMera$ViewModels_in_StuderaMera.ic" NAME="ViewModels in StuderaMera Coverage Results" MODIFIED="1602837520950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ViewModels.*</FILTER>
+=======
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603443275158">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603443275158" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603443212181">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1603443212181" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/StuderaMera2_0$main.ic" NAME="main Coverage Results" MODIFIED="1603293624397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Factory.*</FILTER>
+      <FILTER>Interfaces.*</FILTER>
+      <FILTER>Main.*</FILTER>
+      <FILTER>Models.*</FILTER>
+      <FILTER>ObserverInterfaces.*</FILTER>
+      <FILTER>ViewControllers.*</FILTER>
+      <FILTER>ViewModels.*</FILTER>
+      <FILTER>Views.*</FILTER>
+>>>>>>> Stashed changes
     </SUITE>
     <SUITE FILE_PATH="coverage/StuderaMera1$main.ic" NAME="main Coverage Results" MODIFIED="1600350809200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/StuderaMera$ToDoViewModelTest.ic" NAME="ToDoViewModelTest Coverage Results" MODIFIED="1602838248068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
