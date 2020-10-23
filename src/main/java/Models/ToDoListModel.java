@@ -13,12 +13,12 @@ public class ToDoListModel implements Serializable {
 
     private String name;
     private String description;
-    private ArrayList checklists;
-    private ArrayList timeAndDeadline;
-    private ArrayList checkboxes;
+    private ArrayList<String> checklists;
+    private ArrayList<String> timeAndDeadline;
+    private ArrayList<String> checkboxes;
 
 
-    public ToDoListModel(String name, String description, ArrayList timeAndDeadline, ArrayList<String> checklists,
+    public ToDoListModel(String name, String description, ArrayList<String> timeAndDeadline, ArrayList<String> checklists,
                          ArrayList<String>  checkboxes){
         this.name = name;
         this.description = description;
@@ -36,21 +36,21 @@ public class ToDoListModel implements Serializable {
         return description;
     }
 
-    public ArrayList getChecklists() { return checklists; }
+    public ArrayList<String> getChecklists() { return checklists; }
 
-    public ArrayList getCheckboxes() { return checkboxes; }
+    public ArrayList<String> getCheckboxes() { return checkboxes; }
 
-    public ArrayList getTimeAndDeadline() { return timeAndDeadline; }
+    public ArrayList<String> getTimeAndDeadline() { return timeAndDeadline; }
 
     public void setName(String name) { this.name = name; }
 
     public void setDescription(String description) { this.description = description; }
 
-    public void setTimeAndDeadline(ArrayList timeAndDeadline) { this.timeAndDeadline = timeAndDeadline; }
+    public void setTimeAndDeadline(ArrayList<String> timeAndDeadline) { this.timeAndDeadline = timeAndDeadline; }
 
-    public void setChecklists(ArrayList checklists) { this.checklists = checklists; }
+    public void setChecklists(ArrayList<String> checklists) { this.checklists = checklists; }
 
-    public void setCheckboxes(ArrayList checkboxes) { this.checkboxes = checkboxes; }
+    public void setCheckboxes(ArrayList<String> checkboxes) { this.checkboxes = checkboxes; }
 
     /**
      * This method return the size of the checklist

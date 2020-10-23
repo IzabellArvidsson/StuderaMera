@@ -29,12 +29,12 @@ public class ToDoViewModel  {
      * @param checkboxes an arrayList with strings for the toDoList regarding the checkboxes
      * @param string an arrayList with strings, with the time and deadline for the toDoList
      * @param toDoListFlowPane the FlowPane where the list will appear
-     * @param todoListView
+     * @param todoListView the controller for the fxml-file where the list will appear
      */
 
-    public void addToDoListsToPane(String nameTextField, String description, ArrayList<String> checklist, ArrayList<String>
-            checkboxes, ArrayList<String> string, FlowPane toDoListFlowPane, TodoListView todoListView){
-        ToDoListModel toDoListModel = new ToDoListModel(nameTextField, description, string, checklist, checkboxes);
+     public void addToDoListsToPane(String nameTextField, String description, ArrayList<String> checklist, ArrayList<String>
+             checkboxes, ArrayList<String> string, FlowPane toDoListFlowPane, TodoListView todoListView){
+         ToDoListModel toDoListModel = new ToDoListModel(nameTextField, description, string, checklist, checkboxes);
 
         addToDoListToArrayList(toDoListModel);
         ListInToDoView listInToDoView = new ListInToDoView(toDoListModel);
@@ -52,24 +52,21 @@ public class ToDoViewModel  {
      * @param checklist an arrayList with strings for the toDoList regarding the checklists
      * @param nCheckboxes an arrayList with strings for the toDoList regarding the checkboxes
      * @param string an arrayList with strings, with the time and deadline for the toDoList
-     * @param toDoListModel the list how's values will be changed
      */
 
     public void updateToDoInList(String nameTextField, String description, ArrayList<String> checklist, ArrayList<String>
-            nCheckboxes, ArrayList<String> string, ToDoListModel toDoListModel){
-        for(ToDoListModel toDoListModelInList : allToDoLists){
-            if(toDoListModelInList.equals(toDoListModel)){
-                toDoListModelInList.setName(nameTextField);
-                toDoListModelInList.setDescription(description);
-                toDoListModelInList.setCheckboxes(nCheckboxes);
-                toDoListModelInList.setChecklists(checklist);
-                toDoListModelInList.setTimeAndDeadline(string);
-                System.out.println(allToDoLists);
-                saveToDoList(allToDoLists);
-            }
-        }
+            nCheckboxes, ArrayList<String> string){
+         for(ToDoListModel toDoListModelInList : allToDoLists){
+             if(toDoListModelInList.getName().equals(nameTextField)){
+                 toDoListModelInList.setName(nameTextField);
+                 toDoListModelInList.setDescription(description);
+                 toDoListModelInList.setCheckboxes(nCheckboxes);
+                 toDoListModelInList.setChecklists(checklist);
+                 toDoListModelInList.setTimeAndDeadline(string);
+                 saveToDoList(allToDoLists);
+             }
+         }
     }
-
 
     /**
      * This method adds a toDoList to an arrayList
@@ -79,6 +76,31 @@ public class ToDoViewModel  {
 
     private void addToDoListToArrayList(ToDoListModel toDoList){
         allToDoLists.add(toDoList);
+    }
+
+    /**
+     * This method removes a todo-list from the public arrayList with all the todo-lists
+     *
+     * @param name the name of the todo-list
+     */
+
+    public void removeToDoListFromArrayList(String name){
+        allToDoLists.removeIf(toDoListModel -> toDoListModel.getName().equals(name));
+    }
+
+    /**
+     * This method checks if there are any duplicates of a list and removes them if that is the case
+     */
+
+    public void removeDoubleLists(){
+        for (int j = 0; j<allToDoLists.size(); j++){
+            for (int i=j+1; i<allToDoLists.size(); i++){
+                if(allToDoLists.get(j).getName().equals(allToDoLists.get(i).getName())){
+                    allToDoLists.remove(allToDoLists.get(i));
+                }
+            }
+        }
+        saveToDoList(allToDoLists);
     }
 
 
@@ -104,7 +126,7 @@ public class ToDoViewModel  {
      * This method reads from the .ser file and writes out the toDoLists on the flowPane given in the parameter
      *
      * @param toDoListFlowPane the FlowPane which the toDoList will be added on
-     * @param todoListView
+     * @param todoListView the controller class to the fxml-file
      */
 
     public void writeToDoList(FlowPane toDoListFlowPane, TodoListView todoListView) {

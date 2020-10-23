@@ -170,7 +170,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Text>
-            <Button layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickBackToOverview" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
+            <Button layoutX="778.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#onClickStuderaMera" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
                <effect>
                   <DropShadow color="#919090" />
                </effect>

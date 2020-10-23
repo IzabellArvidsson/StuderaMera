@@ -1,15 +1,16 @@
 package ObserverInterfaces;
 
-import Models.ToDoListModel;
+import java.util.ArrayList;
 
 /**
  * Uses: ToDoListModel
- * Used by: ListInToDoView by implementation
+ * Used by: ToDoListView by implementation
  *
  * Author: Julia
  */
 
 public interface ToDoListOpenObserver {
-    void updateOpen(ToDoListModel toDoList);
+    void updateOpen(String name, String description, ArrayList<String > timeAndDeadline, ArrayList<String> checklists,
+                    ArrayList<String>  checkboxes);
 
 }
