@@ -75,7 +75,7 @@ public class TimerViewModelTest {
     void testStartTimer() {
         TimerViewModel timerViewModel = new TimerViewModel();
         Timeline timeline = new Timeline();
-        Timeline finalTimeline = timeline;
+        Timeline finalTimeline = timeline;//NOPMD
         timeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> timerViewModel.countDown(finalTimeline)));
         timerViewModel.startTimer(timeline);
         assertSame(timeline.getStatus(), Animation.Status.RUNNING);
@@ -116,7 +116,7 @@ public class TimerViewModelTest {
         timerViewModel.studyTimeline.playFromStart();
         timerViewModel.timerOnGoing();
 
-        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus(), "Stopped");
     }
 
     @Test
@@ -127,7 +127,7 @@ public class TimerViewModelTest {
 
         timerViewModel.studyTimeIsRunning();
 
-        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus(), "Stopped");
     }
 
     @Test
@@ -138,6 +138,6 @@ public class TimerViewModelTest {
 
         timerViewModel.restTimeIsRunning();
 
-        assertEquals(Animation.Status.STOPPED, timerViewModel.restTimeLine.getStatus());
+        assertEquals(Animation.Status.STOPPED, timerViewModel.restTimeLine.getStatus(), "Stopped");
     }
 }

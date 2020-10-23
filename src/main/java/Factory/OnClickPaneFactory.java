@@ -28,12 +28,12 @@ public class OnClickPaneFactory {
      * @return a pane that contains a controller and a anchorPane
      */
 
-    private static <T> Pane<T> loadInPane(String path) {
+    private static <T> Pane<T> loadInPane(final String path) {
         Pane<T> pane = null;
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(OnClickPaneFactory.class.getClassLoader().getResource(path));
-            AnchorPane anchorPane = fxmlLoader.load();
-            T controller = fxmlLoader.getController();
+            final FXMLLoader fxmlLoader = new FXMLLoader(OnClickPaneFactory.class.getClassLoader().getResource(path));
+            final AnchorPane anchorPane = fxmlLoader.load();
+            final T controller = fxmlLoader.getController();
             pane = new Pane<T>(anchorPane, controller);
         } catch (IOException exception) {
             exception.printStackTrace();
@@ -49,44 +49,44 @@ public class OnClickPaneFactory {
 
 
     public static Parent mainPane(){
-        Pane<OnClickPaneController> pane = loadInPane("fxml_files/mainAnchorPane.fxml");
+        final Pane<OnClickPaneController> pane = loadInPane("fxml_files/mainAnchorPane.fxml");
         OnClickPaneFactory.onClickPaneController = pane.controller;
         pane.controller.init();
         return pane.aPane;
     }
 
     public static AnchorPane fistViewPane(){
-        Pane<FirstSideView> pane = loadInPane("fxml_files/firstSideView.fxml");
+        final Pane<FirstSideView> pane = loadInPane("fxml_files/firstSideView.fxml");
         pane.controller.initPane(onClickPaneController);
         return pane.aPane;
     }
 
     public static AnchorPane toDoPane(){
-        Pane <TodoListView> pane = loadInPane("fxml_files/todo.fxml");
+        final Pane <TodoListView> pane = loadInPane("fxml_files/todo.fxml");
         pane.controller.initPane(onClickPaneController);
         return pane.aPane;
     }
 
     public static AnchorPane calendarPane(){
-        Pane <CalendarView> pane = loadInPane("fxml_files/Calendar.fxml");
+        final Pane <CalendarView> pane = loadInPane("fxml_files/Calendar.fxml");
         pane.controller.initPane(onClickPaneController);
         return pane.aPane;
     }
 
     public static AnchorPane tipsViewPane(){
-        Pane <TipsView> pane = loadInPane("fxml_files/TipsView.fxml");
+        final Pane <TipsView> pane = loadInPane("fxml_files/TipsView.fxml");
         pane.controller.initPane(onClickPaneController);
         return pane.aPane;
     }
 
     public static AnchorPane helpViewPane(){
-        Pane <HelpView> pane = loadInPane("fxml_files/HelpView.fxml");
+        final Pane <HelpView> pane = loadInPane("fxml_files/HelpView.fxml");
         pane.controller.initPane(onClickPaneController);
         return pane.aPane;
     }
 
     public static AnchorPane timerViewPane(){
-        Pane <TimerView> pane = loadInPane("fxml_files/TimerView.fxml");
+        final Pane <TimerView> pane = loadInPane("fxml_files/TimerView.fxml");
         pane.controller.initPane(onClickPaneController);
         return pane.aPane;
     }
@@ -98,9 +98,9 @@ public class OnClickPaneFactory {
      */
 
     static class Pane<T> {
-        AnchorPane aPane;
-        T controller;
-        Pane(AnchorPane anchorPane, T controller) {
+        private final AnchorPane aPane;
+        private final T controller;
+        Pane(final AnchorPane anchorPane, final T controller) {
             this.aPane = anchorPane;
             this.controller = controller;
         }

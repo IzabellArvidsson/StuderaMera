@@ -7,6 +7,7 @@ import javafx.scene.layout.FlowPane;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class saves and writes out todoLists and creates new ones
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 
 public class ToDoViewModel  {
 
-    public ArrayList<ToDoListModel> allToDoLists = new ArrayList<>();
+    public List<ToDoListModel> allToDoLists = new ArrayList<>();
 
     /**
      * This method creates a toDoList and a ListInToDoView and adds it to a Pane
@@ -32,12 +33,12 @@ public class ToDoViewModel  {
      * @param todoListView the controller for the fxml-file where the list will appear
      */
 
-     public void addToDoListsToPane(String nameTextField, String description, ArrayList<String> checklist, ArrayList<String>
-             checkboxes, ArrayList<String> string, FlowPane toDoListFlowPane, TodoListView todoListView){
-         ToDoListModel toDoListModel = new ToDoListModel(nameTextField, description, string, checklist, checkboxes);
+     public final void addToDoListsToPane(final String nameTextField, final String description, final List<String> checklist, final List<String>
+             checkboxes, final List<String> string, final FlowPane toDoListFlowPane, final TodoListView todoListView){
+         final ToDoListModel toDoListModel = new ToDoListModel(nameTextField, description, string, checklist, checkboxes);
 
         addToDoListToArrayList(toDoListModel);
-        ListInToDoView listInToDoView = new ListInToDoView(toDoListModel);
+        final ListInToDoView listInToDoView = new ListInToDoView(toDoListModel);
         listInToDoView.add(todoListView);
         listInToDoView.addOpen(todoListView);
         toDoListFlowPane.getChildren().add(listInToDoView);
@@ -54,9 +55,9 @@ public class ToDoViewModel  {
      * @param string an arrayList with strings, with the time and deadline for the toDoList
      */
 
-    public void updateToDoInList(String nameTextField, String description, ArrayList<String> checklist, ArrayList<String>
-            nCheckboxes, ArrayList<String> string){
-         for(ToDoListModel toDoListModelInList : allToDoLists){
+    public void updateToDoInList(final String nameTextField, final String description, final List<String> checklist, final List<String>
+            nCheckboxes, final List<String> string){
+         for(final ToDoListModel toDoListModelInList : allToDoLists){
              if(toDoListModelInList.getName().equals(nameTextField)){
                  toDoListModelInList.setName(nameTextField);
                  toDoListModelInList.setDescription(description);
@@ -74,7 +75,7 @@ public class ToDoViewModel  {
      * @param toDoList the toDoList which will be add to the arrayList
      */
 
-    private void addToDoListToArrayList(ToDoListModel toDoList){
+    private void addToDoListToArrayList(final ToDoListModel toDoList){
         allToDoLists.add(toDoList);
     }
 
@@ -84,7 +85,7 @@ public class ToDoViewModel  {
      * @param name the name of the todo-list
      */
 
-    public void removeToDoListFromArrayList(String name){
+    public void removeToDoListFromArrayList(final String name){
         allToDoLists.removeIf(toDoListModel -> toDoListModel.getName().equals(name));
     }
 
@@ -110,15 +111,15 @@ public class ToDoViewModel  {
      * @param toDoLists a list with all the toDoLists which will be saved
      */
 
-    public void saveToDoList(ArrayList<ToDoListModel> toDoLists) {
+    public void saveToDoList(final List<ToDoListModel> toDoLists) {
         try {
-            FileOutputStream fileOut = new FileOutputStream("Models.ToDoLists.ser");
-            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            final FileOutputStream fileOut = new FileOutputStream("Models.ToDoLists.ser");
+            final ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(toDoLists);
             out.close();
             fileOut.close();
         } catch (IOException i) {
-            i.printStackTrace();
+            System.out.println("Exception found");
         }
     }
 
@@ -129,25 +130,25 @@ public class ToDoViewModel  {
      * @param todoListView the controller class to the fxml-file
      */
 
-    public void writeToDoList(FlowPane toDoListFlowPane, TodoListView todoListView) {
+    public void writeToDoList(final FlowPane toDoListFlowPane, final TodoListView todoListView) {
         try {
-            FileInputStream fileIn = new FileInputStream("Models.ToDoLists.ser");
-            ObjectInputStream in = new ObjectInputStream(fileIn);
-            ArrayList<ToDoListModel> toDoLists = (ArrayList<ToDoListModel>) in.readObject();
-            for (ToDoListModel toDoList : toDoLists) {
-                String name = toDoList.getName();
-                String description = toDoList.getDescription();
-                ArrayList<String> nChecklist = toDoList.getChecklists();
-                ArrayList<String> nCheckboxes = toDoList.getCheckboxes();
-                ArrayList<String> timeAndDeadline = toDoList.getTimeAndDeadline();
+            final FileInputStream fileIn = new FileInputStream("Models.ToDoLists.ser");
+            final ObjectInputStream in = new ObjectInputStream(fileIn);
+            final ArrayList<ToDoListModel> toDoLists = (ArrayList<ToDoListModel>) in.readObject();
+            for (final ToDoListModel toDoList : toDoLists) {
+                final String name = toDoList.getName();
+                final String description = toDoList.getDescription();
+                final List<String> nChecklist = toDoList.getChecklists();
+                final List<String> nCheckboxes = toDoList.getCheckboxes();
+                final List<String> timeAndDeadline = toDoList.getTimeAndDeadline();
                 addToDoListsToPane(name, description, nChecklist, nCheckboxes, timeAndDeadline, toDoListFlowPane, todoListView);
             }
             in.close();
             fileIn.close();
         } catch (IOException i) {
-            i.printStackTrace();
+            System.out.println("Exception found");
         } catch (ClassNotFoundException c) {
-            c.printStackTrace();
+            System.out.println("Models.ToDoLists class not found");
         }
     }
 

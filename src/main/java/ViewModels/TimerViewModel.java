@@ -1,6 +1,6 @@
 package ViewModels;
 
-import Interfaces.ITimerViewModel;
+import interfaces.ITimerViewModel;
 import ObserverInterfaces.TimerObservable;
 import ObserverInterfaces.TimerObserver;
 import Models.TimerModel;
@@ -139,12 +139,16 @@ public class TimerViewModel implements TimerObservable, ITimerViewModel {
 
     /**
      * Stops the timer
-     * @param timeline Which timeline that i supposed to be stopped
+     * @param timeline Which timeline that is supposed to be stopped
      */
     public void stopTimer(Timeline timeline) {
         timeline.stop();
     }
 
+    /**
+     * Unpauses the timer
+     * @param timeline Which timeline that is supposed to be stopped
+     */
     public void playTimer(Timeline timeline) {
         timeline.play();
     }

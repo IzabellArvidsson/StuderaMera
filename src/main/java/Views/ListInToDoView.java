@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *  This class handles the functionality of the ListInToDoView
@@ -21,12 +22,12 @@ import java.util.ArrayList;
 
 public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservable, ToDoListOpenObservable {
 
-    @FXML  Text nameText;
-    @FXML  Text numberOfChecklistsText;
-    ToDoListModel toDoList;
+    @FXML private Text nameText;
+    @FXML private Text numberOfChecklistsText;
+    private final ToDoListModel toDoList;
 
-    ArrayList<ToDoListRemoveObserver> observerArrayList = new ArrayList<>();
-    ArrayList<ToDoListOpenObserver> openObserverArrayList = new ArrayList<>();
+    private final List<ToDoListRemoveObserver> observerArrayList = new ArrayList<>();
+    private final List<ToDoListOpenObserver> openObserverArrayList = new ArrayList<>();
 
     /**
      * This method...
@@ -34,8 +35,8 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
      * @param toDoListModel the todoList the ListInToDoView is connected to
      */
 
-    public ListInToDoView(ToDoListModel toDoListModel){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/listInToDo.fxml"));
+    public ListInToDoView(final ToDoListModel toDoListModel){
+        final FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml_files/listInToDo.fxml"));
         fxmlLoader.setController(this);
         fxmlLoader.setRoot(this);
         try {
@@ -71,7 +72,7 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
      * @param o is a TodoListRemoveObserver
      */
     @Override
-    public void add(ToDoListRemoveObserver o) {
+    public void add(final ToDoListRemoveObserver o) {
         observerArrayList.add(o);
     }
 
@@ -82,7 +83,7 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
      */
 
     @Override
-    public void addOpen(ToDoListOpenObserver o) {
+    public void addOpen(final ToDoListOpenObserver o) {
         openObserverArrayList.add(o);
     }
 
@@ -92,7 +93,7 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
 
     @Override
     public void notifyOpenObservers() {
-        for (ToDoListOpenObserver o: openObserverArrayList) {
+        for (final ToDoListOpenObserver o: openObserverArrayList) {
             o.updateOpen(toDoList.getName(), toDoList.getDescription(), toDoList.getTimeAndDeadline(), toDoList.getChecklists(),
                     toDoList.getCheckboxes());
         }
@@ -104,7 +105,7 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
 
     @Override
     public void notifyObservers() {
-        for (ToDoListRemoveObserver o: observerArrayList) {
+        for (final ToDoListRemoveObserver o: observerArrayList) {
             o.update(toDoList.getName(),this);
         }
     }

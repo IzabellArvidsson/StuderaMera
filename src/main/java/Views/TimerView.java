@@ -2,7 +2,7 @@ package Views;
 
 import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
-import Interfaces.ITimerViewModel;
+import interfaces.ITimerViewModel;
 import ObserverInterfaces.TimerObserver;
 import ViewModels.ImageViewModel;
 import ViewModels.TimerViewModel;
@@ -49,6 +49,9 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
     private final ITimerViewModel iTimerViewModel = new TimerViewModel();
     private final ImageViewModel imageViewModel = new ImageViewModel();
 
+    /**
+     * To be able to use the factory pattern
+     */
     OnClickPaneController paneController = new OnClickPaneController();
 
     /**
@@ -135,6 +138,9 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
             case 6:
                 flowerChangingImage.setImage(new Image("/images/flower/plant_6.png"));
                 deadFlowerImage.setImage(new Image("/images/flower/plant_6_dead.png"));
+                break;
+            default:
+                flowerChangingImage.setImage(new Image("/images/flower/plant_0_pot.png"));
                 break;
         }
     }
