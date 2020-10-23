@@ -1,6 +1,7 @@
 package ObserverInterfaces;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Uses: ToDoListModel
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  */
 
 public interface ToDoListOpenObserver {
-    void updateOpen(String name, String description, ArrayList<String > timeAndDeadline, ArrayList<String> checklists,
-                    ArrayList<String>  checkboxes);
+    void updateOpen(String name, String description, List<String > timeAndDeadline, List<String> checklists,
+                    List<String>  checkboxes);
 
 }

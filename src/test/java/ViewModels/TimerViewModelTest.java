@@ -116,7 +116,7 @@ public class TimerViewModelTest {
         timerViewModel.studyTimeline.playFromStart();
         timerViewModel.timerOnGoing();
 
-        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus(), "Stopped");
     }
 
     @Test
@@ -127,7 +127,7 @@ public class TimerViewModelTest {
 
         timerViewModel.studyTimeIsRunning();
 
-        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus(), "Stopped");
     }
 
     @Test
@@ -138,6 +138,6 @@ public class TimerViewModelTest {
 
         timerViewModel.restTimeIsRunning();
 
-        assertEquals(Animation.Status.STOPPED, timerViewModel.restTimeLine.getStatus());
+        assertEquals(Animation.Status.STOPPED, timerViewModel.restTimeLine.getStatus(), "Stopped");
     }
 }

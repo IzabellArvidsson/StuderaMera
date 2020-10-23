@@ -59,7 +59,7 @@ public class OnClickPaneController {
      * @param anchorPane the pane that will be displayed in the view
      */
 
-    private void showPane(AnchorPane anchorPane){
+    private void showPane(final AnchorPane anchorPane){
         mainAnchorPane.getChildren().clear();
         mainAnchorPane.getChildren().add(anchorPane);
         mainAnchorPane.toFront();

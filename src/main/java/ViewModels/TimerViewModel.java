@@ -1,6 +1,6 @@
 package ViewModels;
 
-import Interfaces.ITimerViewModel;
+import interfaces.ITimerViewModel;
 import ObserverInterfaces.TimerObservable;
 import ObserverInterfaces.TimerObserver;
 import Models.TimerModel;

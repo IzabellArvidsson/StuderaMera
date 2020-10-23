@@ -1,5 +1,6 @@
 package ViewModels.TodoViewModels;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *  This class checks if the lists values are valid, as well as their status
@@ -18,10 +19,10 @@ public class CheckTodoValid {
      * @return ArrayList with textFields that is not empty
      */
 
-    public ArrayList<String> checkListEmpty(ArrayList<String> checklist){
-        ArrayList<String> noEmptyChecklist = new ArrayList<>();
-        for (String string: checklist) {
-            if(!string.equals("")){
+    public final List<String> checkListEmpty(final List<String> checklist){
+        final List<String> noEmptyChecklist = new ArrayList<>();
+        for (final String string: checklist) {
+            if(!("".equals(string))){
                 noEmptyChecklist.add(string);
             }
         }
@@ -35,9 +36,9 @@ public class CheckTodoValid {
      * @return return an arrayList with strings
      */
 
-    public ArrayList<String> isCheckboxClicked(ArrayList<Boolean> nCheckboxes){
-        ArrayList<String> checkboxArraylist = new ArrayList<>();
-        for (Boolean bool: nCheckboxes) {
+    public final List<String> isCheckboxClicked(final List<Boolean> nCheckboxes){
+        final List<String> checkboxArraylist = new ArrayList<>();
+        for (final Boolean bool: nCheckboxes) {
             if(bool){
                 checkboxArraylist.add("clickOn");
             }
