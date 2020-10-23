@@ -197,7 +197,7 @@
          <children>
             <AnchorPane prefHeight="101.4" prefWidth="936.0" style="-fx-background-color: #93CFD9;" stylesheets="@../StuderaMera.css">
                <children>
-                  <Button fx:id="startplanbutton" layoutX="770.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#onClickStartPlanning" prefHeight="43.0" prefWidth="131.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Börja Planera">
+                  <Button fx:id="startplanbutton" layoutX="770.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#onClickStartPlanning" prefHeight="43.0" prefWidth="131.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0;" text="Tillbaka">
                      <effect>
                         <DropShadow color="#919090" />
                      </effect>

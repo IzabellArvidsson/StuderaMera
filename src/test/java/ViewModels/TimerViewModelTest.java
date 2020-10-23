@@ -10,29 +10,45 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TimerViewModelTest {
 
     @Test
-    void testSetTimelines() {
-
-    }
-
-    @Test
-    void testSetStudyTimerSpinner() {
+    void testStartStudyTime() {
         TimerViewModel timerViewModel = new TimerViewModel();
-        int studyTime = 20;
-        timerViewModel.setStudyTimerSpinner(studyTime);
+        timerViewModel.setTimelines();
+        timerViewModel.startTimer(timerViewModel.studyTimeline);
+        timerViewModel.stopTimer(timerViewModel.studyTimeline);
+        timerViewModel.startStudyTime();
 
-        //assertEquals(20, timerViewModel.minutes);
+        assertEquals(Animation.Status.RUNNING, timerViewModel.studyTimeline.getStatus());
     }
 
     @Test
-    void testSetRestTimerSpinner() {
+    void testPauseStudyTime() {
         TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.startTimer(timerViewModel.studyTimeline);
+        timerViewModel.pauseStudyTime();
 
-
+        assertEquals(Animation.Status.PAUSED, timerViewModel.studyTimeline.getStatus());
     }
 
     @Test
-    void testSetRepTimerSpinner() {
+    void testStopStudyTime() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.startTimer(timerViewModel.studyTimeline);
+        timerViewModel.stopStudyTime();
 
+        assertEquals(Animation.Status.STOPPED, timerViewModel.studyTimeline.getStatus());
+    }
+
+    @Test
+    void testPlayStudyTime() {
+        TimerViewModel timerViewModel = new TimerViewModel();
+        timerViewModel.setTimelines();
+        timerViewModel.startTimer(timerViewModel.studyTimeline);
+        timerViewModel.pauseTimer(timerViewModel.studyTimeline);
+        timerViewModel.playStudyTime();
+
+        assertEquals(Animation.Status.RUNNING, timerViewModel.studyTimeline.getStatus());
     }
 
     @Test
@@ -81,7 +97,6 @@ public class TimerViewModelTest {
         timerViewModel.countDown(timeline);
 
         assertEquals(2, Integer.parseInt(timerViewModel.timerModel.getMinutes()));
-        assertEquals(59, Integer.parseInt(timerViewModel.timerModel.getSeconds()));
     }
 
     @Test
@@ -91,7 +106,7 @@ public class TimerViewModelTest {
         timerViewModel.studyTimeline.playFromStart();
         timerViewModel.checkIfStudyTimeIsRunning(timerViewModel.studyTimeline);
 
-        assertEquals(1, timerViewModel.imageModel.countUp);
+        assertEquals(1, timerViewModel.countUp);
     }
 
     @Test

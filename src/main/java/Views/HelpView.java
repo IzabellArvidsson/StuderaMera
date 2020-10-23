@@ -4,27 +4,35 @@ import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
 import javafx.fxml.FXML;
 
-import java.io.IOException;
-
+/**
+ * Author: Hanna and Izabell
+ * Uses: Factory pattern to show new views
+ * Used by: None
+ */
 public class HelpView implements IOnClickPane {
 
     private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
-    /*@Override
-    public void onClickButton(MouseEvent mouseEvent, String fxml) throws IOException {
-        super.onClickButton(mouseEvent, "/fxml_files/TimerView.fxml");
-    }*/
-
+    /**
+     * Makes sure that the view goes to TimerView when the user clicks the backbutton
+     */
     @FXML
-    private void onClickBackButton (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    private void onClickBackButton () {
         onClickPaneController.showTimerViewPane();
     }
 
+    /**
+     * Makes sure that the view goes to the first view when the user clicks the StuderaMera-logo
+     */
     @FXML
-    private void onClickStuderaMera (javafx.scene.input.MouseEvent mouseEvent) throws IOException {
+    private void onClickStuderaMera () {
         onClickPaneController.showFirstViewPane();
     }
 
+    /**
+     * Initializes the Factory pattern
+     * @param onClickPaneController the class that controls the factory pattern
+     */
     @Override
     public void initPane(OnClickPaneController onClickPaneController) {
         this.onClickPaneController = onClickPaneController;

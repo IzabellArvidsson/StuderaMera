@@ -1,14 +1,14 @@
-package Models;
+package ViewModels;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ImageModelTest {
+class ImageViewModelTest {
 
     @Test
     void checkChangeImage() {
-        ImageModel imageModel = new ImageModel();
+        ImageViewModel imageModel = new ImageViewModel();
         int countUp = 10;
         int totalTime = 70;
 

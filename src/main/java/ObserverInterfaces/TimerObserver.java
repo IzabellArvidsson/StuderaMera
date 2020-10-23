@@ -1,10 +1,15 @@
 package ObserverInterfaces;
 
-import Models.TimerModel;
-
+/**
+ * Author: Hanna and Izabell
+ * Uses: None
+ * Used by: TimerObservable uses this class for register method. ITimerViewModel uses this class for register model.
+ * TimerViewModel and TimerView implements this interface.
+ *
+ */
 public interface TimerObserver {
 
-    void update(int time, int reps, String string, int currentRep, boolean stopped, int countUp);
-    void update(TimerModel timer);
+    void update(int reps, String string, int currentRep, boolean stopped, int countUp);
+    void update(String time);
 
 }

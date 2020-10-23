@@ -1,6 +1,6 @@
 package ViewModels;
 
-import Models.ImageModel;
+import Interfaces.ITimerViewModel;
 import ObserverInterfaces.TimerObservable;
 import ObserverInterfaces.TimerObserver;
 import Models.TimerModel;
@@ -12,14 +12,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Author: Hanna and Izabell
+ * Uses: Implements TimerObservable to send information. ITimerViewModel is also implemented for sending data purposes.
+ * This class also uses TimerModel to get information from.
+ * Used by: TimerView uses this class to get data.
  * Handles the timer functionalities
  */
-public class TimerViewModel implements TimerObservable {
+public class TimerViewModel implements TimerObservable, ITimerViewModel {
 
     private final List<TimerObserver> timerObservers = new ArrayList<>();
 
     public TimerModel timerModel = new TimerModel();
-    public ImageModel imageModel = new ImageModel();
 
     public Timeline studyTimeline = new Timeline();
     public Timeline restTimeLine = new Timeline();
@@ -27,7 +30,9 @@ public class TimerViewModel implements TimerObservable {
     private String labelType = "Studera";
     private int currentRep = 1;
 
-    private boolean stopped = false;
+    public int countUp;
+
+    private boolean stopped;
 
     private int studyTime;
     private int restTime;
@@ -41,16 +46,17 @@ public class TimerViewModel implements TimerObservable {
     /**
      * Sets the timelines to their values
      */
+    @Override
     public void setTimelines() {
         studyTimeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown(studyTimeline)));
         restTimeLine = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> countDown(restTimeLine)));
-
     }
 
     /**
      * Takes in a value of the studytimerspinner and sets minutes and seconds to the right values
      * @param studyTime The value of the studytimerspinner from controller
      */
+    @Override
     public void setStudyTimerSpinner(Object studyTime) {
         this.studyTime = (int) studyTime;
         this.minutes = this.studyTime;
@@ -62,6 +68,7 @@ public class TimerViewModel implements TimerObservable {
      * Takes in a value of the resttimerspinner and sets minutes and seconds to the right values
      * @param restTime The value of the resttimerspinner from controller
      */
+    @Override
     public void setRestTimerSpinner(Object restTime) {
         this.restTime = (int) restTime;
         this.seconds = 0;
@@ -73,6 +80,7 @@ public class TimerViewModel implements TimerObservable {
      * to the right values
      * @param repNumber The value of the reptimerspinner from controller
      */
+    @Override
     public void setRepTimerSpinner(Object repNumber) {
         this.repNumber = (int) repNumber;
         currentRep = 1;
@@ -82,11 +90,44 @@ public class TimerViewModel implements TimerObservable {
     /**
      * Sets the value of countUp to 0 so that it always begins on that value when you start the timer
      */
+    @Override
     public void setCountUpInt() {
-        imageModel.countUp = 0;
+        countUp = 0;
     }
 
     /*------------------------------------------Timer methods---------------------------------------------------------*/
+
+    /**
+     * Starts the timer with the studytimeline
+     */
+    @Override
+    public void startStudyTime() {
+        startTimer(studyTimeline);
+    }
+
+    /**
+     * Pauses the timer with the studytimeline
+     */
+    @Override
+    public void pauseStudyTime() {
+        pauseTimer(studyTimeline);
+    }
+
+    /**
+     * Stops the timer with the studytimeline
+     */
+    @Override
+    public void stopStudyTime() {
+        stopTimer(studyTimeline);
+    }
+
+    /**
+     * Plays the timer with the studytimeline
+     */
+    @Override
+    public void playStudyTime() {
+        playTimer(studyTimeline);
+    }
 
     /**
      * Pauses the timer
@@ -102,6 +143,10 @@ public class TimerViewModel implements TimerObservable {
      */
     public void stopTimer(Timeline timeline) {
         timeline.stop();
+    }
+
+    public void playTimer(Timeline timeline) {
+        timeline.play();
     }
 
     /**
@@ -141,8 +186,8 @@ public class TimerViewModel implements TimerObservable {
      * @param timeline The timeline that is supposed to be used
      */
     protected void checkIfStudyTimeIsRunning(Timeline timeline) {
-        if (timeline.getStatus() == Animation.Status.RUNNING && timeline == studyTimeline) {
-            imageModel.countUp++;
+        if (timeline.getStatus().equals(Animation.Status.RUNNING) && timeline.equals(studyTimeline)) {
+            countUp++;
         }
     }
 
@@ -163,6 +208,7 @@ public class TimerViewModel implements TimerObservable {
      */
     protected void studyTimeIsRunning() {
         if(currentRep == repNumber) {
+            stopped = false;
             stopTimer(studyTimeline);
             stopped = true;
             notifyObserver();
@@ -210,8 +256,10 @@ public class TimerViewModel implements TimerObservable {
     @Override
     public void notifyObserver() {
         for(TimerObserver timerObserver : timerObservers) {
-            timerObserver.update(studyTime, repNumber, labelType, currentRep, stopped, imageModel.countUp);
-            timerObserver.update(timerModel);
+            timerObserver.update(repNumber, labelType, currentRep, stopped, countUp);
+
+            String time = timerModel.toString();
+            timerObserver.update(time);
         }
     }
 }

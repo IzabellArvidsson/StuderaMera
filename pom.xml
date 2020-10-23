@@ -30,6 +30,19 @@
              <artifactId>javafx-fxml</artifactId>
              <version>13</version>
          </dependency>
+         <dependency>
+             <groupId>org.junit.jupiter</groupId>
+             <artifactId>junit-jupiter</artifactId>
+             <version>RELEASE</version>
+             <scope>test</scope>
+         </dependency>
+
+         <dependency>
+             <groupId>org.openjfx</groupId>
+             <artifactId>javafx-graphics</artifactId>
+             <version>11</version>
+         </dependency>
+
      </dependencies>
      <build>
          <plugins>
@@ -46,7 +59,7 @@
                  <artifactId>javafx-maven-plugin</artifactId>
                  <version>0.0.3</version>
                  <configuration>
-                     <mainClass>main</mainClass>
+                     <mainClass>Main.main</mainClass>
                  </configuration>
              </plugin>
          </plugins>

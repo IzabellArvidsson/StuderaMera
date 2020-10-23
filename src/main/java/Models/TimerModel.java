@@ -1,7 +1,10 @@
 package Models;
 
 /**
- * The modelclass for the timer part of the program. Contains much of the functionality.
+ * Author: Hanna and Izabell
+ * Uses: None
+ * Used by: TimerViewModel gets information from this class
+ * The modelclass for the timer part of the program. Contains functionality.
  */
 public class TimerModel {
 
@@ -20,7 +23,7 @@ public class TimerModel {
      * @param repNumber The current value of repetitions
      */
     public void setReps(int repNumber) {
-        this.reps = repNumber + "";
+        this.reps = String.valueOf(repNumber);
     }
 
     /**
@@ -28,11 +31,7 @@ public class TimerModel {
      * @param min The current value of minutes
      */
     public void setMinutes(int min) {
-        if (min < 10) {
-             this.minutes =  String.valueOf(min);
-        } else {
-            this.minutes = min + "";
-        }
+        this.minutes =  String.valueOf(min);
     }
 
     /**
@@ -40,11 +39,7 @@ public class TimerModel {
      * @param sec The current value of seconds
      */
     public void setSeconds(int sec) {
-        if (sec < 10) {
-            this.seconds = String.valueOf(sec);
-        } else {
-            this.seconds = sec + "";
-        }
+        this.seconds = String.valueOf(sec);
     }
 
     /**
@@ -75,6 +70,7 @@ public class TimerModel {
      * Makes sure that the timer has the format of a timer
      * @return The minutes and seconds separated with ":"
      */
+    @Override
     public String toString() {
         return this.minutes + ":" + this.seconds;
     }
