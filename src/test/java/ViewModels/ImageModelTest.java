@@ -4,8 +4,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test class for the ImageViewModel class
+ */
 class ImageViewModelTest {
 
+    /**
+     * Testing the checkChangeImage() function
+     */
     @Test
     void checkChangeImage() {
         ImageViewModel imageModel = new ImageViewModel();

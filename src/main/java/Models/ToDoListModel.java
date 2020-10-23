@@ -1,6 +1,7 @@
 package Models;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class creates a todoList with the values it got from the user
@@ -13,13 +14,13 @@ public class ToDoListModel implements Serializable {
 
     private String name;
     private String description;
-    private ArrayList<String> checklists;
-    private ArrayList<String> timeAndDeadline;
-    private ArrayList<String> checkboxes;
+    private List<String> checklists;
+    private List<String> timeAndDeadline;
+    private List<String> checkboxes;
 
 
-    public ToDoListModel(String name, String description, ArrayList<String> timeAndDeadline, ArrayList<String> checklists,
-                         ArrayList<String>  checkboxes){
+    public ToDoListModel(final String name, final String description, final List<String> timeAndDeadline, final List<String> checklists,
+                         final List<String> checkboxes){
         this.name = name;
         this.description = description;
         this.timeAndDeadline = timeAndDeadline;
@@ -28,7 +29,7 @@ public class ToDoListModel implements Serializable {
 
     }
 
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
@@ -36,21 +37,21 @@ public class ToDoListModel implements Serializable {
         return description;
     }
 
-    public ArrayList<String> getChecklists() { return checklists; }
+    public List<String> getChecklists() { return checklists; }
 
-    public ArrayList<String> getCheckboxes() { return checkboxes; }
+    public List<String> getCheckboxes() { return checkboxes; }
 
-    public ArrayList<String> getTimeAndDeadline() { return timeAndDeadline; }
+    public List<String> getTimeAndDeadline() { return timeAndDeadline; }
 
-    public void setName(String name) { this.name = name; }
+    public final void setName(final String name) { this.name = name; }
 
-    public void setDescription(String description) { this.description = description; }
+    public final void setDescription(final String description) { this.description = description; }
 
-    public void setTimeAndDeadline(ArrayList<String> timeAndDeadline) { this.timeAndDeadline = timeAndDeadline; }
+    public final void setTimeAndDeadline(final List<String> timeAndDeadline) { this.timeAndDeadline = timeAndDeadline; }
 
-    public void setChecklists(ArrayList<String> checklists) { this.checklists = checklists; }
+    public final void setChecklists(final List<String> checklists) { this.checklists = checklists; }
 
-    public void setCheckboxes(ArrayList<String> checkboxes) { this.checkboxes = checkboxes; }
+    public final void setCheckboxes(final List<String> checkboxes) { this.checkboxes = checkboxes; }
 
     /**
      * This method return the size of the checklist
@@ -70,8 +71,8 @@ public class ToDoListModel implements Serializable {
 
     public int getNOfCheckboxesClicked(){
         int n = 0;
-        for (Object checkbox : checkboxes) {
-            if (checkbox.equals("clickOn")) {
+        for (final Object checkbox : checkboxes) {
+            if ("clickOn".equals(checkbox)) {
                 n++;
             }
         }

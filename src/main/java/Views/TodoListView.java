@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class updates the todoView for the user
@@ -38,9 +39,9 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
 
     private OnClickPaneController onClickPaneController = new OnClickPaneController();
 
-    private final ArrayList<String> timeAndDeadlineStringList = new ArrayList<>();
-    private final ArrayList<TextField> nChecklist = new ArrayList<>();
-    private final ArrayList<CheckBox> nCheckboxes = new ArrayList<>();
+    private final List<String> timeAndDeadlineStringList = new ArrayList<>();
+    private final List<TextField> nChecklist = new ArrayList<>();
+    private final List<CheckBox> nCheckboxes = new ArrayList<>();
     private final ToDoViewModel toDoViewModel = new ToDoViewModel();
     private final CheckTodoValid checkTodoValid = new CheckTodoValid();
 
@@ -135,9 +136,9 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      * @return an arrayList with no empty fields
      */
 
-    private ArrayList<String> checklistsToString(ArrayList<TextField> nChecklist){
-        ArrayList<String> checklistsString = new ArrayList<>();
-        for (TextField textField: nChecklist){
+    private List<String> checklistsToString(final List<TextField> nChecklist){
+        final List<String> checklistsString = new ArrayList<>();
+        for (final TextField textField: nChecklist){
             checklistsString.add(textField.getText());
         }
         return checkTodoValid.checkListEmpty(checklistsString);
@@ -150,9 +151,9 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      * @return an arrayList with the status of the checkboxes
      */
 
-    private ArrayList<String> checkboxesToString(ArrayList<CheckBox> nCheckboxes){
-        ArrayList<Boolean> checkboxesBool = new ArrayList<>();
-        for (CheckBox checkBox: nCheckboxes){
+    private List<String> checkboxesToString(final List<CheckBox> nCheckboxes){
+        final List<Boolean> checkboxesBool = new ArrayList<>();
+        for (final CheckBox checkBox: nCheckboxes){
             checkboxesBool.add(checkBox.isSelected());
         }
         return checkTodoValid.isCheckboxClicked(checkboxesBool);
@@ -165,9 +166,9 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      * @return the return value is a boolean which indicates if the text field is valid or not.
      */
 
-    private boolean isTextFieldValid(TextField textField){
-        String onlyDigits = textField.getText().replaceAll("[^0-9]+", "");
-        if (onlyDigits.length()==2){
+    private boolean isTextFieldValid(final TextField textField){
+        final String onlyDigits = textField.getText().replaceAll("[^0-9]+", "");
+        if (2 == onlyDigits.length()){
             textField.setStyle(" -fx-border-color: white;");
             return true;
         }
@@ -183,8 +184,8 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
 
     @FXML
     private void addTextFieldAndCheckbox(){
-        TextField textField = new TextField();
-        CheckBox checkBox = new CheckBox();
+        final TextField textField = new TextField();
+        final CheckBox checkBox = new CheckBox();
         checklistFlowPane.getChildren().add(checkBox);
         checklistFlowPane.getChildren().add(textField);
         checklistFlowPane.setVgap(7);
@@ -238,10 +239,10 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      * @param checkboxes the arrayList with the checkboxes that will be set
      */
 
-    private void setTextFieldsAndCheckboxes (ArrayList<String> checklists, ArrayList<String>  checkboxes){
+    private void setTextFieldsAndCheckboxes (final List<String> checklists, final List<String>  checkboxes){
         for (int i=0; i < checklists.size(); i++){
-            TextField textField = new TextField();
-            CheckBox checkBox = new CheckBox();
+            final TextField textField = new TextField();
+            final CheckBox checkBox = new CheckBox();
             checklistFlowPane.getChildren().add(checkBox);
             checklistFlowPane.getChildren().add(textField);
             checklistFlowPane.setVgap(7);
@@ -250,7 +251,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
             textField.setText(checklists.get(i));
             nChecklist.add(textField);
             nCheckboxes.add(checkBox);
-            if (checkboxes.get(i).equals("clickOn")){
+            if ("clickOn".equals(checkboxes.get(i))){
                 checkBox.setSelected(true);
             }
         }
@@ -267,8 +268,8 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      */
 
     @FXML
-    private void openToDoList(String name, String description, ArrayList<String > timeAndDeadline, ArrayList<String> checklists,
-                              ArrayList<String> checkboxes){
+    private void openToDoList(final String name, final String description, final List<String > timeAndDeadline, final List<String> checklists,
+                              final List<String> checkboxes){
         showSaveButton();
         clearPane();
         addToList.toFront();
@@ -289,7 +290,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      */
 
     @Override
-    public void initPane(OnClickPaneController onClickPaneController) {
+    public void initPane(final OnClickPaneController onClickPaneController) {
         this.onClickPaneController = onClickPaneController;
         toDoViewModel.writeToDoList(toDoListFlowPane, this);
         toDoViewModel.removeDoubleLists();
@@ -305,7 +306,7 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      */
 
     @Override
-    public void update(String name, ToDoListRemoveObservable o) {
+    public void update(final String name, final ToDoListRemoveObservable o) {
         toDoListFlowPane.getChildren().remove(o);
         toDoViewModel.removeToDoListFromArrayList(name);
         toDoViewModel.saveToDoList(toDoViewModel.allToDoLists);
@@ -322,8 +323,8 @@ public class TodoListView implements IOnClickPane, ToDoListRemoveObserver, ToDoL
      */
 
     @Override
-    public void updateOpen(String name, String description, ArrayList<String > timeAndDeadline, ArrayList<String> checklists,
-                           ArrayList<String>  checkboxes) {
+    public void updateOpen(final String name, final String description, final List<String > timeAndDeadline, final List<String> checklists,
+                           final List<String>  checkboxes) {
         openToDoList(name, description, timeAndDeadline, checklists, checkboxes);
     }
 }
