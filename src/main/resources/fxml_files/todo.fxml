@@ -141,6 +141,9 @@
                      <font>
                         <Font name="Georgia" size="31.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Text>
                   <Text layoutX="546.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(månad/dag)" x="-6.0">
                      <font>

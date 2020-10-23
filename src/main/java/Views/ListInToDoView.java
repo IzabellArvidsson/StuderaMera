@@ -42,7 +42,7 @@ public class ListInToDoView extends AnchorPane implements ToDoListRemoveObservab
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
-            throw new RuntimeException(exception);
+
         }
         nameText.setText(toDoListModel.getName());
         numberOfChecklistsText.setText(toDoListModel.getNOfCheckboxesClicked() + "/" + toDoListModel.getNOfChecklists());

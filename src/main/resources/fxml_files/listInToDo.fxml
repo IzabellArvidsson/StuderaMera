@@ -9,16 +9,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <fx:root type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onTodoListClicked" prefHeight="50.0" prefWidth="619.0" style="-fx-background-color: #ffffff; -fx-border-color: #b8b8b8;">
          <children>
-            <Text fx:id="nameText" layoutX="14.0" layoutY="31.0" onMouseClicked="#onTodoListClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Handlar lista" wrappingWidth="303.17261505126953">
-               <font>
-                  <Font name="Georgia" size="20.0" />
-               </font>
-            </Text>
             <CheckBox layoutX="471.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0">
                <font>
                   <Font size="20.0" />
@@ -41,7 +35,18 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <Text fx:id="nameText" layoutX="14.0" layoutY="31.0" onMouseClicked="#onTodoListClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Handlar lista" wrappingWidth="303.17261505126953">
+               <font>
+                  <Font name="Georgia" size="20.0" />
+               </font>
+            </Text>
          </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </AnchorPane>
    </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </fx:root>
