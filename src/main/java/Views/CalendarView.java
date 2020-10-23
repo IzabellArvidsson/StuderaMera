@@ -2,15 +2,12 @@ package Views;
 
 import Factory.IOnClickPane;
 import Factory.OnClickPaneController;
-import Models.CalendarEvent;
+import Models.CalendarEventModel;
 import Models.CalendarModel;
 import ViewModels.CalendarViewModel;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
@@ -24,13 +21,15 @@ import java.util.ResourceBundle;
 
 public class CalendarView implements IOnClickPane, Initializable {
 
-    private static ArrayList<CalendarEvent> allCalendarEvents = new ArrayList<>();
+
     private final CalendarViewModel calendarViewModel = new CalendarViewModel();
     private final CalendarModel calendarModel = new CalendarModel();
     @FXML
     ComboBox colorComboBox;
     @FXML
     private AnchorPane addToCalendarPane;
+    @FXML
+    private AnchorPane viewEventPane;
     @FXML
     private ComboBox dateDay;
     @FXML
@@ -47,12 +46,11 @@ public class CalendarView implements IOnClickPane, Initializable {
     private TextArea descriptionTextArea, showDescription;
     @FXML
     private Button addEventButton;
-    @FXML
-    private AnchorPane eventPane;
+
     @FXML
     private GridPane gridPane;
     @FXML
-    private Text dateText, eventTitleText, eventTimeText; //TODO: why clear the texts?FXML
+    private Text dateText;
     private YearMonth yearMonth = YearMonth.now();
     private ArrayList<CalendarModel> allCalendarDays = new ArrayList<CalendarModel>(31);
     private OnClickPaneController paneController = new OnClickPaneController();
@@ -61,14 +59,6 @@ public class CalendarView implements IOnClickPane, Initializable {
     public CalendarView() {
     }
 
-    /**
-     * adds event to list allCalendarEvent
-     *
-     * @param calendarEvent event to be added
-     */
-    private static void addToAllCalendarEvents(CalendarEvent calendarEvent) {
-        allCalendarEvents.add(calendarEvent);
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -82,42 +72,7 @@ public class CalendarView implements IOnClickPane, Initializable {
 
     }
 
-    /**
-     * show event details when event is pressed
-     */
-    public void clickGridPane() {
-        gridPane.getChildren().forEach(item -> {
-            item.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent mouseEvent) {
-                    eventPane.toFront();
-                    //populateEventPane(item);
-                }
-            });
-        });
-    }
 
-    /*public void populateEventPane(Node node) {
-        CalendarEvent calEvent = node.p;
-        showName.setText(calEvent.getName());
-        showDescription.setText(calEvent.getDescription());
-        showLocation.setText(calEvent.getPlace());
-        showStartTime.setText(calEvent.getsHour() + ":" + calEvent.getsMin());
-        showEndTime.setText(calEvent.geteHour()+":"+calEvent.geteMin());
-        showDateMonth.setText(calEvent.getMonth());
-        showDateDay.setText(calEvent.getDay());
-    }*/
-
-    public void onClickCloseEventButton() {
-        eventPane.toBack();
-        showDateDay.clear();
-        showDateMonth.clear();
-        showDescription.clear();
-        showEndTime.clear();
-        showStartTime.clear();
-        showName.clear();
-        showLocation.clear();
-    }
 
     /**
      * sets new month, clears children of all CalendarModels, adds labels with dates for new month
@@ -207,7 +162,7 @@ public class CalendarView implements IOnClickPane, Initializable {
     @FXML
     private void onClickSaveEvent() {
         CalendarModel flowPane = findFlowPane(dateDay.getSelectionModel().selectedItemProperty().getValue().toString(), dateMonth.getSelectionModel().selectedItemProperty().getValue().toString());
-        CalendarEvent calEvent = new CalendarEvent(nameTextField.getText(),
+        calendarViewModel.addCalendarEvent(nameTextField.getText(),
                 startTimeHourTextField.getText(),
                 startTimeMinTextField.getText(),
                 endTimeMinTextField.getText(),
@@ -216,9 +171,7 @@ public class CalendarView implements IOnClickPane, Initializable {
                 dateMonth.getSelectionModel().selectedItemProperty().getValue().toString(),
                 dateDay.getSelectionModel().selectedItemProperty().getValue().toString(),
                 descriptionTextArea.getText(),
-                colorComboBox.getSelectionModel().selectedItemProperty().getValue().toString());
-        CalendarViewModel.addCalendarEvents(calEvent, flowPane);
-        addToAllCalendarEvents(calEvent);
+                colorComboBox.getSelectionModel().selectedItemProperty().getValue().toString(), flowPane);
         saveList();
         closeAddToCalendar();
         nameTextField.clear();
@@ -239,7 +192,7 @@ public class CalendarView implements IOnClickPane, Initializable {
      */
     @FXML
     public void loadSavedCalendarEvents() {
-        CalendarViewModel.loadCalendarEvent(allCalendarDays);
+        calendarViewModel.loadCalendarEvent(allCalendarDays);
     }
 
     /**
@@ -251,8 +204,8 @@ public class CalendarView implements IOnClickPane, Initializable {
     public void initPane(OnClickPaneController paneController) {
         this.paneController = paneController;
         loadSavedCalendarEvents();
-        if (CalendarViewModel.loadOldCalendarEvent() != null) {
-            allCalendarEvents.addAll(CalendarViewModel.loadOldCalendarEvent());
+        if (calendarViewModel.loadOldCalendarEvent() != null) {
+            calendarViewModel.getAllCalendarEvents().addAll(calendarViewModel.loadOldCalendarEvent());
         }
     }
 
@@ -278,12 +231,37 @@ public class CalendarView implements IOnClickPane, Initializable {
      * Saves contents of allCalendarEvents to Models.CalendarEvents.ser
      */
     public void saveList() {
-        CalendarViewModel.saveCalendarEvent(allCalendarEvents);
+        calendarViewModel.saveCalendarEvent();
     }
 
     public void onClickBackToOverview() {
         paneController.showFirstViewPane();
     }
 
+    public void onClickCloseEventButton() {
+        viewEventPane.toBack();
+        showDateDay.clear();
+        showDateMonth.clear();
+        showDescription.clear();
+        showEndTime.clear();
+        showStartTime.clear();
+        showName.clear();
+        showLocation.clear();
+    }
+    public void populateEventPane(CalendarEventModel calEvent) {
+        showName.setText(calEvent.getName());
+        showDescription.setText(calEvent.getDescription());
+        showLocation.setText(calEvent.getLocation());
+        showStartTime.setText(calEvent.getsHour() + ":" + calEvent.getsMin());
+        showEndTime.setText(calEvent.geteHour() + ":" + calEvent.geteMin());
+        showDateMonth.setText(calEvent.getMonth());
+        showDateDay.setText(calEvent.getDay());
+    }
+
+    public void showEventPane() {
+        if (viewEventPane != null) {
+            viewEventPane.toFront();
+        }
+    }
 }
 
