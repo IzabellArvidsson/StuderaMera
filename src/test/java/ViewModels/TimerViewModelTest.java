@@ -75,7 +75,7 @@ public class TimerViewModelTest {
     void testStartTimer() {
         TimerViewModel timerViewModel = new TimerViewModel();
         Timeline timeline = new Timeline();
-        Timeline finalTimeline = timeline;
+        Timeline finalTimeline = timeline;//NOPMD
         timeline = new Timeline(new KeyFrame(javafx.util.Duration.seconds(1), e -> timerViewModel.countDown(finalTimeline)));
         timerViewModel.startTimer(timeline);
         assertSame(timeline.getStatus(), Animation.Status.RUNNING);
