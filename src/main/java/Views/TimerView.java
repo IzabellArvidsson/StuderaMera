@@ -141,6 +141,7 @@ public class TimerView extends AnchorPane implements Initializable, TimerObserve
                 break;
             default:
                 flowerChangingImage.setImage(new Image("/images/flower/plant_0_pot.png"));
+                break;
         }
     }
 

@@ -7,11 +7,22 @@ package Models;
  * The modelclass for the timer part of the program. Contains functionality.
  */
 public class TimerModel {
-
+    /**
+     * String that are used to get and set minutes
+     */
     private String minutes;
+    /**
+     * String that are used to get and set seconds
+     */
     private String seconds;
+    /**
+     * String that are used to get and set repetitions
+     */
     private String reps;
 
+    /**
+     * Constructor for this class
+     */
     public TimerModel() {
         this.minutes = "00";
         this.seconds = "00";
